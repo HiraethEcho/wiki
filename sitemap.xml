@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://hiraethecho.github.io/wiki/wiki/code/README_zh-CN/</loc>
+    
+    <lastmod>2023-10-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
     
     <lastmod>2023-10-06</lastmod>
@@ -46,6 +55,27 @@
   </url>
 
   
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/test/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/hello-world/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/categories/code/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
