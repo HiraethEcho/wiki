@@ -1,3 +1,8 @@
+---
+title: README of theme wikitten
+tags:
+  - hello-world
+---
 # hexo-theme-Wikitten
 
 [English Page](./README.md)
@@ -192,13 +197,4 @@ history_control: # 启用这一项使得 wiki 能有历史版本的功能（查�
     user: <your GitHub name>
     repertory: <your repertory name of this wiki source code>
     branch: <branch name of this wiki site source code>
-```
-
-
-
-## 版权协议
-
-[MIT LICENSE](./LICENSE)
-
-
 
