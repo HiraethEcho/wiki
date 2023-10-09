@@ -1,5 +1,5 @@
 ---
-title: 双系统安装linux
+title: Basic intall of archlinux 
 tags:
   - arch
 ---
