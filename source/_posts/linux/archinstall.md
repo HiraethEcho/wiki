@@ -1,3 +1,8 @@
+---
+title: 双系统安装linux
+tags:
+  - arch
+---
 # Basic installation of arch linux
 
 ## 启动盘
