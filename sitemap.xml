@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
+    
+    <lastmod>2023-10-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://hiraethecho.github.io/wiki/wiki/hello-world/</loc>
     
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +22,16 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/wiki/code/README_zh-CN/</loc>
     
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/wiki/linux/archinstall/</loc>
+    
+    <lastmod>2023-10-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +40,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
     
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,16 +49,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
     
-    <lastmod>2023-10-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
-    
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>http://hiraethecho.github.io/wiki</loc>
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,14 +66,14 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/test/</loc>
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/hello-world/</loc>
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -72,8 +81,15 @@
 
   
   <url>
+    <loc>http://hiraethecho.github.io/wiki/categories/linux/</loc>
+    <lastmod>2023-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://hiraethecho.github.io/wiki/categories/code/</loc>
-    <lastmod>2023-10-06</lastmod>
+    <lastmod>2023-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
