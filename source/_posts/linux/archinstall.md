@@ -1,7 +1,9 @@
 ---
-title: Basic intall of archlinux 
+title: 双系统安装archlinux 
+toc: true
 tags:
   - arch
+date: 2023-10-09 11:39
 ---
 # Basic installation of arch linux
 

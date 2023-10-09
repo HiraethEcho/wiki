@@ -37,10 +37,10 @@ customize:
 # Widgets
 widgets: # default use category only
     - category
+    - tagcloud
     - recent_posts
-    - archive
-    - tag
-    # - tagcloud
+    # - archive
+    # - tag
     # - links
     
 # Excerpt 

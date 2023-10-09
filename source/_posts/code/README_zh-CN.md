@@ -1,11 +1,10 @@
 ---
 title: README of theme wikitten
 tags:
-  - hello-world
+  - README
+date: 2023-10-07 11:39
 ---
 # hexo-theme-Wikitten
-
-[English Page](./README.md)
 
 ### 一个仿 [Wikitten](https://wikitten.vizuina.com/) 样式的 Hexo 个人 wiki 系统主题。 >[预览](http://wiki.zthxxx.me/)
 
