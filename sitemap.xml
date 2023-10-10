@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/wiki/code/README_zh-CN/</loc>
+    <loc>http://hiraethecho.github.io/wiki/wiki/README_zh-CN/</loc>
     
     <lastmod>2023-10-10</lastmod>
     
@@ -12,6 +12,24 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/wiki/linux/archinstall/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/wiki/AlgebraicGeometry/moduli/index/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/wiki/AlgebraicGeometry/moduli/sample-a1/</loc>
     
     <lastmod>2023-10-10</lastmod>
     
@@ -69,17 +87,31 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/sample/</loc>
+    <lastmod>2023-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/code/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/linux/</loc>
     <lastmod>2023-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/linux/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/</loc>
+    <lastmod>2023-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/moduli/</loc>
     <lastmod>2023-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
