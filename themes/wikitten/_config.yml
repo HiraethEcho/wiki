@@ -9,13 +9,13 @@ menu:
 # Customize
 customize:
     logo:
-        enabled: false
+        enabled: true
         width: 40
         height: 40
         url: /logo.png
     profile:
         enabled: trus # Whether to show profile bar
-        avatar: css/images/avatar.png
+        avatar: /css/images/avatar.png
         # gravatar: wyz2016zxc@outlook.com # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
         author: Hiraeth
         author_title: Student
