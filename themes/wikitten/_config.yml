@@ -10,8 +10,8 @@ menu:
 customize:
     logo:
         enabled: true
-        width: 40
-        height: 40
+        width: 40px
+        height: 40px
         url: /css/images/logo.png
     profile:
         enabled: trus # Whether to show profile bar
@@ -25,7 +25,7 @@ customize:
     sidebar: left # sidebar position, options: left, right
     category_perExpand: true # enable article categories list per expanding
     thumbnail: false # enable posts thumbnail, options: true, false
-    # favicon: /css/images/favicon.ico # path to favicon
+    favicon: /css/images/favicon.ico # path to favicon
     default_index_file: index.md # if this, it will display at site index instead of default index page
     social_links_titles:
         github: github
