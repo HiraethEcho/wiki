@@ -4,7 +4,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/wiki/README_zh-CN/</loc>
     
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/wiki/linux/archinstall/</loc>
     
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/wiki/AlgebraicGeometry/moduli/index/</loc>
     
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/wiki/AlgebraicGeometry/moduli/sample-a1/</loc>
     
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
     
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
     
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +58,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
     
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +67,7 @@
 
   <url>
     <loc>http://hiraethecho.github.io/wiki</loc>
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,21 +75,21 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/README/</loc>
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/arch/</loc>
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/sample/</loc>
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -98,21 +98,21 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/linux/</loc>
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/</loc>
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/moduli/</loc>
-    <lastmod>2023-10-10</lastmod>
+    <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
