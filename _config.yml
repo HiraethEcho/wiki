@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 #TODO: url
 url: http://HiraethEcho.github.io/wiki
 root: /wiki
-permalink: wiki/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory

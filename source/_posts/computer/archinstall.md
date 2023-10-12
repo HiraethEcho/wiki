@@ -11,9 +11,9 @@ date: 2023-10-09 11:39
 
 下载archlinux的iso文件。找一个U盘，用 `ventoy`安装，然后把iso放进去。
 
-可以先在win下用 `Win`+`k`打开磁盘管理，然后手动分区，用win的GUI代替之后的命令行分区
+可以先在win下用  <kbd>win</kbd>+<kbd>k</kbd>、<kbd>k</kbd> 打开磁盘管理，然后手动分区，用win的GUI代替之后的命令行分区
 
-插上U盘，重起电脑，在开机时按 `F11` `F12` `F2` 之类能进入选择启动位置的界面，选择从U盘启动。之后应该会启动U盘里的`ventoy`，选择arch的iso。这样就进入arch live 的系统，这个系统是用来安装arch的。
+插上U盘，重起电脑，在开机时按 <kbd>F11</kbd> <kbd>F12</kbd> <kbd>F2</kbd> 之类能进入选择启动位置的界面，选择从U盘启动。之后应该会启动U盘里的`ventoy`，选择arch的iso。这样就进入arch live 的系统，这个系统是用来安装arch的。
 
 ## 最小安装
 
