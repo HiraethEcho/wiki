@@ -17,5 +17,5 @@ permalink: :title/
 in hexo site _config
 ## section
 
-[test blog](blog/简记/party)
+[test blog](../hexo/简记/party.md)
 this does not work for hexo, but work for obsidian

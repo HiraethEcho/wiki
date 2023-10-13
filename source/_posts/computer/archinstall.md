@@ -7,6 +7,7 @@ date: 2023-10-09 11:39
 ---
 # Basic installation of arch linux
 
+[test README_zh-CN](/wiki/README_zh-CN)
 ## 启动盘
 
 下载archlinux的iso文件。找一个U盘，用 `ventoy`安装，然后把iso放进去。
