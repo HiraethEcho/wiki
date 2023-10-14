@@ -2353,3 +2353,84 @@ ol.toc {
 #profile {
   float: right;
 }
+.note {
+  padding: 0.75rem;
+  border-left: 0.35rem solid;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+  color: var(--text-color);
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  font-size: 0.9rem;
+}
+.note a {
+  color: var(--text-color);
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.note *:last-child {
+  margin-bottom: 0;
+}
+.note-primary {
+  background-color: rgba(183,160,224,0.25);
+  border-color: #6f42c1;
+}
+.note-secondary,
+note-default {
+  background-color: rgba(187,187,187,0.25);
+  border-color: #777;
+}
+.note-success {
+  background-color: rgba(174,220,174,0.25);
+  border-color: #5cb85c;
+}
+.note-danger {
+  background-color: rgba(236,169,167,0.25);
+  border-color: #d9534f;
+}
+.note-warning {
+  background-color: rgba(248,214,166,0.25);
+  border-color: #f0ad4e;
+}
+.note-info {
+  background-color: rgba(160,197,228,0.25);
+  border-color: #428bca;
+}
+.note-light {
+  background-color: rgba(254,254,254,0.25);
+  border-color: #0f0f0f;
+}
+.label {
+  display: inline;
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  color: var(--text-color);
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.label-default {
+  background: rgba(187,187,187,0.25);
+}
+.label-primary {
+  background: rgba(183,160,224,0.25);
+}
+.label-info {
+  background: rgba(160,197,228,0.25);
+}
+.label-success {
+  background: rgba(174,220,174,0.25);
+}
+.label-warning {
+  background: rgba(248,214,166,0.25);
+}
+.label-danger {
+  background: rgba(236,169,167,0.25);
+}
