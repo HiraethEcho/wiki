@@ -18,8 +18,9 @@ note-warning
 </p>
 <p class="note note-danger">
 note-danger
+this is an example
 </p>
-
+<p class = note> default tag? </p>
 用html语法<span class="label label-primary"> 实现行内 </span>，具体来说是'<span>' tag。
 ### 首行空格。
 
@@ -31,7 +32,7 @@ note-danger
 
 &#8194;&#8194; 这是什么  `&#8194`
 
-  这什么情况。
+这什么情况。
 
   hell
 ## links
