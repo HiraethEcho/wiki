@@ -15,12 +15,9 @@ date: 2023-10-07 11:39
 - 将知识多级分类整理，侧边分级展开，为思维跳转设计
 - 根据文件路径自动为文章添加分类 #4
 
-![Site Preview](./source/images/SitePreview.png)
-
-
-
-![mobile preview](./source/images/mobile1.png) ![mobile preview](./source/images/mobile2.png)
-
+![Site Preview](/wikiimg/SitePreview.png)
+![mobile preview](/wikiimg/mobile1.png) ![mobile preview](/wikiimg/mobile2.png)
+![logo](/wikiimg/logo.png) this works
 
 
 ## 安装说明
