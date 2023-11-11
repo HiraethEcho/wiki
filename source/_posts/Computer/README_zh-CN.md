@@ -1,7 +1,6 @@
 ---
 title: README of theme wikitten
-tags:
-  - README
+tags: [README, hexo]
 date: 2023-10-07 11:39
 ---
 # hexo-theme-Wikitten

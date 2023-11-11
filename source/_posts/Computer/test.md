@@ -1,10 +1,11 @@
 ---
 title: test
-tags:
-  - test
-date: 2023-10-13 00:18 
+tags: [test, hexo]
+date: 2023-10-13 00:18
 ---
+
 # test
+
 ## note
 
 <p class="note note-primary">
@@ -28,22 +29,20 @@ this is an example
 
 &nbsp;这是什么`&nbsp;`
 
-&ensp;测试 `&ensp;`
-
-&#8194;&#8194; 这是什么  `&#8194`
-
-这什么情况。
-
-  hell
 ## links
-[test README_zh-CN](/wiki/README_zh-CN)
+
+[test README_zh-CN](/wiki/Computer/README_zh-CN)
+
 [test computer/archinstall](/wiki/computer/archinstall)
 
-this work for obsidian and hexo, with setting 
+this work for obsidian and hexo, with setting
+
 ```
 permalink: :title/
 ```
-in hexo site _config
+
+in hexo site \_config
+
 ## section
 
 [test blog](../hexo/简记/party.md)
