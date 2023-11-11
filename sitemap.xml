@@ -2,18 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/README_zh-CN/</loc>
+    <loc>http://hiraethecho.github.io/wiki/Computer/README_zh-CN/</loc>
     
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/test/</loc>
+    <loc>http://hiraethecho.github.io/wiki/Computer/archinstall/</loc>
     
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/git/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/test/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,97 +40,115 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/Reading/originoffamilyprivatepropertyandthestate/</loc>
     
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/computer/archinstall/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/FoliationMMP-WQDAC7H3/</loc>
     
-    <lastmod>2023-11-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/MMP/2/</loc>
-    
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/MMP/3/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/comment-8IMJDSY4/</loc>
     
-    <lastmod>2023-11-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/MMP/Intro/</loc>
-    
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/moduli/index/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/%E2%80%9CThe-period-map-p---M-F-%E2%88%97-extends-regularly-away-from-MIV,-and-it-maps-MI-,-MII-and-MIII-to-the-interior-F-,-to-the-unio-2UA6PZP6/</loc>
     
-    <lastmod>2023-11-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/moduli/sample-a1/</loc>
-    
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/rational_geometry/2/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/%E2%80%9CTheorem-A-is-an-establishment-of-the-minimal-model-program-for-algebraically-integrable-foliations-with-%E2%80%9Cklt%E2%80%9D-singulari-L7M6SIIJ/</loc>
     
-    <lastmod>2023-11-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/rational_geometry/817_10-11/</loc>
-    
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/AlgebraicGeometry/rational_geometry/birational_seminar/</loc>
+    <loc>http://hiraethecho.github.io/wiki/Math/MMP/2/</loc>
     
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
+    <loc>http://hiraethecho.github.io/wiki/Math/MMP/3/</loc>
     
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/MMP/Intro/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/moduli/index/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/moduli/sample-a1/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/rational_geometry/2/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/rational_geometry/817_10-11/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/rational_geometry/birational_seminar/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,7 +157,16 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
     
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
+    
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -130,7 +175,7 @@
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
     
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -139,7 +184,7 @@
 
   <url>
     <loc>http://hiraethecho.github.io/wiki</loc>
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,28 +192,42 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/README/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/tags/test/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <loc>http://hiraethecho.github.io/wiki/tags/hexo/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/arch/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/git/</loc>
+    <lastmod>2023-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/test/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/sample/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -177,42 +236,49 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/Reading/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <loc>http://hiraethecho.github.io/wiki/categories/zotero/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/MMP/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <loc>http://hiraethecho.github.io/wiki/categories/Computer/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/moduli/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/AlgebraicGeometry/rational-geometry/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/MMP/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/computer/</loc>
-    <lastmod>2023-11-10</lastmod>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/moduli/</loc>
+    <lastmod>2023-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

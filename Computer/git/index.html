@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>git备忘 | Hiraeth&#39;s Wiki</title>
+    
+    
+        <meta name="keywords" content="git">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="submodule假定我们有两个项目：project-main 和 project-sub-1，其中 project-main 表示主项目，而 project-sub-1 表示子模块项目。 其中 project-main 的远程仓库地址为 https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;project-main.git，而 project-sub-1 的远程仓库地址为 https:&#x2F;&#x2F;gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git备忘">
+<meta property="og:url" content="http://hiraethecho.github.io/wiki/Computer/git/index.html">
+<meta property="og:site_name" content="Hiraeth&#39;s Wiki">
+<meta property="og:description" content="submodule假定我们有两个项目：project-main 和 project-sub-1，其中 project-main 表示主项目，而 project-sub-1 表示子模块项目。 其中 project-main 的远程仓库地址为 https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;project-main.git，而 project-sub-1 的远程仓库地址为 https:&#x2F;&#x2F;gi">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-8b77b08acc39bfc9cb569116ff6905e2_b.png">
+<meta property="article:published_time" content="2023-11-10T10:04:00.000Z">
+<meta property="article:modified_time" content="2023-11-11T05:30:00.290Z">
+<meta property="article:author" content="Hiraeth">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic3.zhimg.com/v2-8b77b08acc39bfc9cb569116ff6905e2_b.png">
+    
+
+    
+
+    
+        <link rel="icon" href="/wiki/css/images/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/wiki/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/wiki/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/wiki/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/wiki/css/style.css">
+
+    
+<script src="/wiki/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/wiki/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/wiki/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/wiki/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/wiki/atom.xml" title="Hiraeth's Wiki" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/wiki/" id="logo">
+            
+            <img class="logomy" src="/wiki/css/images/logo.png">
+            
+                <span class="site-title">Hiraeth&#39;s Wiki</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/wiki/">首页</a>
+                
+                    <a class="main-nav-link" href="/wiki/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/wiki/categories">分类</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/wiki/css/images/avatar.png">
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/wiki/',
+        CONTENT_URL: '/wiki/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/wiki/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/wiki/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/wiki/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/wiki/categories">分类</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/wiki/css/images/avatar.png">
+            <h2 id="name">Hiraeth</h2>
+            <h3 id="title">Student</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Beijing, China</span>
+        </div>
+        <div class="article-info profile-block">
+            <a href=" /wiki/archives ">
+            <div class="article-info-block">
+                17
+                <span>posts</span>
+            </div>
+            </a>
+            <a href=" /wiki/tags ">
+            <div class="article-info-block">
+                6
+                <span>tags</span>
+            </div>
+            </a>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="https://github.com/HiraethEcho" target="_blank" title="github" class="tooltip" rel="external nofollow noopener noreferrer">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://HiraethEcho.github.io" target="_blank" title="academia" class="tooltip">
+                            <i class="fa fa-mortar-board"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://HiraethEcho.github.io/hexo" target="_blank" title="blog" class="tooltip">
+                            <i class="fa fa-book"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-up fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" style="display: block;"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Computer
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Computer/README_zh-CN/">README of theme wikitten</a></li>  <li class="file"><a href="/wiki/Computer/archinstall/">双系统安装archlinux</a></li>  <li class="file"><a href="/wiki/Computer/test/">test</a></li>  <li class="file active"><a href="/wiki/Computer/git/">git备忘</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Math
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            MMP
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Math/MMP/Intro/">Introduction to MMP</a></li>  <li class="file"><a href="/wiki/Math/MMP/2/">2</a></li>  <li class="file"><a href="/wiki/Math/MMP/3/">3</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            moduli
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Math/moduli/index/">Topics in Moduli</a></li>  <li class="file"><a href="/wiki/Math/moduli/sample-a1/">Topics in Moduli, sample</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            rational_geometry
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Math/rational_geometry/817_10-11/">817_10-11</a></li>  <li class="file"><a href="/wiki/Math/rational_geometry/2/">2</a></li>  <li class="file"><a href="/wiki/Math/rational_geometry/birational_seminar/">1</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Reading
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Reading/originoffamilyprivatepropertyandthestate/">originoffamilyprivatepropertyandthestate</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            zotero
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/zotero/FoliationMMP-WQDAC7H3/"></a></li>  <li class="file"><a href="/wiki/zotero/comment-8IMJDSY4/"></a></li>  <li class="file"><a href="/wiki/zotero/%E2%80%9CThe-period-map-p---M-F-%E2%88%97-extends-regularly-away-from-MIV,-and-it-maps-MI-,-MII-and-MIII-to-the-interior-F-,-to-the-unio-2UA6PZP6/"></a></li>  <li class="file"><a href="/wiki/zotero/%E2%80%9CTheorem-A-is-an-establishment-of-the-minimal-model-program-for-algebraically-integrable-foliations-with-%E2%80%9Cklt%E2%80%9D-singulari-L7M6SIIJ/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>tag cloud</span></h3>
+        <div class="widget tagcloud">
+            <a href="/wiki/tags/README/" style="font-size: 20px;">README</a> <a href="/wiki/tags/arch/" style="font-size: 10px;">arch</a> <a href="/wiki/tags/git/" style="font-size: 10px;">git</a> <a href="/wiki/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/wiki/tags/sample/" style="font-size: 10px;">sample</a> <a href="/wiki/tags/test/" style="font-size: 10px;">test</a>
+        </div>
+    </div>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-Computer/git" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/wiki/tags/git/" rel="tag">git</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/Computer/git/">
+            <time datetime="2023-11-10T10:04:00.000Z" itemprop="datePublished">2023-11-10</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/raw/main/source/_posts/Computer/git.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/edit/main/source/_posts/Computer/git.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/commits/main/source/_posts/Computer/git.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            git备忘
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#submodule"><span class="toc-number">1.</span> <span class="toc-text">submodule</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-submodule"><span class="toc-number">1.1.</span> <span class="toc-text">创建 submodule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96-submodule"><span class="toc-number">1.2.</span> <span class="toc-text">获取 submodule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E6%A8%A1%E5%9D%97%E5%86%85%E5%AE%B9%E7%9A%84%E6%9B%B4%E6%96%B0"><span class="toc-number">1.3.</span> <span class="toc-text">子模块内容的更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AD%90%E6%A8%A1%E5%9D%97"><span class="toc-number">1.4.</span> <span class="toc-text">删除子模块</span></a></li></ol></li></ol>
+                </div>
+            
+        
+        
+            <h2 id="submodule"><a href="#submodule" class="headerlink" title="submodule"></a>submodule</h2><p>假定我们有两个项目：<code>project-main</code> 和 <code>project-sub-1</code>，其中 <code>project-main</code> 表示主项目，而 <code>project-sub-1</code> 表示子模块项目。</p>
+<p>其中 <code>project-main</code> 的远程仓库地址为 <code>https://github.com/username/project-main.git</code>，而 <code>project-sub-1</code> 的远程仓库地址为 <code>https://github.com/username/project-sub-1.git</code>。</p>
+<p>接下来，我们希望在 <code>project-main</code> 中添加 <code>project-sub-1</code> ，而又保持 <code>project-sub-1</code> 自身独立的版本控制。</p>
+<h3 id="创建-submodule"><a href="#创建-submodule" class="headerlink" title="创建 submodule"></a>创建 submodule</h3><p>使用 <code>git submodule add &lt;submodule_url&gt;</code> 命令可以在项目中创建一个子模块。</p>
+<p>进入项目 <code>project-main</code> ，输入：</p>
+<blockquote>
+<p>➜ project-main git:(master) git submodule add <a href="https://link.zhihu.com/?target=https://github.com/username/project-sub-1.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/username/project-sub-1.git</a><br>正克隆到 ‘&#x2F;path&#x2F;to&#x2F;project-main&#x2F;project-sub-1’…<br>remote: Enumerating objects: 3, done.<br>remote: Counting objects: 100% (3&#x2F;3), done.<br>remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0<br>展开对象中: 100% (3&#x2F;3), 完成.</p>
+</blockquote>
+<p>此时项目仓库中会多出两个文件：<code>.gitmodules</code> 和 <code>project-sub-1</code> 。</p>
+<p>前者的内容是这样的，事实上就是子模块的相关信息；而后者那个文件，实际上保存的是子模块当前版本的版本号信息。</p>
+<blockquote>
+<p>[submodule “project-sub-1”]<br>path &#x3D; project-sub-1<br>url &#x3D; <a href="https://link.zhihu.com/?target=https://github.com/username/project-sub-1.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/username/project-sub-1.git</a></p>
+</blockquote>
+<p>如果此前项目中已经存在 <code>.gitmodules</code> 文件，则会在文件内容中多出上述三行记录。</p>
+<p>事实上，此时在 <code>.git/config</code> 文件中也会多出一些信息，在 <code>.git/modules</code> 文件夹下也会多出一份内容。</p>
+<p>通常此时可以使用 <code>git commit -m &quot;add submodule xxx&quot;</code> 提交一次，表示引入了某个子模块。提交后，在主项目仓库中，会显示出子模块文件夹，并带上其所在仓库的版本号。</p>
+<p><img src="https://pic3.zhimg.com/v2-8b77b08acc39bfc9cb569116ff6905e2_b.png"></p>
+<h3 id="获取-submodule"><a href="#获取-submodule" class="headerlink" title="获取 submodule"></a>获取 submodule</h3><p>上述步骤在创建子模块的过程中，会自动将相关代码克隆到对应路径，但对于后续使用者而言，对于主项目使用普通的 <code>clone</code> 操作并不会拉取到子模块中的实际代码。</p>
+<p>使用以下命令进行克隆，完成后 <code>project-main/project-sub-1</code> 文件夹是空的：</p>
+<blockquote>
+<p>cd &#x2F;path&#x2F;to&#x2F;temp<br>git clone <a href="https://link.zhihu.com/?target=https://github.com/username/project-main.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/username/project-main.git</a></p>
+</blockquote>
+<p>如果希望子模块代码也获取到，一种方式是在克隆主项目的时候带上参数 <code>--recurse-submodules</code>，这样会递归地将项目中所有子模块的代码拉取。</p>
+<blockquote>
+<p>cd &#x2F;path&#x2F;to&#x2F;temp2<br>git clone <a href="https://link.zhihu.com/?target=https://github.com/username/project-main.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/username/project-main.git</a> –recurse-submodules</p>
+</blockquote>
+<p>此时 <code>project-main/project-sub-1</code> 文件夹是有内容的，并且固定在某个 Git 提交的版本上。</p>
+<p>另外一种可行的方式是，在当前主项目中执行：</p>
+<blockquote>
+<p>git submodule init<br>git submodule update</p>
+</blockquote>
+<p>则会根据主项目的配置信息，拉取更新子模块中的代码。</p>
+<h3 id="子模块内容的更新"><a href="#子模块内容的更新" class="headerlink" title="子模块内容的更新"></a>子模块内容的更新</h3><p>对于子模块而言，并不需要知道引用自己的主项目的存在。对于自身来讲，子模块就是一个完整的 Git 仓库，按照正常的 Git 代码管理规范操作即可。</p>
+<p>对于主项目而言，子模块的内容发生变动时，通常有三种情况：</p>
+<p>1）当前项目下子模块文件夹内的内容发生了未跟踪的内容变动；</p>
+<p>2）当前项目下子模块文件夹内的内容发生了版本变化；</p>
+<p>3）当前项目下子模块文件夹内的内容没变，远程有更新；</p>
+<p><strong>情况1：子模块有未跟踪的内容变动</strong></p>
+<p>对于第1种情况，通常是在开发环境中，直接修改子模块文件夹中的代码导致的。</p>
+<p>此时在主项目中使用 <code>git status</code> 能够看到关于子模块尚未暂存以备提交的变更，但是于主项目而言是无能为力的，使用 <code>git add/commit</code> 对其也不会产生影响。</p>
+<blockquote>
+<p>➜ project-main git:(master) git status<br>位于分支 master<br>您的分支与上游分支 ‘origin&#x2F;master’ 一致。<br>尚未暂存以备提交的变更：<br>（使用 “git add &lt;文件&gt;…” 更新要提交的内容）<br>（使用 “git checkout – &lt;文件&gt;…” 丢弃工作区的改动）<br>（提交或丢弃子模组中未跟踪或修改的内容）<br>修改： project-sub-1 (未跟踪的内容)<br>修改尚未加入提交（使用 “git add” 和&#x2F;或 “git commit -a”）</p>
+</blockquote>
+<p>在此情景下，通常需要进入子模块文件夹，按照子模块内部的版本控制体系提交代码。</p>
+<p>当提交完成后，主项目的状态则进入了情况2，即当前项目下子模块文件夹内的内容发生了版本变化。</p>
+<p><strong>情况2：子模块有版本变化</strong></p>
+<p>当子模块版本变化时，在主项目中使用 <code>git status</code> 查看仓库状态时，会显示子模块有新的提交：</p>
+<blockquote>
+<p>➜ project-main git:(master) ✗ git status<br>位于分支 master<br>您的分支与上游分支 ‘origin&#x2F;master’ 一致。<br>尚未暂存以备提交的变更：<br>（使用 “git add &lt;文件&gt;…” 更新要提交的内容）<br>（使用 “git checkout – &lt;文件&gt;…” 丢弃工作区的改动）<br>修改： project-sub-1 (新提交)<br>修改尚未加入提交（使用 “git add” 和&#x2F;或 “git commit -a”）</p>
+</blockquote>
+<p>在这种情况下，可以使用 <code>git add/commit</code> 将其添加到主项目的代码提交中，实际的改动就是那个子模块 <code>文件</code> 所表示的版本信息：</p>
+<blockquote>
+<p>git diff HEAD HEAD^<br>diff –git a&#x2F;project-sub-1 b&#x2F;project-sub-1<br>index ace9770..7097c48 160000<br>-– a&#x2F;project-sub-1<br>+++ b&#x2F;project-sub-1<br>@@ -1 +1 @@<br>-Subproject commit ace977071f94f4f88935f9bb9a33ac0f8b4ba935<br>+Subproject commit 7097c4887798b71cee360e99815f7dbd1aa17eb4</p>
+</blockquote>
+<p>通常当子项目更新后，主项目修改其所依赖的版本时，会产生类似这种情景的 commit 提交信息。</p>
+<p><strong>情况3：子模块远程有更新</strong></p>
+<p>通常来讲，主项目与子模块的开发不会恰好是同时进行的。通常是子模块负责维护自己的版本升级后，推送到远程仓库，并告知主项目可以更新对子模块的版本依赖。</p>
+<p>在这种情况下，主项目是比较茫然的。</p>
+<p>之前曾经提到，主项目可以使用 <code>git submodule update</code> 更新子模块的代码，但那是指 <code>当前主项目文件夹下的子模块目录内容</code> 与 <code>当前主项目记录的子模块版本</code> 不一致时，会参考后者进行更新。</p>
+<p>但如今这种情况下，后者 <code>当前主项目记录的子模块版本</code> 还没有变化，在主项目看来当前情况一切正常。</p>
+<p>此时，需要让主项目主动进入子模块拉取新版代码，进行升级操作。</p>
+<p>通常流程是：</p>
+<blockquote>
+<p>cd project-sub-1<br>git pull origin master</p>
+</blockquote>
+<p>子模块目录下的代码版本会发生变化，转到情况2的流程进行主项目的提交。</p>
+<p>当主项目的子项目特别多时，可能会不太方便，此时可以使用 <code>git submodule</code> 的一个命令 <code>foreach</code> 执行：</p>
+<blockquote>
+<p>git submodule foreach ‘git pull origin master’</p>
+</blockquote>
+<p><strong>情况汇总</strong></p>
+<p>终上所述，可知在不同场景下子模块的更新方式如下：</p>
+<ul>
+<li>对于子模块，只需要管理好自己的版本，并推送到远程分支即可；</li>
+<li>对于父模块，若子模块版本信息未提交，需要更新子模块目录下的代码，并执行 <code>commit</code> 操作提交子模块版本信息；</li>
+<li>对于父模块，若子模块版本信息已提交，需要使用 <code>git submodule update</code> ，Git 会自动根据子模块版本信息更新所有子模块目录的相关代码。</li>
+</ul>
+<h3 id="删除子模块"><a href="#删除子模块" class="headerlink" title="删除子模块"></a>删除子模块</h3><p>网上流传了一些偏法，主要步骤是直接移除模块，并手动修改 <code>.gitmodules</code>、<code>.git/config</code> 和 <code>.git/modules</code> 内容。包含了一大堆类似<code>git rm --cached &lt;sub-module&gt;</code>、<code>rm -rf &lt;sub-moduel&gt;</code>、<code>rm .gitmodules</code> 和 <code>git rm --cached</code> 之类的代码。</p>
+<p>实际上这是一种比较野的做法，不建议使用。</p>
+<p>根据官方文档的说明，应该使用 <code>git submodule deinit</code> 命令卸载一个子模块。这个命令如果添加上参数 <code>--force</code>，则子模块工作区内即使有本地的修改，也会被移除。</p>
+<blockquote>
+<p>git submodule deinit project-sub-1<br>git rm project-sub-1</p>
+</blockquote>
+<p>执行 <code>git submodule deinit project-sub-1</code> 命令的实际效果，是自动在 <code>.git/config</code> 中删除了以下内容：</p>
+<blockquote>
+<p>[submodule “project-sub-1”]<br>url &#x3D; <a href="https://link.zhihu.com/?target=https://github.com/username/project-sub-1.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/username/project-sub-1.git</a></p>
+</blockquote>
+<p>执行 <code>git rm project-sub-1</code> 的效果，是移除了 <code>project-sub-1</code> 文件夹，并自动在 <code>.gitmodules</code> 中删除了以下内容：</p>
+<blockquote>
+<p>[submodule “project-sub-1”]<br>path &#x3D; project-sub-1<br>url &#x3D; <a href="https://link.zhihu.com/?target=https://github.com/username/project-sub-1.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/username/project-sub-1.git</a></p>
+</blockquote>
+<p>此时，主项目中关于子模块的信息基本已经删除（虽然貌似 <code>.git/modules</code> 目录下还有残余）：</p>
+<blockquote>
+<p>➜ project-main git:(master) ✗ gs<br>位于分支 master<br>您的分支与上游分支 ‘origin&#x2F;master’ 一致。<br>要提交的变更：<br>（使用 “git reset HEAD &lt;文件&gt;…” 以取消暂存）<br>修改： .gitmodules<br>删除： project-sub-1</p>
+</blockquote>
+<p>可以提交代码：</p>
+<blockquote>
+<p>git commit -m “delete submodule project-sub-1”</p>
+</blockquote>
+<p>至此完成对子模块的删除。</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/Math/rational_geometry/birational_seminar/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    1
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/Math/MMP/3/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">3</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Hiraeth &copy; 2023 
+            <a rel="external nofollow noopener noreferrer" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/wiki/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/wiki/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/wiki/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/wiki/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
