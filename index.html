@@ -172,13 +172,13 @@
         <div class="article-info profile-block">
             <a href=" /wiki/archives ">
             <div class="article-info-block">
-                16
+                17
                 <span>posts</span>
             </div>
             </a>
             <a href=" /wiki/tags ">
             <div class="article-info-block">
-                9
+                12
                 <span>tags</span>
             </div>
             </a>
@@ -237,7 +237,7 @@
                             &nbsp;
                             Computer
                         </a>
-                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Computer/README_zh-CN/">README of theme wikitten</a></li>  <li class="file"><a href="/wiki/Computer/archinstall/">双系统安装archlinux</a></li>  <li class="file"><a href="/wiki/Computer/test/">test</a></li>  <li class="file"><a href="/wiki/Computer/git/">git备忘</a></li>  <li class="file"><a href="/wiki/Computer/bn-template-backup-2023-11-13T10-02-16.378Z/"></a></li>  </ul> 
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Computer/README_zh-CN/">README of theme wikitten</a></li>  <li class="file"><a href="/wiki/Computer/archinstall/">双系统安装archlinux</a></li>  <li class="file"><a href="/wiki/Computer/test/">test</a></li>  <li class="file"><a href="/wiki/Computer/git/">git备忘</a></li>  <li class="file"><a href="/wiki/Computer/wikitten/">wikitten</a></li>  <li class="file"><a href="/wiki/Computer/zotero/">zotero</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -365,7 +365,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>tag cloud</span></h3>
         <div class="widget tagcloud">
-            <a href="/wiki/tags/MMP/" style="font-size: 10px;">MMP</a> <a href="/wiki/tags/README/" style="font-size: 20px;">README</a> <a href="/wiki/tags/arch/" style="font-size: 10px;">arch</a> <a href="/wiki/tags/foliation/" style="font-size: 10px;">foliation</a> <a href="/wiki/tags/git/" style="font-size: 10px;">git</a> <a href="/wiki/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/wiki/tags/sample/" style="font-size: 10px;">sample</a> <a href="/wiki/tags/test/" style="font-size: 10px;">test</a> <a href="/wiki/tags/workingon/" style="font-size: 20px;">workingon</a>
+            <a href="/wiki/tags/MMP/" style="font-size: 10px;">MMP</a> <a href="/wiki/tags/README/" style="font-size: 15px;">README</a> <a href="/wiki/tags/arch/" style="font-size: 10px;">arch</a> <a href="/wiki/tags/foliation/" style="font-size: 10px;">foliation</a> <a href="/wiki/tags/git/" style="font-size: 10px;">git</a> <a href="/wiki/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/wiki/tags/obsidian/" style="font-size: 10px;">obsidian</a> <a href="/wiki/tags/sample/" style="font-size: 10px;">sample</a> <a href="/wiki/tags/test/" style="font-size: 10px;">test</a> <a href="/wiki/tags/wiki/" style="font-size: 10px;">wiki</a> <a href="/wiki/tags/workingon/" style="font-size: 15px;">workingon</a> <a href="/wiki/tags/zotero/" style="font-size: 10px;">zotero</a>
         </div>
     </div>
 
@@ -374,37 +374,6 @@
 </aside>
             
             <section id="main">
-        <article id="post-Computer/bn-template-backup-2023-11-13T10-02-16.378Z" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-            
-        
-        
-            [{"name":"[QuickInsertV2]","text":"<p>\n    ${linkText}<br>\n\t${subNoteItem.getNote().trim() }\n    [obidian](/wiki/zotero/${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${noteItem.parentItem ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\" : \"\"}${noteItem.key})<br>\n    <a href="\"${link}\"">\n      zotero\n    </a>\n</p>"},{"name":"[QuickBackLinkV2]","text":"<p>\n    Referred in ${linkText} <a href="\"${link}\"">zotero</a> [obidian](/wiki/zotero/${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${noteItem.parentItem ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\" : \"\"}${noteItem.key})\n</p>"},{"name":"[QuickImportV2]","text":"<p>\n  ${await new Promise(async (r) => {\n    r(await Zotero.BetterNotes.api.convert.link2html(link,{noteItem, dryRun: _env.dryRun}));\n  })}\n</p>"},{"name":"[QuickNoteV5]","text":"${await new Promise(async (r) => {\n    let res = \"\";\n    if (annotationItem.annotationComment) {\n      res += await Zotero.BetterNotes.api.convert.md2html(\n        annotationItem.annotationComment\n      );\n    }\n    res += await Zotero.BetterNotes.api.convert.annotations2html([annotationItem], {noteItem, ignoreComment: true});\n    r(res);\n  })}\n"},{"name":"[ExportMDFileNameV2]","text":"${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${noteItem.parentItem ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\" : \"\"}${noteItem.key}.md"},{"name":"[ExportMDFileHeaderV2]","text":"${await new Promise(async (r) => {\n    let header = {};\n    header.tags = noteItem.getTags().map((_t) => _t.tag);\n\n    header.title = noteItem.getField(\"title\") + \"-\" + ( noteItem.parentItem\n      ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\"\n      : \"\") + noteItem.getField(\"key\");\n\n    header.article = noteItem.parentItem\n      ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\")\n      : \"\";\n    header.collections = (\n      await Zotero.Collections.getCollectionsContainingItems([\n        (noteItem.parentItem || noteItem).id,\n      ])\n    ).map((c) => c.name);\n    r(JSON.stringify(header));\n  })}\n\n"},{"name":"[ExportMDFileContent]","text":"${mdContent.replaceAll(\"\\\\[obsidian]\\\\(\",\"[obsidian](\")}\n\t"}]
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
         <article id="post-zotero/FoliationMMP-7XXD555J" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -428,7 +397,7 @@
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/wiki/zotero/FoliationMMP-7XXD555J/">
-            <time datetime="2023-11-13T10:05:27.852Z" itemprop="datePublished">2023-11-13</time>
+            <time datetime="2023-11-13T10:34:52.199Z" itemprop="datePublished">2023-11-13</time>
         </a>
     </div>
 
@@ -510,7 +479,7 @@
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/wiki/zotero/MMPoverZ-Minimalmodelprogramforalgebraicallyintegrablefoliationsandgeneralizedpairs-CXKHMJMQ/">
-            <time datetime="2023-11-13T10:05:27.852Z" itemprop="datePublished">2023-11-13</time>
+            <time datetime="2023-11-13T10:34:52.199Z" itemprop="datePublished">2023-11-13</time>
         </a>
     </div>
 
@@ -595,7 +564,7 @@
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/wiki/Math/rational_geometry/2/">
-            <time datetime="2023-11-13T10:05:27.852Z" itemprop="datePublished">2023-11-13</time>
+            <time datetime="2023-11-13T10:34:52.199Z" itemprop="datePublished">2023-11-13</time>
         </a>
     </div>
 
@@ -691,7 +660,7 @@
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/wiki/Math/rational_geometry/birational_seminar/">
-            <time datetime="2023-11-13T10:05:27.852Z" itemprop="datePublished">2023-11-13</time>
+            <time datetime="2023-11-13T10:34:52.199Z" itemprop="datePublished">2023-11-13</time>
         </a>
     </div>
 
@@ -756,6 +725,185 @@
             </p></ol></div>   
             <div class="article-more-link">
                 <a href="/wiki/Math/rational_geometry/birational_seminar/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-Computer/zotero" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/wiki/tags/obsidian/" rel="tag">obsidian</a>, <a class="tag-link-link" href="/wiki/tags/wiki/" rel="tag">wiki</a>, <a class="tag-link-link" href="/wiki/tags/zotero/" rel="tag">zotero</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/Computer/zotero/">
+            <time datetime="2023-11-13T10:33:00.000Z" itemprop="datePublished">2023-11-13</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/raw/main/source/_posts/Computer/zotero.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/edit/main/source/_posts/Computer/zotero.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/commits/main/source/_posts/Computer/zotero.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/Computer/zotero/">zotero</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h1 id="Zotero"><a href="#Zotero" class="headerlink" title="Zotero"></a>Zotero</h1><h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><h2 id="Sync"><a href="#Sync" class="headerlink" title="Sync"></a>Sync</h2><h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>For zotero 6:</p>
+<p>For zotero 7:</p>
+<ul>
+<li>zotmoov</li>
+</ul>
+<p>
+                
+            
+        
+        
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/wiki/Computer/zotero/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-Computer/wikitten" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/wiki/tags/hexo/" rel="tag">hexo</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/Computer/wikitten/">
+            <time datetime="2023-11-13T10:32:00.000Z" itemprop="datePublished">2023-11-13</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/raw/main/source/_posts/Computer/wikitten.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/edit/main/source/_posts/Computer/wikitten.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/commits/main/source/_posts/Computer/wikitten.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/Computer/wikitten/">wikitten</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+        
+        
+            <h1 id="Using-hexo-and-wikitten-to-deploy-online-wiki"><a href="#Using-hexo-and-wikitten-to-deploy-online-wiki" class="headerlink" title="Using hexo and wikitten to deploy online wiki"></a>Using hexo and wikitten to deploy online wiki</h1><h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><h2 id="wikitten"><a href="#wikitten" class="headerlink" title="wikitten"></a>wikitten</h2><h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2>
             </div>
         
         <footer class="article-footer">
@@ -1080,102 +1228,6 @@
         
             <h1 id="《家庭、私有制和国家的起源》"><a href="#《家庭、私有制和国家的起源》" class="headerlink" title="《家庭、私有制和国家的起源》"></a>《家庭、私有制和国家的起源》</h1><h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><!-- TODO: toc of the book here -->
 
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-Math/MMP/Intro" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/wiki/categories/Math/">Math</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/wiki/categories/Math/MMP/">MMP</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/Math/MMP/Intro/">
-            <time datetime="2023-10-18T09:20:00.000Z" itemprop="datePublished">2023-10-18</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/raw/main/source/_posts/Math/MMP/Intro.md"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/edit/main/source/_posts/Math/MMP/Intro.md"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HiraethEcho/wiki/commits/main/source/_posts/Math/MMP/Intro.md"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/Math/MMP/Intro/">Introduction to MMP</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h1 id="MMP"><a href="#MMP" class="headerlink" title="MMP"></a>MMP</h1><p>In this class, we consider normal varities over $\mathbb{C}$.</p>
-<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Our goal is to classify algebraic varieties up to birational equivalence, then describe their moduli if exists.</p>
-<p>For $\dim 1$ case, i.e. for integral curves, clearly we can choose the normalization of the curve to be the primitive in the birational class, which is a smooth projective varity. Then we construct the moduli space $M_g$ of smooth curves of genus $g$.</p>
-<p>The motivation of MMP comes from $\dim 2$ case, that is normal (quasi-)projective surfaces.</p>
-<ol>
-<p>
-                
-            
-        
-        
-            </p></ol></div>   
-            <div class="article-more-link">
-                <a href="/wiki/Math/MMP/Intro/#more">Read More</a>
             </div>
         
         <footer class="article-footer">
