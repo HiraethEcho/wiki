@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
-    
-    <lastmod>2023-11-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/Computer/README_zh-CN/</loc>
     
     <lastmod>2023-11-13</lastmod>
@@ -21,6 +12,15 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/Computer/archinstall/</loc>
+    
+    <lastmod>2023-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/bn-template-backup-2023-11-13T10-02-16.378Z/</loc>
     
     <lastmod>2023-11-13</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/Reading/originoffamilyprivatepropertyandthestate/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/FoliationMMP-7XXD555J/</loc>
     
     <lastmod>2023-11-13</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/zotero/FoliationMMP-7XXD555J/</loc>
+    <loc>http://hiraethecho.github.io/wiki/Reading/originoffamilyprivatepropertyandthestate/</loc>
     
     <lastmod>2023-11-13</lastmod>
     
@@ -163,6 +163,15 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
+    
+    <lastmod>2023-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>http://hiraethecho.github.io/wiki</loc>
@@ -259,7 +268,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/zotero/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -273,7 +282,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/zotero/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

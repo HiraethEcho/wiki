@@ -3,17 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: Computer | Hiraeth&#39;s Wiki</title>
+    <title>Hiraeth&#39;s Wiki</title>
     
     
         <meta name="keywords" content="Hiraeth&#39;s Wiki">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="website">
+    <meta name="description" content="[{&quot;name&quot;:&quot;[QuickInsertV2]&quot;,&quot;text&quot;:&quot;\n    ${linkText}\n\t${subNoteItem.getNote().trim() }\n    [obidian](&#x2F;wiki&#x2F;zotero&#x2F;${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(&#x2F;[&#x2F;\\\\?%*:|\&quot; ]&#x2F;g, \&quot;-\">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hiraeth&#39;s Wiki">
-<meta property="og:url" content="http://hiraethecho.github.io/wiki/categories/Computer/index.html">
+<meta property="og:url" content="http://hiraethecho.github.io/wiki/Computer/bn-template-backup-2023-11-13T10-02-16.378Z/index.html">
 <meta property="og:site_name" content="Hiraeth&#39;s Wiki">
+<meta property="og:description" content="[{&quot;name&quot;:&quot;[QuickInsertV2]&quot;,&quot;text&quot;:&quot;\n    ${linkText}\n\t${subNoteItem.getNote().trim() }\n    [obidian](&#x2F;wiki&#x2F;zotero&#x2F;${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(&#x2F;[&#x2F;\\\\?%*:|\&quot; ]&#x2F;g, \&quot;-\">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-13T10:05:27.852Z">
+<meta property="article:modified_time" content="2023-11-13T10:05:27.852Z">
 <meta property="article:author" content="Hiraeth">
 <meta name="twitter:card" content="summary">
     
@@ -231,13 +235,13 @@
         
         
          <ul class="unstyled" id="tree" style="display: block;"> 
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder-open"></i>
                             &nbsp;
                             Computer
                         </a>
-                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Computer/README_zh-CN/">README of theme wikitten</a></li>  <li class="file"><a href="/wiki/Computer/archinstall/">双系统安装archlinux</a></li>  <li class="file"><a href="/wiki/Computer/test/">test</a></li>  <li class="file"><a href="/wiki/Computer/git/">git备忘</a></li>  <li class="file"><a href="/wiki/Computer/bn-template-backup-2023-11-13T10-02-16.378Z/"></a></li>  </ul> 
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/Computer/README_zh-CN/">README of theme wikitten</a></li>  <li class="file"><a href="/wiki/Computer/archinstall/">双系统安装archlinux</a></li>  <li class="file"><a href="/wiki/Computer/test/">test</a></li>  <li class="file"><a href="/wiki/Computer/git/">git备忘</a></li>  <li class="file active"><a href="/wiki/Computer/bn-template-backup-2023-11-13T10-02-16.378Z/"></a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -373,183 +377,51 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-folder"></i></span>
-        <h1 class="title">Computer</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/Computer/bn-template-backup-2023-11-13T10-02-16.378Z/">
-            <time datetime="2023-11-13T10:05:27.852Z" itemprop="datePublished">2023-11-13</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
-    </div>
-
-                    
-                </div>
+            <section id="main"><article id="post-Computer/bn-template-backup-2023-11-13T10-02-16.378Z" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            [{"name":"[QuickInsertV2]","text":"<p>\n    ${linkText}<br>\n\t${subNoteItem.getNote().trim() }\n    [obidian](/wiki/zotero/${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${noteItem.parentItem ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\" : \"\"}${noteItem.key})<br>\n    <a href="\"${link}\"">\n      zotero\n    </a>\n</p>"},{"name":"[QuickBackLinkV2]","text":"<p>\n    Referred in ${linkText} <a href="\"${link}\"">zotero</a> [obidian](/wiki/zotero/${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${noteItem.parentItem ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\" : \"\"}${noteItem.key})\n</p>"},{"name":"[QuickImportV2]","text":"<p>\n  ${await new Promise(async (r) => {\n    r(await Zotero.BetterNotes.api.convert.link2html(link,{noteItem, dryRun: _env.dryRun}));\n  })}\n</p>"},{"name":"[QuickNoteV5]","text":"${await new Promise(async (r) => {\n    let res = \"\";\n    if (annotationItem.annotationComment) {\n      res += await Zotero.BetterNotes.api.convert.md2html(\n        annotationItem.annotationComment\n      );\n    }\n    res += await Zotero.BetterNotes.api.convert.annotations2html([annotationItem], {noteItem, ignoreComment: true});\n    r(res);\n  })}\n"},{"name":"[ExportMDFileNameV2]","text":"${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${noteItem.parentItem ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\" : \"\"}${noteItem.key}.md"},{"name":"[ExportMDFileHeaderV2]","text":"${await new Promise(async (r) => {\n    let header = {};\n    header.tags = noteItem.getTags().map((_t) => _t.tag);\n\n    header.title = noteItem.getField(\"title\") + \"-\" + ( noteItem.parentItem\n      ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\") + \"-\"\n      : \"\") + noteItem.getField(\"key\");\n\n    header.article = noteItem.parentItem\n      ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\")\n      : \"\";\n    header.collections = (\n      await Zotero.Collections.getCollectionsContainingItems([\n        (noteItem.parentItem || noteItem).id,\n      ])\n    ).map((c) => c.name);\n    r(JSON.stringify(header));\n  })}\n\n"},{"name":"[ExportMDFileContent]","text":"${mdContent.replaceAll(\"\\\\[obsidian]\\\\(\",\"[obsidian](\")}\n\t"}]
             </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/wiki/Computer/git/">git备忘</a>
-        </h1>
-    
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/Computer/git/">
-            <time datetime="2023-11-10T10:04:00.000Z" itemprop="datePublished">2023-11-10</time>
+
+    
+<nav id="article-nav">
+    
+    
+        <a href="/wiki/zotero/FoliationMMP-7XXD555J/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">FoliationMMP-7XXD555J</div>
         </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/wiki/tags/git/" rel="tag">git</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
     
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
+</nav>
+
+
+
+
+
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/wiki/Computer/test/">test</a>
-        </h1>
     
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/Computer/test/">
-            <time datetime="2023-10-12T16:18:00.000Z" itemprop="datePublished">2023-10-13</time>
-        </a>
-    </div>
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
-    </div>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/wiki/tags/hexo/" rel="tag">hexo</a>, <a class="tag-link-link" href="/wiki/tags/test/" rel="tag">test</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/wiki/Computer/archinstall/">双系统安装archlinux</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/Computer/archinstall/">
-            <time datetime="2023-10-09T03:39:00.000Z" itemprop="datePublished">2023-10-09</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/wiki/tags/arch/" rel="tag">arch</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/wiki/Computer/README_zh-CN/">README of theme wikitten</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/Computer/README_zh-CN/">
-            <time datetime="2023-10-07T03:39:00.000Z" itemprop="datePublished">2023-10-07</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/wiki/categories/Computer/">Computer</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/wiki/tags/README/" rel="tag">README</a>, <a class="tag-link-link" href="/wiki/tags/hexo/" rel="tag">hexo</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-</div>
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
 </section>
         </div>
         <footer id="footer">
