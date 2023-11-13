@@ -10,6 +10,10 @@ published: true
 ## Install
 
 ## Sync
+zotero 7 to rename:
+```
+{{ title case="snake" }}{{ authors case="snake" prefix="_" max="1"}}{{ year prefix="_" }}
+```
 
 ## Plugins
 For zotero 6:
