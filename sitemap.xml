@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/README_zh-CN/</loc>
+    
+    <lastmod>2023-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/archinstall/</loc>
+    
+    <lastmod>2023-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/git/</loc>
+    
+    <lastmod>2023-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://hiraethecho.github.io/wiki/Computer/test/</loc>
     
     <lastmod>2023-11-13</lastmod>
@@ -128,15 +155,6 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
-    
-    <lastmod>2023-11-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
     
     <lastmod>2023-11-13</lastmod>
@@ -146,34 +164,16 @@
   </url>
   
   <url>
+    <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
+    
+    <lastmod>2023-11-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
-    
-    <lastmod>2023-11-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/README_zh-CN/</loc>
-    
-    <lastmod>2023-11-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/archinstall/</loc>
-    
-    <lastmod>2023-11-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/git/</loc>
     
     <lastmod>2023-11-13</lastmod>
     
@@ -298,7 +298,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/moduli/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -312,14 +312,14 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/zotero/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Math/moduli/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/zotero/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
