@@ -1,13 +1,21 @@
 ---
 title: zotero
 toc: true
-date: 2023-11-11 15:09:10
-tags:
+date: 2023-11-13 18:33
+tags: [wiki, obsidian, zotero]
 categories:
-published: false
+published: true
 ---
+# Zotero
+## Install
 
+## Sync
 
+## Plugins
+For zotero 6:
+
+For zotero 7:
+- zotmoov
 ### better note 
 
 #### templates
