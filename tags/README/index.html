@@ -300,7 +300,7 @@
                             &nbsp;
                             zotero
                         </a>
-                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/">MMPforFdlt-EHKWJVZ2</a></li>  <li class="file"><a href="/wiki/zotero/FoliationMMP-Main-7XXD555J/">FoliationMMP-7XXD555J</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/zotero/FoliationMMP-Main-7XXD555J/">FoliationMMP-7XXD555J</a></li>  <li class="file"><a href="/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/">MMPforFdlt-EHKWJVZ2</a></li>  </ul> 
                     </li> 
                      </ul> 
     </div>
@@ -476,6 +476,14 @@
 </footer>
 
         
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
 
     
         
@@ -537,17 +545,6 @@
 
 
 <!-- Custom Scripts -->
-
-<script src="/wiki/js/main.js"></script>
-
-{% if (theme.mermaid.enable)  %}
-  <script src="https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js"></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
-{% endif %}
 
     </div>
 </body>
