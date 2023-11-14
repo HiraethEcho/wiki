@@ -91,6 +91,11 @@ plugins:
     busuanzi_count: false # options: true, false - to enable busuanzi site pv statistics
 
 # Miscellaneous
+
+# mermaid chart
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+
 miscellaneous:
     open_graph: # see http://ogp.me
         fb_app_id:

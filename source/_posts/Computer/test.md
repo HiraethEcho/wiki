@@ -33,7 +33,7 @@ this is an example
 
 [test README_zh-CN](/wiki/Computer/README_zh-CN)
 
-[test computer/archinstall](/wiki/computer/archinstall)
+[test computer/archinstall](/wiki/Computer/archinstall)
 
 this work for obsidian and hexo, with setting
 

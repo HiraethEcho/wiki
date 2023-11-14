@@ -120,3 +120,4 @@ deploy:
   type: git
   repo: git@github.com:HiraethEcho/wiki.git
   branch : gh-pages
+

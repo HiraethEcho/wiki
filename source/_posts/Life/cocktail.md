@@ -4,9 +4,10 @@ toc: true
 tags: [alcohol]
 published: true
 date: 2023-11-14 17:07 
+mermaid : true
 ---
 # Cocktail
-> Drink properly
+> **Drink properly**
 
 关于鸡尾酒的小知识
 ## 理论部分
