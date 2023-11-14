@@ -95,6 +95,9 @@ plugins:
 # mermaid chart
 mermaid: ## mermaid url https://github.com/knsv/mermaid
   enable: true  # default true
+  version: "7.1.2"
+  options:
+    startOnload: true
 
 miscellaneous:
     open_graph: # see http://ogp.me
