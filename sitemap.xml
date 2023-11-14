@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
-    
-    <lastmod>2023-11-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/Computer/README_zh-CN/</loc>
     
     <lastmod>2023-11-14</lastmod>
@@ -83,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/zotero/FoliationMMP-Main-7XXD555J/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/</loc>
     
     <lastmod>2023-11-14</lastmod>
     
@@ -92,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/FoliationMMP-Main-7XXD555J/</loc>
     
     <lastmod>2023-11-14</lastmod>
     
@@ -183,6 +174,15 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
+    
+    <lastmod>2023-11-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
     
     <lastmod>2023-11-14</lastmod>
     
@@ -307,13 +307,6 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Math/MMP/</loc>
-    <lastmod>2023-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -321,7 +314,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Math/moduli/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/MMP/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -329,6 +322,13 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/categories/Life/</loc>
+    <lastmod>2023-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/moduli/</loc>
     <lastmod>2023-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

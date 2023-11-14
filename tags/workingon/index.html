@@ -300,7 +300,7 @@
                             &nbsp;
                             zotero
                         </a>
-                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/zotero/FoliationMMP-Main-7XXD555J/">FoliationMMP-7XXD555J</a></li>  <li class="file"><a href="/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/">MMPforFdlt-EHKWJVZ2</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/">MMPforFdlt-EHKWJVZ2</a></li>  <li class="file"><a href="/wiki/zotero/FoliationMMP-Main-7XXD555J/">FoliationMMP-7XXD555J</a></li>  </ul> 
                     </li> 
                      </ul> 
     </div>
@@ -404,7 +404,7 @@
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/wiki/zotero/FoliationMMP-Main-7XXD555J/">
-            <time datetime="2023-11-14T10:49:32.856Z" itemprop="datePublished">2023-11-14</time>
+            <time datetime="2023-11-14T11:40:47.467Z" itemprop="datePublished">2023-11-14</time>
         </a>
     </div>
 
@@ -504,6 +504,14 @@
 
 <script src="/wiki/js/main.js"></script>
 
+{% if (theme.mermaid.enable)  %}
+  <script src="https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+{% endif %}
 
     </div>
 </body>
