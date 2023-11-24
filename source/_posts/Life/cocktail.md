@@ -62,11 +62,12 @@ G -->|NO| I[Highball]
 </details>
 
 <details><summary>Highball</summary>
-- Gin & TOnic
+
+- Gin & Tonic
 - Gin Fizz
-- 自由古巴
+- Cuba libre 自由古巴
 - Mojito
-- 血腥玛丽
+- Bloody Mary 血腥玛丽
 - Screw Driver
 - Horse's neck
 - El Diablo
@@ -74,6 +75,7 @@ G -->|NO| I[Highball]
 </details>
 
 <details><summary>Martini</summary>
+
 - Martini
 - Negroni
 - Manhattan
@@ -81,14 +83,48 @@ G -->|NO| I[Highball]
 </details>
 
 <details><summary>Old Fashion</summary>
+    
 - Old Fashioned
 - Old pal
 - 老广场
 - 萨泽拉克
 </details>
 
-
 ### 好喝的经典
 
 ## 酒谱
+
+### 好学好做的
+
+**酸甜酒：**
+
+|                    | 基酒             | 酸       | 甜        | 利口酒        | 其他 |
+| ------------------ | ---------------- | -------- | --------- | ------------- | ---- |
+| Kamikaze           | Vodka 30         | lime 30  |           | Triple Sec 30 |      |
+| Whitelady          | Gin 60           | lemon 15 |           | Triple Sec 15 |      |
+| Gimlet             | Gin 45           | lime 30  | simple 15 |               |      |
+| Daiquiri           | Rum 45           | lime 15  | simple 10 |               |      |
+| xyz                | Rum 30           | lime 15  |           | Triple Sec 15 |      |
+| Side Car           | Brandy 60        | lemon 15 |           | Triple Sec 30 |      |
+| Between the sheets | Brandy 30 Rum 30 | lime 15  |           | Triple Sec 30 |      |
+| Whisky sour        | whisky 60        | lime 20  | rich 15   |               | egg  |
+
+**Highball类长饮：**
+
+|              | 基酒   | 长饮成份    | 其他         |
+| ------------ | ------ | ----------- | ------------ |
+| Screw Driver | vodka  | 橙汁        |              |
+| Moscow Mule  | vodka  | Ginger beer | lime         |
+| Gin & Tonic  | Gin    | Tonic       | lime         |
+| Gin Fizz     | Gin    | Soda        | sugar, lemon |
+| Pina colada  | Rum    | pineapple   | 椰汁         |
+| Mojito       | Rum    | soda        | mint, lime   |
+| Cuba Libre   | Rum    | coca        | lime         |
+| Horse's neck | Brandy | Ginger beer | orange peel  |
+| Highball     | whisky | Soda        | Ginger beer  |
+| Whisky coca  | whisky | coca        |              |
+
+
+
+
 
