@@ -5,7 +5,7 @@ title: FoliationMMP-7XXD555J
 article: ""
 collections:
     - AlgebraicGeometry
-version: 7068
+version: 10181
 libraryID: 1
 itemKey: 7XXD555J
 
@@ -21,5 +21,11 @@ MMPforFdlt
 [obsidian](/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2) <a href="./MMPforFdlt-Article-EHKWJVZ2.md" class="internal-link" zhref="zotero://note/u/EHKWJVZ2/" ztype="znotelink" class="internal-link">zotero</a>
 
 ## MMP of foliation and gpair
+
+test for note
+
+> \[!note] test
+
+test note tag
 
 	

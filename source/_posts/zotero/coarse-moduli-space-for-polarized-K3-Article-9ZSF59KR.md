@@ -4,7 +4,7 @@ title: 'coarse moduli space for polarized K3-9ZSF59KR'
 article: Onthecompactificationofmodulispacesforalgebraic𝐾3surfaces
 collections:
     - AlgebraicGeometry
-version: 7791
+version: 8206
 libraryID: 1
 itemKey: 9ZSF59KR
 

@@ -1,15 +1,15 @@
 ---
 tags: []
-title: PeriodpointofHyperellipticUnigonal-SS4PXY2K
+title: 'Period point in Hyperelliptic Unigonal divisor-SS4PXY2K'
 article: BirationalgeometryofthemodulispaceofquarticK3surfaces
 collections:
     - AlgebraicGeometry
-version: 7675
+version: 8595
 libraryID: 1
 itemKey: SS4PXY2K
 
 ---
-PeriodpointofHyperellipticUnigonal
+Period point in Hyperelliptic Unigonal divisor
 
 Proposition 2.2.1. Let (X, L) be a quartic K3 surface. Then: (1) (X, L) is hyperelliptic if and only if Π(X, L) ∈ Hh(19); and (2) (X, L) is unigonal if and only if Π(X, L) ∈ Hu(19).
 

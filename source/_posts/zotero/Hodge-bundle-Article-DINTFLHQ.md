@@ -4,7 +4,7 @@ title: 'Hodge bundle-DINTFLHQ'
 article: BirationalgeometryofthemodulispaceofquarticK3surfaces
 collections:
     - AlgebraicGeometry
-version: 7687
+version: 8206
 libraryID: 1
 itemKey: DINTFLHQ
 

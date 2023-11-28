@@ -4,7 +4,7 @@ title: 'K3 lattice-ZHJBYNYC'
 article: Onthecompactificationofmodulispacesforalgebraic𝐾3surfaces
 collections:
     - AlgebraicGeometry
-version: 7786
+version: 8206
 libraryID: 1
 itemKey: ZHJBYNYC
 
