@@ -30,8 +30,10 @@ mermaid : true
 
 一个简单的类型判断：
 
+<div align="center">
+
 ```mermaid
-flowchart LR
+graph TD;
 A[有无蛋奶] --> |YES| Flip
 A --> |NO| B
 B[葡萄+酒?] -->|YES| 马天尼
@@ -43,6 +45,7 @@ D -->|糖浆| F[大吉利]
 G[苦甜结构?] -->|YES| H[古典]
 G -->|NO| I[Highball]
 ```
+</div>
 ## 酒单
 
 ### 典中典
@@ -123,7 +126,6 @@ G -->|NO| I[Highball]
 | Horse's neck | Brandy | Ginger beer | orange peel  |
 | Highball     | whisky | Soda        | Ginger beer  |
 | Whisky coca  | whisky | coca        |              |
-
 
 
 

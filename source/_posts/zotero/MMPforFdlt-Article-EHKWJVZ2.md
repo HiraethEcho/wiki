@@ -4,7 +4,7 @@ title: MMPforFdlt-EHKWJVZ2
 article: Minimalmodelprogramforalgebraicallyintegrablefoliationsandgeneralizedpairs
 collections:
     - AlgebraicGeometry
-version: 9566
+version: 10282
 libraryID: 1
 itemKey: EHKWJVZ2
 
