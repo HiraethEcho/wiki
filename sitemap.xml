@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/git/</loc>
+    <loc>http://hiraethecho.github.io/wiki/Computer/test/</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/test/</loc>
+    <loc>http://hiraethecho.github.io/wiki/Computer/git/</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -92,15 +92,6 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/zotero/Hodge-bundle-Article-DINTFLHQ/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/zotero/K3-lattice-Article-ZHJBYNYC/</loc>
     
     <lastmod>2024-01-26</lastmod>
@@ -110,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/zotero/K3Moduli-Main-DLFQJ2XA/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/Hodge-bundle-Article-DINTFLHQ/</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -120,6 +111,15 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/zotero/K3Moduli-Main-DLFQJ2XA/</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/index.html</loc>
+    <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -284,13 +284,6 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/tags/git/</loc>
-    <lastmod>2024-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/tags/obsidian/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -306,6 +299,13 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/test/</loc>
+    <lastmod>2024-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/git/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -342,14 +342,14 @@
 
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Reading/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Computer/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Computer/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Reading/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -370,7 +370,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Life/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -384,7 +384,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Math/rational-geometry/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Life/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
