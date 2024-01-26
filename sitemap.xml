@@ -2,78 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/README_zh-CN/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/archinstall/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/test/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/git/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/wikitten/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Computer/zotero/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Life/cocktail/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/Reading/originoffamilyprivatepropertyandthestate/</loc>
     
     <lastmod>2024-01-26</lastmod>
@@ -92,15 +20,6 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/zotero/K3-lattice-Article-ZHJBYNYC/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/zotero/Hodge-bundle-Article-DINTFLHQ/</loc>
     
     <lastmod>2024-01-26</lastmod>
@@ -110,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/</loc>
+    <loc>http://hiraethecho.github.io/wiki/zotero/K3-lattice-Article-ZHJBYNYC/</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -120,6 +39,15 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/zotero/K3Moduli-Main-DLFQJ2XA/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/zotero/MMPforFdlt-Article-EHKWJVZ2/</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -155,33 +83,6 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/Math/MMP/2/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Math/MMP/3/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/Math/MMP/Intro/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/Math/moduli/index/</loc>
     
     <lastmod>2024-01-26</lastmod>
@@ -209,15 +110,6 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/Math/rational_geometry/817_10-11/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hiraethecho.github.io/wiki/Math/rational_geometry/birational_seminar/</loc>
     
     <lastmod>2024-01-26</lastmod>
@@ -227,7 +119,16 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/Life/iba/</loc>
+    <loc>http://hiraethecho.github.io/wiki/Math/rational_geometry/817_10-11/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -245,7 +146,106 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/about/index.html</loc>
+    <loc>http://hiraethecho.github.io/wiki/tags/index.html</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/README_zh-CN/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/git/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/archinstall/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/test/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/wikitten/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Computer/zotero/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Life/cocktail/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/MMP/2/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/MMP/Intro/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Math/MMP/3/</loc>
+    
+    <lastmod>2024-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hiraethecho.github.io/wiki/Life/iba/</loc>
     
     <lastmod>2024-01-26</lastmod>
     
@@ -277,6 +277,13 @@
   </url>
   
   <url>
+    <loc>http://hiraethecho.github.io/wiki/tags/git/</loc>
+    <lastmod>2024-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://hiraethecho.github.io/wiki/tags/arch/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -299,13 +306,6 @@
   
   <url>
     <loc>http://hiraethecho.github.io/wiki/tags/test/</loc>
-    <lastmod>2024-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hiraethecho.github.io/wiki/tags/git/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -384,14 +384,14 @@
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Life/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Math/moduli/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hiraethecho.github.io/wiki/categories/Math/moduli/</loc>
+    <loc>http://hiraethecho.github.io/wiki/categories/Life/</loc>
     <lastmod>2024-01-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
