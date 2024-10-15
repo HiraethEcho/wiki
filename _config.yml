@@ -85,7 +85,7 @@ auto_dir_categorize:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -update
+  order_by: -date
   
 # Category & Tag
 default_category: uncategorized
