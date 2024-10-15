@@ -31,9 +31,9 @@ this is an example
 
 ## links
 
-[test README_zh-CN](/wiki/Computer/README_zh-CN)
+[test README_zh-CN](wiki/README_zh-CN.md)
 
-[test computer/archinstall](/wiki/Computer/archinstall)
+[test Code/archinstall](/wiki/Code/archinstall)
 
 this work for obsidian and hexo, with setting
 
@@ -44,6 +44,3 @@ permalink: :title/
 in hexo site \_config
 
 ## section
-
-[test blog](../hexo/简记/party.md)
-this does not work for hexo, but work for obsidian
