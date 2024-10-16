@@ -13,10 +13,11 @@ theme:
     # - content.action.view
     - content.code.copy
     - navigation.footer
-    - navigation.sections
+    # - navigation.sections
     - navigation.top
     - navigation.expand
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.path
     - navigation.indexes
     - toc.follow
@@ -76,7 +77,7 @@ plugins:
   # - blog
   - rss:
       # match_path: .* 
-      match_path: Code/.* 
+      match_path: .* 
       date_from_meta:
         as_creation: date
       categories:
