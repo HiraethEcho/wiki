@@ -1,7 +1,5 @@
 ---
 title: About
-hide:
-  - navigation
 ---
 # About This Wiki
 
