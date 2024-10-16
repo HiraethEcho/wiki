@@ -1,6 +1,0 @@
-[submodule "theme/Wikitten"]
-	path = theme/Wikitten
-	url = git@github.com:zthxxx/hexo-theme-Wikitten.git
-[submodule "themes/Wikitten"]
-	path = themes/Wikitten
-	url = git@github.com:zthxxx/hexo-theme-Wikitten.git
