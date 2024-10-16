@@ -9,13 +9,16 @@ theme:
   name: 'material'
 
   features:
-    - content.action.edit
-    - content.action.view
+    # - content.action.edit
+    # - content.action.view
     - content.code.copy
     - navigation.footer
     - navigation.sections
     - navigation.top
+    - navigation.expand
     - navigation.tabs
+    - navigation.path
+    - navigation.indexes
     - toc.follow
   palette:
   # Light mode
@@ -66,7 +69,9 @@ markdown_extensions:
 plugins:
   - search
   - callouts
-  - tags
+  - tags:
+      tags_file: tags.md
+      tags_hierarchy: true
   - roamlinks
   # - blog
   - rss:

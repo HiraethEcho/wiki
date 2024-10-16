@@ -1,3 +1,8 @@
+---
+title: About
+hide:
+  - navigation
+---
 # About This Wiki
 
 Publish your public notes with MkDocs
