@@ -13,11 +13,11 @@ theme:
     # - content.action.view
     - content.code.copy
     - navigation.footer
-    # - navigation.sections
     - navigation.top
-    - navigation.expand
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.sections
+    # - navigation.expand
     - navigation.path
     - navigation.indexes
     - toc.follow
