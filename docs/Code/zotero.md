@@ -11,10 +11,6 @@ published: true
 ## Install
 
 ## Plugins
-**zotero 6:**
-- zotfile
-- zutio
-
 **zotero 7:**
 - zotmoov
 - zotero better notes
@@ -23,11 +19,6 @@ Both:
 
 ## Sync
 
-**zotero 6:**
-
-Using zotfile to rename and move
-
-**zotero 7:**
 
 zotero 7 to rename:
 ```
@@ -35,15 +26,13 @@ zotero 7 to rename:
 ```
 using zotmoov to move files
 
-## With obsidian and wikitten
-
-### zotero better notes
+## zotero better notes
 
 **templates:**
 ```yaml
 -
     name: '[QuickInsertV2]'
-    text: "<p>\n\t${subNoteItem.getNote().trim() }\n    [obsidian](/wiki/zotero/${(subNoteItem.getNoteTitle ? subNoteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${subNoteItem.parentItem ? \"Article-\" : \"Main-\"}${subNoteItem.key})\n    <a href=\"${link}\">\n      zotero\n    </a>\n</p>"
+    text: "<p>\n\t${subNoteItem.getNote().trim() }\n    [md](/wiki/zotero/${(subNoteItem.getNoteTitle ? subNoteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${subNoteItem.parentItem ? \"Article-\" : \"Main-\"}${subNoteItem.key})\n    <a href=\"${link}\">\n      zotero\n    </a>\n</p>"
 -
     name: '[QuickBackLinkV2]'
     text: "<p>\n    Referred in ${linkText}:[obsidian](/wiki/zotero/${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\" : \"\")}${noteItem.parentItem ? \"Article-\" : \"Main-\"}${noteItem.key}) <a href=\"${link}\">zotero</a>\n\t  </p>"
@@ -61,6 +50,6 @@ using zotmoov to move files
     text: "${await new Promise(async (r) => {\n    let header = {};\n    header.tags = noteItem.getTags().map((_t) => _t.tag);\n\n    header.title = noteItem.getField(\"title\") + \"-\" + noteItem.getField(\"key\");\n\n    header.article = noteItem.parentItem\n      ? noteItem.parentItem.getField(\"title\").replace(/ /g, \"\")\n      : \"\";\n    header.collections = (\n      await Zotero.Collections.getCollectionsContainingItems([\n        (noteItem.parentItem || noteItem).id,\n      ])\n    ).map((c) => c.name);\n    r(JSON.stringify(header));\n  })}\n\n"
 -
     name: '[ExportMDFileContent]'
-    text: "${mdContent.replaceAll(\"\\\\[obsidian]\\\\(\",\"[obsidian](\")}\n\t"
+    text: "${mdContent.replaceAll(\"\\\\[md]\\\\(\",\"[md](\")}\n\t"
 ```
 

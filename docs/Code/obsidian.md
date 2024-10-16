@@ -10,7 +10,3 @@ published: false
 ## Install
 
 ## plugins
-
-## For zotero
-
-## For wikitten blog

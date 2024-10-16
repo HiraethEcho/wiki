@@ -1,26 +1,39 @@
-site_name: wiki
+site_name: Hiraeth's Wiki
+site_url: https://hiraethecho.github.io/wiki/
+site_author: hiraeth
+site_description: My personal wiki
+repo_name: hiraethecho/wiki
+repo_url: https://github.com/hiraethecho/wiki
 
 theme:
-    name: 'material'
-    palette:
+  name: 'material'
 
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: pink
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: pink
-      accent: blue
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - navigation.footer
+    - navigation.sections
+    - navigation.top
+    - navigation.tabs
+    - toc.follow
+  palette:
+  # Light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: pink
+    accent: indigo
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+  # Dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: pink
+    accent: blue
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
 
 # Extensions
 markdown_extensions:
@@ -53,10 +66,12 @@ markdown_extensions:
 plugins:
   - search
   - callouts
+  - tags
   - roamlinks
-  - blog
+  # - blog
   - rss:
-      match_path: blog/posts/.* 
+      # match_path: .* 
+      match_path: Code/.* 
       date_from_meta:
         as_creation: date
       categories:
