@@ -14,10 +14,10 @@ theme:
     - content.code.copy
     - navigation.footer
     - navigation.top
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-    # - navigation.expand
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sections
+    - navigation.expand
     - navigation.path
     - navigation.indexes
     - toc.follow

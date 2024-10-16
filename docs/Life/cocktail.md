@@ -48,6 +48,19 @@ G -->|NO| I[Highball]
 
 ### 典中典
 首先是按照分类的一些非常经典的酒：
+> [!note] 酸甜酒
+> 
+> - Whitelady
+> - Gimlet
+> - Daiquiri
+> - xyz
+> - 神风特工队
+> - 大都会
+> - Side Car
+> - Between sheets
+> - Margaret
+> - Whiskey Sour
+
 <details><summary>酸甜酒</summary>
 
 - Whitelady
