@@ -12,14 +12,14 @@ theme:
     # - content.action.edit
     # - content.action.view
     - content.code.copy
-    # - navigation.footer
-    # - navigation.top
+    - navigation.footer
+    - navigation.top
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     # - navigation.expand
-    - navigation.path
+    # - navigation.path
     - navigation.indexes
-    # - toc.follow
+    - toc.follow
     - search.highlight
     - search.share
     - search.suggest
@@ -72,9 +72,9 @@ markdown_extensions:
 plugins:
   - search
   - callouts
-  # - tags:
-  #     tags_file: tags.md
-  #     tags_hierarchy: true
+  - tags:
+      tags_file: About/tags.md
+      tags_hierarchy: true
   - roamlinks
   # - blog
   - rss:
