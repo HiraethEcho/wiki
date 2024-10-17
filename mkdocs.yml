@@ -17,10 +17,10 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
-    - navigation.expand
-    # - navigation.path
+    # - navigation.expand
+    - navigation.path
     - navigation.indexes
-    - toc.follow
+    # - toc.follow
     - search.highlight
     - search.share
     - search.suggest
