@@ -13,10 +13,9 @@ theme:
     # - content.action.view
     - content.code.copy
     - navigation.footer
-    - navigation.top
+    # - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
     # - navigation.expand
     - navigation.path
     - navigation.indexes
@@ -73,9 +72,9 @@ markdown_extensions:
 plugins:
   - search
   - callouts
-  - tags:
-      tags_file: tags.md
-      tags_hierarchy: true
+  # - tags:
+  #     tags_file: tags.md
+  #     tags_hierarchy: true
   - roamlinks
   # - blog
   - rss:
