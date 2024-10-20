@@ -5,7 +5,7 @@ title: About
 I'm using zotero, obsidian and mkdocs to create a wiki.
 This is the mkdocs part of it, and is hosted by github pages.
 
-- [About](/wiki/About/index): More details about this wiki.
+<!-- - [About](/wiki/About/index): More details about this wiki. -->
 - [Code](/wiki/Code/index): My notes about code, computer and sofeares.
 - [Life](/wiki/Life/index): My note about daily life. Some interesting things I want to remember.
 - [Math](/wiki/Math/index): My notes about math. Mostly about Algebraic Geometry.
