@@ -46,25 +46,45 @@ theme:
 markdown_extensions:
   - footnotes
   # - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  # - pymdownx.superfences
+  - pymdownx.details
+  - nl2br
+  - admonition
+  # - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
   - toc:
       permalink: true
 
 plugins:
   - search
-  # - callouts
-  # - blog
+  - blog
+  - callouts
   - tags:
       tags_file: tags.md
       tags_hierarchy: true
   # - roamlinks
-  # - rss:
-  #     match_path: .* 
-  #     date_from_meta:
-  #       as_creation: date
-  #     categories:
-  #       - categories
-  #       - tags
+  - rss:
+      match_path: .* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
 
 not_in_nav: |
   /tags.md
