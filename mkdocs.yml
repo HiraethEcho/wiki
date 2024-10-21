@@ -72,19 +72,19 @@ markdown_extensions:
 
 plugins:
   - search
-  # - callouts
+  - callouts
   - tags:
       tags_file: tags.md
       tags_hierarchy: true
   # - roamlinks
   # - blog
-  # - rss:
-  #     match_path: .* 
-  #     date_from_meta:
-  #       as_creation: date
-  #     categories:
-  #       - categories
-  #       - tags
+  - rss:
+      match_path: .* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
 
 not_in_nav: |
   /tags.md
