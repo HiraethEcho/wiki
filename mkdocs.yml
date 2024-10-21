@@ -24,23 +24,24 @@ theme:
     - search.share
     - search.suggest
   palette:
-  # Light mode
-  - media: "(prefers-color-scheme: light)"
-    scheme: default
-    primary: indigo
-    accent: indigo
-    toggle:
-      icon: material/toggle-switch-off-outline
-      name: Switch to dark mode
-  # Dark mode
-  - media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    primary: indigo
-    accent: blue
-    toggle:
-      icon: material/toggle-switch
-      name: Switch to light mode
-
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
 # Extensions
 markdown_extensions:
   - footnotes
@@ -72,9 +73,9 @@ markdown_extensions:
 plugins:
   - search
   # - callouts
-  # - tags:
-  #     tags_file: tags.md
-  #     tags_hierarchy: true
+  - tags:
+      tags_file: tags.md
+      tags_hierarchy: true
   # - roamlinks
   # - blog
   # - rss:
@@ -85,8 +86,8 @@ plugins:
   #       - categories
   #       - tags
 
-# not_in_nav: |
-#   /tutorials/**/*.md
+not_in_nav: |
+  /tags.md
 
 extra_javascript:
   - javascripts/mathjax.js
