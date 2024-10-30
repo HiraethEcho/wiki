@@ -3,7 +3,7 @@ tags: []
 parent: 'Existence of minimal models for varieties of log general type'
 collections:
     - AlgebraicGeometry
-$version: 32446
+$version: 39096
 $libraryID: 1
 $itemKey: KYT5TILG
 
