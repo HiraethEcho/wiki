@@ -29,6 +29,6 @@ link test:
 
 [/wiki/index](/wiki/index)
 
-[/wiki/Code/archinstall](/wiki/Code/archinstall) this seems works
+[wiki/code/archinstall](wiki/code/archinstall.md) this seems works
 
 ![/wiki/img/a.png](/wiki/img/a.png) use this one
