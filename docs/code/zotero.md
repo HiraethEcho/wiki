@@ -8,24 +8,23 @@ published: true
 ---
 # Zotero
 
-## Install
+## Install and basic setting
 
 ## Plugins
 **zotero 7:**
 - zotmoov
 - zotero better notes
  
-Both:
 
 ## Sync
-
+using zotmoov to move files
 
 zotero 7 to rename:
 ```
 {{ title case="snake" }}{{ authors case="snake" prefix="_" max="1"}}{{ year prefix="_" }}
 ```
-using zotmoov to move files
 
+use any cloud drive to sync. I'm using OneDrive.
 ## zotero better notes
 
 **templates:**
