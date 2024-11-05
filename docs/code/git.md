@@ -56,3 +56,9 @@ git commit -m "delete submodule project-sub-1"
 git remote add <remote name> <url>
 git push <remote name> <local branch>:<remote branch>
 ```
+## 清理
+清理
+```
+git clean -xdf
+```
+其中`-x` remove ignored files，`d` remove untracked directories, `-f` remove untracked nested repositories

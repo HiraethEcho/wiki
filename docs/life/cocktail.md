@@ -7,6 +7,7 @@ date: 2023-11-14 17:07
 mermaid : true
 ---
 # Cocktail
+> [!important]
 > **Drink properly**
 
 关于鸡尾酒的小知识
@@ -61,48 +62,28 @@ G -->|NO| I[Highball]
 > - Margaret
 > - Whiskey Sour
 
-<details><summary>酸甜酒</summary>
+> [!note] Highball
+> - Gin & Tonic
+> - Gin Fizz
+> - Cuba libre 自由古巴
+> - Mojito
+> - Bloody Mary 血腥玛丽
+> - Screw Driver
+> - Horse's neck
+> - El Diablo
+> - Whiskey Highball
 
-- Whitelady
-- Gimlet
-- Daiquiri
-- xyz
-- 神风特工队
-- 大都会
-- Side Car
-- Between sheets
-- Margaret
-- Whiskey Sour
-</details>
+> [!note]
+> - Martini
+> - Negroni
+> - Manhattan
+> - Vesper
 
-<details><summary>Highball</summary>
-
-- Gin & Tonic
-- Gin Fizz
-- Cuba libre 自由古巴
-- Mojito
-- Bloody Mary 血腥玛丽
-- Screw Driver
-- Horse's neck
-- El Diablo
-- Whiskey Highball
-</details>
-
-<details><summary>Martini</summary>
-
-- Martini
-- Negroni
-- Manhattan
-- Vesper
-</details>
-
-<details><summary>Old Fashion</summary>
-    
-- Old Fashioned
-- Old pal
-- 老广场
-- 萨泽拉克
-</details>
+> [!note] Old Fashion
+> - Old Fashioned
+> - Old pal
+> - 老广场
+> - 萨泽拉克
 
 ### 好喝的经典
 
@@ -137,7 +118,3 @@ G -->|NO| I[Highball]
 | Horse's neck | Brandy | Ginger beer | orange peel  |
 | Highball     | whisky | Soda        | Ginger beer  |
 | Whisky coca  | whisky | coca        |              |
-
-
-
-
