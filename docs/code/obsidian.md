@@ -11,3 +11,6 @@ published: false
 ## Install
 
 ## plugins
+- dataview
+- kanban
+- Hover Editor

@@ -57,11 +57,13 @@ Or you can copy these:
 name: "[QuickInsertV2]"
 zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
 pluginVersion: "2.0.18"
-savedAt: "2024-11-07T05:54:05.660Z"
+savedAt: "2024-11-07T07:59:45.835Z"
 content: |-
   // @use-markdown
-  [${linkText}](/wiki/zotero/${subNoteItem.getNoteTitle ? subNoteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-":""}${subNoteItem.key}) <a href="${link}">zn</a>
+  <a href="${link}">${linkText}</a> [md](/wiki/zotero/${subNoteItem.getNoteTitle ? subNoteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-":""}${subNoteItem.key})
+
 ```
+
 ```quickimport
 # This template is specifically for importing/sharing, using better 
 # notes 'import from clipboard': copy the content and
@@ -72,7 +74,6 @@ zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
 pluginVersion: "2.0.18"
 savedAt: "2024-11-07T05:54:37.696Z"
 content: |-
-  ${link}
   <blockquote>
   ${{
     return await Zotero.BetterNotes.api.convert.link2html(link, {noteItem, dryRun: _env.dryRun});
@@ -80,6 +81,7 @@ content: |-
   </blockquote>
 
 ```
+
 ```quicknote
 # This template is specifically for importing/sharing, using better 
 # notes 'import from clipboard': copy the content and
@@ -123,6 +125,7 @@ savedAt: "2024-11-07T05:55:24.890Z"
 content: |-
   ${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-" : "")}${noteItem.key}.md
 ```
+
 ```exportmdfileheader
 # This template is specifically for importing/sharing, using better 
 # notes 'import from clipboard': copy the content and
@@ -147,6 +150,7 @@ content: |-
     return JSON.stringify(header);
   }}$
 ```
+
 ```exportmdfilecontent
 # This template is specifically for importing/sharing, using better 
 # notes 'import from clipboard': copy the content and

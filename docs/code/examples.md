@@ -21,10 +21,14 @@ More formatting options for your webpage [here](https://squidfunk.github.io/mkdo
 > [!note]
 > callout tests
 
-why?
-
 > [!tip]
 > tips
+
+test html callout:
+<div class="admonition note">
+    <p class="admonition-title">Note</p>
+<p>test</p>
+</div>
 
 link test:
 
