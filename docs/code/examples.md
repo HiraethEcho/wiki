@@ -38,11 +38,11 @@ More formatting options for your webpage [here](https://squidfunk.github.io/mkdo
 link test:
 ```md
 [/wiki](/wiki)  
-[wiki/code/archinstall](/wiki/code/archinstall)  
+[/wiki/code/archinstall](/wiki/code/archinstall)  
 ![/wiki/img/a.png](/wiki/img/a.png)
 ```
 [/wiki](/wiki)  
-[wiki/code/archinstall](/wiki/code/archinstall)  
+[/wiki/code/archinstall](/wiki/code/archinstall)  
 ![/wiki/img/a.png](/wiki/img/a.png)
 ## Mermaid diagrams
 Here's the example from [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-flowcharts): 
