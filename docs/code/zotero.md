@@ -17,11 +17,11 @@ published: true
  
 
 ## Sync
-using zotmoov to move files
+using ~~zotmoov~~ attanger to move files
 
 zotero 7 to rename:
 ```
-{{ title case="snake" }}{{ authors case="snake" prefix="_" max="1"}}{{ year prefix="_" }}
+{{ title case="snake" }}{{ creators case="snake" prefix="_" max="1"}}{{ year prefix="_" }}
 ```
 
 use any cloud drive to sync. I'm using OneDrive.

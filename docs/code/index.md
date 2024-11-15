@@ -10,3 +10,5 @@ Concludes linux, software, latex, etc
 - [mkdocs](/wiki/code/3in1wiki)
 ## backup note
 - [examples](/wiki/code/examples)
+## code
+- [git note](/wiki/code/git)
