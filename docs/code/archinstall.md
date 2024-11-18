@@ -4,7 +4,6 @@ toc: true
 tags:
   - arch
 date: 2023-10-09 11:39
-update: 2024-10-15
 ---
 # Basic installation of arch linux
 双系统安装archlinux，使用btrfs文件系统。重装系统的个人参考。
