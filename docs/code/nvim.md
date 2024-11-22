@@ -8,9 +8,11 @@ date:  2024-11-18
 update: 
 ---
 # My neovim
-My [config](https://github.com/HiraethEcho/nvim)
+My [config](https://github.com/HiraethEcho/nvim) on github.
 
 I'm using nvim as a code editor, mainly for latex and markdown.
+
+## Usage
 
 ### general
 
@@ -27,6 +29,7 @@ I'm using nvim as a code editor, mainly for latex and markdown.
 ### plugins
 
 I am using lazy.nvim as my plugins manager. Plugins are divided in serval classes, and following are some of mostly used plugins:
+
 - edit: enhance for editing
     - [mini.surround](https://github.com/echasnovski/mini.surround),
     - [mini.align](https://github.com/eccasnovski/mini.align),
