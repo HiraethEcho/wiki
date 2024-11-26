@@ -1,5 +1,8 @@
 ---
 title: About
+hide:
+  - toc
+  - navigation
 ---
 # My online wiki
 I'm using zotero, obsidian and mkdocs to create a wiki.

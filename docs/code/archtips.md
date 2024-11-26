@@ -1,5 +1,5 @@
 ---
-title: archlinux 
+title: Tips for archlinux 
 toc: true
 tags:
   - arch
@@ -28,6 +28,7 @@ systemctl enable iwd
 ```
 
 **sound**
+
 - ALSA: is a set of built-in Linux kernel modules.
 - PulseAudio: is a general purpose sound server intended to run as a middleware between your applications and your hardware devices, either using ALSA or OSS.
 - pamixer: cli mixer of PulseAudio

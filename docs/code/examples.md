@@ -37,8 +37,39 @@ More formatting options for your webpage [here](https://squidfunk.github.io/mkdo
 
     block?
     and another line
+```md
+!!! note 
+    test
+!!! tip
+    tips
+     
+!!! example
+    example
+!!! danger
+!!! cite
+!!! question
+!!! summary
+??? warning
+    this
+    caution
+```
 
-link test:
+!!! note 
+    test
+!!! tip
+    tips
+     
+!!! example
+    example
+!!! danger
+!!! cite
+!!! question
+!!! summary
+??? warning
+    this
+    caution
+
+## link
 ```md
 [/wiki](/wiki)  
 [/wiki/code/archinstall](/wiki/code/archinstall)  
@@ -69,15 +100,3 @@ $$
 F(x) = \int^a_b \frac{1}{2}x^4
 $$
 ```
-$$
-F(x) = \int^a_b \frac{1}{2}x^4
-$$
-
-$\sqrt{3x-1}+(1+x)^2$
-
-$\sum \epsilon \subset \beta$
-
-$$
-f(x,y) = x + \sqrt{y}
-f(x,y) = \sqrt{y} + \frac{x^2}{4y}
-$$

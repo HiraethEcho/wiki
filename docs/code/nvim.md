@@ -15,16 +15,24 @@ I'm using nvim as a code editor, mainly for latex and markdown.
 ## Usage
 
 ### general
+neotree hop. check /lua/config/keymaps.lua for keymapping.
 
 ### latex
+using vimtex to detect math environment, and texlab lsp to complie.
 
+cmp and ultisnips to enhance editing.
 ### markdown
+mkdnflow to enhance.
 
+<kbd>leader</kbd><kbd>m</kbd><kbd>p</kbd> to open markdown-preview
 ### lsp
+<kbd>leader</kbd><kbd>o</kbd> to open outline
 
+<kbd>g</kbd><kbd>r</kbd> to go to reference, <kbd>g</kbd><kbd>d</kbd> to go to definition
 ## Detail Configure
 
 ### options
+in /lua/config/options.lua
 
 ### plugins
 
@@ -33,7 +41,7 @@ I am using lazy.nvim as my plugins manager. Plugins are divided in serval classe
 - edit: enhance for editing
     - [mini.surround](https://github.com/echasnovski/mini.surround),
     - [mini.align](https://github.com/eccasnovski/mini.align),
-    - [mini.splitjoin](https://github.com/echasnovski/mini.splitjoin),
+    - [mini.splitjoin](https://github.com/echasnovski/mini.splitjoin), gJ and gK to split or joint
     - [fcitx.nvim](https://github.com/smartding/fcitx.nvim), 中文输入自动切换
     - [nvim-autopairs](https://github.com/windwp/nvim-autopairs),
     - [zen-mode.nvim](https://github.com/folke/zen-mode.nvim), zen mode, focus on editing
@@ -51,7 +59,7 @@ I am using lazy.nvim as my plugins manager. Plugins are divided in serval classe
 - editor: enhance for latex and markdown
     - [vimtex](https://github.com/lervag/vimtex), for latex
     - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim), preview md in browser
-    - ~~[markview.nvim](https://github.com/OXY2DEV/markview.nvim)~~  [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim), view md in nvim
+    - ~~[markview.nvim](https://github.com/OXY2DEV/markview.nvim)~~  [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim), render md in nvim
     - [mkdnflow.nvim](https://github.com/jakewvincent/mkdnflow.nvim), help edit list, table etc in nvim
 - git: using git in nvim
     - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim), show git status at left, jump by hunks
@@ -64,7 +72,7 @@ I am using lazy.nvim as my plugins manager. Plugins are divided in serval classe
 - file explorer:
     - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim), file tree
     - [yazi.nvim](https://github.com/mikavilpas/yazi.nvim), yazi (tui file manager) in float terminal
-- telescope: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim), fozzy finder
+- telescope: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim), fuzzy finder
 - ui:
     - [nightfox.nvim](https://github.com/EdenEast/nightfox.nvim), my theme
     - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua), show color like `#123dfe`
