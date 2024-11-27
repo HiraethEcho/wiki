@@ -3,7 +3,7 @@ tags: []
 parent: 'Minimal model program for algebraically integrable foliations and generalized pairs'
 collections:
     - AlgebraicGeometry
-$version: 44108
+$version: 44109
 $libraryID: 1
 $itemKey: 9V925CBS
 
