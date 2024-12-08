@@ -30,3 +30,6 @@ ln -s /path/to/git/repo/docs /path/to/obsidian/repo/wiki
 ```
 这样所有路径都是匹配的。
 ## 总结
+
+> [!note]
+> 似乎需要一个markdown和latex转换的脚本。其中markdown应该混写html比较好。似乎lua就可以，那么就可以做nvim插件。
