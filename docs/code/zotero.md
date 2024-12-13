@@ -169,3 +169,9 @@ content: |-
     return dir2zotero;
   }}$
 ```
+
+annotation will be exported as
+```
+<span class="highlight" data-annotation="<data-annotation>" ztype="zhighlight"><a href="zotero://open/library/items/G4BKVA2X?page=2&#x26;annotation=LZLEYYRJ">“<content>”</a></span> <span class="citation" data-citation="<citation>" ztype="zcitation">(<span class="citation-item"><a href="zotero://select/library/items/GLXUZZJT"></a></span>)</span>
+```
+the color of annotation is coded as `%23<rgb>` in `<data-annotation>`, for example blue (#2ea8e5) annotation is `%232ea8e5`
