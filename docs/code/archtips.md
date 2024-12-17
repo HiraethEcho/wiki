@@ -1,33 +1,42 @@
 ---
-title: Tips for archlinux 
+title: Tips for archlinux
 toc: true
 tags:
   - arch
 date: 2024-11-18
 ---
 
+# some tips for (arch)linux
+
 ## sh
+
 后台挂起
+
 ```sh
 nohup onedrivegui & > /dev/null
 ```
 
 ## configuration
-**net**
+
+### net
+
 Using iwd as backend of NetworkManager:
 
 /etc/NetworkManager/NetworkManager.conf :
+
 ```
 [device]
 wifi.backend=iwd
 ```
+
 then
+
 ```sh
 systemctl mask wpa_supplicant
 systemctl enable iwd
 ```
 
-**sound**
+### sound
 
 - ALSA: is a set of built-in Linux kernel modules.
 - PulseAudio: is a general purpose sound server intended to run as a middleware between your applications and your hardware devices, either using ALSA or OSS.
@@ -40,26 +49,13 @@ pulseaudio --check
 pulseaudio -D
 ```
 
-**light**
+### light
+
 ```sh
 
 sudo pacman -S acpilight
 sudo gpasswd video -a _username_ # 或者
 sudo usermod -aG video _username_
-```
-
-**keyboard**:
-
-find id of touchpad:
-```
-xinput list | grep -i "Touchpad" | awk '{print $6}' | sed 's/[^0-9]//g'
-```
-
-config keys, <kbd>caps</kbd> as <kbd>escape</kbd> and <kbd>ctrl</kbd>
-```sh
-setxkbmap -option ctrl:nocaps &
-xcape -e 'Control_L=Return' &
-xcape -e 'Alt_L=Escape' &
 ```
 
 
@@ -104,4 +100,3 @@ pacman -Scc # 清理缓存中所有内容
 sudo pacman -Rcsn $(pacman -Qdtq -)
 journalctl --vacuum-size=50M #限制日志
 ```
-

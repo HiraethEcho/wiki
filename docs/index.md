@@ -14,3 +14,5 @@ This is the mkdocs part of it, and is hosted by github pages.
 - [Math](/wiki/math): My notes about math. Mostly about Algebraic Geometry.
 - [Reading](/wiki/reading): My Reading notes. (Sadly no notes now, hope to keep a hobit)
 - [Zotero](/wiki/zotero): My annotation and notes exported from `zotero` by `Better Notes for Zotero` .
+
+test, in git repository, later.
