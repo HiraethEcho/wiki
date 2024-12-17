@@ -11,6 +11,7 @@ published: false
 ## Install
 
 ## plugins
-- dataview
-- kanban
-- Hover Editor
+- dataview (display files by metadata)
+- kanban (plan things, especially something with many stages)
+- Hover Editor (actually barely used)
+- remotely save (using webdav to synchronize files)
