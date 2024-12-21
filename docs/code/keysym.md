@@ -8,6 +8,8 @@ date: 2024-12-17
 # 从键盘到字符
 关于键盘改键的知识。
 
+软件版
+
 ## Preliminaries
 
 ### keyboard:

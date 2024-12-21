@@ -2,8 +2,9 @@
 title: zotero
 toc: true
 date: 2023-11-13 18:33
-tags: [wiki, obsidian, zotero]
-categories:
+tags:
+  - second_brain
+categories: 
 published: true
 ---
 # Zotero

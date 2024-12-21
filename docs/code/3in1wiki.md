@@ -1,7 +1,8 @@
 ---
 title: 用mkdocs、obsidian、zotero搭建个人wiki
 toc: true
-tags: []
+tags:
+  - second_brain
 published: false
 date: 2024-10-15 13:48:01
 ---

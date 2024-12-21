@@ -4,7 +4,7 @@ Concludes linux, software, latex, etc
 
 ## linux and code
 - [install arch](/wiki/code/archinstall)
-- [git note](/wiki/code/git)
+- [git note](wiki/code/git-tips)
 - [neovim](/wiki/code/nvim)
 ## work flow
 - [zotero](/wiki/code/zotero)
