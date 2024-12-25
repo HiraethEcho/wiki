@@ -5,8 +5,7 @@ hide:
   - navigation
 ---
 # My online wiki
-I'm using zotero, obsidian and mkdocs to create a wiki.
-This is the mkdocs part of it, and is hosted by github pages.
+The math note part, I'm using zotero, obsidian and mkdocs to create this wiki, and is hosted on github pages.
 
 <!-- - [About](/wiki/About/index): More details about this wiki. -->
 - [Code](/wiki/code): My notes about code, computer and sofeares.
