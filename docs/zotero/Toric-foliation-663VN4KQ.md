@@ -1,11 +1,11 @@
 ---
 tags:
-    - '#AG/toric'
     - foliation
+    - '#AG/toric'
 parent: ""
 collections:
     - AlgebraicGeometry
-$version: 46288
+$version: 48128
 $libraryID: 1
 $itemKey: 663VN4KQ
 
