@@ -1,7 +1,7 @@
 site_name: Hiraeth's Wiki
 site_url: https://hiraethecho.github.io/wiki/
 site_author: hiraeth
-site_description: My personal wiki
+site_description: My personal wiki or PKM
 repo_name: hiraethecho/wiki
 repo_url: https://github.com/hiraethecho/wiki
 
@@ -46,26 +46,6 @@ theme:
 markdown_extensions:
   - footnotes
   # - attr_list
-  - pymdownx.arithmatex:
-      generic: true
-  # - pymdownx.superfences
-  - pymdownx.details
-  - nl2br
-  - admonition
-  # - pymdownx.magiclink
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - def_list
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
 
   - toc:
       permalink: true
