@@ -6,6 +6,13 @@ date: 2024-12-31
 ---
 # My cheat sheets for Linux
 
+## sh
+
+后台挂起
+
+```sh
+nohup onedrivegui & > /dev/null
+```
 
 ## awk
 

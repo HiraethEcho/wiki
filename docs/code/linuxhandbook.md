@@ -6,11 +6,10 @@ tags:
 date: 2024-12-17
 ---
 # Linux Handbook
-This is learning notes of linux.
 
-## bash
+## boot
 
-### keyring
+## keyring
 
 
 [https://wiki.archlinuxcn.org/zh-sg/GNOME/Keyring](https://wiki.archlinuxcn.org/zh-sg/GNOME/Keyring)

@@ -1,5 +1,5 @@
 ---
-title: 从键盘到字符，硬件固件
+title: 键盘和固件
 toc: true
 tags:
   - linux
