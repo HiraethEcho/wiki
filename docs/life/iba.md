@@ -15,16 +15,13 @@ draft: true
 
 「IBA」是国际调酒师协会（International Bartenders Association）的缩写，截止至2022年，共90款鸡尾酒被IBA官方收录，其中分为3个系列：难忘经典33款（The Unforgettables），当代经典31款（Contemporary Classics），新时代饮品26款（New Era Drinks）。
 
-
 ## The Unforgettables
 
 ### 亚历山大 Alexander
 
 亚历山大|Alexander 最早出现在Hugo Ensslin的Recipes For Mixed Drink，最初是用金酒调制，Harry Craddock使用白兰地改良后备受欢迎。据说亚历山大是约翰列侬最爱的鸡尾酒，粉丝会用这杯酒来悼念他。亚历山大和绿色蚱蜢一样，这杯酒更像是一杯“液体甜品”，可可利口酒和鲜奶油，在干邑的加持下，酒香绵长，口感醇厚，最后再撒上肉豆蔻粉，让整杯酒的风味更加具有层次感。
 
-
 今日酒单：白兰地亚历山大 | Brandy Alexander
-
 
 材料：
 
@@ -2249,7 +2246,6 @@ Vento应该算是一杯意式Grappa酸酒，2020年刚刚被被IBA官方收录�
 黄鸟|Yellow Bird 这款加勒比海风情鸡尾酒的起源有两种说法，一种是认为来1961年发布的自同名歌曲“Yellow Bird”，该歌曲的演唱者Arthur Lyman是Tiki文化的倡导者之一，另一种说法是这款鸡尾酒是以金黄色加利安奴利口酒配上橙色水果而命名。这款酒的变体众多，比如加入菠萝汁，香蕉利口酒或者杏子白兰地，今天的配方来自国际调酒师协会，是一种最简单基础的黄鸟调制方法。
 
 今日酒单：黄鸟|Yellow Bird
-
 
 材料：
 

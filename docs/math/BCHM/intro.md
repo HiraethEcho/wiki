@@ -1,9 +1,10 @@
 ---
 title: Introduction to MMP
 toc: true
-tags: 
+tags:
 date: 2023-10-18 17:20
 ---
+
 # MMP
 
 In this class, we consider normal varities over $\mathbb{C}$.
@@ -32,7 +33,7 @@ In higher dimensional cases, we have Cone Theorem and Contraction Theorem, there
 
 However, there are difficulties:
 
-- For a contraction $f:X\to Y$, even $X$ is smooth, $Y$ may not be  smooth  but with singularities;
+- For a contraction $f:X\to Y$, even $X$ is smooth, $Y$ may not be smooth but with singularities;
 - Small contraction;
 - Termination of the program.
 
@@ -52,8 +53,10 @@ Solution to the difficulties:
 - A Cartier is a Weil divisor with invertible ideal sheaf.
 
 Two generalization:
+
 1. $\mathbb{R}$-coefficients
 2. relative version
+
 #### Intersection
 
 KM98 prop 1.36 1.35; JK 1.4.3 etc
@@ -89,6 +92,7 @@ relative case
 #### Resolutions
 
 #### singularities
+
 ## Main theorems
 
 ### X-method

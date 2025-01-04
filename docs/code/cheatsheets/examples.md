@@ -79,19 +79,21 @@ caution
 
 ```md
 [/wiki](/wiki)  
-[/wiki/code/archinstall](/wiki/code/archinstall)  
+[/wiki/code/arch/archinstall](/wiki/code/arch/archinstall)  
 ![/wiki/img/a.png](/wiki/img/a.png)
 ```
 
 [/wiki](/wiki)  
-[/wiki/code/archinstall](/wiki/code/archinstall)  
+[/wiki/code/archinstall](/wiki/code/arch/archinstall)  
 ![/wiki/img/a.png](/wiki/img/a.png)
 
 ## Mermaid diagrams
 
 Here's the example from [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-flowcharts):
 
-```mermaid graph LR A[Start] --> B{Error?}; B -->|Yes| C[Hmm...];
+```mermaid
+  graph LR
+  A[Start] --> B{Error?}; B -->|Yes| C[Hmm...];
   C --> D[Debug];
   D --> B;
   B ---->|No| E[Yay!];

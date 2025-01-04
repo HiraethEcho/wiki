@@ -226,4 +226,4 @@ umount /mnt/home
 umount /mnt
 reboot
 ```
-之后有一些[常见的配置](/wiki/code/archtips)。
+之后有一些[常见的配置](/wiki/code/arch/archtips)。
