@@ -30,7 +30,7 @@ passwd USERNAME
 可以将用户家目录设置成btrfs的子卷，这样可以更好的管理快照。
 
 ```
-useradd -m --btrfs-subvolumes USERNAME
+useradd -m --btrfs-subvolume-home USERNAME
 ```
 
 添加用户到wheel组：
@@ -107,22 +107,10 @@ journalctl --vacuum-size=50M #限制日志
 
 ### 网络
 
-systemctl enable dhcpcd NetworkManager iwd
-
-Using iwd as backend of NetworkManager:
-
-/etc/NetworkManager/NetworkManager.conf :
+启动服务，`iwd`是连接网络的，`dhcpcd`是dns解析
 
 ```
-[device]
-wifi.backend=iwd
-```
-
-then
-
-```sh
-systemctl mask wpa_supplicant
-systemctl enable iwd
+systemctl enable dhcpcd iwd
 ```
 
 ### sound
@@ -140,14 +128,21 @@ pulseaudio -D
 
 ### light
 
-```sh
+`video`组的用户可以控制亮度
 
+```sh
 sudo pacman -S acpilight
 sudo gpasswd video -a _username_ # 或者
 sudo usermod -aG video _username_
 ```
 
+### bluetooth
+
+蓝牙耳机需要`pulseaudio-bluetooth`和`bluez-utils`。
+
 ### input
+
+在`X11`中需要安装`xf86-input-libinput`等
 
 keyboard, mouse, touchpads
 
@@ -155,30 +150,36 @@ keyboard, mouse, touchpads
 
 [archwiki文档](https://wiki.archlinux.org/title/Desktop_environment)
 
-### full Environments
+### 成品桌面环境
+- [GNOME](https://wiki.archlinux.org/title/GNOME)
+- [KDE](https://wiki.archlinux.org/title/KDE)
+- [Xfce](https://wiki.archlinux.org/title/Xfce)
+- [LXQt](https://wiki.archlinux.org/title/LXQt)
 
 ### components
 
 At least one need
 
 - window manager or [compositor](https://wiki.archlinux.org/title/Wayland#Compositors "Wayland")
-- [taskbar](https://wiki.archlinux.org/title/Taskbar "Taskbar")
 - [terminal emulator](https://wiki.archlinux.org/title/Terminal_emulator "Terminal emulator")
-- [file manager](https://wiki.archlinux.org/title/List_of_applications/Utilities#File_managers "List of applications/Utilities")
+
+Usually also need:
+- [Application launcher](https://wiki.archlinux.org/title/List_of_applications/Other#Application_launchers "List of applications/Other")
 - [text editor](https://wiki.archlinux.org/title/Text_editor "Text editor")).
+- [file manager](https://wiki.archlinux.org/title/List_of_applications/Utilities#File_managers "List of applications/Utilities")
+- [taskbar](https://wiki.archlinux.org/title/Taskbar "Taskbar")
+- [Polkit authentication agent](https://wiki.archlinux.org/title/Polkit#Authentication_agents "Polkit")
+- [Display manager](https://wiki.archlinux.org/title/Display_manager#List_of_display_managers "Display manager")
+- [Backlight control](https://wiki.archlinux.org/title/Backlight#Backlight_utilities "Backlight")
 
 Other components usually provided by desktop environments are:
 
-- [Application launcher](https://wiki.archlinux.org/title/List_of_applications/Other#Application_launchers "List of applications/Other")
 - [Audio control](https://wiki.archlinux.org/title/List_of_applications/Multimedia#Volume_control "List of applications/Multimedia")
-- [Backlight control](https://wiki.archlinux.org/title/Backlight#Backlight_utilities "Backlight")
 - [Compositor](https://wiki.archlinux.org/title/Compositor "Compositor")
 - [Default applications](https://wiki.archlinux.org/title/XDG_MIME_Applications#mimeapps.list "XDG MIME Applications")
-- [Display manager](https://wiki.archlinux.org/title/Display_manager#List_of_display_managers "Display manager")
 - [Logout dialogue](https://wiki.archlinux.org/title/List_of_applications/Other#Logout_UI "List of applications/Other")
 - [Media control](https://wiki.archlinux.org/title/MPRIS#Control_utilities "MPRIS")
 - [Notification daemon](https://wiki.archlinux.org/title/Desktop_notifications#Standalone "Desktop notifications")
-- [Polkit authentication agent](https://wiki.archlinux.org/title/Polkit#Authentication_agents "Polkit")
 - [Power management](https://wiki.archlinux.org/title/Power_management "Power management")
 - [Screen capture](https://wiki.archlinux.org/title/Screen_capture "Screen capture")
 - [Screen locker](https://wiki.archlinux.org/title/List_of_applications/Security#Screen_lockers "List of applications/Security")
