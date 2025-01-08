@@ -107,11 +107,20 @@ journalctl --vacuum-size=50M #限制日志
 
 ### 网络
 
-启动服务，`iwd`是连接网络的，`dhcpcd`是dns解析
+启动服务，`iwd`是连接网络的，自带域名解析。需要
 
 ```
-systemctl enable dhcpcd iwd
+# /etc/iwd/main.conf
+[General]
+EnableNetworkConfiguration=true
 ```
+
+也可以用`dhcpcd`解析
+
+```
+systemctl enable dhcpcd
+```
+tui: `impala`
 
 ### sound
 
@@ -140,6 +149,8 @@ sudo usermod -aG video _username_
 
 蓝牙耳机需要`pulseaudio-bluetooth`和`bluez-utils`。
 
+tui: `bluetui`
+
 ### input
 
 在`X11`中需要安装`xf86-input-libinput`等
@@ -151,6 +162,7 @@ keyboard, mouse, touchpads
 [archwiki文档](https://wiki.archlinux.org/title/Desktop_environment)
 
 ### 成品桌面环境
+
 - [GNOME](https://wiki.archlinux.org/title/GNOME)
 - [KDE](https://wiki.archlinux.org/title/KDE)
 - [Xfce](https://wiki.archlinux.org/title/Xfce)
@@ -164,6 +176,7 @@ At least one need
 - [terminal emulator](https://wiki.archlinux.org/title/Terminal_emulator "Terminal emulator")
 
 Usually also need:
+
 - [Application launcher](https://wiki.archlinux.org/title/List_of_applications/Other#Application_launchers "List of applications/Other")
 - [text editor](https://wiki.archlinux.org/title/Text_editor "Text editor")).
 - [file manager](https://wiki.archlinux.org/title/List_of_applications/Utilities#File_managers "List of applications/Utilities")
