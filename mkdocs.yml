@@ -53,11 +53,11 @@ markdown_extensions:
 plugins:
   - search
   # - callouts
+  - blog
   - tags:
       tags_file: tags.md
       tags_hierarchy: true
   # - roamlinks
-  # - blog
   # - rss:
   #     match_path: .* 
   #     date_from_meta:
