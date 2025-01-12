@@ -148,7 +148,9 @@ sudo usermod -aG video _username_
 ### bluetooth
 
 蓝牙耳机需要`pulseaudio-bluetooth`和`bluez-utils`。
-
+```
+sudo systemctl enable bluetooth.service --now
+```
 tui: `bluetui`
 
 ### input
