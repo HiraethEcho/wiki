@@ -30,7 +30,7 @@ $ git config --global user.email “[valid-email]”
 
 ## basic usage
 
-### init, status, diff, add, commit, stash
+### init, status, diff, add, commit, stash, ignore
 
 ```
 $ git init
@@ -62,6 +62,13 @@ git checkout branch2
 git stash pop
 ```
 
+新增ignore文件，并不再跟踪
+```
+# edit .gitignore
+git rm -r --cached .
+git add .
+git commit -m "remove xyz file"
+```
 ### branch
 
 列出分支
@@ -69,6 +76,7 @@ git stash pop
 ```
 $ git branch
 ```
+切换分支
 
 ```
 $ git checkout <branch>
