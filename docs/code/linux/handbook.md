@@ -9,6 +9,10 @@ date: 2024-12-17
 
 ## boot
 
+## display manager
+lightdm 有一堆莫名其妙的问题
+
+gtk display还不知道怎么搞
 ## keyring
 
 
