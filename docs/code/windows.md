@@ -45,6 +45,14 @@ Get-AppxPackage *BingWeather* | Remove-AppxPackage　　　　/*卸载单个软�
 Get-AppXPackage | Remove-AppxPackage　　　　　　　　　　/*卸载所有软件命令
 ```
 
+图形化选择
+
+```
+Get-AppxPackage | Out-GridView -Passthru | Remove-AppXPackage -AllUsers
+```
+
+删除某些
+
 ```
 Get-AppxProvisionedPackage -Online | where-object {$_.packagename -like "xbox"} | Remove-AppxProvisionedPackage -Online
 ```
