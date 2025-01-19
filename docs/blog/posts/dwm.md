@@ -5,7 +5,7 @@ tags:
   - daily
 published: true
 date: 
-  create: 2024-07-29
+  created: 2024-07-29
 excerpt: 关于linux C dwm等
 ---
 
