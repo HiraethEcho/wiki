@@ -4,7 +4,7 @@ tags:
   - linux
   - daily
 published: true
-date: 
+date:
   created: 2024-07-29
 excerpt: 关于linux C dwm等
 ---
@@ -12,7 +12,9 @@ excerpt: 关于linux C dwm等
 # 近期折腾的archlinux
 
 也算是一些业余学习吧。先叠个甲，业余学习所以可能有错误，只是个人理解。
+
 <!-- more -->
+
 ## linux
 
 linux内核的功能是调用硬件，为程序分配使用  
