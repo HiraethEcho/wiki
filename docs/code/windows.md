@@ -17,7 +17,7 @@ date: 2025-01-18
 ## 安装
 
 window11有个莫名其妙的设定，不能在没有网络的时候安装，必须登陆微软账户，很神经，但是可以绕开。  
-在安装界面按<kbd>Shift+F10<kbd>调出命令行，然后输入
+在安装界面按<kbd>Shift+F10</kbd>调出命令行，然后输入
 
 ```
 oobe\bypassnro
@@ -37,14 +37,12 @@ oobe\bypassnro
 
 ```
 Get-AppxPackage -All 　　　　　　　　　　　　　　　　　　　/* 获取Win10以上系统所有预装软件 */
-　　 Get-AppxPackage -All {预装软件全名} | Remove-AppxPackage　　/* 管道方式卸载Win10以上系统预装软件 */
- 　　Remove-AppxPackage {预装软件全名} 　　　　　　　　　　　　/* 常规卸载Win10以上系统预装软件 */
-
-　　 Get-AppxPackage -All | Select-Object Name, PackageFullName　　　/*（推荐）获取Win10以上系统所有预装软件 */
-　　 Remove-AppxPackage -Package "PackageFullName"　　　　　　/*（推荐）常规卸载Win10以上系统预装软件 */
-
-　　Get-AppxPackage *BingWeather* | Remove-AppxPackage　　　　/*卸载单个软件
-　　Get-AppXPackage | Remove-AppxPackage　　　　　　　　　　/*卸载所有软件命令
+Get-AppxPackage -All {预装软件全名} | Remove-AppxPackage　　/* 管道方式卸载Win10以上系统预装软件 */
+Remove-AppxPackage {预装软件全名} 　　　　　　　　　　　　/* 常规卸载Win10以上系统预装软件 */
+Get-AppxPackage -All | Select-Object Name, PackageFullName　　　/*（推荐）获取Win10以上系统所有预装软件 */
+Remove-AppxPackage -Package "PackageFullName"　　　　　　/*（推荐）常规卸载Win10以上系统预装软件 */
+Get-AppxPackage *BingWeather* | Remove-AppxPackage　　　　/*卸载单个软件
+Get-AppXPackage | Remove-AppxPackage　　　　　　　　　　/*卸载所有软件命令
 ```
 
 ```
