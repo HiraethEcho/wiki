@@ -2,7 +2,6 @@
 title: About
 hide:
   - toc
-  - navigation
 ---
 # My online wiki
 The math note part, I'm using zotero, obsidian and mkdocs to create this wiki, and is hosted on github pages.
