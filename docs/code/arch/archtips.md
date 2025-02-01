@@ -120,6 +120,7 @@ EnableNetworkConfiguration=true
 ```
 systemctl enable dhcpcd
 ```
+
 tui: `impala`
 
 ### sound
@@ -148,9 +149,11 @@ sudo usermod -aG video _username_
 ### bluetooth
 
 蓝牙耳机需要`pulseaudio-bluetooth`和`bluez-utils`。
+
 ```
 sudo systemctl enable bluetooth.service --now
 ```
+
 tui: `bluetui`
 
 ### input
@@ -158,6 +161,14 @@ tui: `bluetui`
 在`X11`中需要安装`xf86-input-libinput`等
 
 keyboard, mouse, touchpads
+
+### driver
+
+for amd integrated, open source driver:
+
+```
+sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
+```
 
 ## Desktop Environment
 
@@ -208,3 +219,28 @@ Other components usually provided by desktop environments are:
 ## Applications
 
 ### shell and terminal
+
+### steam:
+
+```
+id -u
+id -g
+```
+
+mount:
+
+```
+sudo mkdir /media/gamedisk
+```
+
+```
+# /etc/fstab
+UUID=38CE9483CE943AD8 /media/gamedisk lowntfs-3g uid=1000,gid=1000,rw,user,exec,umask=000 0 0
+```
+
+debug:
+
+```
+mkdir -p ~/.steam/steam/steamapps/compatdata
+ln -s ~/.steam/steam/steamapps/compatdata /media/gamedisk/Steam/steamapps/
+```
