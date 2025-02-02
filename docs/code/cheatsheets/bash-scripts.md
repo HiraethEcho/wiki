@@ -1,5 +1,5 @@
 ---
-title: "Bash Scripts"
+title: Bash Scripts
 toc: true
 tags: linux
 date: 2024-12-31
