@@ -1,13 +1,17 @@
 ---
 title: Bash Scripts
 toc: true
-tags: linux
+tags: 
+  - linux
 date: 2024-12-31
 ---
+
 # Bash Scripts
 
 ## get-opts
+
 example:
+
 ```sh
 #!/bin/sh
 docs="Usage: \
@@ -68,14 +72,14 @@ do
 done
 
 ## 如果用户没有提供-N选项
-if [ ! $name ] 
+if [ ! $name ]
 then
     echo ERROR: option -N is required >&2
     usage
 fi
 
 ## 如果用户没有提供-a选项
-if [ ! $age ] 
+if [ ! $age ]
 then
     echo ERROR: option -a is required >&2
     usage
