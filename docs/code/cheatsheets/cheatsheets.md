@@ -1,10 +1,11 @@
 ---
 title: My cheat sheets
 toc: true
-tags: 
+tags:
   - linux
 date: 2024-12-31
 ---
+
 # My cheat sheets for Linux
 
 ## sh
@@ -19,21 +20,20 @@ nohup onedrivegui & > /dev/null
 
 <details><summary>ref</summary>
 
-
-
 title: Awk
 date: 2020-12-31 15:18:34
 background: bg-slate-600
 tags:
-  - bash
-  - text
-  - script
-categories:
-  - Linux Command
-intro: |
+
+- bash
+- text
+- script
+  categories:
+- Linux Command
+  intro: |
   This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.
-plugins:
-  - copyCode
+  plugins:
+- copyCode
 
 ## Getting Started
 
@@ -170,7 +170,6 @@ awk 'BEGIN{print substr("hello", 1, 3)}'
 ```
 
 See: [Functions](#awk-functions)
-
 
 ## Awk Variables
 
@@ -823,21 +822,19 @@ $ awk -f demo.awk /etc/passwd
 
 > HackingNoteHackingNote
 
-Built-in
---------
+## Built-in
 
-*   `$1`: `awk` reads and parses each line from input based on _whitespace_ character by default and set the variables `$1`, `$2` and etc.
-*   `NF`: Number of Fields.
-*   `NR`: Number of Records.
-*   `FNR`: Number of Records relative to the current input file.
-*   `FS`: Field Separator, any single character or regular expression, instead of the default _whitespace_. `,` in the script will be replaced with the field separator.
-*   `OFS`: Output Field Separator.
-*   `RS`: Record Separator.
-*   `ORS`: Output Record Separator.
-*   `FILENAME`: Name of the current input file.
+- `$1`: `awk` reads and parses each line from input based on _whitespace_ character by default and set the variables `$1`, `$2` and etc.
+- `NF`: Number of Fields.
+- `NR`: Number of Records.
+- `FNR`: Number of Records relative to the current input file.
+- `FS`: Field Separator, any single character or regular expression, instead of the default _whitespace_. `,` in the script will be replaced with the field separator.
+- `OFS`: Output Field Separator.
+- `RS`: Record Separator.
+- `ORS`: Output Record Separator.
+- `FILENAME`: Name of the current input file.
 
-Count Columns
--------------
+## Count Columns
 
 If delimiter is `,`
 
@@ -866,8 +863,7 @@ $ cat foo.txt | awk -F'^G' '{print NF}'
 
 ```
 
-Get Column Number
------------------
+## Get Column Number
 
 replace `<pattern>` with the column name or pattern
 
@@ -878,8 +874,7 @@ head -1 foo.csv | awk -v RS="|" '/<pattern>/{print NR;}'
 
 ```
 
-Print Rows by Number
---------------------
+## Print Rows by Number
 
 print the second row:
 
@@ -899,13 +894,12 @@ $ awk 'NR==2,NR==10' filename
 
 ```
 
-FS
---
+## FS
 
 `FS` can be set in either of these ways:
 
-*   Using -F command line option. `awk -F 'FS' 'commands' inputfilename`
-*   Awk FS can be set like normal variable. `awk 'BEGIN{FS="FS";}'`
+- Using -F command line option. `awk -F 'FS' 'commands' inputfilename`
+- Awk FS can be set like normal variable. `awk 'BEGIN{FS="FS";}'`
 
 Example to read the `/etc/passwd` file which has `:` as field delimiter.
 
@@ -945,8 +939,7 @@ gdm 112 119 /var/lib/gdm
 
 ```
 
-OFS
----
+## OFS
 
 Similar to `FS` but for outputs.
 
@@ -966,8 +959,7 @@ $ awk -F':' 'BEGIN{OFS="=";} {print $3,$4;}' /etc/passwd
 
 ```
 
-RS
---
+## RS
 
 `awk` reads a line as a "record" by default. To split the text into records differently, set `RS`. E.g. if `input.txt` is like this:
 
@@ -1009,8 +1001,7 @@ C 3
 
 ```
 
-ORS
----
+## ORS
 
 The output equivalent of `RS`. The records will be printed with `ORS` as the separator instead of the default new line.
 
@@ -1022,8 +1013,7 @@ A 1=B 2=C 3=%
 
 ```
 
-Extract a Column
-----------------
+## Extract a Column
 
 ```
 $ cat file | awk '{print $2}'
@@ -1032,8 +1022,7 @@ $ cat file | awk '{print $2}'
 
 ```
 
-Add awk in alias
-----------------
+## Add awk in alias
 
 ```
 awk '{print $1}'
@@ -1043,8 +1032,7 @@ alias aprint='awk "{print \$1}"'
 
 ```
 
-Pattern Matching
-----------------
+## Pattern Matching
 
 ```
 ... | awk '/pattern/'
@@ -1055,7 +1043,9 @@ Pattern Matching
 
 
 ```
+
 ## sed
+
 <details><summary>quickref</summary>
 
 ## Getting Started
@@ -1672,13 +1662,14 @@ $ sed '/regex/{x;p;x;G;}'
 
 
 ```
+
 ## grep
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.hackingnote.com](https://www.hackingnote.com/en/cheatsheets/grep/)
 
 > HackingNote
 
-Count Occurrence: `-c`
-----------------------
+## Count Occurrence: `-c`
 
 ```
 $ cat example.txt | grep -c good
@@ -1687,8 +1678,7 @@ $ cat example.txt | grep -c good
 
 ```
 
-Get Context: `-C`
------------------
+## Get Context: `-C`
 
 Set `--context=0` to print that line alone
 
@@ -1721,8 +1711,7 @@ good day
 
 ```
 
-Ignore: `-v`
-------------
+## Ignore: `-v`
 
 Use `-v` to exclude some lines(i.e. NOT)
 
@@ -1733,8 +1722,7 @@ good luck
 
 ```
 
-Case Insensitive: `-i`
-----------------------
+## Case Insensitive: `-i`
 
 ```
 $ cat example.txt | grep GOOD
@@ -1746,8 +1734,7 @@ good day
 
 ```
 
-Show Match in Color: `--color`
-------------------------------
+## Show Match in Color: `--color`
 
 ```
 $ cat example.txt | grep good --color
@@ -1755,8 +1742,7 @@ $ cat example.txt | grep good --color
 
 ```
 
-Show Matched Line Number: `-n`
-------------------------------
+## Show Matched Line Number: `-n`
 
 ```
 $ cat example.txt | grep good -n
@@ -1766,8 +1752,7 @@ $ cat example.txt | grep good -n
 
 ```
 
-Show Matched File Name: `-l`
-----------------------------
+## Show Matched File Name: `-l`
 
 `grep` is not limited to searching a single file, compare the results below
 
@@ -1807,8 +1792,7 @@ $ cat example.txt | grep good -l
 
 ```
 
-Search for Whole Words Only: `-w`
----------------------------------
+## Search for Whole Words Only: `-w`
 
 ```
 $ grep -w goo example.txt
@@ -1826,8 +1810,7 @@ good day
 
 ```
 
-Recursive grep: `-R`
---------------------
+## Recursive grep: `-R`
 
 This will search all the directory and sub-directories recursively
 
@@ -1837,8 +1820,7 @@ $ grep -R pattern *
 
 ```
 
-Set Maximum Matches: `-m`
--------------------------
+## Set Maximum Matches: `-m`
 
 ```
 $ cat example.txt | grep -m 1 good
@@ -1847,8 +1829,7 @@ good luck
 
 ```
 
-Match
------
+## Match
 
 Show `ssh` processes
 
@@ -1866,8 +1847,7 @@ $ cat foo.log | grep -m 10 ERROR
 
 ```
 
-Show file name
---------------
+## Show file name
 
 ```
 grep -H
@@ -1875,14 +1855,13 @@ grep -H
 
 ```
 
-grep vs egrap vs fgrep
-----------------------
+## grep vs egrap vs fgrep
 
 `grep`, `egrep` and `fgrep` are used to match patterns in files, here are the differences:
 
-*   `grep`: basic regular expressions
-*   `egrep`: extended regular expressions(`?`, `+`, `|`), equivalent to `grep -E`
-*   `fgrep`: fixed patterns, no regular expression; faster than grep and egrep; equivalent to `grep -F`
+- `grep`: basic regular expressions
+- `egrep`: extended regular expressions(`?`, `+`, `|`), equivalent to `grep -E`
+- `fgrep`: fixed patterns, no regular expression; faster than grep and egrep; equivalent to `grep -F`
 
 Checkout the [Regular_expression wikipedia page](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended) for the definitions of POSIX basic and extended regular expressions
 
@@ -1938,11 +1917,13 @@ linux
 
 
 ```
+
 ## cut
 
 ## git
 
 ## regex
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [quickref.me](https://quickref.me/regex)
 
 > A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions an......
@@ -2014,76 +1995,73 @@ False
 
 
 ```
+
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.hackingnote.com](https://www.hackingnote.com/en/cheatsheets/regex/)
 
 > HackingNote
 
-Syntax
-------
+## Syntax
 
-*   `|`: or
-*   `()`: group
+- `|`: or
+- `()`: group
 
 ### Characters
 
-*   `.`: any character (dot matches everything except newlines)
-*   `\w`: alphanumeric character plus `_`, equivalent to `[A-Za-z0-9_]`
-*   `\W`: non-alphanumeric character excluding `_`, equivalent to `[^A-Za-z0-9_]`
-*   `\s`: whitespace
-*   `\S`: anything BUT whitespace
-*   `\d`: digit, equivalent to `[0-9]`
-*   `\D`: non-digit, equivalent to `[^0-9]`
-*   `[...]`: one of the characters
-*   `[^...]`: anything but the characters listed
+- `.`: any character (dot matches everything except newlines)
+- `\w`: alphanumeric character plus `_`, equivalent to `[A-Za-z0-9_]`
+- `\W`: non-alphanumeric character excluding `_`, equivalent to `[^A-Za-z0-9_]`
+- `\s`: whitespace
+- `\S`: anything BUT whitespace
+- `\d`: digit, equivalent to `[0-9]`
+- `\D`: non-digit, equivalent to `[^0-9]`
+- `[...]`: one of the characters
+- `[^...]`: anything but the characters listed
 
 ### Anchors
 
-*   `^`: beginning of a line or string
-*   `$`: end of a line or string
-*   `\b`: zero-width word-boundary (like the caret and the dollar sign)
-*   `\A`: Matches the beginning of a string (but not an internal line).
-*   `\z`: Matches the end of a string (but not an internal line).
+- `^`: beginning of a line or string
+- `$`: end of a line or string
+- `\b`: zero-width word-boundary (like the caret and the dollar sign)
+- `\A`: Matches the beginning of a string (but not an internal line).
+- `\z`: Matches the end of a string (but not an internal line).
 
 ### Repetition Operators
 
-*   `?`: match 0 or 1 times
-*   `+`: match at least once
-*   `*`: match 0 or multiple times
-*   `{M,N}`: minimum M matches and maximum N matches
-    *   `{M,}`: match at least M times
-    *   `{0,N}`: match at most N times
+- `?`: match 0 or 1 times
+- `+`: match at least once
+- `*`: match 0 or multiple times
+- `{M,N}`: minimum M matches and maximum N matches
+  - `{M,}`: match at least M times
+  - `{0,N}`: match at most N times
 
-Greedy vs Lazy
---------------
+## Greedy vs Lazy
 
-*   `.*`: match as long as possible
-*   `.*?`: match as short as possible
+- `.*`: match as long as possible
+- `.*?`: match as short as possible
 
-BRE vs ERE vs PCRE
-------------------
+## BRE vs ERE vs PCRE
 
 The only difference between basic and extended regular expressions is in the behavior of a few characters: `?`, `+`, parentheses (`()`), and braces (`{}`).
 
-*   **basic regular expressions (BRE)**: should be escaped to behave as special characters
-*   **extended regular expressions (ERE)** : should be escaped to match a literal character.
-*   **Perl Compatible Regular Expressions (PCRE)**: much more powerful and flexible than BRE and ERE.
+- **basic regular expressions (BRE)**: should be escaped to behave as special characters
+- **extended regular expressions (ERE)** : should be escaped to match a literal character.
+- **Perl Compatible Regular Expressions (PCRE)**: much more powerful and flexible than BRE and ERE.
 
 Multiple flavors may be supported by the tools:
 
-*   sed
-    *   `sed`: basic
-    *   `sed -E`: extended
-*   grep
-    *   `grep`: basic
-    *   `egrep` or `grep -E`
+- sed
+  - `sed`: basic
+  - `sed -E`: extended
+- grep
+  - `grep`: basic
+  - `egrep` or `grep -E`
 
-JavaScript
-----------
+## JavaScript
 
-*   `str.search`
-*   `str.match`
-*   `str.matchAll`
-*   `str.replace`
+- `str.search`
+- `str.match`
+- `str.matchAll`
+- `str.replace`
 
 Example: split country name and country code in strings like "China (CN)"
 
@@ -2106,8 +2084,8 @@ Match all:
 const regex = /.*/g;
 const matches = content.matchAll(regex);
 for (let match of matches) {
-  
-  
+
+
 }
 
 
@@ -2115,19 +2093,19 @@ for (let match of matches) {
 
 ### Literal vs. Constructor
 
-*   Literal: `re = /.../g`
-*   Constructor: `re = new RegExp("...")`
-    *   can use string concat: `re = new RegExp("..." + some_variable + "...")`
+- Literal: `re = /.../g`
+- Constructor: `re = new RegExp("...")`
+  - can use string concat: `re = new RegExp("..." + some_variable + "...")`
 
 ### Local vs. Global
 
-*   `re = /.../`: `re.match(str)` will return a list of captures of the FIRST match.
-*   `re = /.../g`: `re.match(str)` will return a list of matches but NOT captures.
+- `re = /.../`: `re.match(str)` will return a list of captures of the FIRST match.
+- `re = /.../g`: `re.match(str)` will return a list of matches but NOT captures.
 
 ### match vs. exec
 
-*   `str.match()`: as stated above.
-*   `regex.exec()`: return captures, more detailed info; exec multiple times.
+- `str.match()`: as stated above.
+- `regex.exec()`: return captures, more detailed info; exec multiple times.
 
 Example
 
@@ -2138,14 +2116,13 @@ while ((match = re.exec(str)) !== null) {}
 
 ```
 
-Python
-------
+## Python
 
 `match`, `search` and `findall`:
 
-*   `re.match()`: only match at the beginning of the string, returns a `match` object.
-*   `re.search()`: locate a match anywhere in string, returns a `match` object.
-*   `re.findall()`: find all occurrences, returns a list of strings.
+- `re.match()`: only match at the beginning of the string, returns a `match` object.
+- `re.search()`: locate a match anywhere in string, returns a `match` object.
+- `re.findall()`: find all occurrences, returns a list of strings.
 
 ```
 >>> type(re.search("foo", "foobarfoo"))
