@@ -1,7 +1,7 @@
 ---
 title: Bash Scripts
 toc: true
-tags: 
+tags:
   - linux
 date: 2024-12-31
 ---
