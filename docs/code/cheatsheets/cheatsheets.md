@@ -39,11 +39,9 @@ tags:
 
 ### Have a try
 
-```shell script {.wrap}
+```shell
 $ awk -F: '{print $1, $NF}' /etc/passwd
 ```
-
----
 
 | -             | -                         |
 | ------------- | ------------------------- |
@@ -90,7 +88,6 @@ $0/NR ▶ │  2   │  google.com      │  25   │
         └──────┴──────────────────┴───────┘
 ```
 
----
 
 ```
 # First and last field
@@ -785,7 +782,6 @@ daemon     /sbin
 - `+`
 - `?`
 
-{.cols-3 .marker-none}
 
 ### Escape Sequences
 
