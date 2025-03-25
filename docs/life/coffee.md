@@ -24,21 +24,35 @@ date: 2025-03-20
 咖啡的萃取过程大致可分为三个阶段，每个阶段溶解的主要风味物质不同：
 
 ### 三个阶段
+1.  Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis
+    sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis
+    nulla. Vivamus a pharetra leo.
+
+    1.  Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet
+        quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a
+        ultricies libero efficitur sed.
+
+    2.  Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
+        rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a.
+
+        1.  Mauris dictum mi lacus
+        2.  Ut sit amet placerat ante
+        3.  Suspendisse ac eros arcu
 
 1. 第一阶段：酸味（0%~20%萃取率）
 
-- **溶解物质**： 水果酸（柠檬酸、苹果酸、醋酸等） 部分挥发性芳香物质（花香、果香）
-- **特点**： 这一阶段主要萃取出明亮的酸感和清新香气。 如果萃取时间过短（如快速浓缩咖啡），可能会突出酸味，但甜感和醇厚度不足。
+    - **溶解物质**： 水果酸（柠檬酸、苹果酸、醋酸等） 部分挥发性芳香物质（花香、果香）
+    - **特点**： 这一阶段主要萃取出明亮的酸感和清新香气。 如果萃取时间过短（如快速浓缩咖啡），可能会突出酸味，但甜感和醇厚度不足。
 
 2. 第二阶段：甜味与平衡感（20%~70%萃取率）
 
-- **溶解物质**： 糖类（蔗糖、果糖） 焦糖化产物（带来焦糖、蜂蜜风味） 部分油脂（增加body和顺滑感）
-- **特点**： 这一阶段是咖啡风味的“黄金区间”，酸甜平衡，口感圆润。 手冲咖啡通常追求这个阶段的萃取，避免过度进入苦味阶段。
+    - **溶解物质**： 糖类（蔗糖、果糖） 焦糖化产物（带来焦糖、蜂蜜风味） 部分油脂（增加body和顺滑感）
+    - **特点**： 这一阶段是咖啡风味的“黄金区间”，酸甜平衡，口感圆润。 手冲咖啡通常追求这个阶段的萃取，避免过度进入苦味阶段。
 
 3. 第三阶段：苦味与杂味（70%~100%萃取率）
 
-- **溶解物质**： 生物碱（咖啡因、葫芦巴碱） 碳化苦味物质（木质素、单宁酸） 过度萃取的焦苦味
-- **特点**： 苦味是咖啡的基底，但过量会掩盖其他风味。 过萃时会出现涩感、焦苦和空洞的木质感。
+    - **溶解物质**： 生物碱（咖啡因、葫芦巴碱） 碳化苦味物质（木质素、单宁酸） 过度萃取的焦苦味
+    - **特点**： 苦味是咖啡的基底，但过量会掩盖其他风味。 过萃时会出现涩感、焦苦和空洞的木质感。
 
 ### 不同冲泡方法的风味萃取重点
 
