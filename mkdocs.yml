@@ -16,18 +16,14 @@ theme:
     - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
-    # - navigation.expand
-    # - navigation.path
+    - navigation.expand
+    - navigation.path
     - navigation.indexes
     - toc.follow
     - search.highlight
     - search.share
     - search.suggest
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/link
-        name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
