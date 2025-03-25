@@ -739,7 +739,7 @@ awk -F: '{
 
 Outputs
 
-```shell script
+```sh
 root       /root
 bin        /bin
 daemon     /sbin
@@ -796,7 +796,7 @@ daemon     /sbin
 
 ### Run script
 
-```shell script
+```sh
 $ cat demo.awk
 #!/usr/bin/awk -f
 BEGIN { x = 23 }
@@ -1042,7 +1042,7 @@ alias aprint='awk "{print \$1}"'
 
 ## sed
 
-<details><summary>quickref</summary>
+quickref
 
 ## Getting Started
 
@@ -1050,17 +1050,17 @@ alias aprint='awk "{print \$1}"'
 
 Syntax
 
-```shell script
+```shell
 $ sed [options] command [input-file]
 ```
 
 With pipeline
 
-```shell script
+```sh
 $ cat report.txt | sed 's/Nick/John/g'
 ```
 
-```shell script
+```sh
 $ echo '123abc' | sed 's/[0-9]+//g'
 ```
 
@@ -1078,7 +1078,7 @@ $ echo '123abc' | sed 's/[0-9]+//g'
 
 ### Multiple commands
 
-```shell script {.wrap}
+```sh {.wrap}
 $ echo "hello world" | sed -e 's/h/H/g' -e 's/w/W/g'
 Hello World
 ```
@@ -1087,7 +1087,7 @@ Use `-e` to execute multiple sed commands
 
 ### Sed script
 
-```shell script
+```sh
 $ echo 's/h/H/g' >> hello.sed
 $ echo 's/w/W/g' >> hello.sed
 $ echo "hello world" | sed -f hello.sed
@@ -1098,7 +1098,7 @@ Use `-f` to execute sed script file
 
 ### Examples
 
-```shell script
+```sh
 $ sed 's/old/new/g' file.txt
 $ sed 's/old/new/g' file.txt > new.txt
 
@@ -1138,7 +1138,7 @@ See also: [File spacing](#file-spacing)
 
 ### Flags
 
-```shell script
+```sh
 $ sed 's/old/new/[flags]' [input-file]
 ```
 
@@ -1178,43 +1178,43 @@ $ sed 's/old/new/[flags]' [input-file]
 
 Replace all occurrences of a string
 
-```shell script
+```sh
 $ sed 's/old/new/g' file.txt
 ```
 
 Replace only the nth occurrence of a string
 
-```shell script
+```sh
 $ sed 's/old/new/2' file.txt
 ```
 
 Replace a string only on the 5th line
 
-```shell script
+```sh
 $ sed '5 s/old/new/' file.txt
 ```
 
 Replace "world" with "universe" but only if the line begins with "hello"
 
-```shell script
+```sh
 $ sed '/hello/s/world/universe/' file.txt
 ```
 
 Remove "\" from the end of each line
 
-```shell script
+```sh
 $ sed 's/\\$//' file.txt
 ```
 
 Remove all whitespace from beginning of each line
 
-```shell script
+```sh
 $ sed 's/^\s*//' file.txt
 ```
 
 Remove comments. Even those that are at the end of a line
 
-```shell script
+```sh
 $ sed 's/#.*$//' file.txt
 ```
 
@@ -1222,19 +1222,19 @@ $ sed 's/#.*$//' file.txt
 
 Search for a string and only print the lines that were matched
 
-```shell script
+```sh
 $ sed -n '/hello/p' file.txt
 ```
 
 Case insensitive search
 
-```shell script
+```sh
 $ sed -n '/hello/Ip' file.txt
 ```
 
 Search for a string but only output lines that do not match
 
-```shell script
+```sh
 $ sed -n '/hello/!p' file.txt
 ```
 
@@ -1242,19 +1242,19 @@ $ sed -n '/hello/!p' file.txt
 
 Append line after line 2
 
-```shell script
+```sh
 $ sed '2a Text after line 2' file.txt
 ```
 
 Append line at the end of the file
 
-```shell script
+```sh
 $ sed '$a THE END!' file.txt
 ```
 
 Append line after every 3rd line starting from line 3
 
-```shell script
+```sh
 $ sed '3~3a Some text' file.txt
 ```
 
@@ -1262,25 +1262,25 @@ $ sed '3~3a Some text' file.txt
 
 Number line of a file (simple left alignment)
 
-```shell script
+```sh
 $ sed = file.txt | sed 'N;s/\n/\t/'
 ```
 
 Number line of a file (number on left, right-aligned)
 
-```shell script
+```sh
 $ sed = file.txt | sed 'N; s/^/   /; s/ *\(.\{6,\}\)\n/\1  /'
 ```
 
 Number line of file, but only print numbers if line is not blank
 
-```shell script
+```sh
 $ sed '/./=' file.txt | sed '/./N; s/\n/ /'
 ```
 
 Count lines (emulates "wc -l")
 
-```shell script
+```sh
 $ sed -n '$='
 ```
 
@@ -1288,13 +1288,13 @@ $ sed -n '$='
 
 Insert text before line 5
 
-```shell script
+```sh
 $ sed '5i line number five' file.txt
 ```
 
 Insert "Example: " before each line that contains "hello"
 
-```shell script
+```sh
 $ sed '/hello/i Example: ' file.txt
 ```
 
@@ -1302,37 +1302,37 @@ $ sed '/hello/i Example: ' file.txt
 
 Delete line 5-7 in file
 
-```shell script
+```sh
 $ sed '5,7d' file.txt
 ```
 
 Delete every 2nd line starting with line 3
 
-```shell script
+```sh
 $ sed '3~2d' file.txt
 ```
 
 Delete the last line in file
 
-```shell script
+```sh
 $ sed '$d' file.txt
 ```
 
 Delete lines starting with "Hello"
 
-```shell script
+```sh
 $ sed '/^Hello/d' file.txt
 ```
 
 Delete all empty lines
 
-```shell script
+```sh
 $ sed '/^$/d' file.txt
 ```
 
 Delete lines starting with "#"
 
-```shell script
+```sh
 $ sed '/^#/d' file.txt
 ```
 
@@ -1340,50 +1340,50 @@ $ sed '/^#/d' file.txt
 
 Double space
 
-```shell script
+```sh
 $ sed G
 ```
 
 Delete all blank lines and double space
 
-```shell script
+```sh
 $ sed '/^$/d;G'
 ```
 
 Triple space a file
 
-```shell script
+```sh
 $ sed 'G;G'
 ```
 
 Undo double-spacing
 
-```shell script
+```sh
 $ sed 'n;d'
 ```
 
 Insert a blank line above line which matches "regex"
 
-```shell script
+```sh
 $ sed '/regex/{x;p;x;}'
 ```
 
 Insert a blank line below line which matches "regex"
 
-```shell script
+```sh
 $ sed '/regex/G'
 ```
 
 Insert a blank line around line which matches "regex"
 
-```shell script
+```sh
 $ sed '/regex/{x;p;x;G;}'
 ```
 
 ## Also see {.cols-1}
 
 - [sed cheatsheet](https://gist.github.com/ssstonebraker/6140154) _(gist.github.com)_
-</details>
+
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [quickref.me](https://quickref.me/sed.html)
 
