@@ -1,7 +1,9 @@
 # My online wiki
+
 I'm using zotero, obsidian and mkdocs to create a wiki. This is the mkdocs part of it, and host by github pages.
 
 ## Build
+
 MkDocs template [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
 use [this link](https://github.com/jobindjohn/obsidian-publish-mkdocs/generate) to generate from template.
 

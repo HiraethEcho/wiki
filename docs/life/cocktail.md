@@ -9,7 +9,7 @@ mermaid: true
 
 # Cocktail
 
-> [!important] > **Drink properly**
+> [!important] **Drink properly**
 
 关于鸡尾酒的小知识
 
