@@ -2,7 +2,7 @@
 title: Introduction to MMP
 toc: true
 tags: null
-date: 2023-10-18 17:20
+date: 2023-10-18
 dg-publish: true
 ---
 

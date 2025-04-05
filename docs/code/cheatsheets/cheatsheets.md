@@ -21,7 +21,7 @@ nohup onedrivegui & > /dev/null
 <details><summary>ref</summary>
 
 title: Awk
-date: 2020-12-31 15:18:34
+date: 2020-12-31
 background: bg-slate-600
 tags:
 

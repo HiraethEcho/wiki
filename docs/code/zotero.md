@@ -1,7 +1,7 @@
 ---
 title: zotero
 toc: true
-date: 2023-11-13 18:33
+date: 2023-11-13
 tags:
   - second_brain
 categories: 

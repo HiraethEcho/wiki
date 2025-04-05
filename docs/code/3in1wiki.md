@@ -4,7 +4,7 @@ toc: true
 tags:
   - second_brain
 published: false
-date: 2024-10-15 13:48:01
+date: 2024-10-15
 dg-publish: true
 ---
 

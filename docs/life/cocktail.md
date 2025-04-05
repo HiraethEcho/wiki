@@ -3,7 +3,7 @@ title: cocktail
 toc: true
 tags: [alcohol]
 published: true
-date: 2023-11-14 17:07
+date: 2023-11-14
 mermaid: true
 ---
 

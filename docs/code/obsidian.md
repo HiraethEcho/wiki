@@ -1,7 +1,7 @@
 ---
 title: obsidian
 toc: true
-date: 2023-11-11 15:09:15
+date: 2023-11-11
 tags:
   - obsidian
   - second_brain

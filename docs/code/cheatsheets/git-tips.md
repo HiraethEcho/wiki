@@ -3,7 +3,7 @@ title: git备忘
 toc: true
 tags:
   - git
-date: 2023-11-10 18:04
+date: 2023-11-10
 ---
 
 ## config

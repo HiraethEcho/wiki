@@ -1,6 +1,6 @@
 ---
 title: Topics in Moduli
 tags: []
-date: 2023-10-10 18:22
+date: 2023-10-10
 ---
 # Moduli spaces
