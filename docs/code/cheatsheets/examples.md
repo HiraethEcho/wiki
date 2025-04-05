@@ -1,3 +1,7 @@
+---
+dg-publish: true
+---
+
 # examples
 
 ## Text Formatting
