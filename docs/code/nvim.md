@@ -4,8 +4,9 @@ toc: true
 tags:
   - arch
   - code
-date:  2024-11-18
+date: 2024-11-18
 update: 
+dg-publish: true
 ---
 # My neovim
 My [config](https://github.com/HiraethEcho/nvim) on github.

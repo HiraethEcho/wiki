@@ -4,6 +4,7 @@ toc: true
 tags:
   - arch
 date: 2024-11-18
+dg-publish: true
 ---
 
 # 安装后的建议配置
