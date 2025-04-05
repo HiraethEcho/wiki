@@ -23,20 +23,18 @@ date: 2025-04-05
 
 ## 示例
 
-例如将`obsidian/hexo`的内容同步到`hexo`框架下对应的`hexo/source/_posts`文件夹下
+例如将`obsidian/hexo`的内容同步到`hexo`框架下对应的`hexo/source/_posts`文件夹下，`/.github/workflows/sync_hexo`中
 
-```.github/workflows/sync_hexo
+```yml
 name: Sync ob/hexo to hexo/source_posts
 
 on:
   push:
     paths:
       - 'hexo/**' # 监听文件夹内的文件变化，没有变化不会触发action
-
 jobs:
   sync:
     runs-on: ubuntu-latest
-
     steps:
       # 检出 obsidian 仓库的代码
       - name: Checkout blogs repository
