@@ -16,3 +16,8 @@ The math note part, I'm using zotero, obsidian and mkdocs to create this wiki, a
 test, in git repository, later.
 
 Test. Added by iphone
+
+Test. Added in ob
+Test. Added in ob
+Test. Added in ob debug
+Test. Added in ob debug
