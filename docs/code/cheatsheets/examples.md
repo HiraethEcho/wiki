@@ -87,10 +87,10 @@ caution
 ```
 
 [wiki](wiki)  
-[wiki/code/arch/archinstall](wiki/code/arch/archinstall)  
-[/wiki](/wiki)  
-[/wiki/code/archinstall](/wiki/code/arch/archinstall)  
-![wiki/img/a.png](wiki/img/a.png)
+[wiki/code/arch/archinstall](wiki/code/arch/archinstall)   to https://hiraethecho.github.io/wiki/code/cheatsheets/examples/wiki
+[/wiki](/wiki)  as above
+[/wiki/code/archinstall](/wiki/code/arch/archinstall)  yes
+![wiki/img/a.png](wiki/img/a.png) plain text
 ![/wiki/img/a.png](/wiki/img/a.png)
 
 ## Mermaid diagrams
