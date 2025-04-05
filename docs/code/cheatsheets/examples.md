@@ -78,13 +78,19 @@ caution
 ## link
 
 ```md
+[wiki](wiki)  
+[wiki/code/arch/archinstall](wiki/code/arch/archinstall)  
 [/wiki](/wiki)  
 [/wiki/code/arch/archinstall](/wiki/code/arch/archinstall)  
+![wiki/img/a.png](wiki/img/a.png)
 ![/wiki/img/a.png](/wiki/img/a.png)
 ```
 
+[wiki](wiki)  
+[wiki/code/arch/archinstall](wiki/code/arch/archinstall)  
 [/wiki](/wiki)  
 [/wiki/code/archinstall](/wiki/code/arch/archinstall)  
+![wiki/img/a.png](wiki/img/a.png)
 ![/wiki/img/a.png](/wiki/img/a.png)
 
 ## Mermaid diagrams

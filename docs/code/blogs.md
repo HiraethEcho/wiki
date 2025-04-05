@@ -6,7 +6,9 @@ date: 2025-04-05
 ---
 
 # 用obsidian管理多个博客
+
 一些花里胡哨的技巧。
+
 ## 目标
 
 多个博客网站，都用github pages功能发布。多个博客的post文件放在一个obsidian仓库中管理，并且本身作为一个github repository。push 这个obsidian/github仓库后将博客内容同步到其他博客repo。各个repo自己发布。
