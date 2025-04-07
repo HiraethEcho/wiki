@@ -42,6 +42,10 @@ jobs:
         with:
           repository: username/obsidian_repo
           path: obsidian
+      - name: commit
+        run: |
+          cd obsidian
+          git log -1 --pretty=%B > ~/commit
 
       # 设置 Git 配置（用户名和ssh私钥）
       - name: Set up Git
@@ -70,7 +74,7 @@ jobs:
         run: |
           cd ~/hexo
           git add .
-          git commit -m "Sync obsidian to hexo"
+          git commit -m "Sync obsidian to hexo $(cat ~/commit)"
           git push origin main
 ```
 
