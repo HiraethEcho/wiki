@@ -1,5 +1,5 @@
 ---
-title: 用mkdocs、obsidian、zotero搭建个人wiki
+title: 用mkdocs、obsidian、zotero搭建在线文献学习笔记
 toc: true
 tags:
   - second_brain
@@ -8,7 +8,7 @@ date: 2024-10-15
 dg-publish: true
 ---
 
-# 使用mkdocs、obsidian、zotero搭建个人在线wiki
+# 使用mkdocs、obsidian、zotero搭建在线文献学习笔记
 
 工作流是，在zotero中阅读和标记。用zotero-better-notes插件把标记变成文本格式，并且导出到obsidian的库文件中，进一步编辑（或者用nvim编辑）。在obsidian中更方便笔记链接跳转，zotero只是文献管理和阅读。然后把笔记同步到mkdocs的git仓库（实际上是把mkdocs的文件夹软链接到obsidian库），用github pages搭建在线wiki。
 

@@ -7,6 +7,7 @@ date: 2023-10-09
 ---
 
 # Basic installation of arch linux
+
 > [!important] 有能力者建议看[官方安装文档](https://wiki.archlinux.org/title/Installation_guide)
 
 双系统安装archlinux，使用btrfs文件系统。重装系统的个人参考。
@@ -213,8 +214,6 @@ hosts:
 127.0.1.1   <yourhostname>.localdomain    <yourhostname>
 ```
 
-
-
 ### quit and reboot
 
 退出新系统，取消挂载，重启
@@ -226,4 +225,5 @@ umount /mnt/home
 umount /mnt
 reboot
 ```
-之后有一些[常见的配置](/wiki/code/arch/archtips)。
+
+之后有一些[常见的配置](/wiki/code/arch/archpostinstall)。

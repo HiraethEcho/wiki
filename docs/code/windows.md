@@ -11,7 +11,7 @@ date: 2025-01-18
 
 ## 重装
 
-按<kbd>windows</kbd>然后按住<kbd>shift</kbd>点击重启，这样重启后会进入恢复模式（之类的），这里可以选择重装系统。  
+按<kbd>windows</kbd>然后按住<kbd>shift</kbd>点击重启，这样重启后会进入恢复模式（之类的），这里可以选择重装系统。或者在设置中的系统恢复部分。  
 重装系统只重装C盘，其他盘是不动的。但是应用安装在其他盘的时候会有问题。
 
 ## 安装
@@ -27,11 +27,58 @@ oobe\bypassnro
 
 ## 设置
 
+### 用户文件夹
+
+在用户目录`C:\Users\_username_`下有一些用户目录，移动这些目录需要通过右键菜单的`属性`
+
+### 设置
+
+### 其他
+
+电源管理
+
+pagefiles
+
 ## 软件源
 
 首先从microsoft store安装，其次用scoop，最后用msi安装。
 
 ### 应用商店
+
+### scoop
+
+权限：
+
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+更改环境变量以修改`scoop`安装位置
+
+```
+$env:SCOOP='D:\Applications\Scoop'
+[Environment]::SetEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
+```
+
+安装`scoop `
+
+```
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+```
+
+或者
+
+```
+iwr -useb get.scoop.sh | iex
+```
+
+## 软件
+
+## 清理
+
+### win SxS
+
+### 应用
 
 清理应用商店，卸载预装软件
 
@@ -61,31 +108,4 @@ Get-AppxProvisionedPackage -Online | where-object {$_.packagename -like "xbox"} 
 
 ```
 Remove-AppxVolume -Volume X:\
-```
-
-## scoop
-
-权限：
-
-```
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-更改环境变量以修改`scoop`安装位置
-
-```
-$env:SCOOP='D:\Applications\Scoop'
-[Environment]::SetEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
-```
-
-安装`scoop `
-
-```
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-```
-
-或者
-
-```
-iwr -useb get.scoop.sh | iex
 ```

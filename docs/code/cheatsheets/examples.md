@@ -1,8 +1,9 @@
 ---
 dg-publish: true
+title: 本站和markdown的语法
 ---
 
-# examples
+# 本站和markdown的语法
 
 ## Text Formatting
 
@@ -90,10 +91,10 @@ caution
 ![/wiki/img/a.png](/wiki/img/a.png)
 ```
 
-[wiki](wiki)   https://hiraethecho.github.io/wiki/code/cheatsheets/examples/wiki
+[wiki](wiki) https://hiraethecho.github.io/wiki/code/cheatsheets/examples/wiki
 [wiki/code/arch/archinstall](wiki/code/arch/archinstall) as above
-[/wiki](/wiki) yes 
-[/wiki/code/archinstall](/wiki/code/arch/archinstall)  yes
+[/wiki](/wiki) yes
+[/wiki/code/archinstall](/wiki/code/arch/archinstall) yes
 ![wiki/img/a.png](wiki/img/a.png) plain text
 ![/wiki/img/a.png](/wiki/img/a.png)
 

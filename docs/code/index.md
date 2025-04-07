@@ -16,7 +16,7 @@ Concludes linux, software, latex, etc
 [(Not) All about arch](/wiki/code/arch/index)
 
 - [安装](/wiki/code/arch/archinstall)
-- [配置](/wiki/code/arch/archtips)
+- [配置](/wiki/code/arch/archpostinstall)
 - [btrfs快照](/wiki/code/arch/btrfs)
 - [Arch Wiki的摘抄](/wiki/code/arch/archwiki)
 
