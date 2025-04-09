@@ -18,7 +18,7 @@ published: false
 - remotely save (using webdav to synchronize files)
 
 ## sync
-因为[用obsidian管理blogs](/wiki/blogs)，所以重点是同步obsidian仓库。云端是github和webdav（koofr），在两台电脑（都是win/linux双系统）和手机、ipad，总计6个仓库同步。要注意的是
+因为[用obsidian管理blogs](/wiki/code/blogs)，所以重点是同步obsidian仓库。云端是github和webdav（koofr），在两台电脑（都是win/linux双系统）和手机、ipad，总计6个仓库同步。要注意的是
 - 手机和ipad很难用git
 - 设置需要忽略的文件
 - 考虑用插件还是外部命令
