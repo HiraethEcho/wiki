@@ -36,3 +36,14 @@ GatewayPorts yes
 在服务机 `/etc/ssh/sshd_config`（作为服务端的配置）设置监听端口，默认为22
 
 根据系统设置防火墙
+
+## X through ssh
+
+to share X11 through ssh, need `Xorg` on server and client.  
+on client using
+
+```sh
+ssh -X -C remote_user@remote_host
+```
+
+where `X` for X forwarding, and `-C` for compression. In this ssh session, GUI like `gvim` should show on client.
