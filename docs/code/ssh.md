@@ -1,12 +1,13 @@
 ---
 title: About ssh
 toc: true
-tags: 
+tags:
 date: 2025-04-13
 dg-publish: true
-
 ---
+
 # ssh
+
 ## 内网ssh连接
 
 一个ipv6地址的电脑，作为中间机，一个内网的电脑，记作服务机，期望其他的客户机（比如iphone）连接到内网的服务机。
@@ -55,4 +56,5 @@ on client using
 ssh -X -C remote_user@remote_host
 ```
 
-where `X` for X forwarding, and `-C` for compression. In this ssh session, GUI like `gvim` should show on client.
+where `X` for X forwarding, and `-C` for compression. In this ssh session, GUI
+like `gvim` should show on client.

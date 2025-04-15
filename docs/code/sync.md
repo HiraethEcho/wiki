@@ -2,8 +2,8 @@
 title: 各种同步方法
 toc: true
 tags:
-  - linux
-  - second_brain
+    - linux
+    - second_brain
 date: 2024-12-21
 ---
 
