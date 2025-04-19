@@ -1,5 +1,5 @@
 ---
-title: example
+title: wiki blog example
 date:
   created: 2023-12-31
 ---
