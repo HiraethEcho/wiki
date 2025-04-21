@@ -17,7 +17,9 @@ title: 本站和markdown的语法
 - [-] things
 - [x] ~~done~~
 
-More formatting options for your webpage [here](https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes). (but not compatible with Obsidian)
+More formatting options for your webpage
+[here](https://squidfunk.github.io/mkdocs-material/reference/formatting/#highlighting-changes).
+(but not compatible with Obsidian)
 
 ```callout
 > [!note]
@@ -27,16 +29,14 @@ More formatting options for your webpage [here](https://squidfunk.github.io/mkdo
 > tips
 ```
 
-> [!note]
-> callout tests
+> [!note] callout tests
 
-> [!tip]
-> tips
+> [!tip] tips
 
 ```html
 <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>test</p>
+    <p class="admonition-title">Note</p>
+    <p>test</p>
 </div>
 ```
 
@@ -49,36 +49,16 @@ More formatting options for your webpage [here](https://squidfunk.github.io/mkdo
     and another line
 
 ```md
-!!! note
-test
-!!! tip
-tips
+!!! note test !!! tip tips
 
-!!! example
-example
-!!! danger
-!!! cite
-!!! question
-!!! summary
-??? warning
-this
-caution
+!!! example example !!! danger !!! cite !!! question !!! summary ??? warning
+this caution
 ```
 
-!!! note
-test
-!!! tip
-tips
+!!! note test !!! tip tips
 
-!!! example
-example
-!!! danger
-!!! cite
-!!! question
-!!! summary
-??? warning
-this
-caution
+!!! example example !!! danger !!! cite !!! question !!! summary ??? warning
+this caution
 
 ## link
 
@@ -87,20 +67,18 @@ caution
 [wiki/code/arch/archinstall](wiki/code/arch/archinstall)  
 [/wiki](/wiki)  
 [/wiki/code/arch/archinstall](/wiki/code/arch/archinstall)  
-![wiki/img/a.png](wiki/img/a.png)
-![/wiki/img/a.png](/wiki/img/a.png)
+![wiki/img/a.png](wiki/img/a.png) ![/wiki/img/a.png](/wiki/img/a.png)
 ```
 
 [wiki](wiki) https://hiraethecho.github.io/wiki/code/cheatsheets/examples/wiki
-[wiki/code/arch/archinstall](wiki/code/arch/archinstall) as above
-[/wiki](/wiki) yes
-[/wiki/code/archinstall](/wiki/code/arch/archinstall) yes
-![wiki/img/a.png](wiki/img/a.png) plain text
-![/wiki/img/a.png](/wiki/img/a.png)
+[wiki/code/arch/archinstall](wiki/code/arch/archinstall) as above [/wiki](/wiki)
+yes [/wiki/code/archinstall](/wiki/code/arch/archinstall) yes
+![wiki/img/a.png](wiki/img/a.png) plain text ![/wiki/img/a.png](/wiki/img/a.png)
 
 ## Mermaid diagrams
 
-Here's the example from [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-flowcharts):
+Here's the example from
+[MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-flowcharts):
 
 ```mermaid
   graph LR
@@ -114,7 +92,8 @@ Here's the example from [MkDocs Material documentation](https://squidfunk.github
 
 LaTeX math is supported using MathJax.
 
-Inline math looks like $f(x) = x^2$. The input for this is `$f(x) = x^2$`. Use `$...$`.  
+Inline math looks like $f(x) = x^2$. The input for this is `$f(x) = x^2$`. Use
+`$...$`.  
 For a block of math, use `$$...$$` on separate lines
 
 ```

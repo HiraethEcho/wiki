@@ -3,57 +3,78 @@ title: zotero
 toc: true
 date: 2023-11-13
 tags:
-  - second_brain
-categories: 
+    - second_brain
+categories:
 published: true
 ---
+
 # Zotero
 
 ## Install and basic setting
 
 ## Plugins
+
 **zotero 7:**
-- zotmoov
+
+- attanger
 - zotero better notes
- 
 
 ## Sync
+
 using ~~zotmoov~~ attanger to move files
 
 zotero 7 to rename:
+
 ```
 {{ title case="snake" }}{{ creators case="snake" prefix="_" max="1"}}{{ year prefix="_" }}
 ```
 
 use any cloud drive to sync. I'm using OneDrive.
+
 ## zotero better notes
 
 **templates:**
+
 ```yaml
--
-    name: '[QuickInsertV2]'
-    text: "// @use-markdown\n${linkText} [ob](/zotero/${subNoteItem.getNoteTitle ? subNoteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") + \"-\":\"\"}${subNoteItem.key}) <a href=\"${link}\">zn</a>"
--
-    name: '[QuickImportV2]'
-    text: "<blockquote>\n${{\n  return await Zotero.BetterNotes.api.convert.link2html(link, {noteItem, dryRun: _env.dryRun});\n}}$\n</blockquote>"
--
-    name: '[QuickNoteV5]'
-    text: "${annotationItem.annotationComment}\n${{\n  let res = \"\";\n  res += await Zotero.BetterNotes.api.convert.annotations2html([annotationItem], {noteItem, ignoreComment: true});\n  return res;\n}}$"
--
-    name: '[ExportMDFileNameV2]'
-    text: '${noteItem.parentItem ? "A-":""}${(noteItem.getNoteTitle ? noteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-" : "")}${noteItem.key}.md'
--
-    name: '[ExportMDFileHeaderV2]'
-    text: "${{\n  let header = {};\n  header.tags = noteItem.getTags().map((_t) => _t.tag);\n  header.parent = noteItem.parentItem\n    ? noteItem.parentItem.getField(\"title\")\n    : \"\";\n  return JSON.stringify(header);\n}}$"
--
-    name: '[ExportMDFileContent]'
-    text: "${{\n\tlet str = mdContent;\n\tlet rmspan = str.replace(/<\\/?span.*?>/g, '');\n\tlet isolink = rmspan.replace(/(<a.*?>)“(.*?)”<\\/a>/g,'$2 $1(to zotero pdf)</a>');\n\treturn isolink;\n}}$"
+- name: "[QuickInsertV2]"
+  text:
+      "// @use-markdown\n${linkText} [ob](/zotero/${subNoteItem.getNoteTitle ?
+      subNoteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") +
+      \"-\":\"\"}${subNoteItem.key}) <a href=\"${link}\">zn</a>"
+- name: "[QuickImportV2]"
+  text:
+      "<blockquote>\n${{\n  return await
+      Zotero.BetterNotes.api.convert.link2html(link, {noteItem, dryRun:
+      _env.dryRun});\n}}$\n</blockquote>"
+- name: "[QuickNoteV5]"
+  text:
+      "${annotationItem.annotationComment}\n${{\n  let res = \"\";\n  res +=
+      await Zotero.BetterNotes.api.convert.annotations2html([annotationItem],
+      {noteItem, ignoreComment: true});\n  return res;\n}}$"
+- name: "[ExportMDFileNameV2]"
+  text:
+      '${noteItem.parentItem ? "A-":""}${(noteItem.getNoteTitle ?
+      noteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-" :
+      "")}${noteItem.key}.md'
+- name: "[ExportMDFileHeaderV2]"
+  text:
+      "${{\n  let header = {};\n  header.tags = noteItem.getTags().map((_t) =>
+      _t.tag);\n  header.parent = noteItem.parentItem\n    ?
+      noteItem.parentItem.getField(\"title\")\n    : \"\";\n  return
+      JSON.stringify(header);\n}}$"
+- name: "[ExportMDFileContent]"
+  text:
+      "${{\n\tlet str = mdContent;\n\tlet rmspan = str.replace(/<\\/?span.*?>/g,
+      '');\n\tlet isolink = rmspan.replace(/(<a.*?>)“(.*?)”<\\/a>/g,'$2 $1(to
+      zotero pdf)</a>');\n\treturn isolink;\n}}$"
 ```
+
 Or you can copy these:
+
 ```quickinsert
-# This template is specifically for importing/sharing, using better 
+# This template is specifically for importing/sharing, using better
 # notes 'import from clipboard': copy the content and
-# goto Zotero menu bar, click Tools->New Template from Clipboard.  
+# goto Zotero menu bar, click Tools->New Template from Clipboard.
 # Do not copy-paste this to better notes template editor directly.
 name: "[QuickInsertV2]"
 zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
@@ -66,9 +87,9 @@ content: |-
 ```
 
 ```quickimport
-# This template is specifically for importing/sharing, using better 
+# This template is specifically for importing/sharing, using better
 # notes 'import from clipboard': copy the content and
-# goto Zotero menu bar, click Tools->New Template from Clipboard.  
+# goto Zotero menu bar, click Tools->New Template from Clipboard.
 # Do not copy-paste this to better notes template editor directly.
 name: "[QuickImportV2]"
 zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
@@ -84,9 +105,9 @@ content: |-
 ```
 
 ```quicknote
-# This template is specifically for importing/sharing, using better 
+# This template is specifically for importing/sharing, using better
 # notes 'import from clipboard': copy the content and
-# goto Zotero menu bar, click Tools->New Template from Clipboard.  
+# goto Zotero menu bar, click Tools->New Template from Clipboard.
 # Do not copy-paste this to better notes template editor directly.
 name: "[QuickNoteV5]"
 zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
@@ -104,7 +125,7 @@ content: |-
     }
     return res;
   }}$
-  
+
   // @use-markdown
   ***
   ${{
@@ -115,9 +136,9 @@ content: |-
 ```
 
 ```exportmdfilename
-# This template is specifically for importing/sharing, using better 
+# This template is specifically for importing/sharing, using better
 # notes 'import from clipboard': copy the content and
-# goto Zotero menu bar, click Tools->New Template from Clipboard.  
+# goto Zotero menu bar, click Tools->New Template from Clipboard.
 # Do not copy-paste this to better notes template editor directly.
 name: "[ExportMDFileNameV2]"
 zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
@@ -128,9 +149,9 @@ content: |-
 ```
 
 ```exportmdfileheader
-# This template is specifically for importing/sharing, using better 
+# This template is specifically for importing/sharing, using better
 # notes 'import from clipboard': copy the content and
-# goto Zotero menu bar, click Tools->New Template from Clipboard.  
+# goto Zotero menu bar, click Tools->New Template from Clipboard.
 # Do not copy-paste this to better notes template editor directly.
 name: "[ExportMDFileHeaderV2]"
 zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
@@ -153,9 +174,9 @@ content: |-
 ```
 
 ```exportmdfilecontent
-# This template is specifically for importing/sharing, using better 
+# This template is specifically for importing/sharing, using better
 # notes 'import from clipboard': copy the content and
-# goto Zotero menu bar, click Tools->New Template from Clipboard.  
+# goto Zotero menu bar, click Tools->New Template from Clipboard.
 # Do not copy-paste this to better notes template editor directly.
 name: "[ExportMDFileContent]"
 zoteroVersion: "7.0.9.SOURCE.fadbf3d2d"
@@ -172,7 +193,10 @@ content: |-
 ```
 
 annotation will be exported as
+
 ```
 <span class="highlight" data-annotation="<data-annotation>" ztype="zhighlight"><a href="zotero://open/library/items/G4BKVA2X?page=2&#x26;annotation=LZLEYYRJ">“<content>”</a></span> <span class="citation" data-citation="<citation>" ztype="zcitation">(<span class="citation-item"><a href="zotero://select/library/items/GLXUZZJT"></a></span>)</span>
 ```
-the color of annotation is coded as `%23<rgb>` in `<data-annotation>`, for example blue (#2ea8e5) annotation is `%232ea8e5`
+
+the color of annotation is coded as `%23<rgb>` in `<data-annotation>`, for
+example blue (#2ea8e5) annotation is `%232ea8e5`
