@@ -6,7 +6,7 @@ tags:
   - 书评
 excerpt: 什么是单向度？它是如何形成的？保护自己的思想，不成为单向度的人？
 date: 2023-10-01
-dg-publish:
+dg-publish: true
 ---
 
 # 保护自己的思想
