@@ -59,7 +59,7 @@ ID 290 gen 105929 top level 5 path @
 
 参考：
 
-- [archwiki](https://wiki.archlinux.org/title/User:M0p/Btrfs_subvolumes#An_intro_to_Snapper)。
+- [Snapper](https://wiki.archlinux.org/title/Snapper) 
 - [我的ArchLinux下Btrfs方案](https://www.hhhil.com/posts/archlinux-btrfs-scheme/#%e5%bf%ab%e7%85%a7%e4%b8%8e%e5%a4%87%e4%bb%bd)
 
 snapper更加灵活。首先创建一个snapper的配置文件
