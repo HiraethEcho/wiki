@@ -50,7 +50,7 @@ check monospace
 fc-match monospace
 ```
 
-set fallbak fonts, edit `$XDG_CONFIG_HOME/fontconfig/fonts.conf`:
+set fallback fonts, edit `$XDG_CONFIG_HOME/fontconfig/fonts.conf`:
 
 ```text
 <?xml version="1.0"?>
