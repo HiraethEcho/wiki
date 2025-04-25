@@ -21,3 +21,9 @@ Test. Added in ob
 Test. Added in ob
 Test. Added in ob debug
 Test. Added in ob debug
+
+# Tags
+
+Following is a list of relevant tags:
+
+<!-- material/tags -->
