@@ -1,5 +1,6 @@
 ---
 title: 折腾的linux+X11+dwm
+categories: linux
 tags:
   - linux
   - daily
