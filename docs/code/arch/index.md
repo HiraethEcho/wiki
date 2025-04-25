@@ -7,8 +7,8 @@ date: 2025-01-04
 # 关于arch的安装和配置
 ## start
 - [安装](/wiki/code/arch/archinstall)
-- [配置](/wiki/code/arch/archtips)
+- [配置](/wiki/code/arch/archpostinstall)
 ## usage
-- [btrfs快照](/wiki/code/arch/btrfs)
+- [btrfs快照](/wiki/code/linux/btrfs)
 ## more
 - [Arch Wiki的摘抄](/wiki/code/arch/archwiki)
