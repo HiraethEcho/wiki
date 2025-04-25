@@ -69,7 +69,7 @@ markdown_extensions:
 plugins:
   - search
   - blog:
-      post_url_format: "{file}"
+      post_url_format: "posts/{file}"
       post_excerpt: optional
       archive: true
       categories: true
