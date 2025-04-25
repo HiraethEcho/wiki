@@ -76,6 +76,7 @@ plugins:
       categories_url_format: "{slug}"
   - callouts
   - tags:
+      tags_file: tags.md
       tags_hierarchy: true
   # - roamlinks
   - rss:
