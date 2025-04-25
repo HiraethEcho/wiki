@@ -68,10 +68,14 @@ markdown_extensions:
 
 plugins:
   - search
-  - blog
+  - blog:
+      post_url_format: "{file}"
+      post_excerpt: optional
+      archive: true
+      categories: true
+      categories_url_format: "{slug}"
   - callouts
   - tags:
-      tags_file: tags.md
       tags_hierarchy: true
   # - roamlinks
   - rss:
