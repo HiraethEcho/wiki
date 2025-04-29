@@ -1,12 +1,12 @@
 ---
-title: 下载网易云音乐
+title: 网页端下载网易云音乐的音乐
 toc: true
 tags:
 date: 2025-04-29
 dg-publish: false
 ---
 
-# 从网页端下载
+# 从网页端下载音乐
 
 打开网易云音乐，然后打开`页面审查元素`
 
@@ -15,20 +15,6 @@ dg-publish: false
 
 在新页面里选择`Network`，可以在`Filter`里写m4a。然后点击播放，会有新的请求。右键网址后用`open in new tab`，就可以在新页面打开音频。再右键保存音频即可。
 
-~~或者直接`Save reponse as`来下载。~~ 这样只下载`1024k`的文件，不是整个
+> [!note] ~~或者直接`Save reponse as`来下载。~~ 这样只下载`1024k`的文件，不是整个。
 
-<ul>
-    <li> item
-another line
-<li> another item
-<ol>
-<li> mixed 
-nest
-    closed
-</li>
-<li>
-not closed
-    mulilines
-    </ol>
-        <li> item again
-</ul>
+理论上是网页能播放就能下载。
