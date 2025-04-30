@@ -205,6 +205,12 @@ systemctl enable NetworkManager.service # 启动网络服务
 hostnamectl set-hostname <yourhostname> # 设置主机名
 ```
 
+时间格式也可以设置
+```sh
+echo "LC_TIME=C.UTF-8" >> /etc/locale.conf # >> 表示追加。
+```
+
+
 hosts:
 
 ```
