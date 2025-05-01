@@ -2,11 +2,26 @@
 title: Bash Scripts
 toc: true
 tags:
-  - linux
+    - linux
 date: 2024-12-31
 ---
 
 # Bash Scripts
+
+First line of shell Scripts usually is the `she-bang`:
+
+```
+#!/bin/sh
+```
+
+Means using `/bin/sh` to run the script.
+
+但是`/bin/sh`通常是符号链接，在不同机器上实际上是不同的shell，有时会有以外情况。所以建议写成
+
+```
+#!/bin/bash
+```
+
 
 ## get-opts
 
