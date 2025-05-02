@@ -26,3 +26,15 @@ use `gnome-keyring` and `thunar` to auto connect a webdav.
 ## Reference
 
 [https://linuxhandbook.com/](https://linuxhandbook.com/)
+
+## commands
+
+```sh
+type something
+```
+example
+```sh
+type cd
+
+cd is a shell builtin
+```
