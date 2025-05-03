@@ -1,27 +1,20 @@
 ---
 title: About
 hide:
-  - toc
+    - toc
 ---
+
 # My online wiki
-The math note part, I'm using zotero, obsidian and mkdocs to create this wiki, and is hosted on github pages.
 
-<!-- - [About](/wiki/About/index): More details about this wiki. -->
-- [Code](/wiki/code): My notes about code, computer and sofeares.
-- [Life](/wiki/life): My note about daily life. Some interesting things I want to remember.
-- [Math](/wiki/math): My notes about math. Mostly about Algebraic Geometry.
-- [Reading](/wiki/reading): My Reading notes. (Sadly no notes now, hope to keep a hobit)
-- [Zotero](/wiki/zotero): My annotation and notes exported from `zotero` by `Better Notes for Zotero` .
+To remains me what I know and what are they.
 
-test, in git repository, later.
+- [Code](/wiki/code/index): My notes about code, computer and software. I use Arch by the way.
+- [Life](/wiki/life/index): Life Hacker!
+- [Read](/wiki/read/index): My Reading notes.
+- [Note](/wiki/zotero/index): My annotation and notes exported from `zotero` by `Better Notes for Zotero`.
+- [Math](/wiki/math/index): My notes about math. Mostly about Algebraic Geometry.
 
-Test. Added by iphone
-
-Test. Added in ob
-Test. Added in ob
-Test. Added in ob debug
-Test. Added in ob debug
-
+You can check my [Digital Garden](https://hiraeth-dg.netlify.app/), where are some of my [blogs files in my obsidian repo](/wiki/code/blogs).
 # Tags
 
 Following is a list of relevant tags:
