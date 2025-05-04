@@ -2,7 +2,7 @@
 title: git备忘
 toc: true
 tags:
-  - git
+    - git
 date: 2023-11-10
 ---
 
@@ -63,12 +63,14 @@ git stash pop
 ```
 
 新增ignore文件，并不再跟踪
+
 ```
 # edit .gitignore
 git rm -r --cached .
 git add .
 git commit -m "remove xyz file"
 ```
+
 ### branch
 
 列出分支
@@ -76,6 +78,7 @@ git commit -m "remove xyz file"
 ```
 $ git branch
 ```
+
 切换分支
 
 ```
@@ -201,7 +204,6 @@ $ git revert <commit>
 $ git reset --hard <commit>
 ```
 
-
 ## submodule
 
 使用 `git submodule add <submodule_url>` 命令可以在项目中创建一个子模块。  
@@ -257,8 +259,25 @@ git rm project-sub-1
 git commit -m "delete submodule project-sub-1"
 ```
 
-## 多个上游
+## worktree
 
+一般在主目录外建立另一个worktree，这样可以同时处理两个分支
+
+```
+usage: git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]
+                        [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]
+   or: git worktree list [-v | --porcelain [-z]]
+   or: git worktree lock [--reason <string>] <worktree>
+   or: git worktree move <worktree> <new-path>
+   or: git worktree prune [-n] [-v] [--expire <expire>]
+   or: git worktree remove [-f] <worktree>
+   or: git worktree repair [<path>...]
+   or: git worktree unlock <worktree>
+```
+
+For example: `git worktree add ../tree`
+
+## 多个上游
 
 ## 清理
 
