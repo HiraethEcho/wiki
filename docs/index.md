@@ -10,7 +10,7 @@ To remains me what I know and what are they.
 
 - [Code](/wiki/code/index): My notes about code, computer and software. I use Arch by the way.
 - [Life](/wiki/life/index): Life Hacker!
-- [Read](/wiki/read/index): My Reading notes.
+- [Read](/wiki/read/index): My Reading notes. 包括直接摘抄和总结反思。
 - [Note](/wiki/zotero/index): My annotation and notes exported from `zotero` by `Better Notes for Zotero`.
 - [Math](/wiki/math/index): My notes about math. Mostly about Algebraic Geometry.
 
