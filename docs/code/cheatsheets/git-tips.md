@@ -9,23 +9,27 @@ date: 2023-11-10
 ## config
 
 ```
-$ git config --list
+git config --list
 ```
 
 ```
-$ git config --global --list
+git config --global --list
 ```
 
 ```
-$ git config --system --list
+git config --system --list
 ```
 
 ```
-$ git config --global user.name “[firstname lastname]”
+git config --global user.name “[firstname lastname]”
 ```
 
 ```
-$ git config --global user.email “[valid-email]”
+git config --global user.email “[valid-email]”
+```
+
+```sh
+git config --global credential.helper 'store'
 ```
 
 ## basic usage
