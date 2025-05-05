@@ -1,3 +1,25 @@
+---
+title: cheetsheets
+toc: true
+tags: 
+date: 2025-05-05
+dg-publish: false
+---
+
 # My cheetsheets
 
-about linux etc
+## about linux 
+
+### awk grep sed
+
+### shell, scripts
+
+## cli
+
+### git
+
+### regex
+
+## app
+
+### latex
