@@ -2,6 +2,7 @@
 title: qemu虚拟机
 toc: true
 tags:
+    - tools
 date: 2025-04-21
 dg-publish: false
 ---

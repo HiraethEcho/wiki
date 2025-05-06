@@ -3,6 +3,8 @@ title: Bash Scripts
 toc: true
 tags:
     - linux
+    - handbook
+    - tools
 date: 2024-12-31
 ---
 

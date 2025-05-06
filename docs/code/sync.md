@@ -2,8 +2,7 @@
 title: 各种同步方法
 toc: true
 tags:
-    - linux
-    - second_brain
+    - tools
 date: 2024-12-21
 ---
 

@@ -2,7 +2,7 @@
 title: 用mkdocs、obsidian、zotero搭建在线文献学习笔记
 toc: true
 tags:
-  - second_brain
+  - pkm
 published: false
 date: 2024-10-15
 dg-publish: true

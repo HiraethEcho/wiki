@@ -2,6 +2,7 @@
 title: About ssh
 toc: true
 tags:
+    - tools
 date: 2025-04-13
 dg-publish: true
 ---

@@ -1,7 +1,8 @@
 ---
 title: regex
 toc: true
-tags: 
+tags:
+    - handbook
 date: 2025-05-05
 dg-publish: false
 ---
@@ -123,8 +124,8 @@ False
 - `+`: match at least once
 - `*`: match 0 or multiple times
 - `{M,N}`: minimum M matches and maximum N matches
-  - `{M,}`: match at least M times
-  - `{0,N}`: match at most N times
+    - `{M,}`: match at least M times
+    - `{0,N}`: match at most N times
 
 ## Greedy vs Lazy
 
@@ -142,11 +143,11 @@ The only difference between basic and extended regular expressions is in the beh
 Multiple flavors may be supported by the tools:
 
 - sed
-  - `sed`: basic
-  - `sed -E`: extended
+    - `sed`: basic
+    - `sed -E`: extended
 - grep
-  - `grep`: basic
-  - `egrep` or `grep -E`
+    - `grep`: basic
+    - `egrep` or `grep -E`
 
 ## JavaScript
 
@@ -187,7 +188,7 @@ for (let match of matches) {
 
 - Literal: `re = /.../g`
 - Constructor: `re = new RegExp("...")`
-  - can use string concat: `re = new RegExp("..." + some_variable + "...")`
+    - can use string concat: `re = new RegExp("..." + some_variable + "...")`
 
 ### Local vs. Global
 

@@ -3,7 +3,8 @@ title: My Neovim Config
 toc: true
 tags:
     - arch
-    - code
+    - editor
+    - config
 date: 2024-11-18
 update:
 dg-publish: true

@@ -4,7 +4,8 @@ toc: true
 date: 2023-11-11
 tags:
     - obsidian
-    - second_brain
+    - editor
+    - config
 published: false
 ---
 
@@ -30,5 +31,5 @@ published: false
 
 ## editor
 
-虽然用obsidian管理markdown文件，但编辑器可以用其他的。
+虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[nvim](/wiki/code/nvim).
 

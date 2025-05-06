@@ -1,7 +1,8 @@
 ---
 title: cocktail
 toc: true
-tags: [alcohol]
+tags:
+    - drink
 published: true
 date: 2023-11-14
 mermaid: true

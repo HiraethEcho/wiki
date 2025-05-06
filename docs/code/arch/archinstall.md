@@ -3,6 +3,7 @@ title: 双系统安装archlinux
 toc: true
 tags:
   - arch
+  - handbook
 date: 2023-10-09
 ---
 

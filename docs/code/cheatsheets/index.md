@@ -1,14 +1,15 @@
 ---
 title: cheetsheets
 toc: true
-tags: 
+tags:
+    - handbook
 date: 2025-05-05
 dg-publish: false
 ---
 
 # My cheetsheets
 
-## about linux 
+## about linux
 
 ### awk grep sed
 

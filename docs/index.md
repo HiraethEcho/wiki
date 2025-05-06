@@ -15,7 +15,8 @@ To remains me what I know and what are they.
 - [Math](/wiki/math/index): My notes about math. Mostly about Algebraic Geometry.
 
 You can check my [Digital Garden](https://hiraeth-dg.netlify.app/), where are some of my [blogs files in my obsidian repo](/wiki/code/blogs).
-# Tags
+
+## Tags
 
 Following is a list of relevant tags:
 

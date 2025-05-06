@@ -2,7 +2,7 @@
 title: Linux Handbook
 toc: true
 tags:
-  - linux
+    - handbook
 date: 2024-12-17
 ---
 
@@ -32,7 +32,9 @@ use `gnome-keyring` and `thunar` to auto connect a webdav.
 ```sh
 type something
 ```
+
 example
+
 ```sh
 type cd
 

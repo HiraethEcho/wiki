@@ -2,6 +2,7 @@
 title: 咖啡
 toc: true
 tags:
+    - drink
 date: 2025-03-20
 ---
 

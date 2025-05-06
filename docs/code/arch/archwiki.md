@@ -4,6 +4,7 @@ toc: true
 tags:
   - arch
   - linux
+  - handbook
 date: 2025-01-03
 dg-publish: true
 ---

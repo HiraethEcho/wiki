@@ -1,8 +1,8 @@
 ---
 title: 酒谱
 toc: true
-tags: [alcohol]
-published: false
+tags:
+    - drink
 date: 2024-01-26
 draft: true
 ---

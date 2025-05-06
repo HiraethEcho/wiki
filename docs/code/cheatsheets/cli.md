@@ -1,7 +1,9 @@
 ---
 title: in cli
 toc: true
-tags: 
+tags:
+    - handbook
+    - tools
 date: 2025-05-05
 dg-publish: false
 ---
@@ -15,5 +17,3 @@ dg-publish: false
 ```sh
 nohup onedrivegui & > /dev/null
 ```
-
-

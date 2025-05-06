@@ -2,7 +2,7 @@
 title: 键盘和固件
 toc: true
 tags:
-  - linux
+  - hardware
 date: 2024-12-17
 ---
 
