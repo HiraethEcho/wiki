@@ -11,14 +11,28 @@ published: false
 
 # obsidian
 
-## Install
-
 ## plugins
-
-- dataview (display files by metadata)
-- kanban (plan things, especially something with many stages)
-- Hover Editor (actually barely used)
+常用：
 - remotely save (using webdav to synchronize files)
+- digital garden
+- obsidian web clipper 浏览器插件
+好用：
+- find orphaned files and broken links
+- git
+- dataview (display files by metadata)
+少用：
+- kanban (plan things, especially something with many stages)
+
+about vim:
+- vim toggle
+- vim input method switch
+- vimrc
+- edit in neovim
+
+## theme
+
+- nord
+- minimal
 
 ## sync
 
@@ -31,5 +45,5 @@ published: false
 
 ## editor
 
-虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[nvim](/wiki/code/nvim).
+虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[neovim](/wiki/code/nvim).
 

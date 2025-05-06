@@ -1,6 +1,6 @@
 # This is my Notes about computer
 
-Concludes linux, software, latex, etc
+Includes linux, software, latex, etc
 
 ## softwares
 
@@ -8,8 +8,15 @@ Concludes linux, software, latex, etc
 
 ## linux
 
+About usage and knowledge of [linux](/wiki/code/linux/index).
+
 ## [cheat sheets](/wiki/code/cheatsheets/index)
 
+For [shell](/wiki/code/linux/shell) and [awk](/wiki/code/cheatsheets/awk.md), [sed](/wiki/code/cheatsheets/sed), [grep](/wiki/code/cheatsheets/grep), etc
+
+[Shell script](/wiki/code/cheatsheets/bash-scripts), [regex](/wiki/code/cheatsheets/regex)
+
+[latex](/wiki/code/cheatsheets/latex)
 
 ## archlinux
 
