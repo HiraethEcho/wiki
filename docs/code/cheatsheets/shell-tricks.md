@@ -1,5 +1,5 @@
 ---
-title: in cli
+title: Tricks in shell
 toc: true
 tags:
     - handbook
@@ -8,7 +8,9 @@ date: 2025-05-05
 dg-publish: false
 ---
 
-# cli
+# Tricks in shell
+
+see intro to shell [here](/wiki/code/linux/shell)
 
 ## useful
 

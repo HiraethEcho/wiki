@@ -2,12 +2,15 @@
 title: 从键盘到字符
 toc: true
 tags:
-  - linux
+    - linux
 date: 2024-12-17
 ---
+
 # 从键盘到字符
 
 软件版
+
+计算机从键盘收到信号后发生了什么
 
 ## Preliminaries
 
@@ -21,6 +24,7 @@ xinput list | grep -i "Touchpad" | awk '{print $6}' | sed 's/[^0-9]//g'
 
 > [!warning]
 > does not work
+需要添加文件
 
 ```xinput list
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
@@ -83,6 +87,7 @@ Keycode is what the kernal get, and keysym is what it gives. Each keysym column 
 6. ISO_Level3_Shift+Shift+Key
 
 check current keycode map:
+
 ```xmodmap -pke
 
 keycode   8 =
@@ -112,15 +117,18 @@ keycode  67 = F1 F1 F1 F1 F1 F1 XF86Switch_VT_1
 keycode  68 = F2 F2 F2 F2 F2 F2 XF86Switch_VT_2
 ...
 ```
+
 [ref](https://unix.stackexchange.com/questions/55076/what-is-the-mode-switch-modifier-for/55154#55154)
 
 another softwares:
+
 - interception-tools with plugins
     - dual-function-keys (like Mod-Tap feature of zmk and qmk)
     - caps2esc
     - space2meta
-- [keyd](https://github.com/rvaiya/keyd): this is sick. 
+- [keyd](https://github.com/rvaiya/keyd): this is sick.
 
 # Reference
+
 - archwiki:
-  - [https://wiki.archlinux.org/title/Keyboard_input](https://wiki.archlinux.org/title/Keyboard_input)
+    - [https://wiki.archlinux.org/title/Keyboard_input](https://wiki.archlinux.org/title/Keyboard_input)

@@ -12,18 +12,25 @@ published: false
 # obsidian
 
 ## plugins
+
 常用：
+
 - remotely save (using webdav to synchronize files)
-- digital garden
 - obsidian web clipper 浏览器插件
+
 好用：
+
 - find orphaned files and broken links
 - git
 - dataview (display files by metadata)
+- digital garden
+
 少用：
+
 - kanban (plan things, especially something with many stages)
 
 about vim:
+
 - vim toggle
 - vim input method switch
 - vimrc
@@ -46,4 +53,3 @@ about vim:
 ## editor
 
 虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[neovim](/wiki/code/nvim).
-
