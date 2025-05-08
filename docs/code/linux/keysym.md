@@ -24,7 +24,7 @@ xinput list | grep -i "Touchpad" | awk '{print $6}' | sed 's/[^0-9]//g'
 
 > [!warning]
 > does not work
-需要添加文件
+> 需要添加文件
 
 ```xinput list
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
