@@ -2,8 +2,8 @@
 title: 双系统安装archlinux
 toc: true
 tags:
-  - arch
-  - handbook
+    - arch
+    - handbook
 date: 2023-10-09
 ---
 
@@ -207,10 +207,10 @@ hostnamectl set-hostname <yourhostname> # 设置主机名
 ```
 
 时间格式也可以设置
+
 ```sh
 echo "LC_TIME=C.UTF-8" >> /etc/locale.conf # >> 表示追加。
 ```
-
 
 hosts:
 

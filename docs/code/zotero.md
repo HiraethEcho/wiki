@@ -4,8 +4,7 @@ toc: true
 date: 2023-11-13
 tags:
     - pkm
-categories:
-published: true
+dg-publish: true
 ---
 
 # Zotero

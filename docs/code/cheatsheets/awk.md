@@ -1,12 +1,65 @@
 ---
 title: awk
 toc: true
-tags: 
+tags:
 date: 2025-05-05
 dg-publish: true
 ---
 
 # awk
+
+## tldr
+
+A versatile programming language for working on files.
+More information: <https://github.com/onetrueawk/awk>.
+
+Print the fifth column (a.k.a. field) in a space-separated file:
+
+```
+awk '{print $5}' path/to/file
+```
+
+Print the second column of the lines containing "foo" in a space-separated file:
+
+```
+awk '/foo/ {print $2}' path/to/file
+```
+
+Print the last column of each line in a file, using a comma (instead of space) as a field separator:
+
+```
+awk -F ',' '{print $NF}' path/to/file
+```
+
+Sum the values in the first column of a file and print the total:
+
+```
+awk '{s+=$1} END {print s}' path/to/file
+```
+
+Print every third line starting from the first line:
+
+```
+awk 'NR%3==1' path/to/file
+```
+
+Print different values based on conditions:
+
+```
+awk '{if ($1 == "foo") print "Exact match foo"; else if ($1 ~ "bar") print "Partial match bar"; else print "Baz"}' path/to/file
+```
+
+Print all the lines which the 10th column value is between a min and a max:
+
+```
+awk '($10 >= min_value && $10 <= max_value)'
+```
+
+Print table of users with UID >=1000 with header and formatted output, using colon as separator (`%-20s` mean: 20 left-align string characters, `%6s` means: 6 right-align string characters):
+
+```
+awk 'BEGIN {FS=":";printf "%-20s %6s %25s\n", "Name", "UID", "Shell"} $4 >= 1000 {printf "%-20s %6d %25s\n", $1, $4, $7}' /etc/passwd
+```
 
 ## Getting Started
 
@@ -60,7 +113,6 @@ $0/NR ▶ │  1   │  cheatsheets.zip │  awk  │
 $0/NR ▶ │  2   │  google.com      │  25   │
         └──────┴──────────────────┴───────┘
 ```
-
 
 ```
 # First and last field
@@ -295,7 +347,6 @@ awk -v varName="$PWD" '
 - `++`
 - `--`
 
-{.cols-3 .marker-none}
 
 #### Shorthand assignments
 
@@ -305,7 +356,6 @@ awk -v varName="$PWD" '
 - `/=`
 - `%=`
 
-{.cols-3 .marker-none}
 
 #### Comparison operators
 
@@ -316,7 +366,6 @@ awk -v varName="$PWD" '
 - `<=`
 - `>=`
 
-{.cols-3 .marker-none}
 
 ### Examples
 
@@ -755,7 +804,6 @@ daemon     /sbin
 - `+`
 - `?`
 
-
 ### Escape Sequences
 
 | -    | -                   |
@@ -784,232 +832,3 @@ $ awk -f demo.awk /etc/passwd
 - [The GNU Awk User's Guide](https://www-zeuthen.desy.de/dv/documentation/unixguide/infohtml/gawk/gawk.html)
   _(www-zeuthen.desy.de)_
 - [AWK cheatsheet](https://gist.github.com/Rafe/3102414) _(gist.github.com)_
-
-</details>
-
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.hackingnote.com](https://www.hackingnote.com/en/cheatsheets/awk/)
-
-> HackingNoteHackingNote
-
-## Built-in
-
-- `$1`: `awk` reads and parses each line from input based on _whitespace_ character by default and set the variables `$1`, `$2` and etc.
-- `NF`: Number of Fields.
-- `NR`: Number of Records.
-- `FNR`: Number of Records relative to the current input file.
-- `FS`: Field Separator, any single character or regular expression, instead of the default _whitespace_. `,` in the script will be replaced with the field separator.
-- `OFS`: Output Field Separator.
-- `RS`: Record Separator.
-- `ORS`: Output Record Separator.
-- `FILENAME`: Name of the current input file.
-
-## Count Columns
-
-If delimiter is `,`
-
-```
-$ cat foo.txt | awk -F, '{print NF}'
-
-
-
-```
-
-or
-
-```
-$ awk 'BEGIN {FS=","} {print NF}' file.txt
-
-
-
-```
-
-If delimiter is `\u0007`(`ctrl-v ctrl-g`)
-
-```
-$ cat foo.txt | awk -F'^G' '{print NF}'
-
-
-
-```
-
-## Get Column Number
-
-replace `<pattern>` with the column name or pattern
-
-```
-head -1 foo.csv | awk -v RS="|" '/<pattern>/{print NR;}'
-
-
-
-```
-
-## Print Rows by Number
-
-print the second row:
-
-```
-$ awk 'NR==2' filename
-
-
-
-```
-
-print line 2 to line 10
-
-```
-$ awk 'NR==2,NR==10' filename
-
-
-
-```
-
-## FS
-
-`FS` can be set in either of these ways:
-
-- Using -F command line option. `awk -F 'FS' 'commands' inputfilename`
-- Awk FS can be set like normal variable. `awk 'BEGIN{FS="FS";}'`
-
-Example to read the `/etc/passwd` file which has `:` as field delimiter.
-
-```
-$ cat etc_passwd.awk
-BEGIN{
-    FS=":";
-    print "Name\tUserID\tGroupID\tHomeDirectory";
-}
-{
-    print $1"\t"$3"\t"$4"\t"$6;
-}
-END {
-    print NR,"Records Processed";
-}
-
-
-
-```
-
-Then
-
-```
-$awk -f etc_passwd.awk /etc/passwd
-Name UserID GroupID HomeDirectory
-gnats 41 41 /var/lib/gnats
-libuuid 100 101 /var/lib/libuuid
-syslog 101 102 /home/syslog
-hplip 103 7 /var/run/hplip
-avahi 105 111 /var/run/avahi-daemon
-saned 110 116 /home/saned
-pulse 111 117 /var/run/pulse
-gdm 112 119 /var/lib/gdm
-8 Records Processed
-
-
-
-```
-
-## OFS
-
-Similar to `FS` but for outputs.
-
-```
-$ awk -F':' '{print $3,$4;}' /etc/passwd
-41 41
-100 101
-101 102
-
-
-$ awk -F':' 'BEGIN{OFS="=";} {print $3,$4;}' /etc/passwd
-41=41
-100=101
-101=102
-
-
-
-```
-
-## RS
-
-`awk` reads a line as a "record" by default. To split the text into records differently, set `RS`. E.g. if `input.txt` is like this:
-
-```
-A
-1
-101
-
-B
-2
-202
-
-C
-3
-303
-
-
-
-```
-
-Set `RS` to double new line characters (`\n\n`) so the input text is split into 3 records:
-
-```
-$cat script.awk
-BEGIN {
-    RS="\n\n";
-    FS="\n";
-}
-{
-    print $1,$2;
-}
-
-$ awk -f script.awk input.txt
-A 1
-B 2
-C 3
-
-
-
-```
-
-## ORS
-
-The output equivalent of `RS`. The records will be printed with `ORS` as the separator instead of the default new line.
-
-```
-$ echo "A 1\nB 2\nC 3" | awk 'BEGIN{ORS="="}{print;}'
-A 1=B 2=C 3=%
-
-
-
-```
-
-## Extract a Column
-
-```
-$ cat file | awk '{print $2}'
-
-
-
-```
-
-## Add awk in alias
-
-```
-awk '{print $1}'
-alias aprint='awk "{print \$1}"'
-
-
-
-```
-
-## Pattern Matching
-
-```
-... | awk '/pattern/'
-
-
-... | awk '/pattern/ {print $1}'
-
-
-
-```
-
