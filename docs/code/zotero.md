@@ -15,8 +15,15 @@ dg-publish: true
 
 **zotero 7:**
 
-- attanger
+- Zotero attanger
+- Attachment Scanner
+- Del item with Attachment
+- arXiv Workflow for zotero
+- Ethereal Reference
+- Ethereal Style
+- Zoplicate
 - zotero better notes
+- Linter for zotero
 
 ## Sync
 
