@@ -2,8 +2,8 @@
 title: 安装后的建议配置
 toc: true
 tags:
-  - arch
-  - handbook
+    - arch
+    - handbook
 date: 2024-11-18
 dg-publish: true
 ---
@@ -125,6 +125,22 @@ systemctl enable dhcpcd
 
 tui: `impala`
 
+或者用`networkmanager`
+
+Using iwd as backend of NetworkManager, `/etc/NetworkManager/NetworkManager.conf`
+
+```
+[device]
+wifi.backend=iwd
+```
+
+then
+
+```sh
+systemctl mask wpa_supplicant
+systemctl enable iwd
+```
+
 ### sound
 
 - ALSA: is a set of built-in Linux kernel modules.
@@ -162,7 +178,32 @@ tui: `bluetui`
 
 在`X11`中需要安装`xf86-input-libinput`等
 
-keyboard, mouse, touchpads
+To find id of touchpad
+
+```
+xinput list | grep -i "Touchpad" | awk '{print $6}' | sed 's/[^0-9]//g'
+```
+
+keys:
+
+```sh
+setxkbmap -option ctrl:nocaps &
+xcape -e 'Control_L=Return' &
+xcape -e 'Alt_L=Escape' &
+```
+
+### battery
+
+```
+upower -e
+
+/org/freedesktop/UPower/devices/line_power_ACAD
+/org/freedesktop/UPower/devices/battery_BAT1
+/org/freedesktop/UPower/devices/DisplayDevice
+```
+
+check battery `sudo upower -i /org/freedesktop/UPower/devices/battery_BAT1 `
+
 
 ### driver
 
