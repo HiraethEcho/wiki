@@ -2,7 +2,7 @@
 title: regex
 toc: true
 tags:
-  - handbook
+    - handbook
 date: 2025-05-05
 dg-publish: true
 ---
@@ -11,287 +11,112 @@ dg-publish: true
 
 ## vim
 
-## lua
+```vim
+/^hello\>      " 匹配行首的单词 hello
+:%s/foo/bar/g  " 全局替换 foo 为 bar
+:%s/\(\d\+\)/[\1]/g  " 将所有数字用 [] 包裹（捕获组）
+```
+
+捕获组：`:%s/\(\d\+\)/[\1]/g` 将所有数字用 `[]` 包裹（捕获组）
+
+删除空行
+
+```vim
+:g/^$/d # delete empty line
+:g/^\s*$/d # delete line with only empty char
+:%s/^\s*$//g # clean empty char
+```
 
 ## shell
 
-## regex
+文件名匹配（通配符）、`=~` 操作符用于字符串匹配。Shell 本身使用 glob 模式（非标准正则），但 `[[ ]]` 中 `=~` 支持 **扩展正则表达式（ERE）**。
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [quickref.me](https://quickref.me/regex)
-
-> A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions an......
-
-#### [#](#re-search)re.search()
-
-```
->>> sentence = 'This is a sample string'
->>> bool(re.search(r'this', sentence, flags=re.I))
-True
->>> bool(re.search(r'xyz', sentence))
-False
-
-
+```shell
+if [[ "hello" =~ ^he ]]; then
+    echo "匹配"
+fi
 ```
 
-#### [#](#re-findall)re.findall()
-
 ```
->>> re.findall(r'\bs?pare?\b', 'par spar apparent spare part pare')
-['par', 'spar', 'spare', 'pare']
->>> re.findall(r'\b0*[1-9]\d{2,}\b', '0501 035 154 12 26 98234')
-['0501', '154', '98234']
-
-
+ls *.txt       # 匹配所有.txt文件
+ls file?.log   # 匹配 file1.log, file2.log 等
 ```
 
-#### [#](#re-finditer)re.finditer()
+正则表达式（Regex）在不同工具和编程语言中的语法和功能略有差异。以下是 **Shell、Vim、Lua、Python、grep、sed、ripgrep** 中正则表达式的用法对比和示例：
 
-```
->>> m_iter = re.finditer(r'[0-9]+', '45 349 651 593 4 204')
->>> [m[0] for m in m_iter if int(m[0]) < 350]
-['45', '349', '4', '204']
+## Lua
 
+- **用途** ：字符串匹配（ `string.match`, `string.gsub` ）。
+- **特点** ：Lua 的 regex 是 **轻量级** 的，不支持常见的 `\d` 或 `\w` ，需用字符类如 `%d` 。
 
-```
-
-#### [#](#re-split)re.split()
-
-```
->>> re.split(r'\d+', 'Sample123string42with777numbers')
-['Sample', 'string', 'with', 'numbers']
-
-
+```lua
+-- 提取数字
+local str = "abc123"
+local num = string.match(str, "%d+")  -- 返回 "123"
+-- 替换
+local new_str = string.gsub("hello world", "world", "Lua")
 ```
 
-#### [#](#re-sub)re.sub()
+## Python（re 模块）
 
-```
->>> ip_lines = "catapults\nconcatenate\ncat"
->>> print(re.sub(r'^', r'* ', ip_lines, flags=re.M))
-* catapults
-* concatenate
-* cat
+- **特点** ：支持 **标准正则表达式（PCRE）** ，功能全面（如非贪婪匹配、命名组等）。
+-
 
-
-```
-
-#### [#](#re-compile)re.compile()
-
-```
->>> pet = re.compile(r'dog')
->>> type(pet)
-<class '_sre.SRE_Pattern'>
->>> bool(pet.search('They bought a dog'))
-True
->>> bool(pet.search('A cat crossed their path'))
-False
-
-
+```python
+import re
+re.findall(r'\d+', 'abc123')      # 返回 ['123']
+re.sub(r'foo', 'bar', 'foobar')   # 替换为 'barbar'
+# 命名捕获组
+match = re.search(r'(?P<year>\d{4})', '2023')
+print(match.group('year'))  # 输出 '2023'
 ```
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.hackingnote.com](https://www.hackingnote.com/en/cheatsheets/regex/)
+## grep
 
-> HackingNote
-
-## Syntax
-
-- `|`: or
-- `()`: group
-
-### Characters
-
-- `.`: any character (dot matches everything except newlines)
-- `\w`: alphanumeric character plus `_`, equivalent to `[A-Za-z0-9_]`
-- `\W`: non-alphanumeric character excluding `_`, equivalent to `[^A-Za-z0-9_]`
-- `\s`: whitespace
-- `\S`: anything BUT whitespace
-- `\d`: digit, equivalent to `[0-9]`
-- `\D`: non-digit, equivalent to `[^0-9]`
-- `[...]`: one of the characters
-- `[^...]`: anything but the characters listed
-
-### Anchors
-
-- `^`: beginning of a line or string
-- `$`: end of a line or string
-- `\b`: zero-width word-boundary (like the caret and the dollar sign)
-- `\A`: Matches the beginning of a string (but not an internal line).
-- `\z`: Matches the end of a string (but not an internal line).
-
-### Repetition Operators
-
-- `?`: match 0 or 1 times
-- `+`: match at least once
-- `*`: match 0 or multiple times
-- `{M,N}`: minimum M matches and maximum N matches
-    - `{M,}`: match at least M times
-    - `{0,N}`: match at most N times
-
-## Greedy vs Lazy
-
-- `.*`: match as long as possible
-- `.*?`: match as short as possible
-
-## BRE vs ERE vs PCRE
-
-The only difference between basic and extended regular expressions is in the behavior of a few characters: `?`, `+`, parentheses (`()`), and braces (`{}`).
-
-- **basic regular expressions (BRE)**: should be escaped to behave as special characters
-- **extended regular expressions (ERE)** : should be escaped to match a literal character.
-- **Perl Compatible Regular Expressions (PCRE)**: much more powerful and flexible than BRE and ERE.
-
-Multiple flavors may be supported by the tools:
-
-- sed
-    - `sed`: basic
-    - `sed -E`: extended
-- grep
-    - `grep`: basic
-    - `egrep` or `grep -E`
-
-## JavaScript
-
-- `str.search`
-- `str.match`
-- `str.matchAll`
-- `str.replace`
-
-Example: split country name and country code in strings like "China (CN)"
+- **用途** ：文件内容搜索。
+- **模式** ：
+- `grep` 默认使用 **基本正则表达式（BRE）** 。
+- `grep -E` 或 `egrep` 使用 **扩展正则表达式（ERE）** 。
+- `grep -P` 支持 **PCRE** （部分系统）。
+- **示例** ：
 
 ```
-> s = "China (CN)";
-'China (CN)'
-> match = s.match(/\((.*?)\)/)
-[ '(CN)', 'CN', index: 6, input: 'China (CN)', groups: undefined ]
-> match[1]
-'CN'
-> s.substring(0, match.index).trim()
-'China'
-
-
+grep '^hello' file.txt       # 匹配行首的 hello（BRE）
+grep -E '[0-9]{3}' file.txt # 匹配3位数字（ERE）
+grep -P '\d+' file.txt      # 匹配数字（PCRE）
 ```
 
-Match all:
+## sed
+
+- **用途** ：流编辑器，支持查找替换。
+- **模式** ：
+- 默认使用 **BRE** 。
+- `sed -E` 启用 **ERE** 。
+- **示例** ：
 
 ```
-const regex = /.*/g;
-const matches = content.matchAll(regex);
-for (let match of matches) {
-
-
-}
-
-
+sed 's/foo/bar/g' file.txt           # 替换 foo 为 bar（BRE）
+sed -E 's/[0-9]+/NUM/g' file.txt     # 替换数字为 NUM（ERE）
+sed 's/\(.*\)/\U\1/' file.txt        # 转换为大写（捕获组）
 ```
 
-### Literal vs. Constructor
+## ripgrep（rg）
 
-- Literal: `re = /.../g`
-- Constructor: `re = new RegExp("...")`
-    - can use string concat: `re = new RegExp("..." + some_variable + "...")`
-
-### Local vs. Global
-
-- `re = /.../`: `re.match(str)` will return a list of captures of the FIRST match.
-- `re = /.../g`: `re.match(str)` will return a list of matches but NOT captures.
-
-### match vs. exec
-
-- `str.match()`: as stated above.
-- `regex.exec()`: return captures, more detailed info; exec multiple times.
-
-Example
+- **用途** ：高性能文件搜索。
+- **特点** ：默认使用 **PCRE** ，支持 Unicode 和智能大小写。
+- **示例** ：
 
 ```
-var match;
-while ((match = re.exec(str)) !== null) {}
-
-
+rg '\d{3}'       # 搜索3位数字
+rg -i 'hello'    # 忽略大小写搜索
+rg -U 'foo.*bar' # 多行匹配（跨行）
 ```
 
-## Python
+## 常见正则符号对比
 
-`match`, `search` and `findall`:
-
-- `re.match()`: only match at the beginning of the string, returns a `match` object.
-- `re.search()`: locate a match anywhere in string, returns a `match` object.
-- `re.findall()`: find all occurrences, returns a list of strings.
-
-```
->>> type(re.search("foo", "foobarfoo"))
-<class '_sre.SRE_Match'>
->>> type(re.match("foo", "foobarfoo"))
-<class '_sre.SRE_Match'>
-
-
-```
-
-### re.match()/re.search()
-
-`re.match()` and `re.search()` return a `match` object:
-
-```
->>> match = re.search("f(.*?),", "foo,faa,fuu,bar")
->>> match.groups()
-('oo',)
-
-
-```
-
-`match.group(0)` returns the string snippet that matches the pattern:
-
-```
->>> match.group(0)
-'foo,'
-
-
-```
-
-other `group` captures the ones in `()`:
-
-```
->>> match.group(1)
-'oo'
-
-
-```
-
-### re.findall()
-
-`re.findall()` returns a list, extract value using `[]`:
-
-```
->>> match = re.findall("f(.*?),", "foo,faa,fuu,bar")
->>> match
-['oo', 'aa', 'uu']
->>> match[0]
-'oo'
-
-
-```
-
-### Compiled Patterns
-
-```
-pattern = re.compile(pattern_string)
-result = pattern.match(string)
-
-
-```
-
-is equivalent to
-
-```
-result = re.match(pattern_string, string)
-
-
-```
-
-`re.compile()` returns a `SRE_Pattern` object:
-
-```
->>> type(re.compile("pattern"))
-<class '_sre.SRE_Pattern'>
-
-
-```
+| 功能     | PCRE/Python | BRE (grep/sed) | ERE (grep -E) | Vim       | Lua     |
+| -------- | ----------- | -------------- | ------------- | --------- | ------- |
+| 数字     | `\d`        | `[0-9]`        | `[0-9]`       | `\d`      | `%d`    |
+| 单词字符 | `\w`        | `[[:alnum:]]`  | `\w`          | `\w`      | `%a`    |
+| 量词     | `+``*``?`   | `\+` `\*` `\?` | `+` `*``?`    | `\+` `\*` | `+` `*` |
+| 捕获组   | `(...)`     | `\(...\)`      | `(...)`       | `\(...\)` | `(...)` |

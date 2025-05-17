@@ -2,10 +2,10 @@
 title: Tricks in shell
 toc: true
 tags:
-    - handbook
-    - tools
+  - handbook
+  - tools
 date: 2025-05-05
-dg-publish: false
+dg-publish: true
 ---
 
 # Tricks in shell

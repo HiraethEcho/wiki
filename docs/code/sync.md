@@ -22,16 +22,20 @@ date: 2024-12-21
 rclone --filter-from list.txt localdir remote:target
 
 without
+
 ```txt
 - **.git/**
 ```
-not ignore `.git` in localdir 
+
+not ignore `.git` in localdir
 
 without
+
 ```txt
 - *.git
 ```
-not ignore `.git` in subdir in localdir 
+
+not ignore `.git` in subdir in localdir
 
 have absolute no idea why
 
@@ -39,6 +43,7 @@ have absolute no idea why
 - *.git
 - **.git/**
 ```
+
 can ignore all `.git` folders
 
 ## 管理
