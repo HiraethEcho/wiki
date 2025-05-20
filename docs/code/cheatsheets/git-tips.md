@@ -140,7 +140,7 @@ $ git log --oneline <origin/master>..<remote/master> --left-right
 $ git blame <file>
 ```
 
-## remote
+### remote
 
 ```
 $ git remote -v
@@ -179,7 +179,7 @@ git push <remote name> <local branch>:<remote branch>
 $ git push --tags
 ```
 
-## reset
+### reset
 
 ```
 $ git reset --hard HEAD
@@ -281,8 +281,6 @@ usage: git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]
 ```
 
 For example: `git worktree add ../tree`
-
-## 多个上游
 
 ## 清理
 
