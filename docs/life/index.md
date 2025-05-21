@@ -4,3 +4,4 @@
 
 [喝酒！](/wiki/life/cocktail)
 
+[咖啡](/wiki/life/coffee)

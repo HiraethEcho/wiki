@@ -22,29 +22,47 @@ find id of touchpad:
 xinput list | grep -i "Touchpad" | awk '{print $6}' | sed 's/[^0-9]//g'
 ```
 
-> [!warning]
-> does not work
-> 需要添加文件
+似乎需要添加文件 `/usr/share/X11/xorg.conf.d/30-touchpad.conf`
+
+```conf
+Section "InputClass"
+        Identifier "MyTouchpad"
+        MatchIsTouchpad "on"
+        Driver "libinput"
+        Option "Tapping" "on"
+EndSection
+```
+之后才能正常识别`touchpad`：
+```xinput list
+
+⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ GXTP7863:00 27C6:01E0 Mouse             	id=11	[slave  pointer  (2)]
+⎜   ↳ GXTP7863:00 27C6:01E0 Touchpad          	id=12	[slave  pointer  (2)]
+⎜   ↳ HS6209 2.4G Wireless Receiver Keyboard  	id=9	[slave  pointer  (2)]
+⎜   ↳ HS6209 2.4G Wireless Receiver Mouse     	id=10	[slave  pointer  (2)]
+⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=6	[slave  keyboard (3)]
+    ↳ Power Button                            	id=7	[slave  keyboard (3)]
+    ↳ Huawei WMI hotkeys                      	id=13	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard            	id=14	[slave  keyboard (3)]
+```
+
+否则只会识别两个设备，没有 `Mouse` `Touchpad`
 
 ```xinput list
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
 ⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
-⎜   ↳ ERAZER N500 Pro Mouse                   	id=9	[slave  pointer  (2)]
 ⎜   ↳ GXTP7863:00 27C6:01E0                   	id=10	[slave  pointer  (2)]
 ⎜   ↳ GXTP7863:00 27C6:01E0                   	id=11	[slave  pointer  (2)]
-⎜   ↳ test Keyboard                           	id=15	[slave  pointer  (2)]
-⎜   ↳ ZMK Project reviung Keyboard            	id=8	[slave  pointer  (2)]
 ⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
     ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
     ↳ Video Bus                               	id=6	[slave  keyboard (3)]
     ↳ Power Button                            	id=7	[slave  keyboard (3)]
     ↳ Huawei WMI hotkeys                      	id=12	[slave  keyboard (3)]
     ↳ AT Translated Set 2 keyboard            	id=13	[slave  keyboard (3)]
-    ↳ test Keyboard                           	id=16	[slave  keyboard (3)]
-    ↳ ZMK Project reviung Keyboard            	id=14	[slave  keyboard (3)]
 ```
-
-it does not recognize `Touchpad`
 
 `xev`: find keycode; `xmodmap`: define keysym for each keycode (`xkeycaps` gui); `setxkbmap`: set keyboard layout; `xcape`: use a modifier as another key.
 

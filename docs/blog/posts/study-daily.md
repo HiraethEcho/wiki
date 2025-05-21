@@ -1,5 +1,5 @@
 ---
-title: 学习日记
+title: 2024部分学习日记
 published: true
 date:
   created: 2024-09-26
