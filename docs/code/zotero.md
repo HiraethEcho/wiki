@@ -15,14 +15,22 @@ dg-publish: true
 
 **zotero 7:**
 
+常用：
+
 - Zotero attanger
-- Attachment Scanner
 - Del item with Attachment
-- arXiv Workflow for zotero
 - Ethereal Reference
-- Ethereal Style
-- Zoplicate
+
+好用：
+
 - zotero better notes
+
+没必要但可以：
+
+- Ethereal Style
+- Attachment Scanner
+- arXiv Workflow for zotero
+- Zoplicate
 - Linter for zotero
 
 ## Sync
@@ -35,36 +43,33 @@ zotero 7 to rename:
 {{ title case="snake" }}{{ creators case="snake" prefix="_" max="1"}}{{ year prefix="_" }}
 ```
 
-use any cloud drive to sync. I'm using OneDrive.
+use any cloud drive to sync. I'm using koofr.
 
 ## zotero better notes
+
+用来[导出笔记为markdown](/wiki/code/3in1wiki)
 
 **templates:**
 
 ```yaml
 - name: "[QuickInsertV2]"
-  text:
-      "// @use-markdown\n${linkText} [ob](/zotero/${subNoteItem.getNoteTitle ?
+  text: "// @use-markdown\n${linkText} [ob](/zotero/${subNoteItem.getNoteTitle ?
       subNoteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") +
       \"-\":\"\"}${subNoteItem.key}) <a href=\"${link}\">zn</a>"
 - name: "[QuickImportV2]"
-  text:
-      "<blockquote>\n${{\n  return await
+  text: "<blockquote>\n${{\n  return await
       Zotero.BetterNotes.api.convert.link2html(link, {noteItem, dryRun:
       _env.dryRun});\n}}$\n</blockquote>"
 - name: "[QuickNoteV5]"
-  text:
-      "${annotationItem.annotationComment}\n${{\n  let res = \"\";\n  res +=
+  text: "${annotationItem.annotationComment}\n${{\n  let res = \"\";\n  res +=
       await Zotero.BetterNotes.api.convert.annotations2html([annotationItem],
       {noteItem, ignoreComment: true});\n  return res;\n}}$"
 - name: "[ExportMDFileNameV2]"
-  text:
-      '${noteItem.parentItem ? "A-":""}${(noteItem.getNoteTitle ?
+  text: '${noteItem.parentItem ? "A-":""}${(noteItem.getNoteTitle ?
       noteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-" :
       "")}${noteItem.key}.md'
 - name: "[ExportMDFileHeaderV2]"
-  text:
-      "${{\n  let header = {};\n  header.tags = noteItem.getTags().map((_t) =>
+  text: "${{\n  let header = {};\n  header.tags = noteItem.getTags().map((_t) =>
       _t.tag);\n  header.parent = noteItem.parentItem\n    ?
       noteItem.parentItem.getField(\"title\")\n    : \"\";\n  return
       JSON.stringify(header);\n}}$"
@@ -88,7 +93,7 @@ pluginVersion: "2.0.18"
 savedAt: "2024-11-07T07:59:45.835Z"
 content: |-
   // @use-markdown
-  <a href="${link}">${linkText}</a> [md](/wiki/zotero/${subNoteItem.getNoteTitle ? subNoteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-":""}${subNoteItem.key})
+  <a href="${link}">${linkText}</a> [md](/wiki/math/zotero/${subNoteItem.getNoteTitle ? subNoteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-":""}${subNoteItem.key})
 
 ```
 
