@@ -6,13 +6,17 @@ hide:
 
 # My online wiki
 
-To remains me what I know and what are they.
+这里是我的个人知识的博客。*To remains me what I know and what are they.*
 
 - [Code](/wiki/code/index): My notes about code, computer and software. I use Arch by the way.
 - [Life](/wiki/life/index): Life Hacker!
 - [Read](/wiki/read/index): My Reading notes. 包括直接摘抄和总结反思。
-- [Note](/wiki/zotero/index): My annotation and notes exported from `zotero` by `Better Notes for Zotero`.
-- [Math](/wiki/math/index): My notes about math. Mostly about Algebraic Geometry.
+- [Math](/wiki/math/index): My notes about math. Mostly about Algebraic Geometry. Includes [notes and annotations](/wiki/math/zotero) form `zotero`
+
+
+## 其他
+
+还有一个博客是我[公开的思考、想法、评论](/hexo)。另外还有我的[日常生活和感受](/hugo)。
 
 You can check my [Digital Garden](https://hiraeth-dg.netlify.app/), where are some of my [blogs files in my obsidian repo](/wiki/code/blogs).
 
