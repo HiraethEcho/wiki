@@ -20,14 +20,14 @@ published: false
 
 好用：
 
-- find orphaned files and broken links
 - git
-- dataview (display files by metadata)
 - digital garden
+- share as gist
 
-少用：
+没必要：
 
-- kanban (plan things, especially something with many stages)
+- gistr: 和`share as gist`比不能添加description
+- find orphaned files and broken links
 
 about vim:
 
@@ -35,6 +35,11 @@ about vim:
 - vim input method switch
 - vimrc
 - edit in neovim
+
+展示：
+- [导入和展示豆瓣](/wiki/code/obsidian_douban)
+- dataview (display files by metadata)
+- kanban (plan things, especially something with many stages)不习惯
 
 ## theme
 

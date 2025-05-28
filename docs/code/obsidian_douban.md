@@ -2,9 +2,19 @@
 title: 豆瓣记录导入obsidian
 toc: true
 tags:
-    - obsidian
-date: 2025-05-28
+  - obsidian
+date: 2025-05-28T00:00:00.000Z
 dg-publish: true
+gists:
+  - file: obsidian_douban.md
+    is_public: true
+    id: c8aa9cb4d11302618d12668188be5b72
+    url: 'https://gist.github.com/HiraethEcho/c8aa9cb4d11302618d12668188be5b72'
+    user: HiraethEcho
+    revisions: 1
+    created_at: '2025-05-28T12:47:39Z'
+    updated_at: '2025-05-28T12:47:39Z'
+    updatedAt: '2025-05-28T13:31:26Z'
 ---
 
 # obsidian 和豆瓣
