@@ -1,7 +1,8 @@
 ---
 title: linux-daily
-date:
-    created: 2025-01-19
+tags:
+    - linux
+date: 2025-01-19
 ---
 
 # 零碎的linux知识
