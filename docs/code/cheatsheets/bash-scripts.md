@@ -40,10 +40,9 @@ Means using `/bin/sh` to run the script.
 
 以 # 开头的行就是注释，会被解释器忽略。
 
-
 多行注释可以使用以下格式：
 
-```sh
+```bash
 :<<EOF
 注释内容...
 注释内容...
@@ -55,7 +54,7 @@ EOF
 
 EOF 也可以使用其他符号:
 
-```sh
+```bash
 
 : <<'COMMENT'
 这是注释的部分。
@@ -94,7 +93,7 @@ echo $greeting $name
 
 字符串：
 
-```sh
+```bash
 my_string='Hello, World!my_string="Hello, World!"
 ```
 
@@ -105,7 +104,7 @@ _var="123"
 var2="abc"
 ```
 
-```sh
+```bash
 for file in \` ls / etc \`
 for file in $ (ls / etc)
 
@@ -119,7 +118,7 @@ my_array=(1 2 3 4 5)
 
 只读变量
 
-```sh
+```bash
 #!/bin/bash
 
 myUrl="https://www.google.com"
@@ -156,7 +155,7 @@ my_string="Hello, World!"
 
 拼接字符串
 
-```sh
+```bash
 your\_name = "runoob"
 \# 使用双引号拼接
 greeting = "hello, " $your\_name "!"
@@ -178,7 +177,7 @@ hello, runoob ! hello, ${your_name} !
 
 获取字符串长度
 
-```sh
+```bash
 string = "abcd"
 echo ${#string} \# 输出 4
 ```
@@ -242,7 +241,7 @@ echo ${array_name[@]}
 
 获取数组长度的方法与获取字符串长度的方法相同，例如：
 
-```sh
+```bash
 \# 取得数组元素的个数
 length = ${#array\_name\[@\]}
 \# 或者
@@ -486,7 +485,7 @@ home
 
 ### `[]`
 
-```sh
+```bash
 type [
 
 [ is a shell builtin
@@ -506,7 +505,7 @@ This means that '[' is actually a program, just like ls and other programs, so i
 - 使用\[\[... \]\]条件判断结构，而不是\[... \]，能够防止脚本中的许多逻辑错误。比如，&&、||、<和> 操作符能够正常存在于\[\[ \]\]条件判断结构中，但是如果出现在\[ \]结构中的话，会报错。比如可以直接使用if \[\[ $a!= 1 && $a!= 2 \]\], 如果不适用双括号, 则为if \[ $a -ne 1\] && \[ $a!= 2 \]或者if \[ $a -ne 1 -a $a!= 2 \]。
 - bash把双中括号中的表达式看作一个单独的元素，并返回一个退出状态码。
 
-```sh
+```bash
 if ($i<5)
 if [ $i -lt 5 ]
 if [ $a -ne 1 -a $a != 2 ]
@@ -519,20 +518,159 @@ for ((i=0;i<5;i++));do echo $i;done
 for i in {0..4};do echo $i;done
 ```
 
+### `[]` 和 `[[]]`
+
+在 **Bash** 脚本中，`[ ]`（`test` 命令）和 `[[ ]]`（关键字）都用于条件判断，但它们在功能、性能和安全性上有显著区别。以下是详细对比：
+
+#### **基本定义**
+
+| 语法    | 类型             | 说明                                                                    |
+| ------- | ---------------- | ----------------------------------------------------------------------- |
+| `[ ]`   | **内置命令**     | 等价于 `test` 命令，需严格遵循参数规则（如空格和引号）。                |
+| `[[ ]]` | **Shell 关键字** | Bash/ksh/zsh 的扩展语法，更灵活，支持额外功能（如模式匹配、逻辑组合）。 |
+
+#### **核心区别**
+
+**(1) 字符串比较**
+
+- **`[ ]`**：
+
+    - 使用 `=` 和 `!=` 时，**必须加引号**，否则可能因空格或特殊字符报错。
+    - 示例：
+        ```bash
+        [ "$var" = "hello" ]  # 正确
+        [ $var = hello ]      # 若 $var 含空格，会报错
+        ```
+
+- **`[[ ]]`**：
+    - 自动处理变量中的空格，无需引号（但仍建议加引号以防未定义变量）。
+    - 支持 `==` 和 `!=` 的**通配符匹配**（模式匹配）。
+    - 示例：
+        ```bash
+        [[ $var == "hello" ]]    # 正确，即使 $var 含空格
+        [[ $var == h* ]]         # 支持通配符匹配（如 "hello" 或 "hi"）
+        ```
+
+**(2) 数值比较**
+
+- **`[ ]`**：
+
+    - 必须用 `-eq`、`-lt` 等运算符：
+        ```bash
+        [ "$num" -lt 5 ]  # 数值比较
+        ```
+
+- **`[[ ]]`**：
+    - 仍建议用 `-eq`、`-lt`，但支持 `>` 和 `<`（需转义或双括号）：
+        ```bash
+        [[ $num -lt 5 ]]    # 标准写法
+        [[ $num < 10 ]]     # 字符串比较（字典序）！
+        (( num < 10 ))      # 数值比较的正确写法
+        ```
+
+**(3) 逻辑运算符**
+
+- **`[ ]`**：
+
+    - 用 `-a`（AND）、`-o`（OR），需严格分隔：
+        ```bash
+        [ "$a" -gt 1 -a "$a" -lt 10 ]
+        ```
+
+- **`[[ ]]`**：
+    - 用 `&&` 和 `||`，更直观：
+        ```bash
+        [[ $a -gt 1 && $a -lt 10 ]]
+        ```
+
+**(4) 文件测试**
+
+- **`[ ]`** 和 `[[ ]]` 均支持，但 `[[ ]]` 更安全（如未定义变量不会报错）：
+    ```bash
+    [ -f "$file" ]      # 检查文件是否存在
+    [[ -f $file ]]      # 更健壮（即使 $file 未定义也不会语法错误）
+    ```
+
+**(5) 正则匹配（仅 `[[ ]]`）**
+
+```bash
+[[ "hello" =~ ^h ]]   # 正则匹配（返回 true）
+```
+
+#### **性能与安全性**
+
+| 特性         | `[ ]`                      | `[[ ]]`              |
+| ------------ | -------------------------- | -------------------- |
+| **执行速度** | 较慢（外部命令或内置命令） | 更快（Bash 关键字）  |
+| **安全性**   | 变量未加引号易报错         | 自动处理空格，更健壮 |
+| **兼容性**   | 所有 Shell（sh、dash 等）  | 仅 Bash/ksh/zsh      |
+
+#### **何时使用？**
+
+- **用 `[[ ]]`**：
+    - 需要模式匹配、正则表达式、逻辑组合时。
+    - 脚本已明确使用 Bash（`#!/bin/bash`）。
+- **用 `[ ]`**：
+    - 需兼容 POSIX Shell（如 `/bin/sh`）。
+    - 简单的文件或字符串测试（但务必加引号）。
+
+#### **经典示例**
+
+**(1) 字符串比较**
+
+```bash
+# [ ] 必须加引号
+[ "$name" = "Alice" ] && echo "Hello Alice"
+
+# [[ ]] 更灵活
+[[ $name == A* ]] && echo "Name starts with A"
+```
+
+**(2) 文件检查**
+
+```bash
+# [ ] 和 [[ ]] 均可，但后者更安全
+[ -f "/path/$file" ] && echo "File exists"
+[[ -f /path/$file ]] && echo "File exists"
+```
+
+**(3) 逻辑组合**
+
+```bash
+# [ ] 用 -a/-o
+[ "$age" -gt 18 -a "$age" -lt 60 ] && echo "Valid age"
+
+# [[ ]] 用 &&/||
+[[ $age -gt 18 && $age -lt 60 ]] && echo "Valid age"
+```
+
+#### **总结**
+
+| **需求**   | **`[ ]`**       | **`[[ ]]`**                   |
+| ---------- | --------------- | ----------------------------- |
+| 字符串比较 | 需严格加引号    | 自动处理空格，支持通配符      |
+| 数值比较   | 用 `-eq`、`-lt` | 同 `[ ]`，但可用 `(( ))` 替代 |
+| 逻辑运算符 | `-a`、`-o`      | `&&`、`\|\|`                  |
+| 正则匹配   | ❌              | ✅（`=~`）                    |
+| 性能       | 较慢            | 更快                          |
+
+- **优先用 `[[ ]]`**（Bash 脚本中更安全、灵活）。
+- **只有需要兼容 POSIX 时用 `[ ]`**（如 `/bin/sh` 脚本）。
+
 ### `()`
 
 - **命令组** 。括号中的命令将会新开一个子shell顺序执行，所以括号中的变量不能够被脚本余下的部分使用。括号中多个命令之间用分号隔开，最后一个命令可以没有分号，各命令和括号之间不必有空格。
-- **命令替换** 。等同于\`cmd\`，shell扫描一遍命令行，发现了$(cmd)结构，便将$(cmd)中的cmd执行一次，得到其标准输出，再将此输出放到原来命令。有些shell不支持，如tcsh。
-- **用于初始化数组** 。如：array=(a b c d)
+- **命令替换** 。等同于`cmd`，shell扫描一遍命令行，发现了`$(cmd)`结构，便将`$(cmd)`中的`cmd`执行一次，得到其标准输出，再将此输出放到原来命令。有些shell不支持，如tcsh。
+- **用于初始化数组** 。如：`array=(a b c d)`
 
 ### `(())`
 
 - 整数扩展。这种扩展计算是整数型的计算，不支持浮点型。((exp))结构扩展并计算一个算术表达式的值，如果表达式的结果为0，那么返回的退出状态码为1，或者 是"假"，而一个非零值的表达式所返回的退出状态码将为0，或者是"true"。若是逻辑判断，表达式exp为真则为1,假则为0。
 - 只要括号中的运算符、表达式符合C语言运算规则，都可用在$((exp))中，甚至是三目运算符。作不同进位(如二进制、八进制、十六进制)运算时，输出结果全都自动转化成了十进制。如：echo $((16#5f)) 结果为95 (16进位转十进制)
 - 单纯用 (( )) 也可重定义变量值，比如 a=5; ((a++)) 可将 $a 重定义为6
-- 常用于算术运算比较，双括号中的变量可以不使用$符号前缀。括号内支持多个表达式用逗号分开。 只要括号中的表达式符合C语言运算规则,比如可以直接使用for((i=0;i<5;i++)), 如果不使用双括号, 则为for i in \`seq 0 4\`或者for i in {0..4}。再如可以直接使用if (($i<5)), 如果不使用双括号, 则为if \[ $i -lt 5 \]。
+- 常用于算术运算比较，双括号中的变量可以不使用`$`符号前缀。括号内支持多个表达式用逗号分开。 只要括号中的表达式符合C语言运算规则,比如可以直接使用`for((i=0;i<5;i++))`, 如果不使用双括号, 则为`for i in $(seq 0 4)`或者`for i in {0..4}`。再如可以直接使用`if (($i<5))`, 如果不使用双括号, 则为`if \[ $i -lt 5 \]`。
 
-```sh
+```bash
 var=$((expression))
 ```
 
@@ -551,11 +689,111 @@ var=\`df -h | grep tmpfs\`
 echo $var
 ```
 
+### `""`
+
+```bash
+repo=~"/projects/repo1"  # 或直接写 ~/projects/repo1（不加引号）
+cd "$repo"               # 此时 $repo 已是展开后的绝对路径
+```
+
+```bash
+#!/bin/bash
+
+# 显式展开家目录
+HOME_DIR=$(eval echo "~")  # 或直接写 HOME_DIR="$HOME"
+
+repos=(
+    "$HOME_DIR/projects/repo1"
+    "$HOME_DIR/work/repo2"
+)
+
+```
+
+### `""` 和 `''`
+
+在 **Bash** 脚本中，双引号 `""` 和单引号 `''` 都用于定义字符串，但它们在 **变量扩展**、**命令替换** 和 **特殊字符处理** 上有本质区别。以下是详细对比：
+
+| 特性         | 双引号 `""`                    | 单引号 `''`                    |
+| ------------ | ------------------------------ | ------------------------------ |
+| **变量扩展** | ✅（如 `"$var"` 会展开）       | ❌（如 `'$var'` 原样输出）     |
+| **命令替换** | ✅（如 `"$(date)"` 会执行）    | ❌（如 `'$(date)'` 原样输出）  |
+| **转义字符** | 仅 `\`, `$`, `` ` ``, `"` 生效 | 所有字符均按字面处理（无转义） |
+| **用途**     | 需保留变量或命令结果时使用     | 需完全按字面输出时使用         |
+
+```bash
+name="Alice"
+
+echo "Hello, $name"   # 输出: Hello, Alice
+echo 'Hello, $name'   # 输出: Hello, $name
+```
+
+```bash
+echo "Today is $(date)"  # 输出: Today is Mon Jul 1 12:00:00 UTC 2024
+echo 'Today is $(date)'  # 输出: Today is $(date)
+```
+
+```bash
+echo "Path is \$HOME"    # 输出: Path is $HOME（\$ 被转义）
+echo 'Path is \$HOME'    # 输出: Path is \$HOME（完全字面）
+```
+
+```bash
+echo "She said: 'Hello!'"   # 输出: She said: 'Hello!'
+echo 'He said: "Hi!"'       # 输出: He said: "Hi!"
+```
+
+- 需要**变量或命令替换**时：
+    ```bash
+    echo "Current user: $USER, time: $(date)"
+    ```
+- 字符串中包含**空格或特殊字符**（需部分转义）：
+
+    ```bash
+    echo "Use \"quotes\" inside."
+    ```
+
+- 需**完全按字面输出**（如正则表达式、SQL语句）：
+    ```bash
+    grep -E '^[A-Z]' file.txt  # 正则表达式
+    sql='SELECT * FROM users;' # SQL语句
+    ```
+- 避免**特殊字符被解析**：
+    ```bash
+    echo '$PATH and $(date)'  # 输出: $PATH and $(date)
+    ```
+
+**特殊情况处理**
+
+```bash
+alias rm='rm -i'          # 单引号内定义别名（避免变量提前展开）
+echo "It's a sunny day."  # 双引号内嵌套单引号（无需转义）
+```
+
+```bash
+echo "Line 1\nLine 2"     # 输出: Line 1\nLine 2（\n 未被转义为换行）
+echo -e "Line 1\nLine 2"  # 输出两行（-e 启用转义）
+echo 'Line 1\nLine 2'     # 输出: Line 1\nLine 2（完全字面）
+```
+
+- **单引号稍快**：因为无需解析变量或命令替换。
+- 实际脚本中差异可忽略，优先考虑功能需求。
+
+1. **默认用双引号**：  
+   保护变量中的空格（如 `"$file"`），避免路径或文件名错误拆分。
+    ```bash
+    cp "$file" "/backup/$file"  # 正确处理含空格的文件名
+    ```
+2. **需要纯文本时用单引号**：  
+   如正则表达式、代码生成、避免意外展开。
+    ```bash
+    sed -e 's/foo/bar/g' file.txt
+    ```
+
 ## input
 
 ### in console
 
-```sh
+```bash
 echo "input a"
 read a
 echo "input b"
@@ -606,7 +844,7 @@ done < "sample_file.txt"
 - `if..elif..else..fi`
 - `if..then..else..if..then..fi..fi..` (Nested Conditionals)
 
-```sh
+```bash
 if [ ... ]
 then
   # if-code
@@ -617,7 +855,7 @@ fi
 
 or
 
-```sh
+```bash
 if [ ... ] ; then
   # if-code
 else
@@ -629,7 +867,7 @@ conditions:
 
 examples:
 
-```sh
+```bash
 #!/bin/sh
 if [ "$X" -lt "0" ]
 then
@@ -678,7 +916,7 @@ fi
 
 ### loop
 
-```sh
+```bash
 
 for i in {1..5}
 do
@@ -691,12 +929,53 @@ do
 done
 ```
 
-```sh
+```bash
 i=1
 while [[ $i -le 10 ]] ; do
    echo "$i"
   (( i += 1 ))
 done
+```
+
+```bash
+# 定义数组（空格分隔元素，可含特殊字符）
+fruits=("Apple" "Banana" "Orange" "Grape" "Watermelon")
+for fruit in "${fruits[@]}"; do
+    echo "Fruit: $fruit"
+done
+for i in "${!fruits[@]}"; do
+    echo "Index $i: ${fruits[i]}"
+done
+```
+
+```bash
+# 定义仓库目录列表（支持绝对路径或相对路径）
+repos=(
+    "/path/to/repo1"
+    "/path/to/repo2"
+    "/path/to/repo3"
+    "/path/to/repo4"
+)
+
+# 遍历所有仓库
+for repo in "${repos[@]}"; do
+    echo "Updating repo: $repo"
+    cd "$repo" || { echo "Failed to enter $repo"; continue; }
+
+    # 执行 git pull
+    git pull origin main  # 假设分支是 main，根据实际情况修改
+
+    # 检查 git pull 是否成功
+    if [ $? -eq 0 ]; then
+        echo "Successfully updated: $repo"
+    else
+        echo "Failed to update: $repo"
+    fi
+
+    echo "----------------------------------"
+done
+
+echo "All repositories updated!"
 ```
 
 ## function
@@ -707,7 +986,7 @@ done
 
 example:
 
-```sh
+```bash
 #!/bin/sh
 docs="Usage: \
 \n\tbash $0 [options] \
