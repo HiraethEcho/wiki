@@ -2,9 +2,9 @@
 title: ArchWiki摘抄
 toc: true
 tags:
-  - arch
-  - linux
-  - handbook
+    - arch
+    - linux
+    - handbook
 date: 2025-01-03
 dg-publish: true
 ---
@@ -35,6 +35,10 @@ cat explicit | sudo pacman -D --asexplicit -
 
 ```sh
 pacman -Qii | awk '/^MODIFIED/ {print $2}'
+```
+
+```sh
+pacman -Qi | awk '/^Name/{name=$3} /^Install Date/{print $4,$5,$6,name}' | sort
 ```
 
 ## font

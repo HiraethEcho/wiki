@@ -76,3 +76,73 @@ typedef union {
 ##
 
 最后，可以在我的[github](https://github.com/hiraethecho)找到我的dotfiles和dwm。还没有整理，也没文档，以后有时间心情再说吧。
+
+## backup
+
+`st -c class -n name` with `precmd () {print -Pn "\e]0;%~\a"}` in `.zshrc`
+
+```
+_NET_WM_ICON_NAME(UTF8_STRING) = "~"
+WM_ICON_NAME(UTF8_STRING) = "~"
+WM_CLASS(STRING) = "name", "class"
+_NET_WM_NAME(UTF8_STRING) = "~"
+WM_NAME(UTF8_STRING) = "~"
+```
+
+`tabbed -n "scratchpad" -c -r 2 st -w '' -g 150x40 -c class -n name` with `precmd () {print -Pn "\e]0;%~\a"}` in `.zshrc`
+
+```
+WM_NAME(UTF8_STRING) = "~"
+_NET_WM_NAME(UTF8_STRING) = "~"
+WM_CLASS(STRING) = "scratchpad", "tabbed"
+```
+
+`tabbed -n "scratchpad" -c -r 2 st -w '' -g 150x40 -c class -n name -t title`
+
+```
+WM_NAME(UTF8_STRING) = "title"
+_NET_WM_NAME(UTF8_STRING) = "title"
+WM_CLASS(STRING) = "scratchpad", "tabbed"
+```
+
+using `st -g 150x40 -t scratchpad`
+
+```
+_NET_WM_ICON_NAME(UTF8_STRING) = "~"
+WM_ICON_NAME(UTF8_STRING) = "~"
+WM_CLASS(STRING) = "st-256color", "st-256color"
+_NET_WM_NAME(UTF8_STRING) = "~"
+WM_NAME(UTF8_STRING) = "~"
+_NET_WM_PID(CARDINAL) = 830413
+WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW
+```
+
+and in `manage()`
+
+```
+  selmon->tagset[selmon->seltags] &= ~scratchtag;
+  if (!strcmp(c->name, scratchpadname)) {
+    c->mon->tagset[c->mon->seltags] |= c->tags = scratchtag;
+    c->isfloating = True;
+  }
+```
+
+modify:
+
+```
+void manage(Window w, XWindowAttributes *wa) {
+  Client *c, *t = NULL;
+  XClassHint ch = {NULL, NULL};
+  const char *class, *instance;
+    ...
+  XGetClassHint(dpy, c->win, &ch);
+  class = ch.res_class ? ch.res_class : broken;
+  selmon->tagset[selmon->seltags] &= ~scratchtag;
+  if (!strcmp(class, scratchpadname)) {
+    c->mon->tagset[c->mon->seltags] |= c->tags = scratchtag;
+    c->isfloating = True;
+  }
+}
+```
+
+Then `class` is second term of `WM_CLASS(STRING) = "scratchpad", "tabbed"`
