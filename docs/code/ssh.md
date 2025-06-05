@@ -22,7 +22,7 @@ dg-publish: true
 在服务机上
 
 ```sh
-ssh -R 1234:localhost:22 midle@ipv6
+ssh -R 1234:localhost:22 midle_username@ipv6
 ```
 
 将服务机的22端口和中间机的1234端口连接。
@@ -59,3 +59,30 @@ ssh -X -C remote_user@remote_host
 
 where `X` for X forwarding, and `-C` for compression. In this ssh session, GUI
 like `gvim` should show on client.
+
+### systemd 自动启动
+
+create `/etc/systemd/system/ssh-tunnel.service`
+
+```
+[Unit]
+Description=Autossh Persistent Reverse SSH Tunnel
+After=network.target
+
+[Service]
+User=username
+ExecStart=/usr/bin/autossh -M 20000 -NR 1234:localhost:22 midle_username@ipv6
+Restart=always
+RestartSec=10
+KillMode=process
+Environment="AUTOSSH_GATETIME=0"
+Environment="AUTOSSH_POLL=30"
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl enable --now ssh-tunnel
+```
