@@ -365,7 +365,7 @@ $ ./testparams.sh This is a test
 
 ### {} 花括号
 
-**常规用法**
+#### 常规用法
 
 大括号拓展。(通配(globbing))将对大括号中的文件名做扩展。在大括号中，不允许有空白，除非这个空白被引用或转义。第一种：对大括号中的以逗号分割的文件列表进行拓展。如 touch {a,b}.txt 结果为a.txt b.txt。第二种：对大括号中以点点（..）分割的顺序文件列表起拓展作用，如：touch {a..d}.txt 结果为a.txt b.txt c.txt d.txt
 
@@ -380,7 +380,7 @@ ex1.sh  ex2.sh  ex3.sh  ex4.sh
 
 代码块，又被称为内部组，这个结构事实上创建了一个匿名函数 。与小括号中的命令不同，大括号内的命令不会新开一个子shell运行，即脚本余下部分仍可使用括号内变量。括号内的命令间用分号隔开，最后一个也必须有分号。{}的第一个命令和左括号之间必须要有一个空格。
 
-**几种特殊的替换结构**
+#### 几种特殊的替换结构
 
 ```
 ${var:-string}
@@ -443,7 +443,7 @@ e
 case
 ```
 
-**字符串提取和替换**
+#### 字符串提取和替换
 
 ```
 ${var:num}
@@ -522,14 +522,14 @@ for i in {0..4};do echo $i;done
 
 在 **Bash** 脚本中，`[ ]`（`test` 命令）和 `[[ ]]`（关键字）都用于条件判断，但它们在功能、性能和安全性上有显著区别。以下是详细对比：
 
-#### **基本定义**
+#### 基本定义
 
 | 语法    | 类型             | 说明                                                                    |
 | ------- | ---------------- | ----------------------------------------------------------------------- |
 | `[ ]`   | **内置命令**     | 等价于 `test` 命令，需严格遵循参数规则（如空格和引号）。                |
 | `[[ ]]` | **Shell 关键字** | Bash/ksh/zsh 的扩展语法，更灵活，支持额外功能（如模式匹配、逻辑组合）。 |
 
-#### **核心区别**
+#### 核心区别
 
 **(1) 字符串比较**
 
@@ -597,7 +597,7 @@ for i in {0..4};do echo $i;done
 [[ "hello" =~ ^h ]]   # 正则匹配（返回 true）
 ```
 
-#### **性能与安全性**
+#### 性能与安全性
 
 | 特性         | `[ ]`                      | `[[ ]]`              |
 | ------------ | -------------------------- | -------------------- |
@@ -605,7 +605,7 @@ for i in {0..4};do echo $i;done
 | **安全性**   | 变量未加引号易报错         | 自动处理空格，更健壮 |
 | **兼容性**   | 所有 Shell（sh、dash 等）  | 仅 Bash/ksh/zsh      |
 
-#### **何时使用？**
+#### 何时使用？
 
 - **用 `[[ ]]`**：
     - 需要模式匹配、正则表达式、逻辑组合时。
@@ -614,7 +614,7 @@ for i in {0..4};do echo $i;done
     - 需兼容 POSIX Shell（如 `/bin/sh`）。
     - 简单的文件或字符串测试（但务必加引号）。
 
-#### **经典示例**
+#### 经典示例
 
 **(1) 字符串比较**
 
@@ -644,7 +644,7 @@ for i in {0..4};do echo $i;done
 [[ $age -gt 18 && $age -lt 60 ]] && echo "Valid age"
 ```
 
-#### **总结**
+#### 总结
 
 | **需求**   | **`[ ]`**       | **`[[ ]]`**                   |
 | ---------- | --------------- | ----------------------------- |
@@ -789,9 +789,11 @@ echo 'Line 1\nLine 2'     # 输出: Line 1\nLine 2（完全字面）
     sed -e 's/foo/bar/g' file.txt
     ```
 
-## input
+## read, write
 
-### in console
+### read
+
+#### read in console
 
 ```bash
 echo "input a"
@@ -819,7 +821,7 @@ Run it like this:
 
 `./script arg1 arg2`
 
-### input file
+#### read in file
 
 Suppose we have a file `sample_file.txt`, We can read the file line by line and print the output on the screen.
 
@@ -834,6 +836,324 @@ while read -r CURRENT_LINE
     ((LINE++))
 done < "sample_file.txt"
 ```
+
+### write
+
+## redirection, pipe
+
+### direction
+
+#### 输出重定向
+
+| 符号  | 作用                              | 示例                    |
+| ----- | --------------------------------- | ----------------------- |
+| `>`   | 覆盖写入文件（标准输出）          | `ls > file.txt`         |
+| `>>`  | 追加到文件（标准输出）            | `echo "hi" >> file.txt` |
+| `2>`  | 覆盖写入文件（标准错误）          | `cmd 2> error.log`      |
+| `2>>` | 追加到文件（标准错误）            | `cmd 2>> error.log`     |
+| `&>`  | 覆盖写入文件（标准输出+标准错误） | `cmd &> output.log`     |
+| `&>>` | 追加到文件（标准输出+标准错误）   | `cmd &>> output.log`    |
+
+**文件描述符操作** Bash 用数字`n`表示文件描述符（File Descriptor, FD）：
+
+- `0`：标准输入（stdin）
+- `1`：标准输出（stdout）
+- `2`：标准错误（stderr）
+
+| 符号                 | 作用                                   | 示例                         |
+| -------------------- | -------------------------------------- | ---------------------------- |
+| `n>`                 | 覆盖写入到文件描述符 `n`               | `cmd 3> custom_fd.log`       |
+| `n>>`                | 追加到文件描述符 `n`                   | `cmd 3>> custom_fd.log`      |
+| `n>&m`               | 将文件描述符 `n` 重定向到 `m`          | `cmd 2>&1`（错误合并到输出） |
+| `n>&-`               | 关闭文件描述符 `n`                     | `exec 3>&-`                  |
+| `&>file` 或 `>&file` | 合并标准输出和错误到文件（兼容性写法） | `cmd &> all.log`             |
+
+**示例**：
+
+```bash
+# 将标准错误重定向到文件描述符3，再重定向到文件
+exec 3>&1  # 备份标准输出到3
+cmd 2>&1 >output.log | tee -a error.log  # 错误流单独处理
+exec 1>&3  # 恢复标准输出
+```
+
+**特殊设备重定向**
+
+| 目标文件      | 作用                   | 示例                         |
+| ------------- | ---------------------- | ---------------------------- |
+| `/dev/null`   | 丢弃输出（黑洞设备）   | `cmd > /dev/null 2>&1`       |
+| `/dev/stdout` | 显式指向标准输出       | `echo "x" > /dev/stdout`     |
+| `/dev/stderr` | 显式指向标准错误       | `echo "error" > /dev/stderr` |
+| `/dev/fd/n`   | 重定向到文件描述符 `n` | `cmd > /dev/fd/3`            |
+
+**示例**：
+
+```bash
+# 静默执行命令（忽略所有输出）
+cmd > /dev/null 2>&1
+```
+
+#### 输入重定向
+
+| 符号  | 作用                       | 示例                 |
+| ----- | -------------------------- | -------------------- |
+| `<`   | 从文件读取输入（标准输入） | `sort < data.txt`    |
+| `<<`  | Here Document（多行输入）  | 见前文               |
+| `<<<` | Here String（字符串输入）  | `grep "x" <<< "abc"` |
+
+**`<`：标准输入重定向**
+
+**作用**：将文件内容作为命令的标准输入。  
+**语法**：`command < file`  
+**特点**：
+
+- 从文件中读取数据并传递给命令
+- 文件内容会逐行作为命令的输入
+
+**示例**：
+
+```bash
+# 将 file.txt 的内容作为 wc 命令的输入
+wc -l < file.txt
+```
+
+**结果**：统计 `file.txt` 的行数。
+
+**`<<`：Here Document（文档内嵌输入）**
+
+**作用**：将多行文本（称为 "Here Document"）作为命令的标准输入，直到遇到指定的结束标记。  
+**语法**：
+
+```bash
+command << DELIMITER
+多行文本...
+DELIMITER
+```
+
+**特点**：
+
+- 允许在脚本中直接嵌入多行输入
+- 结束标记（`DELIMITER`）可以是任意字符串（通常用 `EOF`）
+- 默认会解析变量和命令替换（除非用引号包围 `DELIMITER`，如 `<<'EOF'`）
+
+**示例**：
+
+```bash
+# 将多行文本传递给 cat 命令
+cat << EOF
+第一行
+第二行
+变量值: $HOME
+EOF
+```
+
+**结果**：
+
+```
+第一行
+第二行
+变量值: /home/username
+```
+
+**`<<<`：Here String（字符串内嵌输入）**
+**作用**：将单个字符串作为命令的标准输入。  
+**语法**：`command <<< "string"`  
+**特点**：
+
+- 直接传递字符串（无需文件或多行文本）
+- 字符串会解析变量和命令替换
+- 比 `echo "string" | command` 更高效（避免管道和子进程）
+
+**示例**：
+
+```bash
+# 将字符串传递给 grep 命令
+grep "hello" <<< "hello world"
+```
+
+**结果**：输出 `hello world`（因为匹配成功）。
+
+**对比总结**
+
+| 操作符 | 名称          | 输入源               | 典型用途                       | 是否解析变量 |
+| ------ | ------------- | -------------------- | ------------------------------ | ------------ |
+| `<`    | 输入重定向    | 文件                 | 从文件读取数据                 | 是           |
+| `<<`   | Here Document | 多行文本（脚本内嵌） | 传递多行输入（如生成配置文件） | 是（可禁用） |
+| `<<<`  | Here String   | 单个字符串           | 快速传递变量或简单字符串       | 是           |
+
+**关键区别**
+
+1. **输入来源不同**：
+
+    - `<` 从文件读取
+    - `<<` 从脚本内嵌的多行文本读取
+    - `<<<` 从单个字符串读取
+
+2. **性能差异**：
+
+    - `<<<` 比 `echo "str" | command` 更高效（避免管道）
+    - `<` 适合处理大文件（逐行读取，不占用内存）
+
+3. **变量解析**：
+    - `<<` 和 `<<<` 默认解析变量，但 `<<` 可通过 `<<'DELIMITER'` 禁用解析
+    - `<` 由命令决定是否解析（如 `cat` 不解析，`eval` 会解析）
+
+---
+
+**使用场景示例**
+**`<` 的典型用途**
+
+```bash
+# 从配置文件读取输入
+while read line; do
+    echo "配置行: $line"
+done < config.txt
+```
+
+**`<<` 的典型用途**
+
+```bash
+# 生成多行配置文件
+cat > app.conf << EOF
+server_ip=192.168.1.1
+port=8080
+EOF
+```
+
+**`<<<` 的典型用途**
+
+```bash
+# 快速检查字符串是否包含子串
+grep "error" <<< "$log_content"
+```
+
+**注意事项**
+
+1. **`<<` 的结束标记**：
+
+    - 结束标记必须单独一行且顶格书写（不能有缩进）：
+        ```bash
+        # 错误示例（缩进会导致语法错误）
+        cat << EOF
+        内容...
+          EOF  # 缩进了，无法识别为结束标记
+        ```
+
+2. **`<<<` 的字符串引用**：
+
+    - 如果字符串包含空格或特殊字符，需用引号包围：
+        ```bash
+        # 安全写法
+        wc -w <<< "hello world"
+        ```
+
+3. **性能选择**：
+    - 处理大量数据时优先用 `<`（文件）或 `<<`（多行文本）
+    - 简单字符串操作用 `<<<` 更高效
+
+#### 重定向组合
+
+**(1) 同时重定向输入和输出**
+
+```bash
+# 从input.txt读取，结果写入output.txt
+command < input.txt > output.txt
+```
+
+**(2) 分离标准输出和错误**
+
+```bash
+# 标准输出到out.log，错误到err.log
+command > out.log 2> err.log
+```
+
+**(3) 合并输出和错误到同一文件**
+
+```bash
+# 方式1（推荐）
+command &> combined.log
+
+# 方式2（传统写法）
+command > combined.log 2>&1
+```
+
+#### 进程替换（Process Substitution）
+
+用 `>(...)` 和 `<(...)` 将命令输出/输入视为临时文件：
+| 符号 | 作用 | 示例 |
+|-----------|-----------------------------|--------------------------|
+| `<(cmd)` | 将命令输出作为文件输入 | `diff <(ls dir1) <(ls dir2)` |
+| `>(cmd)` | 将命令输入作为文件输出 | `tee >(gzip > out.gz)` |
+
+**示例**：
+
+```bash
+# 比较两个目录的文件列表差异
+diff <(ls /path/to/dir1) <(ls /path/to/dir2)
+
+# 将输出同时写入文件和压缩
+echo "data" | tee >(gzip > output.gz) > original.txt
+```
+
+#### 综合示例
+
+** 日志记录脚本**
+
+```bash
+#!/bin/bash
+exec 3>&1  # 备份标准输出到描述符3
+exec > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)  # 分离输出和错误
+
+echo "正常消息"  # 写入stdout.log
+ls /nonexistent  # 错误写入stderr.log
+
+exec 1>&3  # 恢复标准输出
+echo "回到终端显示"
+```
+
+**复杂重定向**
+
+```bash
+{
+    echo "标准输出1"
+    echo "标准错误1" >&2
+    echo "标准输出2"
+    echo "标准错误2" >&2
+} > >(grep "标准输出" > out.txt) 2> >(grep "标准错误" > err.txt)
+```
+
+**注意事项**
+
+1. **顺序敏感**：  
+   `2>&1 >file` 和 `>file 2>&1` 完全不同！后者才是合并输出到文件。
+
+    ```bash
+    # 错误：错误流不会进入文件
+    cmd 2>&1 > file
+
+    # 正确：合并输出和错误到文件
+    cmd > file 2>&1
+    ```
+
+2. **文件描述符范围**：  
+   Bash 默认支持 `0-9`，更高数值需用 `exec` 显式分配。
+
+3. **管道与重定向优先级**：  
+   管道 `|` 优先级高于重定向，必要时用 `{ }` 分组：
+
+    ```bash
+    { cmd1 | cmd2; } > output.txt
+    ```
+
+4. **Here Document 的变体**：
+    - `<<-`：忽略结束标记前的制表符（Tab）
+        ```bash
+        cat <<- EOF
+            Indented text
+        EOF  # 可以用Tab缩进
+        ```
+
+### pipe
 
 ## control
 
@@ -958,18 +1278,18 @@ repos=(
 )
 
 # 遍历所有仓库
-for repo in "${repos[@]}"; do
-    echo "Updating repo: $repo"
-    cd "$repo" || { echo "Failed to enter $repo"; continue; }
+for i in "${repos[@]}"; do
+    echo "Updating repo: $i"
+    cd "$i" || { echo "Failed to enter $i"; continue; }
 
     # 执行 git pull
     git pull origin main  # 假设分支是 main，根据实际情况修改
 
     # 检查 git pull 是否成功
     if [ $? -eq 0 ]; then
-        echo "Successfully updated: $repo"
+        echo "Successfully updated: $i"
     else
-        echo "Failed to update: $repo"
+        echo "Failed to update: $i"
     fi
 
     echo "----------------------------------"
@@ -980,13 +1300,20 @@ echo "All repositories updated!"
 
 ## function
 
+> [!warning]  
+> **fork boom!**
+>
+> ```
+> :(){:|:;};:
+> ```
+
 ## Advance
 
 ### get-opts
 
 example:
 
-```bash
+```sh
 #!/bin/sh
 docs="Usage: \
 \n\tbash $0 [options] \
