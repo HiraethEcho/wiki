@@ -11,35 +11,6 @@ dg-publish: true
 
 # ArchWiki摘抄
 
-## pacman
-
-```sh
-pacman -Qqe | fzf --preview 'pacman -Qiil {}' --layout=reverse --bind 'enter:execute(pacman -Qiil {} | less)'
-```
-
-```sh
-pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse
-```
-
-```sh
-pacman -D --asdeps $(pacman -Qqe)
-```
-
-```sh
-pacman -D --asexplicit base linux linux-firmware
-```
-
-```sh
-cat explicit | sudo pacman -D --asexplicit -
-```
-
-```sh
-pacman -Qii | awk '/^MODIFIED/ {print $2}'
-```
-
-```sh
-pacman -Qi | awk '/^Name/{name=$3} /^Install Date/{print $4,$5,$6,name}' | sort
-```
 
 ## font
 
