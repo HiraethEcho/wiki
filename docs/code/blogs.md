@@ -20,7 +20,7 @@ date: 2025-04-05
 
 用github action，push之后检测变化的文件，clone对应仓库，同步文件，再分别push。
 
-需要注意的是，github action对各个repo的读写权限，需要配置各种keys。  
+需要注意的是，GitHub action对各个repo的读写权限，需要配置各种keys。  
 先生成ssh keys，将pub放入博客repo的deploy key，记得打开写权限；private key放入obsidian repo的secrets中。  
 每个博客仓库都需要一个密钥对。
 

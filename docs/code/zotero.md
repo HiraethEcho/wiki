@@ -49,38 +49,7 @@ use any cloud drive to sync. I'm using koofr.
 
 用来[导出笔记为markdown](/wiki/code/3in1wiki)
 
-**templates:**
-
-```yaml
-- name: "[QuickInsertV2]"
-  text: "// @use-markdown\n${linkText} [ob](/zotero/${subNoteItem.getNoteTitle ?
-      subNoteItem.getNoteTitle().replace(/[/\\\\?%*:|\"<> ]/g, \"-\") +
-      \"-\":\"\"}${subNoteItem.key}) <a href=\"${link}\">zn</a>"
-- name: "[QuickImportV2]"
-  text: "<blockquote>\n${{\n  return await
-      Zotero.BetterNotes.api.convert.link2html(link, {noteItem, dryRun:
-      _env.dryRun});\n}}$\n</blockquote>"
-- name: "[QuickNoteV5]"
-  text: "${annotationItem.annotationComment}\n${{\n  let res = \"\";\n  res +=
-      await Zotero.BetterNotes.api.convert.annotations2html([annotationItem],
-      {noteItem, ignoreComment: true});\n  return res;\n}}$"
-- name: "[ExportMDFileNameV2]"
-  text: '${noteItem.parentItem ? "A-":""}${(noteItem.getNoteTitle ?
-      noteItem.getNoteTitle().replace(/[/\\?%*:|"<> ]/g, "-") + "-" :
-      "")}${noteItem.key}.md'
-- name: "[ExportMDFileHeaderV2]"
-  text: "${{\n  let header = {};\n  header.tags = noteItem.getTags().map((_t) =>
-      _t.tag);\n  header.parent = noteItem.parentItem\n    ?
-      noteItem.parentItem.getField(\"title\")\n    : \"\";\n  return
-      JSON.stringify(header);\n}}$"
-- name: "[ExportMDFileContent]"
-  text:
-      "${{\n\tlet str = mdContent;\n\tlet rmspan = str.replace(/<\\/?span.*?>/g,
-      '');\n\tlet isolink = rmspan.replace(/(<a.*?>)“(.*?)”<\\/a>/g,'$2 $1(to
-      zotero pdf)</a>');\n\treturn isolink;\n}}$"
-```
-
-Or you can copy these:
+**templates:** you can copy these:
 
 ```quickinsert
 # This template is specifically for importing/sharing, using better
