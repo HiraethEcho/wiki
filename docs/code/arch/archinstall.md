@@ -19,13 +19,18 @@ date: 2023-10-09
 
 可以先在win下用 <kbd>win</kbd>+<kbd>x</kbd>、<kbd>k</kbd> 打开磁盘管理，然后手动分区，用win的GUI代替之后的命令行分区。可以使用`diskgenuis`软件做更多操作。
 
-插上U盘，重起电脑，在开机时按 <kbd>F11</kbd> <kbd>F12</kbd> <kbd>F2</kbd> 之类能进入选择启动位置的界面，选择从U盘启动。之后应该会启动U盘里的`ventoy`，选择arch的iso。这样就进入arch live 的系统，这个系统是用来安装arch的。
+插上U盘，重起电脑，在开机时按 <kbd>F11</kbd> <kbd>F12</kbd> <kbd>F2</kbd> 之类能进入选择启动位置的界面，选择从U盘启动。之后应该会启动U盘里的`ventoy`，选择arch的iso。这样就进入`arch live` 的系统，这个系统是用来安装arch的。
 
-## 最小安装
+## 处理磁盘
 
+> [!tip]
+>  此时进入的是`arch live`环境，其实这个时候已经可以拔掉U盘了。在这个环境中做的修改不会保存。  
+ 
+ 接下来要预处理实际电脑上的磁盘，也就是系统安装位置。
+ 
 ### network and time
 
-使用 `iwctl` 连接网络。
+首先是把`arch live`系统联网，设置时间，配置软件源。使用 `iwctl` 连接网络。
 
 ```sh
 iwctl # 进入iwctl
@@ -41,7 +46,7 @@ timedatectl set-ntp true
 timedatectl status
 ```
 
-在 `/etc/pacman.d/mirrorlist`中添加pacman的源，推荐清华源。
+在 `/etc/pacman.d/mirrorlist`中添加pacman的源，推荐清华源。否则可能下载速度慢。
 
 ```text
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
@@ -49,6 +54,8 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 ### 分区
 
+> [!warning]
+> 这一步是操作实际电脑的磁盘，会删除数据。请小心操作。
 将预留空间格式化为btrfs文件系统，并分区。
 
 首先查看分区：
@@ -63,7 +70,7 @@ fdisk -l
 mkfs.btrfs  -L btrfs-arch /dev/nvme0n1p5 # -L means label, can be omitted
 ```
 
-先挂载这个分区，创建其子卷
+先挂载这个分区，根据需要创建其子卷。
 
 ```sh
 mount -o /dev/nvme0n1p3 /mnt # 这条命令将分区挂载到btrfs的顶级子卷，即 / 子卷， id=5
@@ -87,7 +94,8 @@ ID 257 gen 409 parent 5 top level 5 path @home
 ```
 
 > [!note]
-> ID 是子卷的 id，gen 是子卷的代数，parent 是父卷的 id，top level 是顶级子卷的 id，path 是子卷的路径
+> ID 是子卷的 id，gen 是子卷的代数，parent 是父卷的 id，top level 是顶级子卷的 id，path 是子卷的路径  
+> 应该还有其他子卷的输出，这里没有列出。
 
 接下来先取消挂载顶级子卷，再挂载子卷到对应的目录：
 
@@ -105,7 +113,7 @@ mount -o noatime,nodiratime,compress=zstd,subvol=@opt -m /dev/nvme0n1p5 /mnt/opt
 mount -o noatime,nodiratime,compress=zstd,subvol=@root -m /dev/nvme0n1p5 /mnt/root
 ```
 
-关闭写时复制
+可以把这些子卷关闭写时复制
 
 ```
 chattr +C /mnt/tmp
@@ -120,26 +128,33 @@ mount /dev/nvme0n1p1 /mnt/boot/efi
 ```
 
 > [!tip]
-> win初始的efi分区大小可能不够 `/boot` ，所以可以只挂载 `/boot/efi`。也可以创建`/efi`
+> win初始的efi分区大小可能不够 `/boot` ，所以可以只挂载 `/boot/efi`。也可以创建`/efi`  
 > 在win下可以用 `diskgenuis` 查看efi分区。
 
-### install and genfstab 安装系统并生成分区表
+## 安装系统
 
-安装系统到新分区，这里使用 `pacstrap` 命令，安装一些必要组件和后续使用的基础软件，包括linux内核、linux固件、btrfs-progs管理btrfs文件系统、dhcpcd、iwd、networkmanager管理网络、neovim编辑器、git、sudo、grub、os-prober查找硬盘上其他系统，在grub界面启动windows系统、efibootmgr
+这一步是实际安装系统到电脑上。
+install and genfstab 安装系统并生成分区表
+
+安装系统到新分区，这里使用 `pacstrap` 命令，安装一些必要组件和后续使用的基础软件，包括linux内核、linux固件、btrfs-progs管理btrfs文件系统、dhcpcd、iwd、networkmanager管理网络、neovim编辑器、git、sudo、grub、os-prober (查找硬盘上其他系统，在grub界面启动windows系统)、efibootmgr
 
 ```sh
-pacstrap -K -M /mnt base base-devel base base-devel btrfs-progs iwd neovim git sudo grub os-prober efibootmgr amd-ucode dhcpcd
-genfstab -U /mnt >> /mnt/etc/fstab
+pacstrap -K -M /mnt base base-devel base base-devel btrfs-progs iwd neovim git
+sudo grub os-prober efibootmgr amd-ucode dhcpcd
 ```
 
 > [!note]
 > 根据cpu安装 `amd-ucode` 或 `intel-ucode`
 
-这样实际上已经安装了archlinux，但是还需要配置grub，使得电脑启动时能找到这个系统。
+接下来生成分区表，记录这个磁盘分区是如何使用的。
 
-### 配置grub启动
+```
+genfstab -U /mnt >> /mnt/etc/fstab
+```
 
-进入到安装的系统中并做基本配置：
+## 配置grub启动
+
+配置grub，使得电脑启动时能找到这个系统。这一步需要进入新安装的系统中：
 
 ```
 arch-chroot /mnt
@@ -148,6 +163,11 @@ arch-chroot /mnt
 这个命令之后就进入了刚刚安装的archlinux系统，之后的命令都是在这个系统中执行的。
 
 > [!note]
+> 对于双系统安装，要让grub发现其他系统。在`/etc/default/grub`中取消注释
+> ```
+> # GRUB_DISABLE_OS_PROBER=false
+> ```
+> 
 > 对于btrfs，似乎需要一些操作才能使`os-prober`起效。  
 > 在`/etc/mkinitcpio.conf` 添加 btrfs 到 MODULES=(...)行 找到 HOOKS=(...)行，更换fsck为btrfs 最终你看到的/etc/mkinitcpio.conf文件格式为
 >
@@ -164,13 +184,7 @@ arch-chroot /mnt
 > mkinitcpio -P
 > ```
 
-对于双系统安装，要让grub发现其他系统。在`/etc/default/grub`中取消注释
-
-```
-# GRUB_DISABLE_OS_PROBER=false
-```
-
-接下来在efi分区安装grub，并生成grub文件
+安装启动器`grub`到efi分区，并生成grub文件：
 
 ```sh
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch --recheck
@@ -190,7 +204,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 理论上现在可以重启电脑，选择从硬盘启动，就可以看到grub界面，选择archlinux启动。但最好先做一些基本配置。
 
-### 基本配置
+## 基本配置
 
 配置locale、hostname、网络等
 
@@ -221,7 +235,7 @@ hosts:
 127.0.1.1   <yourhostname>.localdomain    <yourhostname>
 ```
 
-### quit and reboot
+## quit and reboot
 
 退出新系统，取消挂载，重启
 
