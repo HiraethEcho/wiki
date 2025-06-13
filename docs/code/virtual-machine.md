@@ -43,3 +43,8 @@ sudo virsh net-list --all
 sudo virsh net-start --all
 sudo virsh net-autostart default
 ```
+
+
+## Windows
+
+[windows iot LTSC](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-11-iot-enterprise-ltsc) 一个更迷你的win镜像
