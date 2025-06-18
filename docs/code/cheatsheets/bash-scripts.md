@@ -397,6 +397,14 @@ ${var:?string}
 
 在上面这五种替换结构中string不一定是常值的，可用另外一个变量的值或是一种命令的输出。
 
+```
+default_name="Guest"
+unset name  # 确保 name 未定义
+
+# 如果 name 为空，则使用 default_name 的值
+echo "Hello, ${name:-$default_name}"  # 输出: Hello, Guest
+```
+
 **四种模式匹配替换结构**
 
 模式匹配记忆方法：
@@ -801,12 +809,15 @@ read a
 echo "input b"
 read b
 
+read -n 3 -t 5 -s -p "input 3 charater, wait for 5 seconds, silent" c
+echo "$c"
+
 printf "a=%s,b=%s,sum is %s" $a $b $((a + b))
 ```
 
 It is possible to give arguments to the script on execution.
 
-`$@` represents the position of the parameters, starting from one.
+`$@` is a list of the parameters.
 
 ```bash
 #!/bin/bash
