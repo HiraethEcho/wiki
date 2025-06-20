@@ -8,7 +8,7 @@ dg-publish: true
 
 # taskwarrior
 
-## help
+## overview
 
 Command-line to-do list manager. [More information](https://taskwarrior.org/docs/).
 
@@ -52,21 +52,6 @@ Documentation for Taskwarrior can be found using 'man task', 'man taskrc', 'man 
 The general form of commands is:
   task [<filter>] <command> [<mods>]
 
-The <filter> consists of zero or more restrictions on which tasks to select, such as:
-  task                                      <command> <mods>
-  task 28                                   <command> <mods>
-  task +weekend                             <command> <mods>
-  task project:Home due.before:today        <command> <mods>
-  task ebeeab00-ccf8-464b-8b58-f7f2d606edfb <command> <mods>
-
-By default, filter elements are combined with an implicit 'and' operator, but 'or' and 'xor' may also be used, provided parentheses are included:
-  task '(/[Cc]at|[Dd]og/ or /[0-9]+/)'      <command> <mods>
-
-A filter may target specific tasks using ID or UUID numbers.  To specify multiple tasks use one of these forms:
-  task 1,2,3                                    delete
-  task 1-3                                      info
-  task 1,2-5,19                                 modify pri:H
-  task 4-7 ebeeab00-ccf8-464b-8b58-f7f2d606edfb info
 
 The <mods> consist of zero or more changes to apply to the selected tasks, such as:
   task <filter> <command> project:Home
@@ -95,26 +80,6 @@ Built-in attributes are:
   scheduled:      Date task is scheduled to start
   modified:       Date task was last modified
   depends:        Other tasks that this task depends upon
-
-Attribute modifiers make filters more precise.  Supported modifiers are:
-
-  Modifiers         Example            Equivalent           Meaning
-  ----------------  -----------------  -------------------  -------------------------
-                    due:today          due = today          Fuzzy match
-  not               due.not:today      due != today         Fuzzy non-match
-  before, below     due.before:today   due < today          Exact date comparison
-  after, above      due.after:today    due >= tomorrow      Exact date comparison
-  none              project.none:      project == ''        Empty
-  any               project.any:       project !== ''       Not empty
-  is, equals        project.is:x       project == x         Exact match
-  isnt              project.isnt:x     project !== x        Exact non-match
-  has, contains     desc.has:Hello     desc ~ Hello         Pattern match
-  hasnt,            desc.hasnt:Hello   desc !~ Hello        Pattern non-match
-  startswith, left  desc.left:Hel      desc ~ '^Hel'        Beginning match
-  endswith, right   desc.right:llo     desc ~ 'llo$'        End match
-  word              desc.word:Hello    desc ~ '\bHello\b'   Boundaried word match
-  noword            desc.noword:Hello  desc !~ '\bHello\b'  Boundaried word non-match
-
 Alternately algebraic expressions support:
   and  or  xor            Logical operators
   <  <=  =  !=  >=  >     Relational operators
@@ -124,7 +89,6 @@ Alternately algebraic expressions support:
   task '(due < eom and priority != L)'  list
 ```
 
-## Command Line Syntax
 
 Taskwarrior has a flexible command line syntax, but it may not be clear at first what the underlying structure means. Here is the general form of the syntax:
 
@@ -624,8 +588,84 @@ report.simple.sort        project+/,entry+
 Now the report is fully configured, it joins the others and is used in the same way.
 
 ## filter
+```
+The <filter> consists of zero or more restrictions on which tasks to select, such as:
+  task                                      <command> <mods>
+  task 28                                   <command> <mods>
+  task +weekend                             <command> <mods>
+  task project:Home due.before:today        <command> <mods>
+  task ebeeab00-ccf8-464b-8b58-f7f2d606edfb <command> <mods>
+
+By default, filter elements are combined with an implicit 'and' operator, but 'or' and 'xor' may also be used, provided parentheses are included:
+  task '(/[Cc]at|[Dd]og/ or /[0-9]+/)'      <command> <mods>
+
+A filter may target specific tasks using ID or UUID numbers.  To specify multiple tasks use one of these forms:
+  task 1,2,3                                    delete
+  task 1-3                                      info
+  task 1,2-5,19                                 modify pri:H
+  task 4-7 ebeeab00-ccf8-464b-8b58-f7f2d606edfb info
+```
+
+### attributes
+
+```
+Built-in attributes are:
+  description:    Task description text
+  status:         Status of task - pending, completed, deleted, waiting
+  project:        Project name
+  priority:       Priority
+  due:            Due date
+  recur:          Recurrence frequency
+  until:          Expiration date of a task
+  limit:          Desired number of rows in report, or 'page'
+  wait:           Date until task becomes pending
+  entry:          Date task was created
+  end:            Date task was completed/deleted
+  start:          Date task was started
+  scheduled:      Date task is scheduled to start
+  modified:       Date task was last modified
+  depends:        Other tasks that this task depends upon
+
+Attribute modifiers make filters more precise.  Supported modifiers are:
+
+  Modifiers         Example            Equivalent           Meaning
+  ----------------  -----------------  -------------------  -------------------------
+                    due:today          due = today          Fuzzy match
+  not               due.not:today      due != today         Fuzzy non-match
+  before, below     due.before:today   due < today          Exact date comparison
+  after, above      due.after:today    due >= tomorrow      Exact date comparison
+  none              project.none:      project == ''        Empty
+  any               project.any:       project !== ''       Not empty
+  is, equals        project.is:x       project == x         Exact match
+  isnt              project.isnt:x     project !== x        Exact non-match
+  has, contains     desc.has:Hello     desc ~ Hello         Pattern match
+  hasnt,            desc.hasnt:Hello   desc !~ Hello        Pattern non-match
+  startswith, left  desc.left:Hel      desc ~ '^Hel'        Beginning match
+  endswith, right   desc.right:llo     desc ~ 'llo$'        End match
+  word              desc.word:Hello    desc ~ '\bHello\b'   Boundaried word match
+  noword            desc.noword:Hello  desc !~ '\bHello\b'  Boundaried word non-match
+
+Alternately algebraic expressions support:
+  and  or  xor            Logical operators
+  <  <=  =  !=  >=  >     Relational operators
+  (  )                    Precedence
+
+  task due.before:eom priority.not:L   list
+  task '(due < eom and priority != L)'  list
+```
+
+note that
+
+```
+  by         due.by:today       due <= today         Exact date comparison
+```
 
 ### Tags, Virtual Tags
+
+Tags are arbitrary words, any quantity:
+
++tag The + means add the tag
+-tag The - means remove the tag
 
 The basic tag syntax is very powerful and simple to use. There are two ways to use this, shown here:
 

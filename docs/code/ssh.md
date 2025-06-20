@@ -86,3 +86,72 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload
 sudo systemctl enable --now ssh-tunnel
 ```
+
+## debug
+
+在debian上，防火墙
+
+```sh
+sudo ufw allow 22/tcp 1234/tcp
+
+sudo ufw status
+
+1234/tcp                   ALLOW       Anywhere
+22/tcp                     ALLOW       Anywhere
+1234/tcp (v6)              ALLOW       Anywhere (v6)
+22/tcp (v6)                ALLOW       Anywhere (v6)
+```
+
+在`/etc/ssh/sshd_config`中
+
+```config
+Port 22
+# Port 2222 # custom port
+AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+PubkeyAuthentication yes
+AuthorizedKeysFile	.ssh/authorized_keys
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication no
+#AllowAgentForwarding yes
+AllowTcpForwarding yes
+GatewayPorts yes
+X11Forwarding yes
+X11DisplayOffset 10
+X11UseLocalhost no
+```
+
+检查网络，包含这样的
+
+```sh
+ss -tnlp
+
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+LISTEN 0      128          0.0.0.0:2222       0.0.0.0:*
+LISTEN 0      1          127.0.0.1:20001      0.0.0.0:*    users:(("autossh",pid=15104,fd=3))
+LISTEN 0      128        127.0.0.1:20000      0.0.0.0:*    users:(("ssh",pid=21175,fd=5))
+LISTEN 0      1          127.0.0.1:30001      0.0.0.0:*    users:(("autossh",pid=15460,fd=3))
+LISTEN 0      128        127.0.0.1:30000      0.0.0.0:*    users:(("ssh",pid=15464,fd=5))
+LISTEN 0      128            [::1]:30000         [::]:*    users:(("ssh",pid=15464,fd=4))
+LISTEN 0      128             [::]:2222          [::]:*
+LISTEN 0      128            [::1]:20000         [::]:*    users:(("ssh",pid=21175,fd=4))
+```
+
+检查端口占用：
+
+```
+lsof -i :22
+lsof -i :1234
+```
+
+修改配置后记得重启各种服务，例如
+
+```sh
+sudo systemctl restart sshd
+sudo systemctl daemon-reload
+sudo systemctl enable --now ssh-tunnel
+sudo systemctl restart ssh-tunnel
+sudo ufw reload
+```
