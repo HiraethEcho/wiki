@@ -24,10 +24,10 @@ date: 2023-10-09
 ## 处理磁盘
 
 > [!tip]
->  此时进入的是`arch live`环境，其实这个时候已经可以拔掉U盘了。在这个环境中做的修改不会保存。  
- 
- 接下来要预处理实际电脑上的磁盘，也就是系统安装位置。
- 
+> 此时进入的是`arch live`环境，其实这个时候已经可以拔掉U盘了。在这个环境中做的修改不会保存。
+
+接下来要预处理实际电脑上的磁盘，也就是系统安装位置。
+
 ### network and time
 
 首先是把`arch live`系统联网，设置时间，配置软件源。使用 `iwctl` 连接网络。
@@ -56,7 +56,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 > [!warning]
 > 这一步是操作实际电脑的磁盘，会删除数据。请小心操作。
-将预留空间格式化为btrfs文件系统，并分区。
+> 将预留空间格式化为btrfs文件系统，并分区。
 
 首先查看分区：
 
@@ -113,6 +113,12 @@ mount -o noatime,nodiratime,compress=zstd,subvol=@opt -m /dev/nvme0n1p5 /mnt/opt
 mount -o noatime,nodiratime,compress=zstd,subvol=@root -m /dev/nvme0n1p5 /mnt/root
 ```
 
+查看挂载情况
+
+```sh
+findmnt -nt btrfs
+```
+
 可以把这些子卷关闭写时复制
 
 ```
@@ -139,7 +145,7 @@ install and genfstab 安装系统并生成分区表
 安装系统到新分区，这里使用 `pacstrap` 命令，安装一些必要组件和后续使用的基础软件，包括linux内核、linux固件、btrfs-progs管理btrfs文件系统、dhcpcd、iwd、networkmanager管理网络、neovim编辑器、git、sudo、grub、os-prober (查找硬盘上其他系统，在grub界面启动windows系统)、efibootmgr
 
 ```sh
-pacstrap -K -M /mnt base base-devel base base-devel btrfs-progs iwd neovim git
+pacstrap -K -M /mnt base base-devel linux linux-headers btrfs-progs iwd neovim git
 sudo grub os-prober efibootmgr amd-ucode dhcpcd
 ```
 
@@ -164,10 +170,11 @@ arch-chroot /mnt
 
 > [!note]
 > 对于双系统安装，要让grub发现其他系统。在`/etc/default/grub`中取消注释
+>
 > ```
 > # GRUB_DISABLE_OS_PROBER=false
 > ```
-> 
+>
 > 对于btrfs，似乎需要一些操作才能使`os-prober`起效。  
 > 在`/etc/mkinitcpio.conf` 添加 btrfs 到 MODULES=(...)行 找到 HOOKS=(...)行，更换fsck为btrfs 最终你看到的/etc/mkinitcpio.conf文件格式为
 >
@@ -205,6 +212,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 理论上现在可以重启电脑，选择从硬盘启动，就可以看到grub界面，选择archlinux启动。但最好先做一些基本配置。
 
 ## 基本配置
+
+首先设置root密码
+
+```
+passwd root
+```
+
+设置密码是静默输入，不会显示密码，输入两次即可。
 
 配置locale、hostname、网络等
 

@@ -35,6 +35,12 @@ ssh -p 1234 server_user@ipv6
 
 连接，那么数据就从客户机到中间机的1234端口，再转发到服务机的22端口
 
+ssh 有一些选项：
+- -f: Fork into background  让 SSH 在认证成功后进入后台运行，不占用当前终端。
+- -N: No remote command 不执行远程命令，仅用于端口转发。
+- -T: Disable pseudo-terminal allocation    不分配伪终端（PTY），适用于纯端口转发。
+- -R: Remote port forwarding    建立反向隧道（远程端口转发）。
+
 ### 注意
 
 中间机上在`/etc/ssh/sshd_config`（作为服务端的配置）设置
@@ -111,7 +117,7 @@ AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
 PubkeyAuthentication yes
-AuthorizedKeysFile	.ssh/authorized_keys
+AuthorizedKeysFile  .ssh/authorized_keys
 
 # To disable tunneled clear text passwords, change to no here!
 PasswordAuthentication no

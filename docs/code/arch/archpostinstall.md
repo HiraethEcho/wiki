@@ -14,13 +14,7 @@ dg-publish: true
 
 ## add user
 
-首先设置root密码
 
-```
-passwd root
-```
-
-设置密码是静默输入，不会显示密码，输入两次即可。
 
 添加用户并设置密码
 
