@@ -77,7 +77,7 @@ typedef union {
 
 最后，可以在我的[github](https://github.com/hiraethecho)找到我的dotfiles和dwm。还没有整理，也没文档，以后有时间心情再说吧。
 
-## backup
+## tabbed scratchpad
 
 `st -c class -n name` with `precmd () {print -Pn "\e]0;%~\a"}` in `.zshrc`
 
@@ -97,27 +97,10 @@ _NET_WM_NAME(UTF8_STRING) = "~"
 WM_CLASS(STRING) = "scratchpad", "tabbed"
 ```
 
-`tabbed -n "scratchpad" -c -r 2 st -w '' -g 150x40 -c class -n name -t title`
+**summary**: In `WM_CLASS(STRING)="name","class"`, `"name"` is for `st -n name` and `tabbed -n name`, and is also `instance` in `rules`; `class` is for `st -c class`, and class of `tabbed` is always `tabbed`.
 
-```
-WM_NAME(UTF8_STRING) = "title"
-_NET_WM_NAME(UTF8_STRING) = "title"
-WM_CLASS(STRING) = "scratchpad", "tabbed"
-```
 
-using `st -g 150x40 -t scratchpad`
-
-```
-_NET_WM_ICON_NAME(UTF8_STRING) = "~"
-WM_ICON_NAME(UTF8_STRING) = "~"
-WM_CLASS(STRING) = "st-256color", "st-256color"
-_NET_WM_NAME(UTF8_STRING) = "~"
-WM_NAME(UTF8_STRING) = "~"
-_NET_WM_PID(CARDINAL) = 830413
-WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW
-```
-
-and in `manage()`
+origin `manage()`:
 
 ```
   selmon->tagset[selmon->seltags] &= ~scratchtag;
@@ -126,23 +109,44 @@ and in `manage()`
     c->isfloating = True;
   }
 ```
-
-modify:
+we can modify to
 
 ```
 void manage(Window w, XWindowAttributes *wa) {
   Client *c, *t = NULL;
-  XClassHint ch = {NULL, NULL};
-  const char *class, *instance;
++ XClassHint ch = {NULL, NULL};
++ const char *class, *instance;
     ...
-  XGetClassHint(dpy, c->win, &ch);
-  class = ch.res_class ? ch.res_class : broken;
++ XGetClassHint(dpy, c->win, &ch);
++  instance = ch.res_name ? ch.res_name : broken;
   selmon->tagset[selmon->seltags] &= ~scratchtag;
-  if (!strcmp(class, scratchpadname)) {
+~ if (!strcmp(instance, scratchpadname)) {
     c->mon->tagset[c->mon->seltags] |= c->tags = scratchtag;
     c->isfloating = True;
   }
 }
 ```
 
-Then `class` is second term of `WM_CLASS(STRING) = "scratchpad", "tabbed"`
+btw, `apply_rules`:
+
+```
+  XGetClassHint(dpy, c->win, &ch);
+  class = ch.res_class ? ch.res_class : broken;
+  instance = ch.res_name ? ch.res_name : broken;
+
+  for (i = 0; i < LENGTH(rules); i++) {
+    r = &rules[i];
+    if ((!r->title || strstr(c->name, r->title)) &&
+        (!r->class || strstr(class, r->class)) &&
+        (!r->instance || strstr(instance, r->instance))) {
+      c->isfloating = r->isfloating;
+      c->tags |= r->tags;
+      c->opacity = r->opacity;
+      c->unfocusopacity = r->unfocusopacity;
+      for (m = mons; m && m->num != r->monitor; m = m->next) ;
+      if (m)
+        c->mon = m;
+    }
+  }
+```
+

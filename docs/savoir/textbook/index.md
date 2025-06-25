@@ -12,5 +12,5 @@ dg-publish: true
 
 [这里](https://github.com/TapXWorld/ChinaTextbook)可以找到教科书
 
-- [地理](/wiki/read/textbook/geography)
-- [政治](/wiki/read/textbook/politics)
+- [地理](/wiki/savoir/textbook/geography)
+- [政治](/wiki/savoir/textbook/politics)
