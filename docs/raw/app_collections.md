@@ -39,6 +39,25 @@ so powerful
 
 A configuration manager for Arch Linux. Kind of like nixOS. [github](https://github.com/CyberShadow/aconfmgr)
 
+#### linux-firmware
+
+since `linux-firmware` is departed, only need some of them. Use `arch-checkfw` to find which.
+
+`linux-firmware` includes
+
+```
+Depends On      : linux-firmware-amdgpu  linux-firmware-atheros
+                  linux-firmware-broadcom  linux-firmware-cirrus  linux-firmware-intel
+                  linux-firmware-mediatek  linux-firmware-nvidia  linux-firmware-other
+                  linux-firmware-radeon  linux-firmware-realtek
+Optional Deps   : linux-firmware-liquidio: Firmware for Cavium LiquidIO server adapters
+                  linux-firmware-marvell: Firmware for Marvell devices
+                  linux-firmware-mellanox: Firmware for Mellanox Spectrum switches
+                  linux-firmware-nfp: Firmware for Netronome Flow Processors
+                  linux-firmware-qcom: Firmware for Qualcomm SoCs
+                  linux-firmware-qlogic: Firmware for QLogic devices
+```
+
 ## DE
 
 ### wm
@@ -127,6 +146,10 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
 
 ### vcs
 
+#### jujustu
+
+[jj](https://github.com/jj-vcs/jj)
+
 #### avc
 
 [AVC](https://github.com/assembler-0/AVC)
@@ -146,7 +169,7 @@ Alter for mkinitcpio
 [limine](https://wiki.archlinux.org/title/Limine)
 Alter for grub
 
-### ninve
+#### ninve
 
 [ninve](https://github.com/Niedzwiedzw/ninve) A tui video editor. Use `mpv` to play and `ffmpeg` to edit.
 
@@ -175,9 +198,6 @@ not support fo timeshift btrfs snap yet
       whois -b 8.8.8.8
 ```
 
-#### jujustu
-
-[jj](https://github.com/jj-vcs/jj)
 
 #### gitoxide
 
