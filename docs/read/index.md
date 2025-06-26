@@ -6,7 +6,7 @@
 
 直接摘抄和对摘抄内容的想法，属于$n$手资料。
 
-<!-- 类似[哲学](/wiki/philosophy)的内容是我思考后的$n+1$手资料。 -->
+类似[哲学](/wiki/savoir/philosophy/index)的内容是我思考后的$n+1$手资料。
 
 - 社会科学
     - [《女性主义》](/wiki/read/feminism)

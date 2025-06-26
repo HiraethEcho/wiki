@@ -32,7 +32,9 @@ Section "InputClass"
         Option "Tapping" "on"
 EndSection
 ```
+
 之后才能正常识别`touchpad`：
+
 ```xinput list
 
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]

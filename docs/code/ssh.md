@@ -36,16 +36,17 @@ ssh -p 1234 server_user@ipv6
 连接，那么数据就从客户机到中间机的1234端口，再转发到服务机的22端口
 
 ssh 有一些选项：
-- -f: Fork into background  让 SSH 在认证成功后进入后台运行，不占用当前终端。
+
+- -f: Fork into background 让 SSH 在认证成功后进入后台运行，不占用当前终端。
 - -N: No remote command 不执行远程命令，仅用于端口转发。
-- -T: Disable pseudo-terminal allocation    不分配伪终端（PTY），适用于纯端口转发。
-- -R: Remote port forwarding    建立反向隧道（远程端口转发）。
+- -T: Disable pseudo-terminal allocation 不分配伪终端（PTY），适用于纯端口转发。
+- -R: Remote port forwarding 建立反向隧道（远程端口转发）。
 
 ### 注意
 
 中间机上在`/etc/ssh/sshd_config`（作为服务端的配置）设置
 
-```text
+```conf
 AllowTcpForwarding yes
 GatewayPorts yes
 ```
@@ -135,13 +136,10 @@ X11UseLocalhost no
 ss -tnlp
 
 State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
-LISTEN 0      128          0.0.0.0:2222       0.0.0.0:*
+LISTEN 0      128          0.0.0.0:22         0.0.0.0:*
 LISTEN 0      1          127.0.0.1:20001      0.0.0.0:*    users:(("autossh",pid=15104,fd=3))
 LISTEN 0      128        127.0.0.1:20000      0.0.0.0:*    users:(("ssh",pid=21175,fd=5))
-LISTEN 0      1          127.0.0.1:30001      0.0.0.0:*    users:(("autossh",pid=15460,fd=3))
-LISTEN 0      128        127.0.0.1:30000      0.0.0.0:*    users:(("ssh",pid=15464,fd=5))
-LISTEN 0      128            [::1]:30000         [::]:*    users:(("ssh",pid=15464,fd=4))
-LISTEN 0      128             [::]:2222          [::]:*
+LISTEN 0      128             [::]:22            [::]:*
 LISTEN 0      128            [::1]:20000         [::]:*    users:(("ssh",pid=21175,fd=4))
 ```
 

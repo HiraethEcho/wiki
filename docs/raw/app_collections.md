@@ -61,6 +61,11 @@ tiling
 
 [github](https://github.com/Cudiph/cwcwm)
 
+### utils
+
+- xorg-xeye: help to find xwayland app while running wayland
+- xev wev: key stroke under X and wayland
+
 ### debug
 
 [Xephyr](https://wiki.archlinux.org/title/Xephyr) is a nested X server that runs as an X application.
@@ -118,6 +123,16 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
 
 #### aerc
 
+###url
+
+### vcs
+
+#### avc
+
+[AVC](https://github.com/assembler-0/AVC)
+
+Achieve version control
+
 ## useful
 
 ### not now, or not me
@@ -131,9 +146,13 @@ Alter for mkinitcpio
 [limine](https://wiki.archlinux.org/title/Limine)
 Alter for grub
 
+### ninve
+
+[ninve](https://github.com/Niedzwiedzw/ninve) A tui video editor. Use `mpv` to play and `ffmpeg` to edit.
+
 not support fo timeshift btrfs snap yet
 
-### maybe later
+### I'll back here
 
 #### httrack
 
@@ -230,11 +249,7 @@ install binary from github
 
 [doc](https://bsr.xinrea.cn/)
 
-### ninve
-
-[ninve](https://github.com/Niedzwiedzw/ninve) A tui video editor. Use `mpv` to play and `ffmpeg` to edit.
-
-### not much useful or necessary
+### not much useful or unnecessary
 
 #### gowall
 
@@ -279,3 +294,9 @@ wallpaper by mpv in wayland
 #### [codesnap](https://codesnap.dev/)
 
 generate pictures of code snaps
+
+### wtf Interesting
+
+#### activate-linux
+
+a watermark
