@@ -79,3 +79,35 @@ If "--" is used for NEW, then diff against the working directory.
 ```
 
 For example, use `git latexdiff HEAD -- --tmpdirprefix tmp --main main.tex` to check differences between worktree and last commit.
+
+## picture
+
+If fix position:
+
+```tex
+\usepackage{float} % 在导言区添加
+\usepackage{graphicx} % 用于插入图片
+
+...
+
+\begin{figure}[H] % 使用 [H] 固定位置
+    \centering
+    \includegraphics[width=0.8\textwidth]{example-image}
+    \caption{固定位置的图片}
+    \label{fig:example}
+\end{figure}
+```
+
+centering:
+
+```tex
+\usepackage{graphicx} % 在导言区添加
+
+...
+
+{
+    \centering
+    \includegraphics[width=0.8\textwidth]{example-image}
+    \par % 确保居中生效
+}
+```
