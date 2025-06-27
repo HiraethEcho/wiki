@@ -488,7 +488,7 @@ $ sed 's/#.*$//' file.txt
 
 ```
 
-### [#](#search-for-text)Search for text
+### Search for text
 
 Search for a string and only print the lines that were matched
 
