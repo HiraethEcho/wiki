@@ -156,7 +156,27 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
 
 Achieve version control
 
+### rss
+
+[glance](https://github.com/glanceapp/glance)
+
+newsboat
+
+
+
 ## useful
+
+### I'm using these
+
+#### github
+
+github-cli
+
+[del-repos](https://www.npmjs.com/package/del-repos)
+
+#### zmk
+
+zmk-studio
 
 ### not now, or not me
 
