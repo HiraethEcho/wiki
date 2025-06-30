@@ -12,6 +12,8 @@ dg-publish: true
 
 Command-line to-do list manager. [More information](https://taskwarrior.org/docs/).
 
+tldr:
+
 ```
   Add a new task which is due tomorrow:
 
@@ -45,6 +47,8 @@ Command-line to-do list manager. [More information](https://taskwarrior.org/docs
 
       task reports
 ```
+
+man:
 
 ```
 Documentation for Taskwarrior can be found using 'man task', 'man taskrc', 'man task-color', 'man task-sync' or at https://taskwarrior.org
@@ -89,7 +93,6 @@ Alternately algebraic expressions support:
   task '(due < eom and priority != L)'  list
 ```
 
-
 Taskwarrior has a flexible command line syntax, but it may not be clear at first what the underlying structure means. Here is the general form of the syntax:
 
 ![](https://taskwarrior.org/images/syntax.png)
@@ -107,6 +110,95 @@ The first example, `task list` is a report with no filter, and the second, `task
 Taskwarrior looks for the first argument on the command line that looks like an exact command name, and failing that, looks for an abbreviated command name. It is better to use the full name of a command to avoid ambiguity.
 
 It is the position of the `command` argument, and the type of command that determines how the arguments are understood.
+
+<details><summary>task commands</summary>
+
+```
+Command          Category  R/W ID GC Recur Context Filter Mods Misc Description
+columns          config     RO                                 Misc All supported columns and formatting styles
+config           config     RO                                 Misc Change settings in the task configuration
+reports          config     RO                                      Lists all supported reports
+show             config     RO                                 Misc Shows all configuration variables or subset
+udas             config     RO                                      Shows all the defined UDA details
+commands         metadata   RO                                      Generates a list of all commands, with behavior details
+stats            metadata   RO    GC          Ctxt   Filt           Shows task database statistics
+ids              metadata   RO ID GC Recur           Filt           Shows the IDs of matching tasks, as a range
+count            metadata   RO    GC Recur    Ctxt   Filt           Counts matching tasks
+projects         metadata   RO    GC Recur    Ctxt   Filt           Shows all project names used
+tags             metadata   RO    GC          Ctxt   Filt           Shows a list of all tags used
+uuids            metadata   RO    GC Recur           Filt           Shows the UUIDs of matching tasks, as a space-separated list
+context          context    RO                                 Misc Set and define contexts (default filters / modifications)
+```
+
+</details>
+
+<details><summary>internals</summary>
+
+```
+_aliases         internal   RO                                      Generates a list of all aliases, for autocompletion purposes
+_columns         internal   RO                                      Displays only a list of supported columns
+_commands        internal   RO                                      Generates a list of all commands, for autocompletion purposes
+_config          internal   RO                                      Lists all supported configuration variables, for completion purposes
+_context         internal   RO                                      Lists all supported contexts, for completion purposes
+_get             internal   RO                                 Misc DOM Accessor
+_ids             internal   RO ID GC Recur           Filt           Shows the IDs of matching tasks, in the form of a list
+_projects        internal   RO    GC Recur           Filt           Shows only a list of all project names used
+_show            internal   RO    GC                                Shows all configuration settings in a machine-readable format
+_tags            internal   RO    GC Recur           Filt           Shows only a list of all tags used, for autocompletion purposes
+_udas            internal   RO                                      Shows the defined UDAs for completion purposes
+_unique          internal   RO ID GC                 Filt      Misc Generates lists of unique attribute values
+_urgency         internal   RO    GC                 Filt           Displays the urgency measure of a task
+_uuids           internal   RO    GC Recur           Filt           Shows the UUIDs of matching tasks, as a list
+_version         internal   RO                                      Shows only the Taskwarrior version number
+_zshattributes   internal   RO                                      Generates a list of all attributes, for zsh autocompletion purposes
+_zshcommands     internal   RO                                      Generates a list of all commands, for zsh autocompletion purposes
+_zshids          internal   RO ID GC Recur           Filt           Shows the IDs and descriptions of matching tasks
+_zshuuids        internal   RO    GC Recur           Filt           Shows the UUIDs and descriptions of matching tasks
+```
+
+</details>
+
+<details><summary>operation</summary>
+
+```
+add              operation  RW                Ctxt        Mods      Adds a new task
+annotate         operation  RW                       Filt Mods      Adds an
+append           operation  RW                       Filt Mods      Appends text to
+delete           operation  RW                Ctxt   Filt Mods      Deletes the
+denotate         operation  RW                Ctxt   Filt      Misc Deletes an
+done             operation  RW                Ctxt   Filt Mods      Marks the
+duplicate        operation  RW                Ctxt   Filt Mods      Duplicates the
+edit             operation  RW       Recur    Ctxt   Filt           Launches an
+log              operation  RW                Ctxt        Mods      Adds a new task
+modify           operation  RW                       Filt Mods      Modifies the
+prepend          operation  RW                Ctxt   Filt Mods      Prepends text to
+purge            operation  RW    GC          Ctxt   Filt           Removes the
+start            operation  RW                Ctxt   Filt Mods      Marks specified
+stop             operation  RW                Ctxt   Filt Mods      Removes the
+undo             operation  RW                                      Reverts the most
+```
+
+</details>
+
+<details><summary>graphs</summary>
+
+```
+burndown.daily   graphs     RO    GC Recur    Ctxt   Filt           Shows a
+burndown.monthly graphs     RO    GC Recur    Ctxt   Filt           Shows a
+burndown.weekly  graphs     RO    GC Recur    Ctxt   Filt           Shows a
+calendar         graphs     RO ID GC                           Misc Shows a
+ghistory.annual  graphs     RO       Recur    Ctxt   Filt           Shows a
+ghistory.daily   graphs     RO       Recur    Ctxt   Filt           Shows a
+ghistory.monthly graphs     RO       Recur    Ctxt   Filt           Shows a
+ghistory.weekly  graphs     RO       Recur    Ctxt   Filt           Shows a
+history.annual   graphs     RO       Recur    Ctxt   Filt           Shows a report
+history.daily    graphs     RO       Recur    Ctxt   Filt           Shows a report
+history.monthly  graphs     RO       Recur    Ctxt   Filt           Shows a report
+history.weekly   graphs     RO       Recur    Ctxt   Filt           Shows a report
+summary          graphs     RO    GC          Ctxt   Filt           Shows a report
+```
+
+</details>
 
 ### Filter
 
@@ -152,156 +244,15 @@ Overrides are temporary values for configuration settings, and can be specified 
 
 There can be any number of overrides on the command line, and they have no effect on the syntax.
 
-## Using Dates Effectively
-
-A task does not require a due date, and can simply be a statement of need:
-
-```shell
-$ task add Send Alice a birthday card
-```
-
-However, this is exactly the kind of task can benefit from having a due date, and perhaps several other dates also.
-
-There are several dates that can decorate a task, each with its own meaning and effects. You can choose to use some, all or none of these, but like all Taskwarrior features, they are there in case your needs require it, but you do not pay a performance or friction penalty by not using them.
-
-### The due Date
-
-Use a `due` date to specify the exact date by which a task must be completed. This corresponds to the last possible moment when the task can be considered on-time. Using our example, we can set the `due` date to be Alice’s birthday (line breaks added for clarity):
-
-```shell
-$ task add Send Alice a birthday card \
-           due:2016-11-08
-```
-
-Now your task has an associated `due` date, to help you determine when you need to work on it. But what effect does this have on Taskwarrior? How can it be used to best advantage?
-
-We call the `due` date of a task ‘metadata’. As such, it is just a piece of data associated with the task, and therefore it can become part of a filter:
-
-```shell
-$ task due:today list
-...
-```
-
-This is one way to find out if any of your tasks are due today. You could also use:
-
-```shell
-$ task +TODAY list
-...
-```
-
-That is an example of a virtual tag, `TODAY`, which is not a real tag, but is something you can query, and is equivalent to the previous example. Additionally, you can use `DUE` which filters tasks that have a due date today or within the next 7 days, or `WEEK` for all tasks due within the current calendar week, or `YESTERDAY`, `TOMORROW`, `MONTH` and `YEAR`.
-
-Note that number of days in which a task is considered `DUE` can be configured using the `rc.due` setting.
-
-You can find tasks that have any due date at all:
-
-```shell
-$ task due.any: list
-...
-```
-
-Or no due date:
-
-```shell
-$ task due.none: list
-...
-```
-
-There is also an `overdue` report that makes use of the `OVERDUE` virtual tag, to show you what is already late. If you run the `calendar` report, your due date will be highlighted on it.
-
-What we see here is that Taskwarrior leverages the metadata to drive various features. Several reports will sort by `due` date, and as we see above, a task that has a due date now belongs on your schedule.
-
-### The scheduled Date
-
-A `scheduled` date is different from a `due` date, and represents the earliest opportunity to work on a task. Let’s continue with the same example above. You need to send a birthday card to Alice, but her birthday isn’t until November, so it’s not the kind of task that can be done in advance. Ideally this would be done a few days ahead of the `due` date:
-
-```shell
-$ task add Send Alice a birthday card \
-           due:2016-11-08 \
-           scheduled:2016-11-04
-```
-
-This means that you need to send Alice a birthday card, no later than 2016-11-08, and no earlier than 2016-11-04.
-
-If a task has a `scheduled` date, then once that date passes, the task is considered ready, and there is a `ready` report and a `READY` virtual tag for this:
-
-```shell
-$ task ready
-...
-$ task +READY list
-...
-```
-
-Tasks that have no `scheduled` date are considered always ready. Again, metadata drives the sophistication of your task list.
-
-### The wait Date
-
-Many people do not like to look at long task lists, finding them daunting, or just distracting. You can add a `wait` date to a task, which has the effect of hiding the task from you until that date. In our example, Alice’s birthday isn’t close yet, so we applied a `scheduled` date to indicate that we should not begin the task yet, as it is not ready. Now let’s add a `wait` date to the task:
-
-```shell
-$ task add Send Alice a birthday card \
-           due:2016-11-08 \
-           scheduled:2016-11-04 \
-           wait:november
-```
-
-Here the task is given a `wait` date of 2016-11-01, via the useful shortcut ’november’, which means the task will not appear on lists until November. At that time, it will reappear, but it will still not be ready until 2016-11-04.
-
-You can view all the hidden waiting tasks using the `waiting` report:
-
-```shell
-$ task waiting
-...
-```
-
-There is a `WAITING` virtual tag to select these tasks, but note that you have to use the `all` report with it, otherwise you get conflicts with the other reports that specify a ‘pending’ status, because a waiting task is not pending.
-
-### The until Date
-
-Now suppose I miss Alice’s birthday completely. Shame on me. The task would be overdue, but this is the kind of task where I don’t want to complete it late, I’d rather just forget it, and wish Alice a belated happy birthday in person. I could simply delete or complete the task, but there is another option, which is to add an `until` date:
-
-```perl
-$ task add Send Alice a birthday card \
-           due:2016-11-08 \
-           scheduled:2016-11-04 \
-           wait:november \
-           until:2016-11-10
-```
-
-This means that on 2016-11-10, the task self-destructs, and is automatically deleted. This might be the right thing to do for a birthday card task, but is not suitable for a “Pay the rent” task. Beware!
-
-There is a DOM-based shortcut you can use, to make the command above a little more formulaic:
-
-```perl
-$ task add Send Alice a birthday card \
-           due:2016-11-08 \
-           scheduled:due-4d \
-           wait:due-7d \
-           until:due+2d
-```
-
-This is evaluated only at task creation time, so if you change the due date, you also need to change the other dates. Note there is an `UNTIL` virtual tag to show you all tasks that are set to auto-expire.
-
-### Other Dates
-
-There are other dates associated with a task, but these are more for internal use, and are less useful for you.
-
-Each task has an `entry` date which records when it was created. Each completed or deleted task has an `end` date, which records when it was completed or deleted. An active, or started task has a `start` date, but only while it is in the active state. Finally, every task has a `modification` date, which records when it was last modified. This is used as a hint when tasks are being synced.
-
-In addition, you may find you have a use case for a different kind of date for your task lists. For example, you may adhere to an agile development process, and a task may be assigned to a sprint, and that sprint may be identified by its end date. You can add arbitrary dates like this to Taskwarrior by defining a [User Defined Attribute](https://taskwarrior.org/docs/udas/) (UDA) and then storing that metadata with your tasks. In this case, Taskwarrior will do nothing with your UDA but store it, and let you use it in reports and filters.
-
-### Urgency
-
-The presence and values of date metadata in your tasks affects the urgency calculations. For example, if a task is blocked by a dependency, the urgency is reduced. Similarly, tasks that are ready have an elevated urgency.
-
-## Reports
+## reports
 
 Taskwarrior has three kinds of reports. There are built-in reports that cannot be modified, such as `info` and `summary`. There are built-in reports which can be redefined completely or eliminated, such as `list`, `next`. And finally there are your own custom reports. To generate a list of _all_ the reports, use the `reports` command:
 
-```coffeescript
-$ task reports
+<details><summary>task reports</summary>
 
+```
 Report           Description
+---------------- --------------------------------------------------
 active           Active tasks
 all              All tasks
 blocked          Blocked tasks
@@ -333,6 +284,8 @@ waiting          Waiting (hidden) tasks
 
 28 reports
 ```
+
+</details>
 
 ### Built-In Static Reports
 
@@ -588,6 +541,7 @@ report.simple.sort        project+/,entry+
 Now the report is fully configured, it joins the others and is used in the same way.
 
 ## filter
+
 ```
 The <filter> consists of zero or more restrictions on which tasks to select, such as:
   task                                      <command> <mods>
@@ -684,6 +638,43 @@ This shows tasks that have the `HOME` tag, but do not have the `WORK` tag. This 
 
 A tag may be any single word that does not start with a digit, punctuation, or mathematical operator.
 
+#### Supported Virtual Tags
+
+Since version 2.2.0, Taskwarrior has supported virtual tags, and the list will continue to grow. Here is the full list of supported virtual tags:
+
+- `BLOCKED` - Is the task dependent on another incomplete task?
+- `UNBLOCKED` - The opposite of `BLOCKED`, for convenience. Note `+BLOCKED` == `-UNBLOCKED` and vice versa.
+- `BLOCKING` - Does another task depend on this incomplete task?
+- `DUE` - Is this task due within 7 days? Determined by `rc.due`
+- `DUETODAY` - Is this task due sometime today?
+- `TODAY` - Is this task due sometime today?
+- `OVERDUE` - Is this task past its due date?
+- `WEEK` - Is this task due this week? 2.3.0
+- `MONTH` - Is this task due this month? 2.3.0
+- `QUARTER` - Is this task due this quarter? 2.6.0
+- `YEAR` - Is this task due this year? 2.3.0
+- `ACTIVE` - Is the task active, i.e. does it have a start date?
+- `SCHEDULED` - Is the task scheduled, i.e. does it have a scheduled date?
+- `PARENT` - Is the task a hidden parent recurring task? 2.3.0
+- `CHILD` - Is the task a recurring child task?
+- `UNTIL` - Does the task expire, i.e. does it have an until date?
+- `WAITING` - Is the task hidden, i.e. does it have a wait date?
+- `ANNOTATED` - Does the task have any annotations?
+- `READY` - Is the task pending, not blocked, and either not scheduled, or scheduled before now. 2.4.0
+- `YESTERDAY` - Was the task due yesterday? 2.4.0
+- `TOMORROW` - Is the task due tomorrow? 2.4.0
+- `TAGGED` - Does the task have any tags?
+- `PENDING` - Is the task in the pending state? 2.4.0
+- `COMPLETED` - Is the task in the completed state? 2.4.0
+- `DELETED` - Is the task in the deleted state? 2.4.0
+- `UDA` - Does the task contain any UDA values? 2.5.0
+- `ORPHAN` - Does the task contain any orphaned UDA values? 2.5.0
+- `PRIORITY` - Does the task have a priority? 2.5.0
+- `PROJECT` - Does the task have a project? 2.5.0
+- `LATEST` - Is the task the most recently added task? 2.5.0
+
+### filters usage
+
 #### Complex Filters
 
 Some Taskwarrior filters are simple in concept, but the syntax is not that straightforward. For example, to determine whether a task has a due date that falls on the current day, you need to use this filter:
@@ -726,40 +717,147 @@ Virtual tags are built in to Taskwarrior. They are evaluated at run time, which 
 
 Thus virtual tags combine the simplicity of the tag interface with more complex defined conditions, for convenience.
 
-#### Supported Virtual Tags
+## Using Dates Effectively
 
-Since version 2.2.0, Taskwarrior has supported virtual tags, and the list will continue to grow. Here is the full list of supported virtual tags:
+A task does not require a due date, and can simply be a statement of need:
 
-- `BLOCKED` - Is the task dependent on another incomplete task?
-- `UNBLOCKED` - The opposite of `BLOCKED`, for convenience. Note `+BLOCKED` == `-UNBLOCKED` and vice versa.
-- `BLOCKING` - Does another task depend on this incomplete task?
-- `DUE` - Is this task due within 7 days? Determined by `rc.due`
-- `DUETODAY` - Is this task due sometime today?
-- `TODAY` - Is this task due sometime today?
-- `OVERDUE` - Is this task past its due date?
-- `WEEK` - Is this task due this week? 2.3.0
-- `MONTH` - Is this task due this month? 2.3.0
-- `QUARTER` - Is this task due this quarter? 2.6.0
-- `YEAR` - Is this task due this year? 2.3.0
-- `ACTIVE` - Is the task active, i.e. does it have a start date?
-- `SCHEDULED` - Is the task scheduled, i.e. does it have a scheduled date?
-- `PARENT` - Is the task a hidden parent recurring task? 2.3.0
-- `CHILD` - Is the task a recurring child task?
-- `UNTIL` - Does the task expire, i.e. does it have an until date?
-- `WAITING` - Is the task hidden, i.e. does it have a wait date?
-- `ANNOTATED` - Does the task have any annotations?
-- `READY` - Is the task pending, not blocked, and either not scheduled, or scheduled before now. 2.4.0
-- `YESTERDAY` - Was the task due yesterday? 2.4.0
-- `TOMORROW` - Is the task due tomorrow? 2.4.0
-- `TAGGED` - Does the task have any tags?
-- `PENDING` - Is the task in the pending state? 2.4.0
-- `COMPLETED` - Is the task in the completed state? 2.4.0
-- `DELETED` - Is the task in the deleted state? 2.4.0
-- `UDA` - Does the task contain any UDA values? 2.5.0
-- `ORPHAN` - Does the task contain any orphaned UDA values? 2.5.0
-- `PRIORITY` - Does the task have a priority? 2.5.0
-- `PROJECT` - Does the task have a project? 2.5.0
-- `LATEST` - Is the task the most recently added task? 2.5.0
+```shell
+$ task add Send Alice a birthday card
+```
+
+However, this is exactly the kind of task can benefit from having a due date, and perhaps several other dates also.
+
+There are several dates that can decorate a task, each with its own meaning and effects. You can choose to use some, all or none of these, but like all Taskwarrior features, they are there in case your needs require it, but you do not pay a performance or friction penalty by not using them.
+
+### The due Date
+
+Use a `due` date to specify the exact date by which a task must be completed. This corresponds to the last possible moment when the task can be considered on-time. Using our example, we can set the `due` date to be Alice’s birthday (line breaks added for clarity):
+
+```shell
+$ task add Send Alice a birthday card \
+           due:2016-11-08
+```
+
+Now your task has an associated `due` date, to help you determine when you need to work on it. But what effect does this have on Taskwarrior? How can it be used to best advantage?
+
+We call the `due` date of a task ‘metadata’. As such, it is just a piece of data associated with the task, and therefore it can become part of a filter:
+
+```shell
+$ task due:today list
+...
+```
+
+This is one way to find out if any of your tasks are due today. You could also use:
+
+```shell
+$ task +TODAY list
+...
+```
+
+That is an example of a virtual tag, `TODAY`, which is not a real tag, but is something you can query, and is equivalent to the previous example. Additionally, you can use `DUE` which filters tasks that have a due date today or within the next 7 days, or `WEEK` for all tasks due within the current calendar week, or `YESTERDAY`, `TOMORROW`, `MONTH` and `YEAR`.
+
+Note that number of days in which a task is considered `DUE` can be configured using the `rc.due` setting.
+
+You can find tasks that have any due date at all:
+
+```shell
+$ task due.any: list
+...
+```
+
+Or no due date:
+
+```shell
+$ task due.none: list
+...
+```
+
+There is also an `overdue` report that makes use of the `OVERDUE` virtual tag, to show you what is already late. If you run the `calendar` report, your due date will be highlighted on it.
+
+What we see here is that Taskwarrior leverages the metadata to drive various features. Several reports will sort by `due` date, and as we see above, a task that has a due date now belongs on your schedule.
+
+### The scheduled Date
+
+A `scheduled` date is different from a `due` date, and represents the earliest opportunity to work on a task. Let’s continue with the same example above. You need to send a birthday card to Alice, but her birthday isn’t until November, so it’s not the kind of task that can be done in advance. Ideally this would be done a few days ahead of the `due` date:
+
+```shell
+$ task add Send Alice a birthday card \
+           due:2016-11-08 \
+           scheduled:2016-11-04
+```
+
+This means that you need to send Alice a birthday card, no later than 2016-11-08, and no earlier than 2016-11-04.
+
+If a task has a `scheduled` date, then once that date passes, the task is considered ready, and there is a `ready` report and a `READY` virtual tag for this:
+
+```shell
+$ task ready
+...
+$ task +READY list
+...
+```
+
+Tasks that have no `scheduled` date are considered always ready. Again, metadata drives the sophistication of your task list.
+
+### The wait Date
+
+Many people do not like to look at long task lists, finding them daunting, or just distracting. You can add a `wait` date to a task, which has the effect of hiding the task from you until that date. In our example, Alice’s birthday isn’t close yet, so we applied a `scheduled` date to indicate that we should not begin the task yet, as it is not ready. Now let’s add a `wait` date to the task:
+
+```shell
+$ task add Send Alice a birthday card \
+           due:2016-11-08 \
+           scheduled:2016-11-04 \
+           wait:november
+```
+
+Here the task is given a `wait` date of 2016-11-01, via the useful shortcut ’november’, which means the task will not appear on lists until November. At that time, it will reappear, but it will still not be ready until 2016-11-04.
+
+You can view all the hidden waiting tasks using the `waiting` report:
+
+```shell
+$ task waiting
+...
+```
+
+There is a `WAITING` virtual tag to select these tasks, but note that you have to use the `all` report with it, otherwise you get conflicts with the other reports that specify a ‘pending’ status, because a waiting task is not pending.
+
+### The until Date
+
+Now suppose I miss Alice’s birthday completely. Shame on me. The task would be overdue, but this is the kind of task where I don’t want to complete it late, I’d rather just forget it, and wish Alice a belated happy birthday in person. I could simply delete or complete the task, but there is another option, which is to add an `until` date:
+
+```perl
+$ task add Send Alice a birthday card \
+           due:2016-11-08 \
+           scheduled:2016-11-04 \
+           wait:november \
+           until:2016-11-10
+```
+
+This means that on 2016-11-10, the task self-destructs, and is automatically deleted. This might be the right thing to do for a birthday card task, but is not suitable for a “Pay the rent” task. Beware!
+
+There is a DOM-based shortcut you can use, to make the command above a little more formulaic:
+
+```perl
+$ task add Send Alice a birthday card \
+           due:2016-11-08 \
+           scheduled:due-4d \
+           wait:due-7d \
+           until:due+2d
+```
+
+This is evaluated only at task creation time, so if you change the due date, you also need to change the other dates. Note there is an `UNTIL` virtual tag to show you all tasks that are set to auto-expire.
+
+### Other Dates
+
+There are other dates associated with a task, but these are more for internal use, and are less useful for you.
+
+Each task has an `entry` date which records when it was created. Each completed or deleted task has an `end` date, which records when it was completed or deleted. An active, or started task has a `start` date, but only while it is in the active state. Finally, every task has a `modification` date, which records when it was last modified. This is used as a hint when tasks are being synced.
+
+In addition, you may find you have a use case for a different kind of date for your task lists. For example, you may adhere to an agile development process, and a task may be assigned to a sprint, and that sprint may be identified by its end date. You can add arbitrary dates like this to Taskwarrior by defining a [User Defined Attribute](https://taskwarrior.org/docs/udas/) (UDA) and then storing that metadata with your tasks. In this case, Taskwarrior will do nothing with your UDA but store it, and let you use it in reports and filters.
+
+### Urgency
+
+The presence and values of date metadata in your tasks affects the urgency calculations. For example, if a task is blocked by a dependency, the urgency is reduced. Similarly, tasks that are ready have an elevated urgency.
 
 ## How Recurrence Works
 
