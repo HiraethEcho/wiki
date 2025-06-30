@@ -15,7 +15,7 @@ dg-publish: true
 
 ### Zotero
 
-关键是`zotero-better-note`插件的[模板设置](/wiki/code/zotero)：从注释创建笔记；将笔记插入到其他笔记；将笔记导出为markdown。
+关键是`zotero-better-note`插件的[模板设置](/wiki/code/apps/zotero)：从注释创建笔记；将笔记插入到其他笔记；将笔记导出为markdown。
 
 > [!important]
 > 导出路径和模板中链接路径有硬编码部分，需要根据具体情况手动修改。

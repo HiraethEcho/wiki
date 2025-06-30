@@ -2,9 +2,11 @@
 
 Includes linux, software, latex, etc
 
-## softwares
+## apps
 
-- [neovim](/wiki/code/nvim)
+- [zotero](/wiki/code/apps/zotero)
+- [obsidian](/wiki/code/apps/obsidian)
+- [nvim](/wiki/code/apps/nvim)
 
 ## linux
 
@@ -27,11 +29,6 @@ For [shell](/wiki/code/linux/shell) and [awk](/wiki/code/cheatsheets/awk.md), [s
 - [btrfs快照](/wiki/code/linux/btrfs)
 - [Arch Wiki的摘抄](/wiki/code/arch/archwiki)
 
-## work flow
-
-- [zotero](/wiki/code/zotero)
-- [obsidian](/wiki/code/obsidian)
-- [mkdocs](/wiki/code/3in1wiki)
 
 ## backup note
 

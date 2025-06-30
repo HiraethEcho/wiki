@@ -37,7 +37,8 @@ about vim:
 - edit in neovim
 
 展示：
-- [导入和展示豆瓣](/wiki/code/obsidian_douban)
+
+- [导入和展示豆瓣](/wiki/code/apps/obsidian_douban)
 - dataview (display files by metadata)
 - kanban (plan things, especially something with many stages)不习惯
 
@@ -57,4 +58,4 @@ about vim:
 
 ## editor
 
-虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[neovim](/wiki/code/nvim).
+虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[neovim](/wiki/code/apps/nvim).
