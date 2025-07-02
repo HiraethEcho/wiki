@@ -335,14 +335,17 @@ waiting
 
 Suppose you wanted to remove a column from one of these reports, for example removing `tags` from the `minimal` report. First look at the existing columns and labels of the `minimal` report:
 
-```sql
-$ task show report.minimal.labels
+`task show report.minimal.labels`
 
+```
 Config Variable       Value
 --------------------- ---------------------------
 report.minimal.labels ID,Project,Tags,Description
+```
 
-$ task show report.minimal.columns
+`task show report.minimal.columns`
+
+```
 
 Config Variable        Value
 ---------------------- ---------------------------------------
@@ -379,8 +382,9 @@ Simple list of open tasks by project
 
 This is just a descriptive label that will be used when the report is listed. Next we need to specify the columns in the report, and the order in which those are shown. Here the `_columns` helper command will show the columns available:
 
-```sql
-$ task _columns
+`task _columns`
+
+```
 depends
 description
 due
@@ -411,11 +415,9 @@ That represents all the data that Taskwarrior stores, and therefore all the data
 id,project,description
 ```
 
-But there are also formats for each column, and the `columns` command shows them, with examples. Here are the formats for our three columns:
+But there are also formats for each column, and the `columns` command shows them, with examples. Here are the formats for our three columns: `task columns id`
 
 ```
-$ task columns id
-
 Columns Supported Formats Example
 ------- ----------------- ------------------------------------
 id      number*           123
@@ -423,11 +425,7 @@ uuid    long*             f30cb9c3-3fc0-483f-bfb2-3bf134f00694
         short             f30cb9c3
 ```
 
-This is easy, because there is only one `id` format.
-
-```shell
-task columns project
-```
+This is easy, because there is only one `id` format. `task columns project`
 
 ```
 Columns Supported Formats Example
@@ -437,11 +435,7 @@ project full*             home.garden
         indented            home.garden
 ```
 
-There are three formats for the `project` column, and the default, `full` is the one we want.
-
-```shell
-task columns description
-```
+There are three formats for the `project` column, and the default, `full` is the one we want. `task columns description`
 
 ```
 Columns     Supported Formats Example
