@@ -9,4 +9,4 @@
 ## 总结和反思
 
 - [单向度的人](/wiki/read/one-dimensional-man)
-- [民主制度](/wiki/read/democracyold)
+- [民主制度](/wiki/savoir/democracyold)

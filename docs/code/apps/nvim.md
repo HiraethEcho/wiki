@@ -7,6 +7,8 @@ date: 2025-07-08
 
 # Tricks in nvim
 
+## lua in nvim
+
 ## start up of nvim
 
 [nvim doc](https://neovim.io/doc/user/starting.html#_initialization)
