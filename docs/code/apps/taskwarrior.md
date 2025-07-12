@@ -8,14 +8,23 @@ dg-publish: true
 
 # taskwarrior
 
-## overview
-
 Command-line to-do list manager. [More information](https://taskwarrior.org/docs/).
 
-tldr:
+## overview
+
+Taskwarrior has a flexible command line syntax, but it may not be clear at first what the underlying structure means. Here is the general form of the syntax:
+
+![](https://taskwarrior.org/images/syntax.png)
+
+There are four parts to the syntax (`filter`, `command`, `modifications`, and `miscellaneous`), and each part is optional.
+
+<details><summary>tldr</summary>
 
 ```
   Add a new task which is due tomorrow:
+</details>
+
+
 
       task add description due:tomorrow
 
@@ -93,11 +102,15 @@ Alternately algebraic expressions support:
   task '(due < eom and priority != L)'  list
 ```
 
-Taskwarrior has a flexible command line syntax, but it may not be clear at first what the underlying structure means. Here is the general form of the syntax:
+### Filter
 
-![](https://taskwarrior.org/images/syntax.png)
+A filter is a means of addressing a subset of tasks. Because filters are optional, the simplest case is no filter. A command with no filter addresses all tasks.
 
-There are four parts to the syntax (`filter`, `command`, `modifications`, and `miscellaneous`), and each part is optional.
+Generally filter arguments appear before the command, so any arguments to the left of the command are considered filter arguments.
+
+There is a special case, in which a command that does not support modifications or miscellaneous arguments, expects only filter arguments, and so they can appear before or after the command, without confusing Taskwarrior:
+
+![](https://taskwarrior.org/images/filter.png)
 
 ### Command
 
@@ -199,16 +212,6 @@ summary          graphs     RO    GC          Ctxt   Filt           Shows a repo
 ```
 
 </details>
-
-### Filter
-
-A filter is a means of addressing a subset of tasks. Because filters are optional, the simplest case is no filter. A command with no filter addresses all tasks.
-
-Generally filter arguments appear before the command, so any arguments to the left of the command are considered filter arguments.
-
-There is a special case, in which a command that does not support modifications or miscellaneous arguments, expects only filter arguments, and so they can appear before or after the command, without confusing Taskwarrior:
-
-![](https://taskwarrior.org/images/filter.png)
 
 ### Modifications
 
@@ -534,27 +537,9 @@ report.simple.sort        project+/,entry+
 
 Now the report is fully configured, it joins the others and is used in the same way.
 
-## filter
+## attributes
 
-```
-The <filter> consists of zero or more restrictions on which tasks to select, such as:
-  task                                      <command> <mods>
-  task 28                                   <command> <mods>
-  task +weekend                             <command> <mods>
-  task project:Home due.before:today        <command> <mods>
-  task ebeeab00-ccf8-464b-8b58-f7f2d606edfb <command> <mods>
-
-By default, filter elements are combined with an implicit 'and' operator, but 'or' and 'xor' may also be used, provided parentheses are included:
-  task '(/[Cc]at|[Dd]og/ or /[0-9]+/)'      <command> <mods>
-
-A filter may target specific tasks using ID or UUID numbers.  To specify multiple tasks use one of these forms:
-  task 1,2,3                                    delete
-  task 1-3                                      info
-  task 1,2-5,19                                 modify pri:H
-  task 4-7 ebeeab00-ccf8-464b-8b58-f7f2d606edfb info
-```
-
-### attributes
+### built-in
 
 ```
 Built-in attributes are:
@@ -573,9 +558,13 @@ Built-in attributes are:
   scheduled:      Date task is scheduled to start
   modified:       Date task was last modified
   depends:        Other tasks that this task depends upon
+```
 
-Attribute modifiers make filters more precise.  Supported modifiers are:
+### modifiers
 
+Attribute modifiers make filters more precise. Supported modifiers are:
+
+```
   Modifiers         Example            Equivalent           Meaning
   ----------------  -----------------  -------------------  -------------------------
                     due:today          due = today          Fuzzy match
@@ -606,6 +595,108 @@ note that
 
 ```
   by         due.by:today       due <= today         Exact date comparison
+```
+
+### How Recurrence Works
+
+A recurring task is a task with a due date that keeps coming back as a reminder. Here is an example:
+
+```
+task add Pay the rent due:1st recur:monthly until:2015-03-31
+Created task 123.
+```
+
+This task has a due date, a monthly recurrence, and an optional until date coinciding with the end of the lease.
+
+A recurring task is given a status of `recurring` which hides it from view, although you can see it in the `all` report. The recurring task you create is called the template task, from which recurring tasks instances are created. So the template remains hidden, and the recurring instances that spawn from it are the tasks that you will see and complete.
+
+Here is a look at the template task:
+
+```shell
+task 123 info
+
+Name        Value
+ID          123
+Description Pay the rent
+Status      Recurring
+Recurrence  monthly
+Entered     2014-03-01 12:13:28 (42 secs)
+Due         2014-04-01 00:00:00
+Until       2015-03-31 00:00:00
+UUID        64bcf8fd-74d5-40d2-9e57-1d6a5922cdfc
+Urgency     2.4
+```
+
+Now if you run a report, such as `task list`, you will see the first instance of that recurring task generated. We can take a look at the instance:
+
+```shell
+task 124 info
+
+Name        Value
+ID          124
+Description Pay the rent
+Status      Pending
+Recurrence  monthly
+Parent task 64bcf8fd-74d5-40d2-9e57-1d6a5922cdfc
+Mask Index  0
+Entered     2014-03-01 12:17:03 (15 secs)
+Due         2014-04-01 00:00:00
+Until       2015-03-31 00:00:00
+UUID        29d2df7a-1165-4559-b974-a727519e00f1
+Urgency     2.4
+```
+
+Notice how the instance has a status `pending`, and a reference back to the template task (Parent task). In addition, you can see it inherited the recurrence and description, and if there was a project, priority and tags, those would also be inherited.
+
+The recurring instance has an attribute named ‘Mask Index’, which is zero. This indicates that it is the first of the many recurring task instances, the counting being zero-based.
+
+Now if we look back at the template task, we see changes:
+
+```shell
+task 123 info
+
+Name          Value
+ID            123
+Description   Pay the rent
+Status        Recurring
+Recurrence    monthly
+Mask          -
+Entered       2014-03-01 12:13:28 (3 mins)
+Due           2014-04-01 00:00:00
+Until         2015-03-31 00:00:00
+Last modified 2014-03-01 12:17:03 (24 secs)
+UUID          64bcf8fd-74d5-40d2-9e57-1d6a5922cdfc
+Urgency       2.4
+
+Date                Modification
+2014-03-01 12:17:03 Mask set to '-'.
+                    Modified set to '2014-03-01 12:17:03'.
+```
+
+The template task now has a `mask` attribute, and some change history. That `mask` is a string of task statuses. It has a value of `-` which indicates that one instance was created, task 124, because it is one character long. The `-` means that instance is still pending. This is how the template task keeps track of what it does and does not need to generate. When the task instance changes status that `-` becomes `+` (completed) or `X` (deleted) or `W` (waiting).
+
+Note that you never directly interact with task 123, the template task. It is hidden for a reason. Instead, you interact with the recurring task instances, and in most cases, changes are propagated to the template task and optionally other sibling tasks.
+
+In this example one task instance is generated for the next due period. This is because the configuration setting `recurrence.limit` is set to 1, the default. If this number is increased to 2, then you would see the next 2 instances generated. Note that this only generates two steps into the future, without regard for whether those two instances are completed or not - don’t expect to complete the first task and see a new one pop up immediately.
+
+## filter
+
+```
+The <filter> consists of zero or more restrictions on which tasks to select, such as:
+  task                                      <command> <mods>
+  task 28                                   <command> <mods>
+  task +weekend                             <command> <mods>
+  task project:Home due.before:today        <command> <mods>
+  task ebeeab00-ccf8-464b-8b58-f7f2d606edfb <command> <mods>
+
+By default, filter elements are combined with an implicit 'and' operator, but 'or' and 'xor' may also be used, provided parentheses are included:
+  task '(/[Cc]at|[Dd]og/ or /[0-9]+/)'      <command> <mods>
+
+A filter may target specific tasks using ID or UUID numbers.  To specify multiple tasks use one of these forms:
+  task 1,2,3                                    delete
+  task 1-3                                      info
+  task 1,2-5,19                                 modify pri:H
+  task 4-7 ebeeab00-ccf8-464b-8b58-f7f2d606edfb info
 ```
 
 ### Tags, Virtual Tags
@@ -852,88 +943,6 @@ In addition, you may find you have a use case for a different kind of date for y
 ### Urgency
 
 The presence and values of date metadata in your tasks affects the urgency calculations. For example, if a task is blocked by a dependency, the urgency is reduced. Similarly, tasks that are ready have an elevated urgency.
-
-## How Recurrence Works
-
-A recurring task is a task with a due date that keeps coming back as a reminder. Here is an example:
-
-```
-task add Pay the rent due:1st recur:monthly until:2015-03-31
-Created task 123.
-```
-
-This task has a due date, a monthly recurrence, and an optional until date coinciding with the end of the lease.
-
-A recurring task is given a status of `recurring` which hides it from view, although you can see it in the `all` report. The recurring task you create is called the template task, from which recurring tasks instances are created. So the template remains hidden, and the recurring instances that spawn from it are the tasks that you will see and complete.
-
-Here is a look at the template task:
-
-```shell
-task 123 info
-
-Name        Value
-ID          123
-Description Pay the rent
-Status      Recurring
-Recurrence  monthly
-Entered     2014-03-01 12:13:28 (42 secs)
-Due         2014-04-01 00:00:00
-Until       2015-03-31 00:00:00
-UUID        64bcf8fd-74d5-40d2-9e57-1d6a5922cdfc
-Urgency     2.4
-```
-
-Now if you run a report, such as `task list`, you will see the first instance of that recurring task generated. We can take a look at the instance:
-
-```shell
-task 124 info
-
-Name        Value
-ID          124
-Description Pay the rent
-Status      Pending
-Recurrence  monthly
-Parent task 64bcf8fd-74d5-40d2-9e57-1d6a5922cdfc
-Mask Index  0
-Entered     2014-03-01 12:17:03 (15 secs)
-Due         2014-04-01 00:00:00
-Until       2015-03-31 00:00:00
-UUID        29d2df7a-1165-4559-b974-a727519e00f1
-Urgency     2.4
-```
-
-Notice how the instance has a status `pending`, and a reference back to the template task (Parent task). In addition, you can see it inherited the recurrence and description, and if there was a project, priority and tags, those would also be inherited.
-
-The recurring instance has an attribute named ‘Mask Index’, which is zero. This indicates that it is the first of the many recurring task instances, the counting being zero-based.
-
-Now if we look back at the template task, we see changes:
-
-```shell
-task 123 info
-
-Name          Value
-ID            123
-Description   Pay the rent
-Status        Recurring
-Recurrence    monthly
-Mask          -
-Entered       2014-03-01 12:13:28 (3 mins)
-Due           2014-04-01 00:00:00
-Until         2015-03-31 00:00:00
-Last modified 2014-03-01 12:17:03 (24 secs)
-UUID          64bcf8fd-74d5-40d2-9e57-1d6a5922cdfc
-Urgency       2.4
-
-Date                Modification
-2014-03-01 12:17:03 Mask set to '-'.
-                    Modified set to '2014-03-01 12:17:03'.
-```
-
-The template task now has a `mask` attribute, and some change history. That `mask` is a string of task statuses. It has a value of `-` which indicates that one instance was created, task 124, because it is one character long. The `-` means that instance is still pending. This is how the template task keeps track of what it does and does not need to generate. When the task instance changes status that `-` becomes `+` (completed) or `X` (deleted) or `W` (waiting).
-
-Note that you never directly interact with task 123, the template task. It is hidden for a reason. Instead, you interact with the recurring task instances, and in most cases, changes are propagated to the template task and optionally other sibling tasks.
-
-In this example one task instance is generated for the next due period. This is because the configuration setting `recurrence.limit` is set to 1, the default. If this number is increased to 2, then you would see the next 2 instances generated. Note that this only generates two steps into the future, without regard for whether those two instances are completed or not - don’t expect to complete the first task and see a new one pop up immediately.
 
 ## DOM - Document Object Model
 
