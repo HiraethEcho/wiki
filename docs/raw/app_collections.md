@@ -58,6 +58,20 @@ Optional Deps   : linux-firmware-liquidio: Firmware for Cavium LiquidIO server a
                   linux-firmware-qlogic: Firmware for QLogic devices
 ```
 
+## AI
+
+### engines
+
+#### deepseek
+
+#### gemini
+
+#### qwen
+
+### plugins
+
+### ollama
+
 ## DE
 
 ### wm
@@ -162,8 +176,6 @@ Achieve version control
 
 newsboat
 
-
-
 ## useful
 
 ### I'm using these
@@ -217,7 +229,6 @@ not support fo timeshift btrfs snap yet
 
       whois -b 8.8.8.8
 ```
-
 
 #### gitoxide
 
