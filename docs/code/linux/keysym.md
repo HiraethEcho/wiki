@@ -4,6 +4,7 @@ toc: true
 tags:
     - linux
 date: 2024-12-17
+status: draft
 ---
 
 # 从键盘到字符

@@ -3,6 +3,7 @@ title: 没有GUI时
 toc: true
 tags:
 date: 2025-07-13
+status: draft
 ---
 
 ### tty

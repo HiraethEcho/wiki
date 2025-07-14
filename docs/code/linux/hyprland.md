@@ -4,7 +4,7 @@ toc: true
 tags:
     - config
 date: 2025-04-26
-dg-publish: true
+status: draft
 ---
 
 # My hyprland config

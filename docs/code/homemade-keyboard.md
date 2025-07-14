@@ -3,7 +3,7 @@ title: 自制机械键盘
 toc: true
 tags:
 date: 2025-06-26
-draft: true
+status: draft
 ---
 
 # 自制机械键盘

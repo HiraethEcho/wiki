@@ -2,6 +2,7 @@
 title: seatd实现多人共用电脑
 toc: true
 date: 2025-06-27
+status: draft
 ---
 
 # seatd实现多人共用电脑
