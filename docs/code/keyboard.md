@@ -2,8 +2,9 @@
 title: 键盘和固件
 toc: true
 tags:
-  - hardware
+    - hardware
 date: 2024-12-17
+hide: true
 ---
 
 # 键盘硬件固件
