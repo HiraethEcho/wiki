@@ -12,6 +12,7 @@ dg-publish: true
 ## No DM
 
 skip username: `/etc/systemd/system/getty@tty1.service.d/skip-username.conf`
+
 ```
 [Service]
 ExecStart=
@@ -40,6 +41,7 @@ You must then also be part of the nopasswdlogin group to be able to login intera
 groupadd -r nopasswdlogin
 gpasswd -a username nopasswdlogin
 ```
+
 SDDM goes through PAM so you must configure the SDDM configuration of PAM: `/etc/pam.d/sddm`
 
 ```

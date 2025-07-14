@@ -4,7 +4,7 @@ toc: true
 tags:
     - hardware
 date: 2024-12-17
-hide: true
+status: draft
 ---
 
 # 键盘硬件固件
