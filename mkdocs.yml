@@ -65,6 +65,14 @@ markdown_extensions:
 
   - toc:
       permalink: true
+extra:
+  status: # 用于标记文档的状态,需要在md文档的元数据中添加status字段
+    in-progress: in-progress #进行中的内容
+    draft: draft  #草稿状态的内容
+  social:
+      - icon: material/github
+        link: https://github.com/hiraethecho
+        name: GitHub
 
 plugins:
   - search
