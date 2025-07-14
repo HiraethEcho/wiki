@@ -9,8 +9,8 @@ theme:
   name: 'material'
 
   features:
-    # - content.action.edit
-    # - content.action.view
+    - content.action.edit
+    - content.action.view
     - content.code.copy
     - navigation.footer
     - navigation.top
@@ -44,7 +44,7 @@ markdown_extensions:
   # - attr_list
   - pymdownx.arithmatex:
       generic: true
-  # - pymdownx.superfences
+  - pymdownx.betterem
   - pymdownx.details
   - nl2br
   - admonition
@@ -54,7 +54,7 @@ markdown_extensions:
   - def_list
   - pymdownx.critic
   - pymdownx.caret
-  - pymdownx.keys
+  # - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.superfences:
@@ -62,7 +62,6 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
   - toc:
       permalink: true
 extra:
