@@ -16,6 +16,7 @@ hide:
 - [Math](/wiki/math/index): My notes about math. Mostly about Algebraic Geometry. Includes [notes and annotations](/wiki/math/zotero) form `zotero`
 - [raw](/wiki/raw/index): 未经整理的知识，临时中转站
 - [savoir](/wiki/savoir/index): 一般性的知识，专业领域的非专业知识
+- [clip](/wiki/clip/index): 各种剪藏
 
 
 ## 其他
