@@ -672,8 +672,8 @@ Date                Modification
 2014-03-01 12:17:03 Mask set to '-'.
                     Modified set to '2014-03-01 12:17:03'.
 ```
-
-The template task now has a `mask` attribute, and some change history. That `mask` is a string of task statuses. It has a value of `-` which indicates that one instance was created, task 124, because it is one character long. The `-` means that instance is still pending. This is how the template task keeps track of what it does and does not need to generate. When the task instance changes status that `-` becomes `+` (completed) or `X` (deleted) or `W` (waiting).
+> [!note]+ template mask
+> The template task now has a `mask` attribute, and some change history. That `mask` is a string of task statuses. It has a value of `-` which indicates that one instance was created, task 124, because it is one character long. The `-` means that instance is still pending. This is how the template task keeps track of what it does and does not need to generate. When the task instance changes status that `-` becomes `+` (completed) or `X` (deleted) or `W` (waiting).
 
 Note that you never directly interact with task 123, the template task. It is hidden for a reason. Instead, you interact with the recurring task instances, and in most cases, changes are propagated to the template task and optionally other sibling tasks.
 
