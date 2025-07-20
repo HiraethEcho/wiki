@@ -112,23 +112,3 @@ dg-publish: true
 如果你想要想我上面的的展示图片那样给图片加个渐变边框的话可以用 postspark（ https://postspark.app/screenshot ） 这类工具。
 
 ![Image](https://mmbiz.qpic.cn/mmbiz_png/fbRX0iaT8EgfOx02QqTJRdZEyb1OtOpVa5Ch5gh6caGLz9kfNCDPQ4rtN53EM2VluCibluxic8C3RTGcgWIACsgxg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
-
-好了，今天的图片生成教程就到这里了。
-
-  
-
-如果你觉的教程对你有帮助的话可以帮我点个赞👍或者喜欢🩷，也可以推荐给你需要的朋友们！
-
-  
-
-最后欢迎在评论区或者其他平台 @ 我，交作业
-
-  
-
-继续滑动看下一个
-
-歸藏的AI工具箱
-
-向上滑动看下一个
-
-normal
