@@ -5,6 +5,9 @@ dg-publish: true
 # some applications and tools
 
 ## basic tools
+### web
+
+[sshfs](https://wiki.archlinuxcn.org/zh/SSHFS)
 
 ### media
 
