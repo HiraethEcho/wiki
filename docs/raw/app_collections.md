@@ -5,9 +5,12 @@ dg-publish: true
 # some applications and tools
 
 ## basic tools
+
 ### web
 
 [sshfs](https://wiki.archlinuxcn.org/zh/SSHFS)
+
+用ssh挂载文件系统
 
 ### media
 
@@ -212,6 +215,12 @@ not support fo timeshift btrfs snap yet
 
 ### I may back here
 
+#### casaos
+
+[casaos](https://casaos.zimaspace.com/)
+
+本地一键部署docker，似乎很好用
+
 #### [tracexec](https://github.com/kxxt/tracexec)
 
 #### httrack
@@ -250,7 +259,7 @@ not support fo timeshift btrfs snap yet
 
 ### useful
 
-#### virtual like
+#### virtual
 
 [clivm](https://github.com/AruAVI/clivm-git) is a lightweight tool to locally create containers for multiple Linux distributions.
 
