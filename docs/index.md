@@ -19,11 +19,11 @@ hide:
 - [clip](/wiki/clip/index): 各种剪藏
 
 
-## 其他
+## 其他博客
 
 - 还有一个博客是我[公开的思考、想法、评论](/hexo)。
-- 另外还有我的[日常生活和感受](/hugo)。
-- You can check my [Digital Garden](https://hiraeth-dg.netlify.app/), where are some of my [blogs files in my obsidian repo](/wiki/code/blogs).
+- 另外还有我的[日常生活、想法、日志](/hugo)。
+- obsidian插件的 [Digital Garden](https://hiraeth-dg.netlify.app/)。
 
 ## Tags
 
