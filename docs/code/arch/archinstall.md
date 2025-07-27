@@ -103,7 +103,7 @@ ID 257 gen 409 parent 5 top level 5 path @home
 umount /mnt
 
 mount -o noatime,nodiratime,compress=zstd,subvol=@ /dev/nvme0n1p5 /mnt #挂载 @ 子卷到新系统的 / 目录
-# mkdir -p /mnt/{boot/efi,home,var/{log,cache}} #创建新系统的 /boot/efi、/home、/var/log、/var/cache
+mkdir -p /mnt/{boot/efi,home,var/{log,cache}} #创建新系统的 /boot/efi、/home、/var/log、/var/cache
 mount -o noatime,nodiratime,compress=zstd,subvol=@home -m /dev/nvme0n1p5 /mnt/home # -m 创建挂载的文件夹
 # 如果创建了对应子卷，那么
 mount -o noatime,nodiratime,compress=zstd,subvol=@log -m /dev/nvme0n1p5 /mnt/var/log
@@ -119,14 +119,6 @@ mount -o noatime,nodiratime,compress=zstd,subvol=@root -m /dev/nvme0n1p5 /mnt/ro
 findmnt -nt btrfs
 ```
 
-可以把这些子卷关闭写时复制
-
-```
-chattr +C /mnt/tmp
-chattr +C /mnt/var/cache
-chattr +C /mnt/var/log
-```
-
 挂载efi分区。因为单硬盘安装双系统，所以使用windows系统原有的efi分区。
 
 ```sh
@@ -136,6 +128,29 @@ mount /dev/nvme0n1p1 /mnt/boot/efi
 > [!tip]
 > win初始的efi分区大小可能不够 `/boot` ，所以可以只挂载 `/boot/efi`。也可以创建`/efi`  
 > 在win下可以用 `diskgenuis` 查看efi分区。
+
+> [!note] update 2025-07-27
+> ESP分区的挂载，现在推荐直接挂载到`/efi`而不是`/boot/efi`
+>
+> ```sh
+> mount /dev/nvme0n1p1 /mnt/efi
+> ```
+>
+> 除此之外，`btrfs`格式的`/boot`会导致一些奇怪的报错，比如稀疏文件的问题等，以及`grub`无法设置为从上次启动的选项启动。所以也可以单开一个分区来挂载`/boot`.
+> 参见[这篇博客](https://silvertuanzi.github.io/2025/02/11/arch-cinnamon/)
+
+```shell
+mkdir -p /mnt/efi
+mount /dev/nvme0n1p1 /mnt/boot/efi
+```
+
+可以把这些子卷关闭写时复制
+
+```
+chattr +C /mnt/tmp
+chattr +C /mnt/var/cache
+chattr +C /mnt/var/log
+```
 
 ## 安装系统
 
