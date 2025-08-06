@@ -14,8 +14,6 @@ dg-publish: true
 
 ## add user
 
-
-
 添加用户并设置密码
 
 ```sh
@@ -198,7 +196,6 @@ upower -e
 
 check battery `sudo upower -i /org/freedesktop/UPower/devices/battery_BAT1 `
 
-
 ### driver
 
 for amd integrated, open source driver:
@@ -249,9 +246,19 @@ Other components usually provided by desktop environments are:
 - [Screen temperature](https://wiki.archlinux.org/title/Backlight#Color_correction "Backlight")
 - [Wallpaper setter](https://wiki.archlinux.org/title/List_of_applications/Other#Wallpaper_setters "List of applications/Other")
 
+### utils
+
+`filedialog` 是其他应用需要选择文件时的弹窗。通常需要一些`xdg-desktop-portal`，不同的包有不同的[具体功能](https://wiki.archlinux.org/title/XDG_Desktop_Portal)。
+
 ### X11
 
+`Xlibre` `wayback`
+
 ### wayland
+
+gnome, kde
+
+niri, hyprland, sway, river, wayfire, 
 
 ## Applications
 
@@ -280,4 +287,23 @@ debug:
 ```
 mkdir -p ~/.steam/steam/steamapps/compatdata
 ln -s ~/.steam/steam/steamapps/compatdata /media/gamedisk/Steam/steamapps/
+```
+
+### wechat
+
+微信使用fcitx输入法会有一些问题，似乎是不能正常读取环境变量。修改`/usr/share/applications/wechat.desktop`来设定变量。有可能在更新后被覆盖，或许可以放在`~/.local/share/applications/wechat.desktop`中。
+
+```
+[Desktop Entry]
+Name=wechat
+Name[zh_CN]=微信
+Exec=env XMODIFIERS="@im=fcitx" GTK_IM_MODULE="fcitx" QT_IM_MODULE="fcitx" /usr/bin/wechat %U
+StartupNotify=true
+Terminal=false
+Icon=/opt/wechat/icons/wechat.png
+Type=Application
+Categories=Utility;
+Comment=Wechat Desktop
+Comment[zh_CN]=微信桌面版
+
 ```

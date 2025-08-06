@@ -1,4 +1,4 @@
-# philosophy.md
+# 哲学收集
 
 ## 摘录
 
