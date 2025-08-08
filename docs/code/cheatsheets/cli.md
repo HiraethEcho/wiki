@@ -180,3 +180,11 @@ Show the time on the west coast of the US (use tzselect(1) to find TZ)
 Show the local time for 9AM next Friday on the west coast of the US
   $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
 ```
+
+## tricks
+
+后台挂起
+
+```sh
+nohup onedrivegui & > /dev/null
+```

@@ -1,5 +1,6 @@
 ---
 dg-publish: true
+title: 收集一些工具
 ---
 
 # some applications and tools
@@ -8,9 +9,23 @@ dg-publish: true
 
 ### web
 
-[sshfs](https://wiki.archlinuxcn.org/zh/SSHFS)
+[sshfs](https://wiki.archlinuxcn.org/zh/SSHFS): Filesystem client based on SSH.
 
-用ssh挂载文件系统
+```shell
+# Mount remote directory:
+
+sshfs username@remote_host:remote_directory mountpoint
+
+# Unmount remote directory:
+
+umount mountpoint
+
+# Mount remote directory from server with specific port: -p
+# Use compression: -C
+# Follow symbolic links: -o follow_symlinks
+
+sshfs -o follow_symlinks username@remote_host:remote_directory mountpoint -p 2222 -C
+```
 
 ### media
 
