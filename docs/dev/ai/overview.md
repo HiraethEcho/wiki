@@ -107,3 +107,7 @@ mcp-hub 可以把多个mcp整合为一个mcp，这样调用`mcp-hub`的mcp相当
 
 - npx
 - uvx
+
+## utils
+
+[vectorcode](https://github.com/Davidyz/VectorCode)
