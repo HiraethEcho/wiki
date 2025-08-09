@@ -277,4 +277,4 @@ umount /mnt
 reboot
 ```
 
-之后有一些[常见的配置](/wiki/code/arch/archpostinstall)。
+之后有一些[常见的配置](/wiki/dev/arch/archpostinstall)。

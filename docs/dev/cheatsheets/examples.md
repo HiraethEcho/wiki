@@ -72,15 +72,15 @@ this caution
 
 ```md
 [wiki](wiki)  
-[wiki/code/arch/archinstall](wiki/code/arch/archinstall)  
+[wiki/dev/arch/archinstall](wiki/dev/arch/archinstall)  
 [/wiki](/wiki)  
-[/wiki/code/arch/archinstall](/wiki/code/arch/archinstall)  
+[/wiki/dev/arch/archinstall](/wiki/dev/arch/archinstall)  
 ![wiki/img/a.png](wiki/img/a.png) ![/wiki/img/a.png](/wiki/img/a.png)
 ```
 
-[wiki](wiki) https://hiraethecho.github.io/wiki/code/cheatsheets/examples/wiki
-[wiki/code/arch/archinstall](wiki/code/arch/archinstall) as above [/wiki](/wiki)
-yes [/wiki/code/archinstall](/wiki/code/arch/archinstall) yes
+[wiki](wiki) https://hiraethecho.github.io/wiki/dev/cheatsheets/examples/wiki
+[wiki/dev/arch/archinstall](wiki/dev/arch/archinstall) as above [/wiki](/wiki)
+yes [/wiki/dev/archinstall](/wiki/dev/arch/archinstall) yes
 ![wiki/img/a.png](wiki/img/a.png) plain text ![/wiki/img/a.png](/wiki/img/a.png)
 
 ## Mermaid diagrams

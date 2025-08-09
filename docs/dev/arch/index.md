@@ -12,13 +12,13 @@ date: 2025-01-04
 
 ## start
 
-- [安装](/wiki/code/arch/archinstall)
-- [配置](/wiki/code/arch/archpostinstall)
+- [安装](/wiki/dev/arch/archinstall)
+- [配置](/wiki/dev/arch/archpostinstall)
 
 ## usage
 
-- [btrfs快照](/wiki/code/linux/btrfs)
+- [btrfs快照](/wiki/dev/linux/btrfs)
 
 ## more
 
-- [Arch Wiki的摘抄](/wiki/code/arch/archwiki)
+- [Arch Wiki的摘抄](/wiki/dev/arch/archwiki)

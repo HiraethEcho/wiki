@@ -36,7 +36,7 @@ ollama
 
 ### 编辑器
 
-- [nvim](/wiki/code/ai/ai-in-nvim)
+- [nvim](/wiki/dev/ai/ai-in-nvim)
 - vscode
 
 ### 用例

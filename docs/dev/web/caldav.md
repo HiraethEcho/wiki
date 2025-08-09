@@ -1,14 +1,20 @@
 ---
-title: caldav链接icloud
+title: caldav协议
 toc: true
 tags:
 date: 2025-06-30
 status: in-progress
 ---
 
-# 学习笔记
+# Caldav
 
 ## caldav
+
+## edit caldav
+
+## host a caldav
+
+## connect a caldav
 
 ref:
 
@@ -23,7 +29,7 @@ https://<server-id>-caldav.icloud.com.cn/<user-id>/calendars/<calendar-id>/
 
 在网页版icloud的日历界面打开开发者工具，然后找`Network`里的`Get`请求，过滤`XHR`，然后找类似 `https://<server-id>-calendarws.icloud.com.cn/ca/eventdetail/<calendar-id>/<event-id>?clientBuildNumber=<some-random-text>&clientId=<some-random-text>&clientMasteringNumber=<some-random-text>&clientVersion=<some-random-text>&dsid=<user-id>&lang=<some-random-text>&requestID=<some-random-text>&usertz=<some-random-text>`的内容。
 
-## vdirsync
+### vdirsync
 
 用 [vdirsync](https://vdirsyncer.readthedocs.io/) 将`icloud`的日历同步到本地，以`.ics`格式存储。
 

@@ -7,9 +7,9 @@ date: 2025-07-22
 
 # 概览
 
-## llm
+## LLM (Large Language Models)
 
-### 开发者和模型
+### Developers and Models
 
 - **Gemini**  
   Google DeepMind 推出的 Gemini 系列是 Google 旗下最先进的大语言模型，具备多模态理解、超长上下文、强推理和代码能力，广泛应用于搜索、助手、开发等场景。Gemini 2.5 Pro/Flash/Flash-Lite 等模型已开放 API 和网页端体验。  
@@ -35,7 +35,7 @@ date: 2025-07-22
   通义千问是阿里云推出的多模态大模型，具备文本、图像、音频等多种能力，广泛应用于办公、开发、教育等领域，支持 API、网页端和企业集成。  
   官网：[https://tongyi.aliyun.com/](https://tongyi.aliyun.com/)
 
-### provider
+### Providers
 
 - 多模型合集
     - OpenRouter 是一个统一的 LLM API 聚合平台，支持 OpenAI、Google、Anthropic、DeepSeek、Moonshot 等数百种主流大模型，提供统一接口、灵活计费和高可用性，适合开发者和企业多模型接入。官网：[https://openrouter.ai/](https://openrouter.ai/)
@@ -44,9 +44,11 @@ date: 2025-07-22
 - 专用
     - deepseek
     - gemini之类的
-- 本地[ollama](/wiki/code/ai/ollama)
+- 本地[ollama](/wiki/dev/ai/ollama)
 
-### capbilities
+用[copilot-api](https://github.com/ericc-ch/copilot-api)来把github copilot包装成 OpenAI 或 Anthropic的格式，然后被调用。
+
+### Capabilities
 
 - chat：就聊天
 - coder：为代码编写和调试提供支持，通常包括代码生成、错误修复、代码重构等功能。
@@ -55,7 +57,7 @@ date: 2025-07-22
 
 ## agents
 
-### cli
+### CLI Tools
 
 命令行环境
 
@@ -70,7 +72,17 @@ date: 2025-07-22
 
 基本上每个开发团队都有它们自己的cli，当然也主要对接自家llm。至于开源的三个，支持的模型和provider各不相同。`crush`暂时还不支持`github copilot`，但是可以配置`lsp`，比较有特色。
 
-### ide
+- goose
+- opencode
+- gemini
+- claude
+- crush
+- codex
+- aichat
+- auggie
+- cursor-agent
+
+### IDEs
 
 |        | nvim                  | vscode       | cursor |
 | ------ | --------------------- | ------------ | ------ |
@@ -78,9 +90,9 @@ date: 2025-07-22
 | plugin | avante, CodeCompanion | cline, ligma |        |
 | cli    | opencode, goose       |              |        |
 
-nvim的[ai设置](/wiki/code/ai/ai-in-nvim)
+nvim的[ai设置](/wiki/dev/ai/ai-in-nvim)
 
-### desktop app
+### Desktop Applications
 
 桌面客户端。
 
