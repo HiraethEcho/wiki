@@ -1,6 +1,9 @@
 ---
 dg-publish: true
 ---
+
+# scripts example
+
 ```
 find . -name "*.md" -type f -exec grep -lE "Finished" {} + | while read file; do
   if ! grep -q "2025-05-31" "$file"; then

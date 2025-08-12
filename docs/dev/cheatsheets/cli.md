@@ -1,6 +1,7 @@
 ---
 title: cli的常用命令
 tags:
+    - linux
 date: 2025-08-06
 ---
 
@@ -9,6 +10,13 @@ date: 2025-08-06
 ## utils
 
 一些基础的，常常是系统自带的命令工具。
+
+### chattr
+
+```
+sudo chattr +i /etc/resolv.conf  # 设置文件不可修改
+sudo chattr -i /etc/resolv.conf  # 解除
+```
 
 ### file
 

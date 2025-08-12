@@ -10,11 +10,12 @@ status: draft
 
 ## overview
 
-| agent plugin  | agent功能 | chat功能 | mcp               | model   | vscode        |
-| ------------- | --------- | -------- | ----------------- | ------- | ------------- |
-| CodeCanpanion |           | 支持     | 使用`mcphub.nvim` |         | 类似`cline`   |
-| avante        |           | 支持     | 使用`mcphub.nvim` |         | 类似`cline`   |
-| Copilot chat  |           |          | 没有原生支持      | copilot | 类似`copilot` |
+| plugin        | agent功能      | chat功能 | completion | model   | vscode        |
+| ------------- | -------------- | -------- | ---------- | ------- | ------------- |
+| CodeCanpanion |                | 支持     |            |         | 类似`cline`   |
+| avante        |                | 支持     |            |         | 类似`cline`   |
+| Copilot chat  |                |          |            | copilot | 类似`copilot` |
+| opencode.nvim | 和opencode一致 |          |            |         |               |
 
 some util plugin:
 
@@ -54,7 +55,9 @@ nvim通过[mcphub.nvim](https://github.com/ravitemer/mcphub.nvim)与`mcp-hub`通
 
 ## completion
 
-### copilot本身就提供补全，可以被`blink.cmp`使用
+### copilot.lua
+
+本身就提供补全，可以被`blink.cmp`使用
 
 ### minuet-ai
 
