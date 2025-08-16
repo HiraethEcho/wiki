@@ -384,3 +384,13 @@ generate pictures of code snaps
 #### activate-linux
 
 a watermark
+
+## host
+
+### web
+
+[memos](https://github.com/usememos/memos) A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.
+
+但是开发很迅速，导致api乱七八糟，迷茫。而且似乎没有导出功能，只是能把附件存储在cloudflare上。还是要想办法备份一下。包括radicale也是。
+
+现在停留在24.4版本。
