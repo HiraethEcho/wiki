@@ -206,7 +206,7 @@ An array of obsolete packages that are replaced by the package, e.g. [wireshark-
 
 An array of files that can contain user-made changes and should be preserved during upgrade or removal of a package, primarily intended for configuration files in `/etc`. If these files are unchanged from how they ship with the package, they will be removed or replaced as normal files during upgrade or removal.
 
-Files in this array should use **relative** paths without the leading slash (`/`) (e.g. `etc/pacman.conf`, instead of `/etc/pacman.conf`). The `backup` array [does not support empty directories or wildcards such as "\*"](https://bbs.archlinux.org/viewtopic.php?pid=2187778).
+Files in this array should use **relative** paths without the leading slash (`/`) (e.g. `etc/pacman.conf`, instead of `/etc/pacman.conf`). The `backup` array [does not support empty directories or wildcards such as "\*"](https://bbs.archlinux.org/viewtoasset.php?pid=2187778).
 
 When updating, new versions may be saved as `*file*.pacnew` to avoid overwriting a file which already exists and was previously modified by the user. Similarly, when the package is removed, user-modified files will be preserved as `*file*.pacsave` unless the package was removed with the `pacman -Rn` command.
 
@@ -231,7 +231,7 @@ The name of the *.install* script to be included in the package.
 - `pre_remove` — The script is run right before files are removed. One argument is passed: old package version.
 - `post_remove` — The script is run right after files are removed. One argument is passed: old package version.
 
-Each function is run [chrooted](https://wiki.archlinux.org/title/Chroot "Chroot") inside the *pacman* install directory. See [this thread](https://bbs.archlinux.org/viewtopic.php?pid=913891).
+Each function is run [chrooted](https://wiki.archlinux.org/title/Chroot "Chroot") inside the *pacman* install directory. See [this thread](https://bbs.archlinux.org/viewtoasset.php?pid=913891).
 
 **Note:** Do not end the script with `exit`. This would prevent the contained functions from executing.
 

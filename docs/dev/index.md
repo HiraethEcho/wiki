@@ -16,7 +16,7 @@ About usage and knowledge of [linux](/wiki/dev/linux/index).
 
 For [shell](/wiki/dev/linux/shell) and [awk](/wiki/dev/cheatsheets/awk.md), [sed](/wiki/dev/cheatsheets/sed), [grep](/wiki/dev/cheatsheets/grep), etc
 
-[Shell script](/wiki/dev/cheatsheets/bash-scripts), [regex](/wiki/dev/cheatsheets/regex)
+[Shell script](/wiki/dev/code/bash-scripts), [regex](/wiki/dev/cheatsheets/regex)
 
 [latex](/wiki/dev/cheatsheets/latex)
 

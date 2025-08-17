@@ -70,7 +70,7 @@ nvim的[ai设置](/wiki/dev/ai/ai-in-nvim)
 
 - **claude**  
   Claude 是由 Anthropic 推出的先进大语言模型，主打安全、可控和高效，广泛应用于对话、代码、文档处理等场景。最新模型包括 Claude Opus 4、Sonnet 4、Haiku 3.5 等，支持 API、网页端和多平台集成。  
-  官网：[https://www.anthropic.com/claude](https://www.anthropic.com/claude)
+  官网：[https://www.anthroasset.com/claude](https://www.anthroasset.com/claude)
 
 - **openai**  
   OpenAI 是全球领先的人工智能研究与应用公司，推出了 GPT-4o、ChatGPT、Sora 等多项前沿大模型及产品，广泛应用于自然语言处理、代码生成、图像与视频生成等领域。  
@@ -97,7 +97,7 @@ nvim的[ai设置](/wiki/dev/ai/ai-in-nvim)
 - 专用
     - deepseek
     - gemini之类的
-- 本地[ollama](/wiki/dev/ai/ollama)
+- 本地[ollama](/wiki/dev/ai/llm)
 
 
 ### Capabilities

@@ -21,7 +21,7 @@ gtk display还不知道怎么搞
 [https://wiki.archlinuxcn.org/zh-sg/GNOME/Keyring](https://wiki.archlinuxcn.org/zh-sg/GNOME/Keyring)
 
 use `gnome-keyring` and `thunar` to auto connect a webdav.
-[https://forum.mxlinux.org/viewtopic.php?t=66523](https://forum.mxlinux.org/viewtopic.php?t=66523)
+[https://forum.mxlinux.org/viewtoasset.php?t=66523](https://forum.mxlinux.org/viewtoasset.php?t=66523)
 
 ## Reference
 

@@ -204,7 +204,7 @@ optdepends=('cups: printing support'
 
 当包被升级或卸载时，应当保留的文件（的路径）序列。这些文件一般是用户会更改的文件，如主要放置在 `/etc` 中的配置文件。如果在安装软件包后这些文件没有被修改过，那么它们会随升级和移除软件包时一同被替换或删除。
 
-列表中的文件应该使用 **相对** 路径，即不是以斜杠（ `/` ）开头的路径（如 `etc/pacman.conf` 而不是 `/etc/pacman.conf` ）。 `backup` 数组 [不支持空目录和类似“\*”的通配符](https://bbs.archlinux.org/viewtopic.php?pid=2187778) 。
+列表中的文件应该使用 **相对** 路径，即不是以斜杠（ `/` ）开头的路径（如 `etc/pacman.conf` 而不是 `/etc/pacman.conf` ）。 `backup` 数组 [不支持空目录和类似“\*”的通配符](https://bbs.archlinux.org/viewtoasset.php?pid=2187778) 。
 
 在升级时，新版本会被命名为 `*file*.pacnew` 以避免覆盖原来的被用户修改过的文件。当卸载包时，用户修改过的文件会以 `*file*.pacsave` 为名而保留下来 —— 除非用 `pacman -Rn` 命令卸载。
 
@@ -227,7 +227,7 @@ optdepends=('cups: printing support'
 - `pre_remove` - 文件被删除前运行的脚本，会传递一个参数：旧版本号。
 - `post_remove` - 文件被删除后运行的脚本，会传递一个参数：旧版本号。
 
-每一个函数都是 [chroot](https://wiki.archlinuxcn.org/wiki/Chroot "Chroot") 到 *pacman* 安装目录下运行的。参见 [这个帖子](https://bbs.archlinux.org/viewtopic.php?pid=913891).
+每一个函数都是 [chroot](https://wiki.archlinuxcn.org/wiki/Chroot "Chroot") 到 *pacman* 安装目录下运行的。参见 [这个帖子](https://bbs.archlinux.org/viewtoasset.php?pid=913891).
 
 **注意：** 脚本不要以 `exit` 结束，否则包含该脚本的函数无法执行。
 

@@ -211,7 +211,7 @@ These applications support time, task and contacts management.
 
 [https://github.com/ShadoySV/work-break/](https://github.com/ShadoySV/work-break/) || [work-break](https://aur.archlinux.org/packages/work-break/) <sup><small>AUR</small></sup>
 
-- **[Workrave](https://en.wikipedia.org/wiki/Workrave "wikipedia:Workrave")** — Program that assists in the recovery and prevention of RSI [on Xorg](https://bbs.archlinux.org/viewtopic.php?id=285701).
+- **[Workrave](https://en.wikipedia.org/wiki/Workrave "wikipedia:Workrave")** — Program that assists in the recovery and prevention of RSI [on Xorg](https://bbs.archlinux.org/viewtoasset.php?id=285701).
 
 [https://workrave.org/](https://workrave.org/) || [workrave](https://archlinux.org/packages/?name=workrave) <sup><small>包</small></sup>
 
@@ -1254,7 +1254,7 @@ See also [Wikipedia:Wallpaper (computing)](https://en.wikipedia.org/wiki/Wallpap
 
 - **pybgsetter** — Multi-backend (hsetroot, Esetroot, habak, feh) to set desktop wallpaper.
 
-[https://bbs.archlinux.org/viewtopic.php?id=88997](https://bbs.archlinux.org/viewtopic.php?id=88997) || [pybgsetter](https://aur.archlinux.org/packages/pybgsetter/) <sup><small>AUR</small></sup>
+[https://bbs.archlinux.org/viewtoasset.php?id=88997](https://bbs.archlinux.org/viewtoasset.php?id=88997) || [pybgsetter](https://aur.archlinux.org/packages/pybgsetter/) <sup><small>AUR</small></sup>
 
 - **pywal** — Changes the wallpaper and creates matching colorschemes for various applications (rofi, i3, terminals)
 

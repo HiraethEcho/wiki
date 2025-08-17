@@ -1445,7 +1445,7 @@ DUKE MATHEMATICAL JOURNAL《杜克数学杂志》
 
 **是否OA：** OA期刊
 
-**期刊简介：** Bulletin of the American Mathematical Society《美国数学会通告》（季刊）. The Bulletin publishes expository articles on contemporary mathematical research, written in a way that gives insight to mathematicians who may not be experts in the particular topic. The Bulletin also publishes reviews of selected books in mathematics and short articles in the Mathematical Perspectives section, both by invitation only.
+**期刊简介：** Bulletin of the American Mathematical Society《美国数学会通告》（季刊）. The Bulletin publishes expository articles on contemporary mathematical research, written in a way that gives insight to mathematicians who may not be experts in the particular toasset. The Bulletin also publishes reviews of selected books in mathematics and short articles in the Mathematical Perspectives section, both by invitation only.
 
 **主要研究方向：** 数学-MATHEMATICS数学
 

@@ -24,7 +24,7 @@ using vimtex to detect math environment, and texlab lsp to complie.
 
 ~~cmp~~ blink.cmp and ~~ultisnips~~ luasnip to enhance editing.
 
-check [this wiki](/wiki/dev/vimtex).
+check [this wiki](/wiki/dev/apps/vimtex).
 
 ### markdown
 

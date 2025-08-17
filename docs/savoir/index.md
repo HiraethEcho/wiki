@@ -10,7 +10,7 @@ dg-publish: true
 
 首先，**常识**像是一个家族相似的概念，不同人的常识互不相同。
 
-![](https://pic.877675.xyz/not-common-sense.webp)
+![](https://asset.877675.xyz/not-common-sense.webp)
 
 同时，我个人对各个领域的知识很感兴趣，既有好奇心但又没有全面学习的能力。  
 所以尝试广而浅地了解诸多常识，这里是一个汇总。

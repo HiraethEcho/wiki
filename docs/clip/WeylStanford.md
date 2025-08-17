@@ -1154,7 +1154,7 @@ $$
 ds2=(dx0)2−gαβdxαdxβ(41)=c2dt2−gαβdxαdxβ,
 $$
 
-where c t \= x 0,x 0 $ct=x0,x0$ is called the _cosmic time_, and t $t$ is the _proper time_ of any galaxy. The spacelike hypsersurfaces are therefore the surfaces of simultaneity with respect to the cosmic time x 0 $x0$. The Cosmological Principle in turn tells us that these hypersurfaces of simultaneity are homogeneous and isotropic.
+where c t \= x 0,x 0 $ct=x0,x0$ is called the _cosmic time_, and t $t$ is the _proper time_ of any galaxy. The spacelike hypsersurfaces are therefore the surfaces of simultaneity with respect to the cosmic time x 0 $x0$. The Cosmological Principle in turn tells us that these hypersurfaces of simultaneity are homogeneous and isotroasset.
 
 Independently, Robertson and Walker, were subsequently able to give a precise mathematical derivation of the most general metric by assuming Weyl’s Postulate and the Cosmological Principle.
 
