@@ -3,6 +3,7 @@ title: 大模型使用概览
 tags:
     - ai
 date: 2025-07-22
+status: in-progress
 ---
 
 # 概览
@@ -99,7 +100,6 @@ nvim的[ai设置](/wiki/dev/ai/ai-in-nvim)
     - gemini之类的
 - 本地[ollama](/wiki/dev/ai/llm)
 
-
 ### Capabilities
 
 - chat：就聊天
@@ -119,6 +119,5 @@ mcp-hub 可以把多个mcp整合为一个mcp，这样调用`mcp-hub`的mcp相当
 ## others
 
 [vectorcode](https://github.com/Davidyz/VectorCode)
-
 
 用[copilot-api](https://github.com/ericc-ch/copilot-api)来把github copilot包装成 OpenAI 或 Anthropic的格式，然后被调用。
