@@ -16,8 +16,10 @@ status: draft
 
 - example.com
 - blog.example.com
-- dev.example.com
     - notes.example.com
+    - docs.example.com
+    - projects.example.com
+- dev.example.com
     - rss.example.com
     - todo.example.com
     - git.example.com
@@ -28,9 +30,11 @@ status: draft
     - mail.example.com
     - cal.example.com
 - driver.example.com
+    - driver.example.com/openlist
     - bucket-name.example.com
     - another-bucket-name.example.com
-- media.example.com
+- gallery.example.com
+    - film.example.com
     - book.example.com
     - photos.example.com
 

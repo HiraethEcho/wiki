@@ -1,6 +1,5 @@
 ---
 title: 双系统安装archlinux
-toc: true
 tags:
     - arch
     - handbook
