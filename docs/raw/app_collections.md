@@ -12,11 +12,7 @@ title: 收集一些工具
 [sshfs](https://wiki.archlinuxcn.org/zh/SSHFS): Filesystem client based on SSH.
 
 ```shell
-# Mount remote directory:
-
 sshfs username@remote_host:remote_directory mountpoint
-
-# Unmount remote directory:
 
 umount mountpoint
 
@@ -27,9 +23,9 @@ umount mountpoint
 sshfs -o follow_symlinks username@remote_host:remote_directory mountpoint -p 2222 -C
 ```
 
-### media
+## media
 
-#### mpd
+### mpd
 
 - mpd
 - frontend for mpd:
@@ -50,17 +46,17 @@ video player and more
 
 so powerful
 
-### system
+## system
 
-#### systemd-manager-tui
+### systemd-manager-tui
 
 [systemd-manager-tui](https://crates.io/crates/systemd-manager-tui)
 
-#### aconfmgr
+### aconfmgr
 
 A configuration manager for Arch Linux. Kind of like nixOS. [github](https://github.com/CyberShadow/aconfmgr)
 
-#### linux-firmware
+### linux-firmware
 
 since `linux-firmware` is departed, only need some of them. Use `arch-checkfw` to find which.
 
@@ -81,7 +77,7 @@ Optional Deps   : linux-firmware-liquidio: Firmware for Cavium LiquidIO server a
 
 ## AI
 
-### engines
+### llm
 
 #### deepseek
 
@@ -230,6 +226,10 @@ not support fo timeshift btrfs snap yet
 
 ### I may back here
 
+#### httpd
+
+darkhttpd
+
 #### casaos
 
 [casaos](https://casaos.zimaspace.com/)
@@ -323,6 +323,14 @@ Distrobox itself is not a container manager and relies on Podman or Docker to cr
 
 a bilibili downloader
 
+#### diagon
+
+draw things in ascii
+
+[github](https://github.com/ArthurSonzogni/Diagon)
+
+[web app](https://arthursonzogni.com/Diagon/)
+
 ### not now, or not me
 
 #### stew-bin
@@ -379,15 +387,15 @@ wallpaper by mpv in wayland
 
 generate pictures of code snaps
 
-### wtf Interesting
+## wtf Interesting
 
-#### activate-linux
+### activate-linux
 
 a watermark
 
-## host
+## host something
 
-### web
+### with webui
 
 [memos](https://github.com/usememos/memos) A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.
 

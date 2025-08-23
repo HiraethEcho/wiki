@@ -27,8 +27,8 @@ status: draft
     - links.example.com
     - imap.example.com
     - smtp.example.com
-    - mail.example.com
     - cal.example.com
+    - mail.example.com
 - driver.example.com
     - driver.example.com/openlist
     - bucket-name.example.com

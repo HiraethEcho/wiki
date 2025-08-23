@@ -39,6 +39,7 @@ status: draft
     - **API Reference**: 如何在 Worker 中通过 `env.DB.prepare()` 等 API 执行 SQL 查询。
     - **Client API**: 熟练掌握 `prepare()`, `bind()`, `all()`, `run()` 等方法。
 
+
 #### 3. Cloudflare R2 (对象存储 - 文件内容存储)
 
 用于存储实际的 `.ics` 和 `.vcf` 文件内容。
