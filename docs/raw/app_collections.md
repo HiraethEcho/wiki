@@ -75,6 +75,14 @@ Optional Deps   : linux-firmware-liquidio: Firmware for Cavium LiquidIO server a
                   linux-firmware-qlogic: Firmware for QLogic devices
 ```
 
+### disk usage
+
+- dua: du 的替代品，我一般用`dua -i`交互式查看
+- bonsai: gnome的baobab（kde的filelight）的tui版本，旭日图那个
+- diskonaut: 类似treesize, wiztree的方格划分的
+
+感觉还是dua好用，图示其实用处不大
+
 ## AI
 
 ### llm
@@ -319,7 +327,9 @@ package() {
 Distrobox itself is not a container manager and relies on Podman or Docker to create containers.  
 [BoxBuddy](https://github.com/Dvlv/BoxBuddyRS) is a gui for it.
 
-#### [yutto](https://yutto.nyakku.moe/)
+#### yutto
+
+[yutto](https://yutto.nyakku.moe/)
 
 a bilibili downloader
 
@@ -394,6 +404,14 @@ generate pictures of code snaps
 a watermark
 
 ## host something
+
+### host a web
+
+nginx
+
+darkhttpd
+
+## serves
 
 ### with webui
 
