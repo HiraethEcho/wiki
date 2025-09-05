@@ -1,5 +1,4 @@
 ---
-dg-publish: false
 title: 本站和markdown的语法
 gists:
     - id: 1748bf8ea8f33ab9634a912240aa81d2

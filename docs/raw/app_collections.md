@@ -25,6 +25,10 @@ sshfs -o follow_symlinks username@remote_host:remote_directory mountpoint -p 222
 
 ## media
 
+### edit
+
+python-eye3 edit meta data for mp3
+
 ### mpd
 
 - mpd
@@ -420,3 +424,31 @@ darkhttpd
 但是开发很迅速，导致api乱七八糟，迷茫。而且似乎没有导出功能，只是能把附件存储在cloudflare上。还是要想办法备份一下。包括radicale也是。
 
 现在停留在24.4版本。
+
+### other
+
+glance
+
+## small tools
+
+ffcast
+
+fbterm
+
+fv-cli show font in terminal using sixel iterm or kitty
+
+cbfmt format code blocks inside markdown
+
+kmscon alternative getty and tty, support unicode
+
+### for arch
+
+lostfiles find orphaned files not owned by Arch package
+
+archstatus
+
+arch-wiki-doc wikiman
+
+pacfiles `pacman -F` alternative
+
+pacman-contrib
