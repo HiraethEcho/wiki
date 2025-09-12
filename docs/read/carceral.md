@@ -28,3 +28,11 @@ status: draft
 ## 规劝
 
 并非自上而下，而是网络一般无处不在的权力。
+
+![](https://asset.877675.xyz/202509121816253.webp)
+
+![](https://asset.877675.xyz/202509121816913.webp)
+
+![](https://asset.877675.xyz/202509121815912.webp)
+
+![](https://asset.877675.xyz/202509121815184.webp)
