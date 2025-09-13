@@ -7,7 +7,7 @@ date: 2025-08-29
 # 监狱的诞生
 
 ![image](https://asset.877675.xyz/s35120012.webp)  
-读[《导读福柯》](/wiki/read/excerpt/prison)之后的一些笔记。原文摘抄在[这里](prison/original)。
+读 《导读福柯》之后的一些笔记。原文摘抄在[这里](/wiki/read/excerpt/prison)。
 
 > [!note] 胡说八道
 > ![](https://asset.877675.xyz/202509121815184.webp)
