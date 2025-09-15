@@ -89,6 +89,11 @@ date: 2025-08-29
 > 福柯拒绝这样一种观点，即科学理性与人道主义启蒙能够置身于权力之外，并发挥使社会不受权力玷污的“清洁剂”作用。与此不同，他将人文社会科学视为现代权力关系的新发展中的某些部分与症候。  
 > 在现代，对于真理的宣告，以及对于“知识”的生产本身便会成为一种施行权力的方式，而不是一种对权力的逃离。
 
+> [!tip] 关于资本控制学术
+> 这里有一个视频介绍了农药公司如何干涉学术论文，从而掩盖农药的危害。不过这还只是表面的权力影响科学，福柯阐述的不止于此。
+>
+> <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=115200686626020&bvid=BV1dcpFzwE8R&cid=32371051190&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>
+
 没有无偏见的知识，就像（其实不像，但就是想起来了所以提一下这句话）
 
 > [!note] 《帕斯卡尔式的沉思》
