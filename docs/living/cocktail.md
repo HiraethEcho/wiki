@@ -6,6 +6,7 @@ tags:
 published: true
 date: 2023-11-14
 mermaid: true
+moved: true
 ---
 
 # Cocktail

@@ -2,6 +2,7 @@
 title: 监狱的诞生
 tags:
 date: 2025-08-29
+moved: true
 ---
 
 # 监狱的诞生
