@@ -6,6 +6,7 @@ tags:
     - github
     - pkm
 date: 2025-04-05
+moved: true
 ---
 
 # 用obsidian管理多个博客

@@ -3,8 +3,9 @@ title: zotero
 toc: true
 date: 2023-11-13
 tags:
-    - pkm
+  - pkm
 dg-publish: true
+moved: true
 ---
 
 # Zotero

@@ -4,6 +4,7 @@ tags:
     - pkm
 date: 2024-10-15
 dg-publish: true
+moved: true
 ---
 
 # 使用mkdocs、obsidian、zotero搭建在线文献学习笔记
