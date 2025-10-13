@@ -2,8 +2,9 @@
 title: 用btrfs做linux的快照备份
 toc: true
 tags:
-    - arch
-    - tools
+  - arch
+  - tools
+moved: true
 ---
 
 # linux下的 btrfs

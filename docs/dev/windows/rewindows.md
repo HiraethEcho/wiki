@@ -3,6 +3,7 @@ title: Windows重装指南
 toc: true
 tags:
 date: 2025-01-18
+moved: true
 ---
 
 # Windows重装指南

@@ -2,11 +2,12 @@
 title: ArchWiki摘抄
 toc: true
 tags:
-    - arch
-    - linux
-    - handbook
+  - arch
+  - linux
+  - handbook
 date: 2025-01-03
 dg-publish: true
+moved: true
 ---
 
 # ArchWiki摘抄

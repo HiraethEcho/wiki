@@ -2,10 +2,11 @@
 title: 安装后的建议配置
 toc: true
 tags:
-    - arch
-    - handbook
+  - arch
+  - handbook
 date: 2024-11-18
 dg-publish: true
+moved: true
 ---
 
 # 安装后的建议配置

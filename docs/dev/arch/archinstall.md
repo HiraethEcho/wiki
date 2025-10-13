@@ -1,9 +1,10 @@
 ---
 title: 双系统安装archlinux
 tags:
-    - arch
-    - handbook
+  - arch
+  - handbook
 date: 2023-10-09
+moved: true
 ---
 
 # Basic installation of arch linux
