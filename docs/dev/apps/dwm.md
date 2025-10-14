@@ -1,14 +1,15 @@
 ---
 title: 折腾的linux+X11+dwm
 categories:
-    - linux
+  - linux
 tags:
-    - linux
-    - daily
+  - linux
+  - daily
 published: true
 date:
-    created: 2024-07-29
+  created: 2024-07-29
 excerpt: 关于linux C dwm等
+moved: true
 ---
 
 # 近期折腾的archlinux
