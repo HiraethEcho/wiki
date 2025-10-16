@@ -2,9 +2,10 @@
 title: 巴特勒收集
 toc: true
 tags:
-    - feminism
+  - feminism
 date: 2025-05-27
 dg-publish: true
+moved: true
 ---
 
 # 收集一些关于巴特勒的内容

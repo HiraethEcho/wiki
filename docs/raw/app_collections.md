@@ -1,6 +1,7 @@
 ---
 dg-publish: true
 title: 收集一些工具
+moved: true
 ---
 
 # some applications and tools

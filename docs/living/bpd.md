@@ -2,8 +2,9 @@
 title: 边缘性人格障碍
 toc: true
 tags:
-    - life
+  - life
 date: 2025-02-26
+moved: true
 ---
 
 # 边缘性人格障碍
