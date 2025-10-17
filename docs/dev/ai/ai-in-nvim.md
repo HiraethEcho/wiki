@@ -1,9 +1,10 @@
 ---
 title: AI in neovim
 tags:
-    - nvim
+  - nvim
 date: 2025-07-20 15:39
 status: draft
+moved: true
 ---
 
 # AI in neovim
