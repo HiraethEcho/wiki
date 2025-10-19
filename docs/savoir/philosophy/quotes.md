@@ -1,9 +1,10 @@
 ---
 title: 一些哲学语录
 tags:
-    - philosophy
+  - philosophy
 date: 2025-08-10
 status: draft
+moved: true
 ---
 
 # 一些哲学语录
