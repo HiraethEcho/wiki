@@ -1,7 +1,7 @@
 ---
 title: 一些哲学语录
 tags:
-  - philosophy
+    - philosophy
 date: 2025-08-10
 status: draft
 moved: true
@@ -12,6 +12,7 @@ moved: true
 > [!note] 《帕斯卡尔式的沉思》
 > 囿于一己之见就无法得出全整性的真理
 > 不持有观点就无法展开思考
+> ![](https://asset.877675.xyz/202510202113949.webp)
 
 > [!note] 马赛尔
 > 在这个世界上，你拥有的越多，你所是的就越少。
