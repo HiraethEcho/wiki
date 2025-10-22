@@ -5,6 +5,7 @@ tags:
 date: 2024-01-25
 index_img:
 summary: 关于做饭的记录和总结
+moved: true
 ---
 
 # 厨艺养成ing
