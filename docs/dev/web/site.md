@@ -1,9 +1,10 @@
 ---
 title: 个人网站的组织和管理
 tags:
-    - site
+  - site
 date: 2025-08-20
 status: draft
+moved: true
 ---
 
 # 个人网站的组织和管理

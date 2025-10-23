@@ -4,6 +4,7 @@ toc: true
 tags:
 date: 2025-06-17
 dg-publish: true
+moved: true
 ---
 
 # taskwarrior

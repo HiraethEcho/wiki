@@ -2,9 +2,10 @@
 title: git备忘
 toc: true
 tags:
-    - git
-    - handbook
+  - git
+  - handbook
 date: 2023-11-10
+moved: true
 ---
 
 ## config

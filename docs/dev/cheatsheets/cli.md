@@ -1,8 +1,9 @@
 ---
 title: cli的常用命令
 tags:
-    - linux
+  - linux
 date: 2025-08-06
+moved: true
 ---
 
 # title: cli的常用命令
