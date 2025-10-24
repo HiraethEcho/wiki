@@ -2,9 +2,10 @@
 title: shell
 toc: true
 tags:
-    - handbook
+  - handbook
 date: 2025-05-05
 status: draft
+moved: true
 ---
 
 # shell

@@ -2,6 +2,7 @@
 title: 一些nvim的配置和使用技巧
 tags:
 date: 2025-08-06
+moved: true
 ---
 
 # 一些nvim的配置和使用技巧

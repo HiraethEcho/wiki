@@ -1,8 +1,9 @@
 ---
 title: 诗
 tags:
-    - poem
+  - poem
 date: 2025-06-01
+moved: true
 ---
 
 # 诗

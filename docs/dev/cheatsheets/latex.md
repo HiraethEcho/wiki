@@ -2,10 +2,11 @@
 title: Latex Tricks
 toc: true
 tags:
-    - latex
-    - handbook
+  - latex
+  - handbook
 date: 2025-05-04
 dg-publish: true
+moved: true
 ---
 
 # Latex tricks

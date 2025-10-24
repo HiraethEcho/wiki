@@ -2,9 +2,10 @@
 title: 从键盘到字符
 toc: true
 tags:
-    - linux
+  - linux
 date: 2024-12-17
 status: draft
+moved: true
 ---
 
 # 从键盘到字符

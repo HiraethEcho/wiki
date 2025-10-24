@@ -3,6 +3,7 @@ title: nvim的技巧
 toc: true
 tags:
 date: 2025-07-08
+moved: true
 ---
 
 # Tricks in nvim

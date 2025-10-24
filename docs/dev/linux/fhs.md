@@ -4,6 +4,7 @@ toc: true
 tags:
 date: 2025-06-09
 dg-publish: false
+moved: true
 ---
 
 # Filesystem Hierarchy Standard

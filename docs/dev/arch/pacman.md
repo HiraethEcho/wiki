@@ -2,11 +2,12 @@
 title: Archlinux 上的包管理
 toc: true
 tags:
-    - arch
-    - linux
-    - handbook
+  - arch
+  - linux
+  - handbook
 date: 2025-06-08
 dg-publish: true
+moved: true
 ---
 
 # Package manage on Arch

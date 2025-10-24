@@ -2,11 +2,12 @@
 title: Write latex with neovim
 toc: true
 tags:
-    - editor
-    - latex
-    - config
+  - editor
+  - latex
+  - config
 date: 2025-04-27
 dg-publish: true
+moved: true
 ---
 
 # Write latex with neovim

@@ -3,6 +3,7 @@ title: latex概览
 tags:
 date: 2025-08-25
 status: draft
+moved: true
 ---
 
 # latex概览

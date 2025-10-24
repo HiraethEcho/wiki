@@ -3,10 +3,11 @@ title: obsidian
 toc: true
 date: 2023-11-11
 tags:
-    - obsidian
-    - editor
-    - config
+  - obsidian
+  - editor
+  - config
 published: false
+moved: true
 ---
 
 # obsidian

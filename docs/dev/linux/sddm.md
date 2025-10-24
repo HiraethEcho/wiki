@@ -2,9 +2,10 @@
 title: Display Manager
 toc: true
 tags:
-    - linux
+  - linux
 date: 2025-06-05
 dg-publish: true
+moved: true
 ---
 
 # Display Manager

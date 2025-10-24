@@ -4,6 +4,7 @@ toc: true
 tags:
 date: 2025-07-13
 status: draft
+moved: true
 ---
 
 ### tty

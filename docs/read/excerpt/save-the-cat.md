@@ -2,6 +2,7 @@
 title: 救猫咪
 toc: true
 date: 2025-06-30
+moved: true
 ---
 
 # 救猫咪 电影编剧宝典

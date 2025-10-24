@@ -2,12 +2,13 @@
 title: My Neovim Config
 toc: true
 tags:
-    - arch
-    - editor
-    - config
+  - arch
+  - editor
+  - config
 date: 2024-11-18
 update:
 dg-publish: true
+moved: true
 ---
 
 # My neovim

@@ -2,9 +2,10 @@
 title: My hyprland config
 toc: true
 tags:
-    - config
+  - config
 date: 2025-04-26
 status: draft
+moved: true
 ---
 
 # My hyprland config
