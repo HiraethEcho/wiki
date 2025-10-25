@@ -1,9 +1,10 @@
 ---
 title: 大模型使用概览
 tags:
-    - ai
+  - ai
 date: 2025-07-22
 status: in-progress
+moved: true
 ---
 
 # 概览

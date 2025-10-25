@@ -1,8 +1,9 @@
 ---
 title: linux-daily
 tags:
-    - linux
+  - linux
 date: 2025-01-19
+moved: true
 ---
 
 # 零碎的linux知识

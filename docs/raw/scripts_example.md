@@ -1,5 +1,6 @@
 ---
 dg-publish: true
+moved: true
 ---
 
 # scripts example

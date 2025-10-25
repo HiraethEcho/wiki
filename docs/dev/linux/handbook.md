@@ -2,8 +2,9 @@
 title: Linux Handbook
 toc: true
 tags:
-    - handbook
+  - handbook
 date: 2024-12-17
+moved: true
 ---
 
 # Linux Handbook

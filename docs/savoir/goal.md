@@ -3,6 +3,7 @@ title: 常识目标
 toc: true
 tags:
 date: 2025-07-01
+moved: true
 ---
 
 # 我所感兴趣的常识

@@ -1,5 +1,6 @@
 ---
 dg-publish: true
+moved: true
 ---
 
 https://github.com/SuperManito/LinuxMirrors

@@ -2,9 +2,10 @@
 title: 酒谱
 toc: true
 tags:
-    - drink
+  - drink
 date: 2024-01-26
 status: in-progress
+moved: true
 ---
 
 # 酒谱

@@ -2,9 +2,10 @@
 title: sed cheatsheet
 toc: true
 tags:
-    - handbook
+  - handbook
 date: 2025-05-01
 dg-publish: true
+moved: true
 ---
 
 # sed
