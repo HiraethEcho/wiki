@@ -2,8 +2,9 @@
 title: 各种同步方法
 toc: true
 tags:
-    - tools
+  - tools
 date: 2024-12-21
+moved: true
 ---
 
 # 各种云同步方法

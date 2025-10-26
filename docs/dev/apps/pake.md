@@ -2,9 +2,10 @@
 title: pake打包web应用
 toc: true
 tags:
-    - linux
+  - linux
 date: 2025-06-08
 dg-publish: true
+moved: true
 ---
 
 # pake打包web应用
