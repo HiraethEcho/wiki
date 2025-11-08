@@ -1,0 +1,8434 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My personal wiki or PKM">
+      
+      
+        <meta name="author" content="hiraeth">
+      
+      
+        <link rel="canonical" href="https://hiraethecho.github.io/wiki/clip/PKGBUILD-ArchLinux%E4%B8%AD%E6%96%87/">
+      
+      
+        <link rel="prev" href="../Only%20Use%20Old%20Computers/">
+      
+      
+        <link rel="next" href="../PKGBUILD-ArchWiki/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>PKGBUILD -  Arch Linux 中文维基 - Hiraeth's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hiraeth&#39;s Wiki" class="md-header__button md-logo" aria-label="Hiraeth's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hiraeth's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PKGBUILD -  Arch Linux 中文维基
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hiraethecho/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hiraethecho/wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Clip
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../living/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Living
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../math/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../raw/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Raw
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../read/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Read
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../savoir/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Savoir
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hiraeth&#39;s Wiki" class="md-nav__button md-logo" aria-label="Hiraeth's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hiraeth's Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hiraethecho/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hiraethecho/wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Clip
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Clip
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025%E4%B8%8A%E5%8D%8A%E5%B9%B4%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E4%BA%A7%E5%93%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    万字盘点 2025 上半年，值得推荐的 AI 模型与产品清单 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../81862/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    乐观主义者是相似的但悲观主义者是不同的
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A%20Declaration%20of%20the%20Independence%20of%20Cyberspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Declaration of the Independence of Cyberspace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI_slower/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    研究发现 AI 降低了开源开发者的编程效率
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AIcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cat attack on ai
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI%E6%A3%80%E6%B5%8BAI%E8%AE%BA%E6%96%87_/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI检测AI论文 
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Arch-%E6%89%93%E5%8C%85%E5%87%86%E5%88%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arch 打包准则 -  Arch Linux 中文维基
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Artix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArtixOpenRC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Build%20a%20Six-headed%2C%20Six-user%20Linux%20System%20LG%20124/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build a Six-headed, Six-user Linux System LG #124
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Can%20AI%20Teach%20Our%20Grandmothers%20To%20Suck%20Eggs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Can AI Teach Our Grandmothers To Suck Eggs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Clothoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clothoff 试图支配深度伪造色情
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Copyleft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Copyleft-next 项目重新启动
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Definition-of-Art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definition of Art | Internet Encyclopedia of Philosophy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Esoteric-Vim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Esoteric Vim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FeedsAskPhilosophers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feeds | AskPhilosophers.org
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GitWorktree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    worktree
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Good%20For%20Nothing%20-%20Mark%20Fisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Good For Nothing - Mark Fisher
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hugo%E4%B8%8D%E5%90%8C%E9%A1%B5%E9%9D%A2%E5%85%B1%E7%94%A8Twikoo%E8%AF%84%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hugo 设置不同页面共用一套 Twikoo 评论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Intuitionism-in-mathematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intuitionism in mathematics | Internet Encyclopedia of Philosophy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kernel%20Panic%20%E6%88%91%E6%8A%8A%20Arch%20%E6%BB%9A%E6%8C%82%E4%BA%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kernel Panic: 我把 Arch 滚挂了
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Letter%20to%20the%20NSF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Letter to the NSF | Jason Polak
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%E9%85%8D%E7%BD%AE%E6%89%93%E5%8D%B0%E6%9C%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    终于可以在 Linux 下愉快打印了：Linux 发行版配置打印机攻略 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mathematical-and-Computational-Linguistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematical and Computational Linguistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NewsGuard__AI_fake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NewsGuard 的调查显示 AI 生成虚假信息的比例一年内翻了一倍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Obsidian%20Bases%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obsidian 可以替代 Notion 了吗？Bases 数据库使用技巧 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Only%20Use%20Old%20Computers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Only Use Old Computers! | Luke Smith
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PKGBUILD -  Arch Linux 中文维基
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    PKGBUILD -  Arch Linux 中文维基
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件包名称
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="软件包名称">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkgbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgbase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkgname" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgname
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      版本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="版本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkgver" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkgrel" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgrel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epoch" class="md-nav__link">
+    <span class="md-ellipsis">
+      epoch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      一般变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一般变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkgdesc" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgdesc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      arch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      license
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      依赖关系
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="依赖关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depends" class="md-nav__link">
+    <span class="md-ellipsis">
+      depends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makedepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      makedepends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkdepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      checkdepends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optdepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      optdepends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      包关系
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="包关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      provides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      conflicts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      replaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其它">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      backup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      install
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      changelog
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      源码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noextract" class="md-nav__link">
+    <span class="md-ellipsis">
+      noextract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validpgpkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      validpgpkeys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      完整性检验
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="完整性检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b2sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      b2sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha512sumssha384sumssha256sumssha224sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      sha512sums，sha384sums，sha256sums，sha224sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha1sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      sha1sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      md5sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      cksums
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PKGBUILD-ArchWiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PKGBUILD - ArchWiki
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pake-%E5%A6%82%E4%BD%95%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%89%93%E5%8C%85%E6%88%90%E5%BA%94%E7%94%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pake 如何将自己的页面打包成应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Postmodernism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postmodernism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro-Life%20vs%20%20Anti-Abortion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pro-Life vs. Anti-Abortion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Protests-Guilt-by-Association/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protests: Guilt by Association
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rescuing-Mind-from-the-Machines-Philosophy-Now/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rescuing Mind from the Machines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScientificRealism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scientific Realism (Stanford Encyclopedia of Philosophy/Summer 2017 Edition)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Taskwarrior-Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Taskwarrior - What's next? - Taskwarrior
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The%20Who%20Cares%20Era/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Who Cares Era | dansinker.com
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The-World-in-2025-8-Predictions-for-the-Next-10-Years/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The World in 2025: 8 Predictions for the Next 10 Years
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Understanding-Alan-Watts-Quote-Overthink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding Alan Watts Quote-Overthink
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Universal-Wayland-Session-Manager-ArchWiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Universal Wayland Session Manager - ArchWiki
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WeylStanford/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hermann Weyl (Stanford Encyclopedia of Philosophy)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../What-does-Philosophy-do/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What does Philosophy do?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WhyIsThereSomethingRatherThanNothing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Is There Something Rather Than Nothing?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XephyrArchWiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Xephyr - ArchWiki
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Youre_the_Racist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    You’re the Racist!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Youre_the_Racist_2_Whites_as_Victims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    You’re the Racist! 2: Whites as Victims
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    蚁后被发现产下了两个不同物种的蚂蚁
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    法国高考哲学作文汇总
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beer-and-fly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    研究发现爱喝啤酒的人对蚊子有高吸引力
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-molecule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    科学家重新创造宇宙第一种分子
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game-philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一个游戏爱好者的“哲学”之路
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    git-flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpt-words-in-real-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    源自 ChatGPT 的常用词在人们的日常对话中也日益流行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heart-press/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    压力影响心脏功能背后的分子机制
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../localhost_second_domain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    学到了：localhost 居然支持二级域名
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meritocracy%E8%AF%9D%E8%AF%AD%E4%B8%8B%E7%9A%84%E9%81%93%E5%BE%B7%E6%9A%B4%E5%8A%9B%E4%B8%8E%E9%98%B6%E7%BA%A7%E7%BE%9E%E8%BE%B1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    “你穷是因为你不够优秀”：meritocracy话语下的道德暴力与阶级羞辱
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../old-code-from-1960-for-bank/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    英国银行仍然运行 1960 年代写的代码
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pacfiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pacfiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pacmanRosetta-ArchWiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pacman/Rosetta - ArchWiki
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simplify-english/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    简化英语
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yt-dlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    被 YouTube 斩尽杀绝！yt-dlp 几乎被判死刑…但它像个斗士一样，又杀回来了！
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%8AA%20room%20of%20one%E2%80%99s%20own%E3%80%8B%E5%A5%B3%E6%80%A7%E9%9B%86%E4%BD%93%E5%A4%B1%E8%AF%AD%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%9A%84PUA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《A room of one’s own》女性集体失语，人类史上最大规模的PUA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E5%9B%BE%E5%B1%95%E7%A4%BA%E5%85%A8%E9%83%A8%E4%BF%A1%E6%81%AF%EF%BC%9A%E6%8F%90%E7%A4%BA%E8%AF%8D%20%2B%20Figma%20%E5%8D%81%E7%A7%92%E7%B2%BE%E4%BF%AE%EF%BC%8C%E8%AE%A9%E9%95%BF%E7%BD%91%E9%A1%B5%E7%A7%92%E5%8F%98%E5%B0%81%E9%9D%A2%EF%BC%88%E5%86%85%E6%9C%89%E7%99%BD%E5%AB%96%E7%A6%8F%E5%88%A9%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一图展示全部信息：提示词 + Figma 十秒精修，让长网页秒变封面（内有白嫖福利）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%80%E5%9C%BA%E2%80%9C%E7%8C%8E%E5%A5%B3%E2%80%9D%E7%8B%82%E6%AC%A2%E6%95%A3%E5%8E%BB%E4%BB%A5%E5%90%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一场“猎女”狂欢散去以后
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%87%E5%AD%97%E7%9B%98%E7%82%B9%202025%20%E4%B8%8A%E5%8D%8A%E5%B9%B4%EF%BC%8C%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%20AI%20%E6%A8%A1%E5%9E%8B%E4%B8%8E%E4%BA%A7%E5%93%81%E6%B8%85%E5%8D%95%20-%20%E5%B0%91%E6%95%B0%E6%B4%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    万字盘点 2025 上半年，值得推荐的 AI 模型与产品清单 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8A%9D%E4%BD%A0%E4%B8%8D%E8%A6%81%E7%BB%83%E4%B9%A0%E6%AD%A3%E5%BF%B5%E5%86%A5%E6%83%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    为什么我劝你不要练习正念冥想 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%90%AC%E5%88%B0%E5%A5%B3%E5%AD%A9%E8%A6%81%E8%87%AA%E5%B0%8A%E8%87%AA%E7%88%B1%E8%BF%99%E4%B8%AA%E8%AF%8D%E8%A7%89%E5%BE%97%E9%9D%9E%E5%B8%B8%E6%81%B6%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    为什么我听到女孩要自尊自爱这个词觉得非常恶心？ - 知乎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B9%9D%E7%A7%8D%E7%81%B5%E6%80%A7%E7%BB%83%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    九种灵性练习 |第169期 |现在的理念 --- Nine Spiritual Exercises | Issue 169 | Philosophy Now
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BB%8EAIGC%E5%88%B0MCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    从AIGC到MCP：普通人需要了解的AI新进展及其技术本质 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%90%86%E8%A7%A3%20Git%EF%BD%9C%E7%BA%AF%E6%89%8B%E5%B7%A5%E6%89%93%E9%80%A0%20Git%20%E4%BB%93%E5%BA%93%EF%BD%9C%E5%A4%AA%E9%95%BF%E5%8F%AF%E4%BB%A5%E4%B8%8D%E7%9C%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    从零开始理解 Git｜纯手工打造 Git 仓库｜太长可以不看
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BC%8A%E6%9C%97%E5%BC%80%E5%8F%91%E8%80%85-%E8%A2%AB%E5%88%A0%E9%99%A4%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E4%BA%BA%E7%94%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    伊朗开发者：被删除的互联网人生
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BD%99%E5%8D%8E-%E6%88%91%E5%87%A0%E5%8D%81%E5%B9%B4%E7%9A%84%E5%86%99%E4%BD%9C%E7%A7%98%E8%AF%80%E9%83%BD%E5%9C%A8%E8%BF%99%E4%BA%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    余华 我几十年的写作秘诀都在这了
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BD%BF%E7%94%A8%20Cloudflare%20Tunnels%20%E9%80%9A%E8%BF%87%20Web%20SSH%20%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    使用 Cloudflare Tunnels 通过 Web SSH 访问服务器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BF%9D%E5%8D%AB%E8%A1%A8%E8%BE%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    保卫表达：用后端 BaaS 快速搭建专属无点赞评论版微博——b言b语 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%81%9A%E7%94%B0%E9%87%8E%E5%B7%A5%E4%BD%9C%E5%92%8C%E7%8E%B0%E8%B1%A1%E5%AD%A6%E9%80%82%E9%85%8D%E5%BA%A6%E5%A5%BD%E9%AB%98%E5%95%8A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    做田野工作和现象学适配度好高啊
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B6%E5%AE%9E%EF%BC%8C%E4%BD%A0%E6%AF%8F%E5%A4%A9%E5%9C%A8%E7%94%A8%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8A%E6%97%A9%E5%B0%B1%E6%B2%A1%E6%9C%89%E6%B4%BB%E4%BA%BA%E4%BA%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    其实，你每天在用的互联网上，早就没有活人了？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8C%BB%E9%99%A2%E6%9C%8D%E5%8A%A1%E7%84%B6%E5%90%8E%E5%91%A2mental/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    医院服务，然后呢？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8D%A1%E8%BE%9B%E6%96%AF%E5%9F%BA%E7%9A%84%E8%AD%A6%E5%91%8A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    卡辛斯基的警告 - 阮一峰的网络日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9C%A8%E4%B8%AD%E5%9B%BD%EF%BC%8C%E6%B5%81%E6%B5%AA%E7%8C%AB%E6%AF%8F%E5%B9%B4%E6%8D%95%E6%9D%80%E7%9A%84%E9%87%8E%E7%94%9F%E5%8A%A8%E7%89%A9%E6%98%AF%E4%BB%A5%E7%99%BE%E4%BA%BF%E4%B8%BA%E5%8D%95%E4%BD%8D%E7%9A%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    所以总的来说，在中国，流浪猫每年捕杀的野生动物是以百亿为单位的｜李忠秋 一席第822位讲者
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9C%A8%E9%A9%AC%E5%85%8B%E6%80%9D%E3%80%8A%E8%B5%84%E6%9C%AC%E8%AE%BA%E3%80%8B%E4%B8%AD%E4%BD%9C%E4%B8%BA%E5%91%88%E7%8E%B0%E6%96%B9%E6%B3%95%E7%9A%84%E8%BE%A9%E8%AF%81%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    在马克思《资本论》中作为呈现方法的辩证法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A4%A9%E6%96%87%E5%AD%A6%E5%AE%B6%E5%8F%91%E7%8E%B0%E5%A4%B1%E8%90%BD%E6%99%AE%E9%80%9A%E7%89%A9%E8%B4%A8%E7%9A%84%E7%BA%BF%E7%B4%A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    奇客Solidot | 天文学家发现失落普通物质的线索
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A5%87%E5%AE%A2Solidot%20%20%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8D%E9%9B%86%E4%B8%AD%E5%8F%AF%E8%83%BD%E6%98%AF%E5%A4%A7%E8%84%91%E5%9C%A8%E6%B8%85%E7%90%86%E5%9E%83%E5%9C%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    奇客Solidot | 注意力不集中可能是大脑在清理垃圾
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A5%87%E5%AE%A2Solidot-%E5%A5%B3%E5%AD%A9%E7%9A%84%E6%95%B0%E5%AD%A6%E8%A1%A8%E7%8E%B0%E4%BB%8E%E4%B8%8A%E5%AD%A6%E8%B5%B7%E5%BC%80%E5%A7%8B%E8%90%BD%E5%90%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    奇客Solidot 女孩的数学表现从上学起开始落后
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A5%87%E5%AE%A2Solidot%E6%96%B0%E9%97%BB%E6%A0%87%E9%A2%98%E8%BF%87%E5%8E%BB%E4%BA%8C%E5%8D%81%E5%B9%B4%E8%B6%8A%E6%9D%A5%E8%B6%8A%E9%95%BF%E8%B6%8A%E6%9D%A5%E8%B6%8A%E8%B4%9F%E9%9D%A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    新闻标题过去二十年越来越长越来越负面
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A5%B3%E6%80%A7%E8%A2%AB%E7%B3%BB%E7%BB%9F%E6%80%A7%E7%9A%84%E5%88%BB%E7%94%BB%E6%88%90%E6%AF%94%E7%94%B7%E6%80%A7%E6%9B%B4%E5%B9%B4%E8%BD%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    奇客Solidot | 女性被系统性的刻画成比男性更年轻
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%87%E5%AE%99%E7%9A%84%E5%A4%96%E9%9D%A2%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%88%91%E5%A6%88%E7%AA%81%E7%84%B6%E9%97%AE%E6%88%91%20%20%E6%88%91%E6%98%AF%E7%99%BD%20%E4%B8%80%E5%B8%AD%E5%B0%91%E5%B9%B4%E7%AC%AC9%E4%BD%8D%E8%AE%B2%E8%80%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    宇宙的外面是什么？我妈突然问我 | 我是白 一席少年第9位讲者
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AF%BB%E6%89%BE%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%B0%8F%E6%89%8B%E6%9C%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    寻找真正的小手机 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%B7%A5%E4%B8%9A%E7%A4%BE%E4%BC%9A%E5%8F%8A%E5%85%B6%E6%9C%AA%E6%9D%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    “工业社会及其未来”原文--卡辛斯基
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E5%85%B6%E5%AE%83-ArchLinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    应用程序列表/其它 -  Arch Linux 中文维基
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BC%A0%E5%BC%82%E5%AE%BE%EF%BC%9A%E3%80%8A%E9%B2%8D%E5%BE%B7%E9%87%8C%E4%BA%9A%EF%BC%9A%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E7%9C%9F%E5%AE%9E%E7%9A%84%E8%8D%92%E6%BC%A0%E2%80%94%E2%80%94%E4%BB%8E%E7%94%B5%E5%BD%B1%E9%AA%87%E5%AE%A2%E5%B8%9D%E5%9B%BD%E8%B0%88%E8%B5%B7%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    张异宾：《鲍德里亚：欢迎来到真实的荒漠——从电影<骇客帝国>谈起》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BD%93Obsidian%E4%B8%8E%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E7%9B%B8%E9%81%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    当 Obsidian 与时间管理相遇 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BD%BC%E5%BE%97%C2%B7%E5%87%AF%E5%BC%97%E4%B8%A8%E7%94%B7%E5%A5%B3%E7%9C%9F%E7%9A%84%E5%B9%B3%E7%AD%89%E5%90%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    男女真的平等吗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%80%A7%E5%88%AB%E9%99%B7%E9%98%B1%E5%BE%88%E5%A4%9A%E6%97%B6%E5%80%99%E5%9C%A8%E6%9D%9F%E7%BC%9A%E5%92%8C%E4%BC%A4%E5%AE%B3%E7%9D%80%E6%AF%8F%E4%B8%80%E4%B8%AA%E4%BA%BA%EF%BC%8C%E4%B8%8D%E8%AE%BA%E4%BD%A0%E6%98%AF%E4%BB%80%E4%B9%88%E6%80%A7%E5%88%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    性别陷阱很多时候在束缚和伤害着每一个人，不论你是什么性别 | 钟馨乐 一席少年第14位讲者
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%80%A7%E5%B0%91%E6%95%B0%E6%97%97%E5%B8%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    这些性少数旗帜，你都认识吗？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AE%A4%E4%B8%8D%E5%87%86%E9%9D%92%E8%89%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    我们为什么认不准青色？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%91%E4%BB%AC%E4%BB%8E%E6%9C%AA%E8%A7%89%E9%86%92%EF%BC%9A%E8%BA%AB%E4%BB%BD%E6%94%BF%E6%B2%BB%E6%97%B6%E4%BB%A3%E7%9A%84%E9%98%B6%E7%BA%A7%E5%A4%B1%E8%AF%AD%E7%97%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    我们从未觉醒：身份政治时代的阶级失语症
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%91%E4%BB%AC%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E3%80%8C%E7%94%A8-AI-%E5%86%99%E3%80%8D%E5%92%8C%E3%80%8C%E5%86%99-AI%E3%80%8D%E7%9A%84%E6%96%87%E7%AB%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    我们如何看待「用 AI 写」和「写 AI」的文章 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%91%E4%BB%AC%E6%98%AF%E5%90%A6%E5%9C%A8%E7%94%A8%E7%88%B6%E6%9D%83%E6%A0%87%E5%B0%BA%E4%B8%88%E9%87%8F%E8%A7%A3%E6%94%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    “女性也能狩猎”的陷阱：我们是否在用父权标尺丈量解放？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%91%E4%BB%AC%E7%94%A8%E4%BB%80%E4%B9%88%E8%AF%AD%E8%A8%80%E6%80%9D%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    我们用什么语言思考？ - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%91%E5%9B%BD%E7%A7%91%E5%AD%A6%E5%AE%B6%E5%9F%B9%E8%82%B2%E5%87%BA%E8%83%BD%E6%B4%BB%E5%88%B0%E6%88%90%E5%B9%B4%E7%9A%84%E5%8F%8C%E7%88%B8%E9%BC%A0%E5%AE%9D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    【科技日报】我国科学家培育出能活到成年的“双爸”鼠宝----中国科学院
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%88%91%E5%A6%82%E4%BD%95%E4%B8%BA%E3%80%8C%E9%9C%9E%E9%B9%9C%E3%80%8D%E7%B3%BB%E5%88%97%E5%AD%97%E4%BD%93%E6%B7%BB%E5%8A%A0%20GB%2018030-2022%20%E5%AD%97%E7%AC%A6%E9%9B%86%E6%94%AF%E6%8C%81%20-%20%E5%B0%91%E6%95%B0%E6%B4%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    我如何为「霞鹜」系列字体添加 GB 18030-2022 字符集支持 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%89%93%E5%B7%A5%E4%BA%BA%E5%A6%82%E9%B2%A0%E5%9C%A8%E5%96%89%E7%9A%84%E4%B8%80%E5%A4%A9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    早上挤地铁，中午叫外卖，晚上刷手机，打工人如鲠在喉的一天｜王小伟 一席第1052位讲者
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%E7%9A%84%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    改变世界的一次代码提交
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E5%AD%A6SCI%E6%9C%9F%E5%88%8A%E6%B1%87%E6%80%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数学SCI期刊
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%96%87%E5%BC%B1%E4%B9%A6%E7%94%9F%E6%98%AF%E4%BD%95%E7%A7%8D%E7%94%B7%E6%80%A7%E6%B0%94%E6%A6%82-%E4%B8%80%E7%A7%8D%E8%A2%AB%E5%BF%BD%E8%A7%86%E7%9A%84%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E8%AF%AD%E5%A2%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    “文弱书生”是何种男性气概？一种被忽视的中国历史语境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A0%E6%95%8C%E6%95%91%E6%98%9F%E7%AC%AC%E4%B8%80%E5%8D%B7%EF%BC%9A%E6%AD%A3%E4%B9%89%E4%B8%8E%E6%96%B0%E9%B2%9C%E8%94%AC%E8%8F%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无敌救星 第一卷：正义与新鲜蔬菜
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%98%AF%E4%BB%80%E4%B9%88%E8%AE%A9%E4%B8%80%E4%BB%B6%E8%89%BA%E6%9C%AF%E5%93%81%E5%8F%98%E5%BE%97%E4%BC%9F%E5%A4%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    是什么让一件艺术品变得伟大？ |第169期 |现在的理念 --- What Makes A Work Of Art Great? | Issue 169 | Philosophy Now
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E5%9C%A8%E7%89%A9%E8%B4%A8%E4%B8%B0%E5%AF%8C%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8D%E8%B7%8C%E5%85%A5%E9%99%B7%E9%98%B1-%E8%87%AA%E6%88%91%E4%BA%86%E8%A7%A3-%E9%80%82%E4%B8%AD-%E8%B0%A8%E6%85%8E%E5%92%8C%E5%B9%B3%E8%A1%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    普通人如何在物质丰富的社会不跌入陷阱：自我了解，适中，谨慎和平衡
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9C%80%E8%AE%A9%E4%BA%BA%E5%BF%83%E9%85%B8%E7%9A%84%E6%98%AF%E9%82%A3%E4%BA%9B%E6%9C%89%E8%BF%9D%E6%B3%95%E5%89%8D%E7%A7%91%E7%9A%84%E7%88%B6%E6%AF%8D%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A0%AA%E8%BF%9E%E5%88%B6%E5%BA%A6%E8%BF%98%E6%98%AF%E7%89%A2%E5%9B%BA%E5%9C%B0%E5%AD%98%E5%9C%A8%E7%9D%80%EF%BC%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    最让人心酸的是那些有违法前科的父母，为什么株连制度还是牢固地存在着？｜赵宏 一席第1125位讲者
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9F%A5%E7%90%86%E8%8A%92%E6%A0%BC%E7%9A%84100%E4%B8%AA%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    查理芒格的100个思维模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%AF%8F%E6%97%A5%E5%93%B2%E5%AD%A6_%E6%82%B2%E8%A7%82%E5%85%83%E5%BD%92%E7%BA%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    悲观元归纳
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%88%B1%E6%83%85%E5%AF%B9%E7%A9%B7%E4%BA%BA%E6%9D%A5%E8%AF%B4%E4%B9%9F%E6%98%AF%E4%B8%80%E4%BB%B6%E5%A5%A2%E4%BE%88%E5%93%81%EF%BC%8C%E8%BF%99%E5%B0%B1%E6%98%AF%E6%83%A9%E7%BD%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    “爱情对穷人来说也是一件奢侈品，这就是惩罚。”
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%89%A1%E8%9B%8E%E7%BB%99%E8%8A%9D%E5%8A%A0%E5%93%A5%E5%B8%A6%E6%9D%A5%E4%BA%86%E6%B5%B7%EF%BC%8C%E6%88%91%E7%BB%99%E5%8C%97%E4%BA%AC%E5%B8%A6%E6%9D%A5%E4%BA%86%E4%B8%80%E6%89%80%E6%B2%B3%E5%8D%97%E7%9A%84%E9%AB%98%E4%B8%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    牡蛎给芝加哥带来了海，我给北京带来了一所河南的高中｜金子 一席第1115位讲者
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%8E%84%E5%A5%98%E4%B8%8E%E7%9B%96%E8%92%82%E5%B0%94%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    玄奘与盖蒂尔问题 |第169期 |现在的理念 --- Xuanzang & the Gettier Problem | Issue 169 | Philosophy Now
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生活黑客 ｜ 黑客生活 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%A8%20Zeabur%20%E8%BD%BB%E6%9D%BE%E8%87%AA%E6%89%98%E7%AE%A1%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    优惠上架 | 用 Zeabur 轻松自托管开源服务 - 少数派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%B1%E4%BA%8E%E6%8B%85%E5%BF%83git%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E5%8F%98%E5%A4%9A%E5%8D%A0%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E6%89%80%E5%81%9A%E7%9A%84%E5%8A%AA%E5%8A%9B%E6%8E%A2%E7%B4%A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    由于担心历史记录变多占用本地存储空间所做的努力探索 - 每日闲聊
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%8F%E6%9F%AF%E5%92%8C%E8%87%AA%E7%94%B1%E4%B8%BB%E4%B9%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    福柯和自由主义：理性，革命和反抗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC%20368%20%E6%9C%9F%EF%BC%89%EF%BC%9A%E4%B8%8D%E8%A6%81%E8%BF%99%E6%A0%B7%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6%E5%9B%A2%E9%98%9F%20-%20%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 368 期）：不要这样管理软件团队 - 阮一峰的网络日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A9%B7%E4%BA%BA%E8%8A%B1%E5%85%89%E5%85%A8%E9%83%A8%E8%BA%AB%E5%AE%B6%EF%BC%8C%E4%B9%B0%E5%88%B0%E7%9A%84%E4%B9%9F%E5%8F%AA%E6%9C%89%E6%83%85%E7%BB%AA%E4%BB%B7%E5%80%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    穷人花光全部身家，买到的也只有情绪价值
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86EASWebDavCalDavCardDavWebCaliCalendar%E7%9A%84%E5%90%AB%E4%B9%89%20%E2%80%93%20WolfBolin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    简单认识EAS/WebDav/CalDav/CardDav/WebCal/iCalendar的含义 – WolfBolin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%B3%BB%E4%B8%BB%E4%BB%BB%E7%A8%8B%E4%B9%90%E6%9D%BE%E5%9C%A8%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E5%93%B2%E5%AD%A6%E7%B3%BB2025%E5%B9%B4%E5%BC%80%E5%AD%A6%E5%85%B8%E7%A4%BC%E4%B8%8A%E7%9A%84%E8%87%B4%E8%BE%9E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    系主任程乐松在北京大学哲学系2025年开学典礼上的致辞
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BE%8E%E5%9B%BD%E7%A9%B7%E4%BA%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    愤怒的美国穷人，把明星送上“断头台”
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BF%BB%E8%AF%91%E7%A7%91%E5%AD%A6%E5%AE%9E%E5%9C%A8%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    科学实在论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%82%A5%E8%83%96%E5%AF%86%E7%A0%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    正跟体重打得不可开交，就来了一本劝架的书
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%A8%80%E8%AF%AD%E7%85%A7%E6%98%8E%E7%9A%84%E4%B8%96%E7%95%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《言语照明的世界》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC%202.0.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    语义化版本
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%B5%84%E6%9C%AC%E4%B8%BA%E5%95%A5%E8%A6%81%E6%94%B9%E9%80%A0%E7%94%B7%E5%AD%90%E6%B0%94%E6%A6%82/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    资本为啥要改造男子气概啊？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%98%B3%E5%85%89%E4%B8%BA%E4%BB%80%E4%B9%88%E8%83%BD%E9%AB%98%E6%95%88%E7%9A%84%E8%92%B8%E5%8F%91%E6%B0%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    阳光为什么能高效的蒸发水
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%98%BF%E7%94%98%E6%9C%AC%E3%80%8A%E4%BE%8B%E5%A4%96%E7%8A%B6%E6%80%81%E3%80%8B%E6%91%98%E8%A6%81%E4%B8%8E%E6%95%B4%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    阿甘本《例外状态》摘要与整理——一个法律悬置的空无，确保了法秩序的持存。
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97-%E5%B0%91%E6%95%B0%E6%B4%BE%E5%88%9B%E4%BD%9C%E6%89%8B%E5%86%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    风格指南 - 少数派创作手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A9%AC%E5%85%8B%E6%80%9D%E5%AF%B9%E6%8A%BD%E8%B1%A1%E7%A4%BE%E4%BC%9A%E7%9A%84%E6%89%B9%E5%88%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    马克思对抽象社会的批判
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A9%AC%E5%85%8B%E6%80%9D%E7%A0%94%E7%A9%B6%E4%B8%8E%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E7%9A%84%E7%8E%B0%E5%AE%9E%E6%94%BF%E6%B2%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    马克思研究与中国大陆的现实政治
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%AB%98%E6%94%B6%E5%85%A5%E4%BD%8E%E7%94%9F%E8%82%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    为何所有高收入国家生育率都如此之低
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%B2%81%E8%BF%85%E8%B0%88%E5%B0%8F%E8%AF%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    鲁迅谈文学创作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dev/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Dev
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/3in1wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用mkdocs、obsidian、zotero搭建在线文献学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/blogs-advance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多个博客网站管理
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用obsidian管理多个博客
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dev/ai/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Ai
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ai
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ai/ai-in-nvim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI in neovim
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ai/llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大语言模型llm
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ai/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大模型使用概览
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--in-progress" title="in-progress">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Apps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/dwm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    折腾的linux+X11+dwm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/ffmpeg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ffmpeg
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/nvim-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    My Neovim Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/nvim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nvim的技巧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/obsidian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    obsidian
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/obsidian_douban/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    豆瓣记录导入obsidian
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/pake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pake打包web应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    各种同步方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/taskwarrior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    taskwarrior
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/timewarrior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    timewarrior
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/vimtex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Write latex with neovim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    zotero
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dev/arch/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Arch
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Arch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/arch/archinstall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    双系统安装archlinux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/arch/archpostinstall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    安装后的建议配置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/arch/archwiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArchWiki摘抄
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/arch/pacman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Archlinux 上的包管理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dev/cheatsheets/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Cheatsheets
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Cheatsheets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/awk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    awk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cli的常用命令
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    本站和markdown的语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/git-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    git备忘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/grep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    grep
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/latex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Latex Tricks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/cheatsheets/sed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sed cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/code/bash-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/code/latex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    latex概览
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/code/lua/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lua
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/code/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    编程语言概览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dev/linux/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/btrfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用btrfs做linux的快照备份
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/fhs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filesystem Hierarchy Standard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/handbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Handbook
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/hyprland/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    My hyprland config
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/keysym/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    从键盘到字符
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/linux-daily/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    linux-daily
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/no-gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    没有GUI时
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/sddm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Display Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/seatd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    seatd实现多人共用电脑
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    shell
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux/virtual-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    qemu虚拟机
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dev/web/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Web
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/web/caldav/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    caldav协议
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--in-progress" title="in-progress">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/web/cloudflare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    薅羊毛cloudflare
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--in-progress" title="in-progress">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/web/encryption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/web/netease/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    网页端下载网易云音乐的音乐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/web/site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    个人网站的组织和管理
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/web/ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About ssh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Windows
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/windows/rewindows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows重装指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../living/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Living
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Living
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../living/bpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    边缘性人格障碍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../living/cocktail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cocktail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../living/coffee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    咖啡
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../living/cook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    厨艺养成ing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../living/food/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    food
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../living/iba/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    酒谱
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--in-progress" title="in-progress">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../math/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../math/BCHM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    BCHM
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            BCHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/BCHM/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to MMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../math/Foliation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Foliation
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Foliation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../math/Talks/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Talks
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Talks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../math/Topics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Topics
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../raw/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Raw
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Raw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raw/app_collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    收集一些工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raw/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raw/nvim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一些nvim的配置和使用技巧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raw/regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../raw/scripts_example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    scripts example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../read/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Read
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Read
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../read/carceral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    监狱的诞生
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../read/one-dimensional-man/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《单向度的人：发达工业社会意识形态研究》读后感
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../read/excerpt/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Excerpt
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Excerpt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../read/excerpt/butler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    巴特勒收集
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../read/excerpt/feminism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《女性主义》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../read/excerpt/prison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    导读福柯《规劝与惩罚》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../read/excerpt/save-the-cat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    救猫咪
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../savoir/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Savoir
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Savoir
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../savoir/democracyold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    民主与共和
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../savoir/goal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常识目标
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../savoir/knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Knowledge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../savoir/poems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    诗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../savoir/philosophy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Philosophy
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Philosophy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../savoir/philosophy/quotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一些哲学语录
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft" title="draft">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../savoir/textbook/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Textbook
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            Textbook
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../savoir/textbook/geography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    中学地理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../savoir/textbook/politics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    中学政治
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件包名称
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="软件包名称">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkgbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgbase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkgname" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgname
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      版本
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="版本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkgver" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkgrel" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgrel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epoch" class="md-nav__link">
+    <span class="md-ellipsis">
+      epoch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      一般变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一般变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkgdesc" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkgdesc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      arch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      license
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      依赖关系
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="依赖关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depends" class="md-nav__link">
+    <span class="md-ellipsis">
+      depends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makedepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      makedepends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkdepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      checkdepends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optdepends" class="md-nav__link">
+    <span class="md-ellipsis">
+      optdepends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      包关系
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="包关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      provides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      conflicts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      replaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      其它
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其它">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      backup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      install
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      changelog
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      源码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noextract" class="md-nav__link">
+    <span class="md-ellipsis">
+      noextract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validpgpkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      validpgpkeys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      完整性检验
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="完整性检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b2sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      b2sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha512sumssha384sumssha256sumssha224sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      sha512sums，sha384sums，sha256sums，sha224sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha1sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      sha1sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5sums" class="md-nav__link">
+    <span class="md-ellipsis">
+      md5sums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      cksums
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/hiraethecho/wiki/edit/master/docs/clip/PKGBUILD-ArchLinux中文.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/hiraethecho/wiki/raw/master/docs/clip/PKGBUILD-ArchLinux中文.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>PKGBUILD -  Arch Linux 中文维基</h1>
+
+<p>本页面讨论 <code>PKGBUILD</code> 中可由维护者定义的变量。若要获取关于 <code>PKGBUILD</code> 中的函数和创建软件包的基本信息，请参考 <a href="https://wiki.archlinuxcn.org/wiki/%E5%88%9B%E5%BB%BA%E8%BD%AF%E4%BB%B6%E5%8C%85" title="创建软件包">创建软件包</a> 和 <a href="https://man.archlinux.org/man/PKGBUILD.5">PKGBUILD(5)</a> 。</p>
+<p><code>PKGBUILD</code> 是一个 <a href="https://wiki.archlinuxcn.org/wiki/Bash" title="Bash">Bash</a> 脚本，包含在构建 <a href="https://wiki.archlinuxcn.org/wiki/Arch_Linux" title="Arch Linux">Arch Linux</a> 软件包时需要的信息。</p>
+<p>Arch Linux 使用 <a href="https://wiki.archlinuxcn.org/wiki/Makepkg" title="Makepkg">makepkg</a> 构建软件包。当 <em>makepkg</em> 运行时，它会在当前目录寻找 <code>PKGBUILD</code> 文件，并依照其中的指令编译或获取所需的文件，并生成 <code>*pkgname*.pkg.tar.zst</code> 软件包。生成的包内有二进制文件和安装指令，可以使用 <a href="https://wiki.archlinuxcn.org/wiki/Pacman" title="Pacman">pacman</a> 进行安装。</p>
+<p>必须定义的变量有 <code>pkgname</code> ， <code>pkgver</code> ， <code>pkgrel</code> 和 <code>arch</code> 。在构建软件包时不强制要求定义 <code>license</code> ，但若要分享 <code>PKGBUILD</code> 文件给其他人，推荐加上该变量，否则 <em>makepkg</em> 会提示相关报错。</p>
+<p>一般来说，建议但不强制要求按照下面的顺序在 <code>PKGBUILD</code> 文件中定义这些变量。</p>
+<p><strong>提示：</strong><br />
+- 使用 <a href="https://wiki.archlinuxcn.org/wiki/Namcap" title="Namcap">namcap</a> 来检查 <code>PKGBUILD</code> 文件中的常见打包问题。<br />
+- 可以使用 <a href="https://man.archlinux.org/man/shellcheck.1">shellcheck(1)</a> 来检查 <code>PKGBUILD</code> 中的常见语法错误，并排除 <a href="https://www.shellcheck.net/wiki/SC2034">SC2034</a> 和 <a href="https://www.shellcheck.net/wiki/SC2154">SC2154</a> ：</p>
+<p><code>shellcheck --shell=bash --exclude=SC2034,SC2154 PKGBUILD</code></p>
+<ul>
+<li><a href="https://aur.archlinux.org/packages/termux-language-server/">termux-language-server</a> <sup><small>AUR</small></sup> 为 <code>PKGBUILD</code> 和 <code>makepkg.conf</code> 等提供了一个 <a href="https://wiki.archlinuxcn.org/wiki/%E8%AF%AD%E8%A8%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8D%8F%E8%AE%AE" title="语言服务器协议">语言服务器</a> 。</li>
+</ul>
+<h2 id="_1">软件包名称<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="pkgbase">pkgbase<a class="headerlink" href="#pkgbase" title="Permanent link">&para;</a></h3>
+<p>在构建常规的软件包时，不应该在 <code>PKGBUILD</code> 文件中显式定义该变量，这个值默认会与 <a href="https://wiki.archlinuxcn.org/wiki/#pkgname">#pkgname</a> 的值相同。</p>
+<p>构建 <a href="https://man.archlinux.org/man/PKGBUILD.5#PACKAGE_SPLITTING">拆分包</a> 时，这个变量可用于在 <em>makepkg</em> 的输出和纯源代码包中指定软件包组。此变量不允许以下划线开头。若该变量没有明确定义，则会默认对应到 <code>pkgname</code> 数组的第一个元素。</p>
+<p>拆分软件包中的所有选项和指令都默认使用 <code>PKGBUILD</code> 中全局定义的值。以下选项可以在拆分包的打包函数中覆写： <a href="https://wiki.archlinuxcn.org/wiki/#pkgdesc">#pkgdesc</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#arch">#arch</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#url">#url</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#license">#license</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#groups">#groups</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#depends">#depends</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#optdepends">#optdepends</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#provides">#provides</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#conflicts">#conflicts</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#replaces">#replaces</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#backup">#backup</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#options">#options</a> 、 <a href="https://wiki.archlinuxcn.org/wiki/#install">#install</a> 和 <a href="https://wiki.archlinuxcn.org/wiki/#changelog">#changelog</a> 。</p>
+<h3 id="pkgname">pkgname<a class="headerlink" href="#pkgname" title="Permanent link">&para;</a></h3>
+<p>对于常规的软件包，这个变量设定软件包的名称，例如 <code>pkgname='foo'</code> 。对于拆分包则是一个名称的序列，例如 <code>pkgname=('foo' 'bar')</code> 。名称只能由由小写字母、数字和 <code>@ . _ + -</code> (at 符号、英文句点、下划线、加号、连字符)构成，且不能以连字符或英文句点开头。为了保证一致性， <code>pkgname</code> 应该与软件的源代码文件相匹配。比如：源文件包名为 <code>foobar-2.5.tar.gz</code> ，那么应该使用 <code>pkgname=foobar</code> 。</p>
+<h2 id="_2">版本<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="pkgver">pkgver<a class="headerlink" href="#pkgver" title="Permanent link">&para;</a></h3>
+<p>软件包的版本号，应该与软件上游发布的版本号一致。变量的值可以由字母、数字和英文句点 <code>.</code>，下划线 <code>_</code> 组成，但 <strong>不能</strong> 包含连字符（ <code>-</code> ）。如果上游版本号中使用了连字符，则应该用下划线 <code>_</code> 来替代。在之后的 <code>PKGBUILD</code> 指令中 <code>pkgver</code> 中的下划线可以用下面这个方法替换回连字符： <code>source=("${pkgname}-${pkgver//_/-}.tar.gz")</code> 。</p>
+<p><strong>注意：</strong> 如果上游使用时间戳格式的版本号，例如 <code>30102014</code> ，请修改为年份在前的格式 <code>20141030</code> （ <a href="https://zh.wikipedia.org/wiki/ISO_8601" title="zhwp:ISO 8601">ISO 8601</a> 格式）。否则新版本可能无法被系统识别出来是新的。</p>
+<h3 id="pkgrel">pkgrel<a class="headerlink" href="#pkgrel" title="Permanent link">&para;</a></h3>
+<p>软件的发布号。这通常是一个正整数，用来区分同一版本软件的多次构建。当软件包的补丁和附加功能被添加进入 <code>PKGBUILD</code> ，从而导致生成的软件包发生变化时， <code>pkgrel</code> 应该增加 1。而当这个软件包发布一个新版本时，发布号重置为 1。在个别情况下，也会有其他的发布号形式。比如 <em>主版本号.次要版本号</em> 。</p>
+<h3 id="epoch">epoch<a class="headerlink" href="#epoch" title="Permanent link">&para;</a></h3>
+<p><strong>警告：</strong> 除了特别、绝对、显式要求需要这样做，否则不允许使用 <code>epoch</code> 变量。</p>
+<p>用于强制升级软件包。在判定逻辑中，不论版本号如何，只要 <code>epoch</code> 值较大，就会被视为更新的软件包。这个值应为非负整数，且默认值为 0。通常当一个软件的版本编号方式改变（或者使用某些字母-数字混编的版本符号），导致正常的版本比较逻辑无法进行时，会使用这个变量来控制升级。比如：</p>
+<p><div class="highlight"><pre><span></span><code>pkgver=5.13
+pkgrel=2
+epoch=1
+</code></pre></div><br />
+<div class="highlight"><pre><span></span><code>1:5.13-2
+</code></pre></div></p>
+<p>更多关于版本比较的信息，参见 <a href="https://man.archlinux.org/man/pacman.8">pacman(8)</a> 。</p>
+<h2 id="_3">一般变量<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="pkgdesc">pkgdesc<a class="headerlink" href="#pkgdesc" title="Permanent link">&para;</a></h3>
+<p>软件包描述。建议最多 80 个字符，并不要自引软件包的名字，除非软件包名和程序名不相同。比如： <code>pkgdesc='Nedit is a text editor for X11'</code> 应该被写成 <code>pkgdesc='Text editor for X11'</code> 。</p>
+<p>合理地在描述中使用关键字，这样可以使软件包在相关的搜索中出现的可能性增加。</p>
+<h3 id="arch">arch<a class="headerlink" href="#arch" title="Permanent link">&para;</a></h3>
+<p>一个描述能够生成并运行该软件包的架构的数组。Arch 官方仅支持 <code>x86_64</code>, 但是其它项目提供了其它架构支持。比如说， <a href="https://archlinux32.org/">Arch Linux 32</a> 提供了 <code>i686</code> 和 <code>pentium4</code> 支持； <a href="https://archlinuxarm.org/">Arch Linux ARM</a> 项目提供 <code>armv7h</code> (带有硬件浮点运算模块的 armv7）和 <code>aarch64</code> (64 位 armv8) 的支持。</p>
+<p>这个数组有两种形式：</p>
+<ul>
+<li><code>arch=('any')</code> 表明软件包可以在任意架构上生成，并且一旦编译完成，编译时的架构就不再有影响了（例如 shell 脚本、字体、主题、各种扩展、 <a href="https://wiki.archlinuxcn.org/wiki/Java" title="Java">Java</a> 程序等）。</li>
+<li><code>arch=(...)</code> 包含一个或更多架构（ <code>any</code> 除外），表明这个软件包可以在上述的任意架构上生成，但生成产物只能在编译它的架构上运行。对于这些软件包，您必须在 <code>PKGBUILD</code> 文件中指定所有官方支持的架构。对于官方软件源和 <a href="https://wiki.archlinuxcn.org/wiki/AUR" title="AUR">AUR</a> 软件包，这指的是 <code>arch=('x86_64')</code> 。不过，AUR 软件包可以选择添加一些已知的兼容架构的支持。</li>
+</ul>
+<p>在生成过程中可以通过 <code>$CARCH</code> 变量来获知目标架构。</p>
+<h3 id="url">url<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
+<p>待打包软件官方站点的网址。</p>
+<h3 id="license">license<a class="headerlink" href="#license" title="Permanent link">&para;</a></h3>
+<p>软件分发所使用的许可证。Arch Linux 使用 <a href="https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%8C%85%E8%B5%84%E6%96%99%E4%BA%A4%E6%8D%A2%E8%A7%84%E8%8C%83#.E8.AE.B8.E5.8F.AF.E8.AF.81.E8.AF.AD.E6.B3.95" title="zhwp:软件包资料交换规范">SPDX 许可证标识符</a> ，所有许可证都需在 <code>/usr/share/licenses/</code> 下有对应项。</p>
+<p><a href="https://archlinux.org/packages/?name=licenses">licenses</a> <sup><small>包</small></sup> 包含了常见许可证（例如 <code>GPL-3.0-or-later</code> ）的对应文件，默认已作为 <a href="https://archlinux.org/packages/?name=base">base</a> <sup><small>包</small></sup> <a href="https://wiki.archlinuxcn.org/wiki/%E5%85%83%E8%BD%AF%E4%BB%B6%E5%8C%85" title="元软件包">元软件包</a> 的依赖之一安装在 <code>/usr/share/licenses/spdx/</code> 目录下，使用时只需引用 <a href="https://spdx.org/licenses/">SPDX 标识符清单</a> 中的标识符。</p>
+<p>类似 BSD 或 MIT 的许可证族严格来说不是特定的单个许可证，每个实例都需要独立的许可证文件。对于这些许可证，需要在 <code>license</code> 中使用通用 SPDX 标识符（例如 <code>BSD-3-Clause</code> 或 <code>MIT</code> ），并像自定义许可证一样提供对应的许可证文件。</p>
+<p>对于自定义许可证，如果其不属于常见许可证族，就需要使用 <code>LicenseRef-*license-name*</code> 或 <code>custom:*license-name*</code> 作为标识符。对应的许可证文件必须放置在 <code>/usr/share/licenses/*pkgname*</code> 目录下。可以在 <code>package()</code> 中使用如下代码安装许可证文件：</p>
+<div class="highlight"><pre><span></span><code>install -Dm644 LICENSE &quot;${pkgdir}/usr/share/licenses/${pkgname}/LICENSE&quot;
+</code></pre></div>
+<p><strong>注意：</strong> <code>pkgdir</code> 变量由 <em>makepkg</em> 定义，具体信息请参考 <a href="https://man.archlinux.org/man/PKGBUILD.5#PACKAGING_FUNCTIONS">PKGBUILD(5) § PACKAGING FUNCTIONS</a> 。</p>
+<p>如果要结合多个许可证或添加例外，需要遵循 <a href="https://spdx.github.io/spdx-spec/v3.0/annexes/SPDX-license-expressions/">SPDX 语法</a> 。例如，如果软件包发布于 GNU/GPL 2.0 <em>或</em> GNU/LGPL 2.1，需要使用 <code>'GPL-2.0-or-later OR LGPL-2.1-or-later'</code> ；如果软件包发布于 Apache 2.0 并带有 LLVM 例外，需要使用 <code>'Apache-2.0 WITH LLVM-exception'</code> ；如果软件包部分发布于 BSD 3 clause，其它部分发布于 GNU/LGPL 2，还有一部分发布于 GNU/GPL 2.0，就需要使用 <code>'BSD-3-Clause AND LGPL-2.1-or-later AND GPL-2.0-or-later'</code> <a href="https://gitlab.archlinux.org/archlinux/packaging/packages/musepack/-/blob/main/PKGBUILD?ref_type=heads#L13">[2]</a> 。注意，这需要是单个字符串，因此需要将整个表达式用引号括起来。截至 2023 年 11 月为止， <a href="https://spdx.org/licenses/preview/exceptions-index.html">SPDX 例外列表</a> 还非常有限，因此你通常还是需要遵循添加自定义许可证的方式。</p>
+<p>如果在 SPDX 标识符方面遇到问题，可以在过渡期间使用旧标识符（ <code>/usr/share/licenses/common</code> 中的目录名称）。</p>
+<p>另请参考 <a href="https://wiki.archlinuxcn.org/wzh/index.php?title=Nonfree_applications_package_guidelines&amp;action=edit&amp;redlink=1" title="Nonfree applications package guidelines（页面不存在）">Nonfree applications package guidelines</a> 。</p>
+<p>有关自由和开放源码软件许可证的更多信息和观点，请参阅以下网页：</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Free_software_licence" title="wikipedia:Free software licence">Wikipedia:Free software licence</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E6%AF%94%E8%BE%83" title="zhwp:自由及开放源代码软件许可协议比较">zhwp:自由及开放源代码软件许可协议比较</a></li>
+<li><a href="https://www.softwarefreedom.org/resources/2008/foss-primer.html">开源和自由软件项目法律问题入门指南</a></li>
+<li><a href="https://www.gnu.org/licenses/license-list.html">GNU 项目 - 各类许可证及其评论</a></li>
+<li><a href="https://www.debian.org/legal/licenses/">Debian - 许可证信息</a></li>
+<li><a href="https://www.opensource.org/licenses/alphabetical">开放源代码促进会 - 许可证清单</a></li>
+</ul>
+<h3 id="groups">groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h3>
+<p>软件包所在的 <a href="https://wiki.archlinuxcn.org/wiki/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%BB%84" title="软件包组">软件包组</a> 。例如：当你安装 <a href="https://archlinux.org/groups/x86_64/plasma/">plasma</a> <sup><small>包组</small></sup> ，它会安装组里的所有包。</p>
+<h2 id="_4">依赖关系<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>注意：</strong> 架构相关的额外依赖可以通过在名称后添加下划线和架构的方式指定，例如 <code>optdepends_x86_64=()</code> 。</p>
+<h3 id="depends">depends<a class="headerlink" href="#depends" title="Permanent link">&para;</a></h3>
+<p>为了生成 <strong>和</strong> 运行软件，而必须安装的包列表。如果是只在运行时才依赖的包，请在 <code>package()</code> 函数中定义。</p>
+<p>可以使用比较运算符来描述版本限制。例如 <code>depends=('foobar&gt;=1.8.0')</code> 。如有多重限制，你可以添加多条，例如 <code>depends=('foobar&gt;=1.8.0' 'foobar&lt;2.0.0')</code> 。</p>
+<p><code>depends</code> 应该列出所有的直接依赖，即使已由某个依赖项间接引入时也应该如此。如果不这样做，那可能会发生以下情况：如果一个软件包 <em>foo</em> 依赖 <em>bar</em> 和 <em>baz</em> 两个软件包，而 <em>bar</em> 软件包也依赖于 <em>baz</em> 软件包，当 <strong>bar</strong> 软件包不再依赖于 <strong>baz</strong> 就极有可能会导致意外行为 —— pacman 不会在安装 <strong>foo</strong> 软件包时安装 <strong>baz</strong> 软件包，也会在清除孤儿软件包时把 <strong>baz</strong> 清理掉。由于 <strong>baz</strong> 软件包被依赖却没有被安装， <strong>foo</strong> 可能崩溃或者发生运行错误。</p>
+<p>但在一些情况下，上面所述的某些依赖是没有必要或者不应该被列出的。比如说 <a href="https://archlinux.org/packages/?name=glibc">glibc</a> <sup><small>包</small></sup> ，每个操作系统都需要 C 运行库，因此它是不能够被卸载的。又比如，当软件包已经依赖于一个以 <em>python-</em> 开头的模块，就不需要再单独依赖 <a href="https://archlinux.org/packages/?name=python">python</a> <sup><small>包</small></sup> —— 因为 <em>python-</em> 开头的模块必定依赖于 <a href="https://archlinux.org/packages/?name=python">python</a> <sup><small>包</small></sup> 软件包，而且不允许从依赖列表中删除。</p>
+<p>通常的依赖应该包括生成所有可选功能所需的依赖。否则，对于任何依赖于额外软件包的可选功能，应显式通过配置选项将其禁用。如果不这样做，会给软件包添加了所谓“ <a href="https://wiki.gentoo.org/wiki/Project:Quality_Assurance/Automagic_dependencies" title="gentoo:Project:Quality Assurance/Automagic dependencies">自动魔法依赖</a> ”：一些生成时可选功能因为生成软件包的机器上安装的一些传递依赖或者不相关的软件被意外启用了，但是没有表现在包的依赖中。</p>
+<p>如果依赖的名称写成了库的名称（例如 <code>depends=('libfoobar.so')</code> ）， <em>makepkg</em> 会在编译完成的包中尝试寻找依赖这个库的二进制文件，并添加二进制文件所需的 <a href="https://en.wikipedia.org/wiki/soname" title="wikipedia:soname">soname</a> 版本号到依赖列表中。可以自己加上版本号来停用自动检测，比如说 <code>depends=('libfoobar.so=2')</code> 。</p>
+<h3 id="makedepends">makedepends<a class="headerlink" href="#makedepends" title="Permanent link">&para;</a></h3>
+<p>仅在软件 <strong>生成</strong> 时需要的软件包列表。可以像 <code>depends</code> 序列一样指定依赖的版本限制。 <code>depends</code> 序列里面的软件包默认也是生成时需要的，此处不应该重复。</p>
+<p><strong>提示：</strong> 用以下命令查看某个依赖项是否已经被 <a href="https://archlinux.org/packages/?name=base-devel">base-devel</a> <sup><small>包</small></sup> 直接依赖： <code>pactree -rsud1 *package* | grep base-devel</code> （需要安装 <a href="https://archlinux.org/packages/?name=pacman-contrib">pacman-contrib</a> <sup><small>包</small></sup> ）。</p>
+<h3 id="checkdepends">checkdepends<a class="headerlink" href="#checkdepends" title="Permanent link">&para;</a></h3>
+<p>运行软件的测试组件时需要，而运行时不需要的包列表。该列表中的包遵循 <code>depends</code> 相同的格式。这些依赖只在 <a href="https://wiki.archlinuxcn.org/wiki/%E5%88%9B%E5%BB%BA%E8%BD%AF%E4%BB%B6%E5%8C%85#check()" title="创建软件包">check()</a> 函数存在，且被 <em>makepkg</em> 执行时会被处理。</p>
+<p><strong>注意：</strong> 在使用 <em>makepkg</em> 构建软件包时，默认 <a href="https://archlinux.org/packages/?name=base-devel">base-devel</a> <sup><small>包</small></sup> 已安装。该包的依赖项 <strong>不应该</strong> 出现在 <code>checkdepends</code> 列表中。</p>
+<h3 id="optdepends">optdepends<a class="headerlink" href="#optdepends" title="Permanent link">&para;</a></h3>
+<p>可选软件包序列。这些可选软件包不影响软件主要功能，但能提供额外特性。这通常意味着除非安装了对应的可选软件包，该软件包所提供的个别可执行文件可能无法正常使用 <a href="https://lists.archlinux.org/archives/list/arch-general@lists.archlinux.org/message/ZFBCD2NFFBSOZBI22AYZYHH2PDRCLJWF/">[3]</a> 。如果软件有一些替代依赖，您可以将其在此处全部列出，而不是 <code>depends</code> 列表中列出。</p>
+<p>应该简要说明每个包所能提供的额外功能，例如：</p>
+<div class="highlight"><pre><span></span><code>optdepends=(&#39;cups: printing support&#39;
+            &#39;sane: scanners support&#39;
+            &#39;libgphoto2: digital cameras support&#39;
+            &#39;alsa-lib: sound support&#39;
+            &#39;giflib: GIF images support&#39;
+            &#39;libjpeg: JPEG images support&#39;
+            &#39;libpng: PNG images support&#39;)
+</code></pre></div>
+<h2 id="_5">包关系<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><strong>注意：</strong> 架构相关的附加列表可以通过在变量名称后添加下划线和架构名字的方式指定，例如 <code>conflicts_x86_64=()</code> 。</p>
+<h3 id="provides">provides<a class="headerlink" href="#provides" title="Permanent link">&para;</a></h3>
+<p>该列表说明的是本软件包能够提供列表中的包（或者像 <em>cron</em> 、 <em>sh</em> 这样的 <a href="https://wiki.archlinuxcn.org/wiki/Pacman#%E8%99%9A%E5%8C%85" title="Pacman">虚包</a> 和 <a href="https://wiki.archlinuxcn.org/wiki/Arch_%E6%89%93%E5%8C%85%E5%87%86%E5%88%99#%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%85%B3%E8%81%94" title="Arch 打包准则">所有外部共享库</a> ）所提供的功能。只要 <code>provides</code> 列表中的包都没有声明 <code>conflicts</code> ，提供相同功能的软件包就可以同时安装。</p>
+<p><strong>注意：</strong><br />
+- 该变量中的软件包应当加上版本号（ <code>pkgver</code> ，可能的话还有 <code>pkgrel</code> ），特别是当依赖该软件包的其他软件对版本号特别敏感的时候。就是说，如果一个修改过的 <em>qt</em> 包其版本号为 3.3.8，命名为 <em>qt-foobar</em> ，那么 <code>provides</code> 应该写成 <code>provides=('qt=3.3.8')</code> 。如果忽略了版本号，会导致所有依赖于 <em>qt</em> 的某个特定版本的包编译失败。<br />
+- 不要把 <code>pkgname</code> 加入 <code>provides</code> 序列。这个操作会自动进行。</p>
+<h3 id="conflicts">conflicts<a class="headerlink" href="#conflicts" title="Permanent link">&para;</a></h3>
+<p>这个列表描述的是与当前软件包冲突的包，或者与该包同时存在会产生问题的包。安装此软件时，这个列表中的所有软件包和提供这个功能的软件包都会被删除。可以像 <code>depends</code> 那样指定冲突包的版本号。</p>
+<p>需要注意的是，冲突检查的对象是 <code>pkgname</code> 以及 <code>provides</code> 中的名字。因此，如果你的包 <code>provides</code> <code>*foo*</code> 功能，在 <code>conflicts</code> 中指定 <code>*foo*</code> 就会导致你的包和所有其他在 <code>provides</code> 中包含了 <code>*foo*</code> 的包冲突（也就是说，你不需要一个一个地指定所有冲突的包的名字）。例子是：</p>
+<ul>
+<li><a href="https://archlinux.org/packages/?name=netbeans">netbeans</a> <sup><small>包</small></sup> 提供 <code>netbeans</code> （因为 <code>pkgname</code> 就是如此）。</li>
+<li><a href="https://aur.archlinux.org/packages/netbeans-cpp/">netbeans-cpp</a> <sup><small>AUR</small></sup> 提供 <code>netbeans</code> 功能，并和 <code>netbeans</code> 冲突。</li>
+<li><a href="https://aur.archlinux.org/packages/netbeans-php/">netbeans-php</a> <sup><small>AUR</small></sup> 提供 <code>netbeans</code> 功能，而且和 <code>netbeans</code> 冲突，但是不需要再说明它与 <a href="https://aur.archlinux.org/packages/netbeans-cpp/">netbeans-cpp</a> <sup><small>AUR</small></sup> 冲突，因为提供相同功能的包隐含了冲突关系。</li>
+</ul>
+<p>当不同的包通过在 <code>provides</code> 列表中声明的方式提供相同的功能，那么是否特意在 <code>conflicts</code> 列表中添加可替换的包会产生不同的结果。特意说明的话，两个包就会被认为是可相互替代的；如果 <code>conflicts</code> 列表不存在，那么两个包会被认为是“可能可以同时存在”。在决定是否需要声明 <code>conflicts</code> 列表的时候，请忽略 <code>provides</code> 列表的内容，独立决策。</p>
+<h3 id="replaces">replaces<a class="headerlink" href="#replaces" title="Permanent link">&para;</a></h3>
+<p>会因安装当前包而取代的过时的包的列表。比如： <a href="https://archlinux.org/packages/?name=wireshark-qt">wireshark-qt</a> <sup><small>包</small></sup> 中的 <code>replaces=('wireshark')</code> 。在 <strong>同步</strong> 软件数据库后， <em>pacman</em> 会立刻用软件库中的另一个包替换掉 <code>replaces</code> 中已安装的包。如果你只是提供已存在包的一个替代品，或者上传到 AUR, 请不要使用 <code>replace</code> ，而是使用 <code>conflicts</code> 和 <code>provides</code> 两个变量 —— 它们仅在安装冲突软件包时被检查。</p>
+<h2 id="_6">其它<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="backup">backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h3>
+<p>当包被升级或卸载时，应当保留的文件（的路径）序列。这些文件一般是用户会更改的文件，如主要放置在 <code>/etc</code> 中的配置文件。如果在安装软件包后这些文件没有被修改过，那么它们会随升级和移除软件包时一同被替换或删除。</p>
+<p>列表中的文件应该使用 <strong>相对</strong> 路径，即不是以斜杠（ <code>/</code> ）开头的路径（如 <code>etc/pacman.conf</code> 而不是 <code>/etc/pacman.conf</code> ）。 <code>backup</code> 数组 <a href="https://bbs.archlinux.org/viewtoasset.php?pid=2187778">不支持空目录和类似“*”的通配符</a> 。</p>
+<p>在升级时，新版本会被命名为 <code>*file*.pacnew</code> 以避免覆盖原来的被用户修改过的文件。当卸载包时，用户修改过的文件会以 <code>*file*.pacsave</code> 为名而保留下来 —— 除非用 <code>pacman -Rn</code> 命令卸载。</p>
+<p>参见 <a href="https://wiki.archlinuxcn.org/wiki/Pacman/pacnew_%E4%B8%8E_pacsave" title="Pacman/pacnew 与 pacsave">pacnew 和 pacsave 文件</a> 获取更多信息。</p>
+<h3 id="options">options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<p>参见 <a href="https://man.archlinux.org/man/PKGBUILD.5#OPTIONS_AND_DIRECTIVES">PKGBUILD(5) § OPTIONS AND DIRECTIVES</a> 以获取所有可用选项。</p>
+<h3 id="install">install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h3>
+<p>需要包含在包中的 <em>.install</em> 脚本的名称。</p>
+<p><em>pacman</em> 可以在安装、卸载或升级一个软件包时存储及执行一些特定的脚本。脚本包含了下面几个函数，并且在特定时刻执行它们：</p>
+<ul>
+<li><code>pre_install</code> - 提取包中文件前运行的脚本。会传递一个参数：新版本号。</li>
+<li><code>post_install</code> - 提取包中文件后运行的脚本。安装软件包后输出的提示信息需放置于该函数内。会传递一个参数：新版本号。</li>
+<li><code>pre_upgrade</code> - 提取包中文件前运行的脚本。两个参数会按以下顺序传递：新版本号，旧版本号。</li>
+<li><code>post_upgrade</code> - 提取包中文件后运行的脚本。两个参数会按以下顺序传递：新版本号，旧版本号。</li>
+<li><code>pre_remove</code> - 文件被删除前运行的脚本，会传递一个参数：旧版本号。</li>
+<li><code>post_remove</code> - 文件被删除后运行的脚本，会传递一个参数：旧版本号。</li>
+</ul>
+<p>每一个函数都是 <a href="https://wiki.archlinuxcn.org/wiki/Chroot" title="Chroot">chroot</a> 到 <em>pacman</em> 安装目录下运行的。参见 <a href="https://bbs.archlinux.org/viewtoasset.php?pid=913891">这个帖子</a>.</p>
+<p><strong>注意：</strong> 脚本不要以 <code>exit</code> 结束，否则包含该脚本的函数无法执行。</p>
+<h3 id="changelog">changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h3>
+<p>软件包的更新日志的文件名。要查看安装软件的更新日志（如果有）：</p>
+<div class="highlight"><pre><span></span><code>$ pacman -Qc pkgname
+</code></pre></div>
+<h2 id="_7">源码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="source">source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
+<p>构建软件包时需要的文件列表。它必须包含软件源的位置，大多数情况下是一个完整的 HTTP 或 FTP 地址。您可以在此处调用前面提到的变量 <code>pkgname</code> 和 <code>pkgver</code> ，来实现高效的命名（如 <code>source=("https://example.com/${pkgname}-${pkgver}.tar.gz")</code> ）。</p>
+<p>文件也可以放到与 <code>PKGBUILD</code> 文件相同目录，并将文件名添加到这个列表。在实际的编译过程开始之前，所有该列表中引用的文件都会被下载或检查是否存在，如果有文件丢失 <em>makepkg</em> 就不会继续。</p>
+<p><em>.install</em> 文件会被 <em>makepkg</em> 自动识别，而不应该被包含在这个列表中。 <em>makepkg</em> 会自动把 <code>source</code> 中 <em>.sig</em> ，<em>.sign</em> 或 <em>.asc</em> 结尾的文件当成 PGP 签名，并自动验证对应的源文件的完整性。</p>
+<p><strong>警告：</strong> 因为所有包的 <a href="https://wiki.archlinuxcn.org/wiki/Makepkg#%E5%8C%85%E8%BE%93%E5%87%BA" title="Makepkg">SRCDEST</a> 的值可能相同，所以下载的文件的文件名需要唯一。比如说，如果一个项目只用版本号来命名，可能会与其他有相同版本号的不同项目冲突。在这种情况下，你可以为下载的文件指定不同的文件名： <code>source=('*unique_package_name***::***file_uri*')</code> 。例如 <code>source=("${pkgname}-${pkgver}.tar.gz::https://github.com/coder/program/archive/v${pkgver}.tar.gz")</code> 。</p>
+<h3 id="noextract">noextract<a class="headerlink" href="#noextract" title="Permanent link">&para;</a></h3>
+<p>一个在 <code>source</code> 中列出，但不应该由 <a href="https://wiki.archlinuxcn.org/wiki/Makepkg" title="Makepkg">makepkg</a> 解包的文件列表。这通常包括那些不能被 <code>/usr/bin/bsdtar</code> 处理的压缩文件，或者本来就不需要解压、按照原样提供的文件。对于前者，需要将额外的解包工具（如 <code>unzip</code> ， <code>p7zip</code> ， <a href="https://archlinux.org/packages/?name=lrzip">lrzip</a> <sup><small>包</small></sup> 等）加入 <code>makedepends</code> 序列，且 <a href="https://wiki.archlinuxcn.org/wiki/%E5%88%9B%E5%BB%BA%E8%BD%AF%E4%BB%B6%E5%8C%85#prepare()" title="创建软件包">prepare()</a> 函数的第一行需进行手动解压。例如：</p>
+<div class="highlight"><pre><span></span><code>prepare() {
+  lrzip -d source.tar.lrz
+}
+</code></pre></div>
+<p>注意当 <code>source</code> 是一些 URL 时， <code>noextract</code> <strong>仅仅</strong> 取文件名部分：</p>
+<div class="highlight"><pre><span></span><code>source=(&quot;http://foo.org/bar/foobar.tar.xz&quot;)
+noextract=(&#39;foobar.tar.xz&#39;)
+</code></pre></div>
+<p>不提取任何东西时，可以像这样：</p>
+<ul>
+<li>如果 <code>source</code> 只包含了纯 URL，而没有自定义的文件名时，将内容从最后一个斜杠之前像这样从 <code>source</code> 序列中提出来：</li>
+</ul>
+<div class="highlight"><pre><span></span><code>noextract=(&quot;${source[@]##*/}&quot;)
+</code></pre></div>
+<ul>
+<li>如果 <code>source</code> 只包含了带自定义文件名的项，将内容从分隔符 <code>::</code> 之前像这样从 <code>source</code> 序列中提出来（这是从旧版 <a href="https://gitlab.archlinux.org/archlinux/packaging/packages/firefox-i18n/-/blob/46492498ef720353cbb84de5096102de694faf90/PKGBUILD#L132">firefox-i18n 的 PKGBUILD 中找到的</a> ）：</li>
+</ul>
+<div class="highlight"><pre><span></span><code>noextract=(&quot;${source[@]%%::*}&quot;)
+</code></pre></div>
+<h3 id="validpgpkeys">validpgpkeys<a class="headerlink" href="#validpgpkeys" title="Permanent link">&para;</a></h3>
+<p>PGP 指纹列表。如果使用， <em>makepkg</em> 仅接受这里定义的签名，并且忽略密钥环中的值。如果源代码用子密钥签名， <em>makepkg</em> 仍然会使用主密钥进行比较。</p>
+<p>此处仅接受完整的指纹。它们必须是大写字母而且不能有空白字符。</p>
+<p><strong>注意：</strong> 可以使用 <code>gpg --list-keys --fingerprint *KEYID*</code> 查找密钥的指纹。</p>
+<p>请参阅 <a href="https://wiki.archlinuxcn.org/wiki/Makepkg#%E9%AA%8C%E8%AF%81%E7%AD%BE%E5%90%8D" title="Makepkg">makepkg#验证签名</a> 了解签名验证过程的详细信息。</p>
+<h2 id="_8">完整性检验<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>下面描述的这些序列中的变量是 <a href="https://wiki.archlinuxcn.org/wiki/#source">source</a> 序列中对应文件的校验和。可以插入 <code>SKIP</code> 跳过某个不需要检验的文件。</p>
+<p>校验和的类型和数值应该始终使用上游提供的数值（比如在新版本公告中的）。当存在多种类型的时候，最好选用最强的校验类型。类型按照从强到弱的顺序如下： <code>b2</code> &gt; <code>sha512</code> &gt; <code>sha384</code> &gt; <code>sha256</code> &gt; <code>sha224</code> &gt; <code>sha1</code> &gt; <code>md5</code> &gt; <code>ck</code> ，这样可以最大限度地保证从上游的公告到软件包的生成整个流程中下载文件的完整性。</p>
+<p><strong>注意：</strong> 另外，当上游具备 <a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D" title="zhwp:数字签名">数字签名</a> 文件时，这个签名文件应该被添加到 <a href="https://wiki.archlinuxcn.org/wiki/#source">source</a> 序列中，PGP 密钥添加到 <a href="https://wiki.archlinuxcn.org/wiki/#validpgpkeys">validpgpkeys</a> 序列中。这样允许在生成软件包时进行验证。</p>
+<p><a href="https://wiki.archlinuxcn.org/wiki/Makepkg" title="Makepkg">makepkg</a> 的 <code>-g</code> / <code>--geninteg</code> 选项可以自动生成校验值，通常可以通过 <code>makepkg -g &gt;&gt; PKGBUILD</code> 命令写入。 <a href="https://archlinux.org/packages/?name=pacman-contrib">pacman-contrib</a> <sup><small>包</small></sup> 提供的 <a href="https://man.archlinux.org/man/updpkgsums.8">updpkgsums(8)</a> 命令也可以更新 <code>PKGBUILD</code> 中的变量。两个工具都会自动检测 PKGBUILD 中的算法, 如果没找到就回滚到 <code>md5sums</code> 。</p>
+<p>The file integrity checks to use can be set up with the <code>INTEGRITY_CHECK</code> option in <code>/etc/makepkg.conf</code>. See <a href="https://man.archlinux.org/man/makepkg.conf.5">makepkg.conf(5)</a>.</p>
+<p><strong>注意：</strong> 架构相关的额外完整性检验可以通过在名称后添加下划线和架构的方式指定，例如 <code>sha256sums_x86_64=()</code> 。</p>
+<h3 id="b2sums">b2sums<a class="headerlink" href="#b2sums" title="Permanent link">&para;</a></h3>
+<p><a href="https://zh.wikipedia.org/wiki/BLAKE#BLAKE2" title="zhwp:BLAKE">BLAKE2</a> 校验和数组，大小为 512 位。</p>
+<h3 id="sha512sumssha384sumssha256sumssha224sums">sha512sums，sha384sums，sha256sums，sha224sums<a class="headerlink" href="#sha512sumssha384sumssha256sumssha224sums" title="Permanent link">&para;</a></h3>
+<p><a href="https://zh.wikipedia.org/wiki/SHA-2" title="zhwp:SHA-2">SHA-2</a> 校验和数组，大小分别为 512，384，256 和 224 位。最常见的是 <code>sha256sums</code> 。</p>
+<h3 id="sha1sums">sha1sums<a class="headerlink" href="#sha1sums" title="Permanent link">&para;</a></h3>
+<p><code>source</code> 数组中文件的 160 位 <a href="https://zh.wikipedia.org/wiki/SHA-1" title="zhwp:SHA-1">SHA-1</a> 校验和数组。</p>
+<h3 id="md5sums">md5sums<a class="headerlink" href="#md5sums" title="Permanent link">&para;</a></h3>
+<p><code>source</code> 数组中文件的 128 位 <a href="https://zh.wikipedia.org/wiki/MD5" title="zhwp:MD5">MD5</a> 校验和数组。</p>
+<h3 id="cksums">cksums<a class="headerlink" href="#cksums" title="Permanent link">&para;</a></h3>
+<p><code>source</code> 数组中文件的 <a href="https://zh.wikipedia.org/wiki/%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C" title="zhwp:循环冗余校验">CRC32</a> （使用 UNIX 标准的 <a href="https://zh.wikipedia.org/wiki/cksum" title="zhwp:cksum">cksum</a> ）校验和数组。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Only%20Use%20Old%20Computers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Only Use Old Computers! | Luke Smith">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Only Use Old Computers! | Luke Smith
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../PKGBUILD-ArchWiki/" class="md-footer__link md-footer__link--next" aria-label="Next: PKGBUILD - ArchWiki">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                PKGBUILD - ArchWiki
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/hiraethecho" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "navigation.footer", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
