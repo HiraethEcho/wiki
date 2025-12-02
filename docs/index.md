@@ -6,6 +6,15 @@ hide:
 
 # My online wiki
 
+
+> [!important] 迁移
+> 这个网站内容迁移到新网站。包括
+>
+> - [memex](https://memex.keinmal.top) 其中[forest](https://memex.keinmal.top/forest)包括这里的clip,savoir,read/excerpt,living等
+> - [docs](https://docs.keinmal.top) 主要是这里的dev，即计算机相关笔记
+> - [math](https://math.keinmal.top) 是数学笔记
+
+
 这里是我的个人知识的博客。_To remains me what I know and what are they._
 
 ## Overview
